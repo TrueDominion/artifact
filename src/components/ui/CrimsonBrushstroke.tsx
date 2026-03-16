@@ -18,7 +18,7 @@ export default function CrimsonBrushstroke({
   animate = true,
   className = '',
 }: CrimsonBrushstrokeProps) {
-  const height = 12
+  const height = 16
   // Slightly irregular hand-drawn path
   const path = `M4,8 C${width * 0.15},4 ${width * 0.3},10 ${width * 0.5},7 C${width * 0.68},4 ${width * 0.82},9 ${width - 4},6`
   const pathLength = width * 1.05 // approximate
@@ -35,7 +35,7 @@ export default function CrimsonBrushstroke({
       <motion.path
         d={path}
         stroke="#C41E3A"
-        strokeWidth="2"
+        strokeWidth="4"
         strokeLinecap="round"
         fill="none"
         initial={animate ? { pathLength: 0, opacity: 0 } : { pathLength: 1, opacity: 1 }}
