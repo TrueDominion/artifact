@@ -1,0 +1,104 @@
+[
+  {
+    "id": "kalam",
+    "title": "The Kalam Cosmological Argument",
+    "category": "Cosmological",
+    "summary": "Whatever begins to exist has a cause. The universe began to exist. Therefore, the universe has a cause — one that is timeless, spaceless, immensely powerful, and personal.",
+    "artifact_svg_key": "cosmos",
+    "claim": "The universe had a beginning, and therefore requires a cause beyond itself — a cause that must transcend time, space, and matter.",
+    "logic": "Premise 1: Whatever begins to exist has a cause.\nPremise 2: The universe began to exist.\nConclusion: Therefore, the universe has a cause.\n\nThe causal principle (P1) is among the most intuitive in human reasoning — ex nihilo nihil fit (nothing comes from nothing). P2 is supported by both philosophical argument (an infinite regress of past events is impossible) and empirical science: the Big Bang cosmology, the Borde-Guth-Vilenkin theorem, and the second law of thermodynamics all point to a cosmic beginning. The cause, by logical necessity, must be uncaused, timeless, spaceless, immaterially powerful, and capable of initiating an effect — pointing to a personal agent rather than an abstract principle.",
+    "counterargument": "The universe could be eternal, cycling, or self-caused. Quantum mechanics allows for uncaused events. The multiverse could explain fine-tuning without a designer. Perhaps the universe simply exists without cause.",
+    "response": "Cyclical models still require a beginning per the BGV theorem. Quantum 'uncaused' events occur within an existing spacetime framework — not from absolute nothing. The multiverse hypothesis multiplies entities without evidence and still requires explanation for the laws generating the multiverse. 'The universe just exists' is not an explanation; it is a refusal to explain. The Kalam does not prove the Christian God directly but establishes a transcendent personal cause compatible with theism and incompatible with strict naturalism.",
+    "sources": [
+      "William Lane Craig, The Kalam Cosmological Argument (1979)",
+      "Borde, Guth & Vilenkin, Inflationary Spacetimes Are Not Past-Complete (2003)",
+      "Alexander Vilenkin, Many Worlds in One (2006)",
+      "J.D. Sinclair, The Kalam Cosmological Argument, in The Blackwell Companion to Natural Theology (2009)"
+    ]
+  },
+  {
+    "id": "teleological",
+    "title": "The Teleological Argument",
+    "category": "Design",
+    "summary": "The universe exhibits extraordinary fine-tuning for life — physical constants calibrated to one part in 10^120. Random chance cannot account for this precision. Design is the most rational inference.",
+    "artifact_svg_key": "telescope",
+    "claim": "The fundamental constants of physics are set with extraordinary precision to permit life. This fine-tuning is best explained by intentional design.",
+    "logic": "The fine-tuning argument observes that the constants of nature — the gravitational constant, the cosmological constant, the strong nuclear force, the mass ratio of proton to electron — are calibrated to astonishing precision for life to be possible. The cosmological constant alone is fine-tuned to 1 part in 10^120. Three explanations are possible: physical necessity, chance, or design. Physical necessity lacks evidence that these values had to be what they are. Chance strains credibility at these odds. Design provides an explanation commensurate with the effect — an intelligent agent who intended life.",
+    "counterargument": "The anthropic principle explains fine-tuning: we can only observe a universe compatible with our existence. The multiverse provides the probabilistic resources: with enough universes, any combination of constants will occur.",
+    "response": "The anthropic principle does not explain why a life-permitting universe exists at all — it only notes that observers will find themselves in one. The multiverse is theoretically motivated but empirically unconfirmed, and itself requires fine-tuned laws to generate universes. Robin Collins argues that even granting the multiverse, the fine-tuning of the universe-generating mechanism itself requires explanation. The design inference is not a god-of-the-gaps argument; it is an inference to the best explanation of observed data.",
+    "sources": [
+      "Robin Collins, The Teleological Argument, in The Blackwell Companion to Natural Theology (2009)",
+      "John Barrow & Frank Tipler, The Anthropic Cosmological Principle (1986)",
+      "Roger Penrose, The Road to Reality (2004)",
+      "Alvin Plantinga, Where the Conflict Really Lies (2011)"
+    ]
+  },
+  {
+    "id": "moral",
+    "title": "The Moral Argument",
+    "category": "Moral",
+    "summary": "Objective moral truths exist. Objective moral truths require a grounding beyond human preference. God is the best — perhaps only — adequate ground for objective morality.",
+    "artifact_svg_key": "scales",
+    "claim": "If objective moral values exist, God exists. Objective moral values do exist. Therefore, God exists.",
+    "logic": "The argument distinguishes between moral epistemology (how we know moral truths) and moral ontology (what grounds them). Most people recognize that some things — torturing children for pleasure, chattel slavery, genocide — are objectively wrong, not merely culturally discouraged. This intuition is near-universal and remarkably stable across cultures. If moral realism is true, what grounds it? Not evolutionary pressure (which produces behavior, not obligation). Not social convention (which makes morality relative). C.S. Lewis argued that the existence of the Moral Law — and our sense that we violate it — points to a Moral Lawgiver. God, as the necessarily good personal being, provides the metaphysical grounding that makes moral realism coherent.",
+    "counterargument": "Moral values can be grounded in human flourishing, social contracts, or evolutionary adaptation. We do not need God to behave morally or to know right from wrong. Secular ethics is fully coherent.",
+    "response": "The argument does not claim that atheists cannot behave morally. It claims that without God, there is no non-arbitrary ground for moral obligation — no reason why human flourishing should matter more than the flourishing of any other organism. Evolutionary accounts explain why we have moral feelings, not why those feelings track objective truth. Social contracts explain why we have laws, not why breaking them is genuinely wrong. The moral argument does not prove the Christian God directly but demands a personal, necessarily good ground for moral reality.",
+    "sources": [
+      "C.S. Lewis, Mere Christianity (1952)",
+      "William Lane Craig, Reasonable Faith (2008)",
+      "Russ Shafer-Landau, Moral Realism: A Defence (2003)",
+      "David Baggett & Jerry Walls, God and Cosmos (2016)"
+    ]
+  },
+  {
+    "id": "ontological",
+    "title": "The Ontological Argument",
+    "category": "Metaphysical",
+    "summary": "God is defined as the greatest conceivable being. A being that exists in reality is greater than one that exists only in the mind. Therefore, God must exist in reality.",
+    "artifact_svg_key": "arch",
+    "claim": "If it is possible that a maximally great being exists, then a maximally great being necessarily exists.",
+    "logic": "Anselm's original formulation: God is 'that than which nothing greater can be conceived.' If such a being existed only in the mind, it would be less than a being existing in reality — which contradicts the definition. Therefore, God must exist. Plantinga's modal version is more rigorous: using possible worlds semantics, a maximally great being (one with maximal excellence in every possible world) would exist necessarily. If it is even possible that such a being exists, then given the nature of necessity, it must exist in all possible worlds — including the actual world. The argument's power lies in its a priori structure: it reasons from the concept of God to his existence.",
+    "counterargument": "The argument seems to define things into existence. Gaunilo's parody: using the same logic, one could prove the existence of a greatest possible island. Kant argued existence is not a predicate. The move from possible to necessary existence seems illicit.",
+    "response": "Plantinga's response to Gaunilo is decisive: islands are inherently contingent — a maximally great island is an incoherent concept, because islands can always be improved. Necessary existence, by contrast, applies coherently only to a being whose essence involves existence. Kant's objection applies to the classical version but not to the modal formulation. The argument's opponent must maintain that a maximally great being is impossible — a strong claim requiring its own defense. The ontological argument is best understood as establishing the rationality of theism, not as a standalone deductive proof.",
+    "sources": [
+      "Anselm of Canterbury, Proslogion (1078)",
+      "Alvin Plantinga, The Nature of Necessity (1974)",
+      "Alvin Plantinga, God, Freedom, and Evil (1974)",
+      "Graham Oppy, Ontological Arguments and Belief in God (1995)"
+    ]
+  },
+  {
+    "id": "resurrection-evidence",
+    "title": "The Historical Resurrection",
+    "category": "Historical",
+    "summary": "Four minimal facts — accepted by the majority of critical scholars — are best explained by the bodily resurrection of Jesus Christ from the dead.",
+    "artifact_svg_key": "tomb",
+    "claim": "The resurrection of Jesus is the most historically defensible explanation for the established facts surrounding his death and the birth of Christianity.",
+    "logic": "Gary Habermas's 'minimal facts' methodology argues from data accepted by the majority of critical NT scholars regardless of theological commitment:\n1. Jesus died by Roman crucifixion.\n2. The tomb was found empty on the third day.\n3. Disciples experienced post-resurrection appearances.\n4. The disciples were transformed — willing to die for this claim.\n5. Paul and James, former skeptics, were converted by claimed appearances.\n\nAlternative hypotheses — hallucination, swoon, conspiracy, wrong tomb — each fail to account for the full set of facts. The hallucination theory cannot explain the empty tomb or the group appearances. The swoon theory is medically implausible. The conspiracy theory cannot explain the disciples' willingness to die for a known lie. Resurrection, while extraordinary, provides a unified explanation.",
+    "counterargument": "Resurrection is a miracle claim requiring extraordinary evidence. The Gospels were written decades after the events and reflect theological bias. Hallucination or legendary development better explains the accounts.",
+    "response": "The NT documents, while theological, are also historical. Paul's creed in 1 Corinthians 15:3–7 is dated by scholars to within 2–5 years of the crucifixion. The criterion of embarrassment supports the women's testimony at the tomb (women were not credible witnesses in first-century culture — an invented story would not use them). The criterion of enemy attestation supports the empty tomb — Jewish opponents explained it as body theft, not as a fabrication of the claim. Miracles cannot be ruled out a priori; historical investigation determines whether the evidence warrants the inference.",
+    "sources": [
+      "Gary Habermas & Michael Licona, The Case for the Resurrection of Jesus (2004)",
+      "N.T. Wright, The Resurrection of the Son of God (2003)",
+      "William Lane Craig, Assessing the New Testament Evidence for the Historicity of the Resurrection (1989)",
+      "Gerd Lüdemann, The Resurrection of Christ: A Historical Inquiry (2004)"
+    ]
+  },
+  {
+    "id": "consciousness",
+    "title": "The Argument from Consciousness",
+    "category": "Mind",
+    "summary": "The existence of subjective conscious experience — qualia, intentionality, the 'hard problem' — is inexplicable on purely physical grounds and points to a mind-grounded reality.",
+    "artifact_svg_key": "eye",
+    "claim": "Consciousness — particularly subjective experience — is not reducible to physical processes and is best explained within a theistic framework.",
+    "logic": "David Chalmers identified the 'hard problem' of consciousness: explaining why physical processes give rise to subjective experience. We can explain how the brain processes color information, but not why there is something it is like to see red. Physicalism struggles to account for qualia (the felt quality of experience), intentionality (the 'aboutness' of mental states), and personal identity across time. J.P. Moreland argues that these features of consciousness are alien to a purely physical ontology but natural within a theistic framework in which mind is fundamental to reality — God is, in classical theism, pure mind or intellect. Consciousness on theism is not an anomaly but an expected feature of a universe created by a personal, conscious God.",
+    "counterargument": "Consciousness will be explained by neuroscience as our understanding advances. Identity theory, functionalism, or eliminativism can account for mental phenomena without invoking God. The 'hard problem' may dissolve with better science.",
+    "response": "The promissory note response — 'science will explain it eventually' — does not address the philosophical problem. No advance in mapping neural correlates of consciousness explains why any physical process produces subjective experience. The conceivability of philosophical zombies (beings physically identical to us but with no inner experience) demonstrates that consciousness is not logically entailed by physical facts. The argument does not appeal to ignorance but to an explanatory gap that is structural, not merely temporary. Theism, in which a conscious God creates conscious beings in his image, provides an ontological framework where consciousness is fundamental, not epiphenomenal.",
+    "sources": [
+      "David Chalmers, The Conscious Mind (1996)",
+      "J.P. Moreland, Consciousness and the Existence of God (2008)",
+      "Richard Swinburne, The Evolution of the Soul (1986)",
+      "Victor Reppert, C.S. Lewis's Dangerous Idea (2003)"
+    ]
+  }
+]

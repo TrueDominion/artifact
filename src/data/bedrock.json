@@ -1,0 +1,37 @@
+[
+  {
+    "id": "incarnation",
+    "title": "The Incarnation",
+    "summary": "God became flesh in the person of Jesus Christ — fully divine and fully human — entering history to accomplish what humanity could not.",
+    "scripture": "John 1:14 — \"And the Word became flesh and dwelt among us, and we have seen his glory, glory as of the only Son from the Father, full of grace and truth.\"",
+    "detail": "The Incarnation is the central miracle of Christian theology: the eternal Son of God, the second person of the Trinity, took on human nature in the womb of Mary. He was not partially divine or partially human — the Council of Chalcedon (451 AD) affirmed that Christ possesses two complete natures, divine and human, united in one person without confusion, change, division, or separation. This event is the hinge on which all of history turns. The Incarnation is the necessary precondition for the Atonement: only one who was truly human could represent humanity, and only one who was truly God could bear infinite penalty and rise victorious. The doctrine is not a late development — it is embedded in the earliest Christian writings, including Paul's letter to the Philippians (2:6–11), written within two decades of the crucifixion."
+  },
+  {
+    "id": "resurrection",
+    "title": "The Resurrection",
+    "summary": "Jesus Christ rose bodily from the dead on the third day, vindicating his claims, defeating death, and inaugurating the new creation.",
+    "scripture": "1 Corinthians 15:17 — \"And if Christ has not been raised, your faith is futile and you are still in your sins.\"",
+    "detail": "The Resurrection is not a symbol or a spiritual metaphor — it is a historical claim subject to historical investigation. The core facts are widely accepted even by skeptical scholars: Jesus died by crucifixion under Pontius Pilate; he was buried; the tomb was found empty on the third day; post-resurrection appearances were reported by hundreds of witnesses; the disciples' transformation from fearful fugitives to bold martyrs demands explanation. The best historical explanation, argued by scholars such as N.T. Wright and Gary Habermas, is bodily resurrection. The Resurrection validates everything Jesus claimed about himself, provides the foundation for Christian hope, and is the first fruits of the new creation promised in Scripture."
+  },
+  {
+    "id": "trinity",
+    "title": "The Trinity",
+    "summary": "The one God eternally exists as three distinct persons — Father, Son, and Holy Spirit — co-equal, co-eternal, and of one essence.",
+    "scripture": "Matthew 28:19 — \"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.\"",
+    "detail": "Trinitarianism is not tritheism (three gods) nor modalism (one God in three sequential masks). The doctrine, crystallized at Nicaea (325 AD) and Constantinople (381 AD), holds that God is one in essence (ousia) and three in person (hypostasis). This distinction matters: the Father did not suffer on the cross; the Son was not at the tomb while the Spirit moved over the waters at creation. Each person is fully God, yet there is only one God. Critics charge that the Trinity is a later Greek invention, but Trinitarian language appears in the earliest strata of the New Testament — including Paul's letters and the Gospel of John — predating the councils by centuries. The doctrine uniquely resolves the philosophical problem of the one and the many: God is himself a communion of love prior to creation."
+  },
+  {
+    "id": "scripture",
+    "title": "Scripture and Revelation",
+    "summary": "The Bible is the inspired, authoritative Word of God — truthful in all that it affirms — given through human authors by the Holy Spirit.",
+    "scripture": "2 Timothy 3:16–17 — \"All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness.\"",
+    "detail": "The doctrine of Scripture's inspiration (theopneustos — 'God-breathed') does not imply mechanical dictation but organic authorship: the Holy Spirit superintended the human authors so that what they freely wrote was precisely what God intended to communicate. The canon of Scripture was not created by church councils but recognized — texts already bearing apostolic authority and consistent with the rule of faith were acknowledged as canonical. Textual criticism has confirmed the remarkable preservation of the biblical text: we possess more than 5,800 Greek New Testament manuscripts, far more than any comparable ancient document. The unity of the biblical narrative — from creation through fall to redemption and consummation — across 66 books, 40 authors, and 1,500 years constitutes its own argument for a divine intelligence behind the text."
+  },
+  {
+    "id": "nature-of-god",
+    "title": "The Nature of God",
+    "summary": "God is the necessary, eternal, all-knowing, all-powerful, perfectly good, and personal being who created and sustains all that exists.",
+    "scripture": "Exodus 3:14 — \"God said to Moses, 'I AM WHO I AM.' And he said, 'Say this to the people of Israel: I AM has sent me to you.'\"",
+    "detail": "Classical theism — the tradition flowing from Augustine, Anselm, and Aquinas — holds that God is not merely a very powerful being among others but Being itself: ipsum esse subsistens. God's existence is not contingent; he does not receive his attributes from outside himself. He is omniscient (knowing all true propositions, including free future contingents), omnipotent (able to do all things consistent with his nature), and omnibenevolent (perfectly and necessarily good). He is also personal — not an impersonal force but a self-revealing, relational being who speaks, acts, loves, and enters into covenant. The divine attributes are not in tension but mutually entailing: a being of infinite goodness must also be all-knowing (otherwise ignorance could compromise moral action). The 'I AM' of Exodus is the most philosophically loaded name in ancient literature, pointing to a being whose essence is existence itself."
+  }
+]

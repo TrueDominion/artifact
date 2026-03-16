@@ -1,0 +1,93 @@
+[
+  {
+    "id": "augustine",
+    "name": "Augustine of Hippo",
+    "dates": "354–430 AD",
+    "portrait_svg_key": "augustine",
+    "tradition": "Patristic / Western Christianity",
+    "summary": "The most influential theologian of the Western church, whose synthesis of Platonic philosophy and Christian revelation shaped Catholic and Protestant thought alike. His Confessions remain the greatest spiritual autobiography in any language.",
+    "key_works": [
+      "Confessions (397–400 AD)",
+      "The City of God (413–426 AD)",
+      "On the Trinity (399–419 AD)",
+      "On Free Choice of the Will (388–395 AD)"
+    ],
+    "contribution": "Augustine forged the philosophical vocabulary of Western Christianity: original sin, divine grace, predestination, the two cities (City of God vs. City of Man), and the restlessness of the human heart until it rests in God. His encounter with Manichaean dualism sharpened his theodicy; his engagement with Neoplatonism gave him categories for understanding the immaterial God; his reading of Paul transformed his soteriology. His dictum 'Our heart is restless until it rests in Thee' encapsulates the apologetic insight that human longing is itself a pointer toward the divine. No understanding of Western intellectual history — theological or secular — is possible without Augustine."
+  },
+  {
+    "id": "aquinas",
+    "name": "Thomas Aquinas",
+    "dates": "1225–1274 AD",
+    "portrait_svg_key": "aquinas",
+    "tradition": "Scholastic / Roman Catholic",
+    "summary": "The Angelic Doctor, whose synthesis of Aristotelian philosophy and Christian theology in the Summa Theologica remains the intellectual summit of medieval thought and a living tradition in Catholic philosophy.",
+    "key_works": [
+      "Summa Theologica (1265–1273 AD)",
+      "Summa Contra Gentiles (1259–1265 AD)",
+      "On Being and Essence (1252–1256 AD)",
+      "Commentary on Aristotle's Metaphysics"
+    ],
+    "contribution": "Aquinas's Five Ways — arguments for God's existence from motion, causation, contingency, gradation, and teleology — remain touchstones of natural theology. His doctrine of analogy addressed how human language can meaningfully speak of God without either equivocation or univocation. His synthesis of faith and reason — 'grace does not destroy nature but perfects it' — established that theology and philosophy are allies, not adversaries. Contemporary Thomism, represented by thinkers such as Edward Feser and Eleonore Stump, demonstrates that Aquinas's metaphysical framework is not antiquated but philosophically rigorous in ways that analytic philosophy is only beginning to appreciate."
+  },
+  {
+    "id": "pascal",
+    "name": "Blaise Pascal",
+    "dates": "1623–1662 AD",
+    "portrait_svg_key": "pascal",
+    "tradition": "French Catholic / Jansenist",
+    "summary": "Mathematician, physicist, inventor, and Christian apologist whose Pensées is the most penetrating psychological and philosophical defense of Christianity ever written — a cathedral built from fragments.",
+    "key_works": [
+      "Pensées (posthumous, 1670)",
+      "Provincial Letters (1656–1657)",
+      "Treatise on the Arithmetical Triangle (1654)"
+    ],
+    "contribution": "Pascal's apologetic method is experiential and existential before it is argumentative. He begins not with proofs but with the human condition: the grandeur and wretchedness of humanity, the misery of diversion, the infinite abyss in every human heart that only God can fill. His famous Wager is often misunderstood as a cynical bet — it is better read as a thought experiment about the rationality of commitment given infinite stakes and genuine uncertainty. Pascal was the first to articulate the hiddenness of God as a theological datum rather than an objection: 'God is hidden, and any religion that does not say that God is hidden is not true.' He anticipated modern existentialism in his diagnosis of human self-deception and the flight from meaning."
+  },
+  {
+    "id": "chesterton",
+    "name": "G.K. Chesterton",
+    "dates": "1874–1936 AD",
+    "portrait_svg_key": "chesterton",
+    "tradition": "Roman Catholic / English Literature",
+    "summary": "Journalist, novelist, poet, and polemicist whose Orthodoxy is the most joyful and paradox-laden defense of Christian faith in the English language — a man who arrived at Rome by following reason further than the skeptics dared.",
+    "key_works": [
+      "Orthodoxy (1908)",
+      "Heretics (1905)",
+      "The Everlasting Man (1925)",
+      "The Father Brown Stories (1910–1936)"
+    ],
+    "contribution": "Chesterton's contribution to apologetics is tonal and methodological as much as argumentative: he demonstrated that Christianity is not the refuge of those who have stopped thinking but of those who have thought long enough to find that reason alone is insufficient. His paradox-rich style — 'The Christian ideal has not been tried and found wanting; it has been found difficult and left untried' — disarmed the comfortable skepticism of Edwardian England. The Everlasting Man, which converted C.S. Lewis, argued that the history of religion and the history of Christ are not parallel phenomena but ruptures: Christ is not the best of many wise teachers but an utterly singular intrusion into human history. Chesterton revived the apologetic power of joy: orthodoxy was not a cage but the dance floor of the universe."
+  },
+  {
+    "id": "lewis",
+    "name": "C.S. Lewis",
+    "dates": "1898–1963 AD",
+    "portrait_svg_key": "lewis",
+    "tradition": "Anglican / Oxford Christianity",
+    "summary": "Scholar, novelist, and apologist whose conversion from atheism to Christianity produced the 20th century's most beloved works of Christian imagination and its most accessible defenses of the rational case for faith.",
+    "key_works": [
+      "Mere Christianity (1952)",
+      "The Problem of Pain (1940)",
+      "Miracles (1947)",
+      "The Screwtape Letters (1942)",
+      "Till We Have Faces (1956)"
+    ],
+    "contribution": "Lewis's apologetic career began with his own defeat: a thoroughgoing atheist and literary scholar at Oxford, he was argued into theism by his colleague Hugo Dyson and his friend J.R.R. Tolkien. His Trilemma — that Jesus was either Lord, Liar, or Lunatic, but not merely a 'good moral teacher' — remains the most compact and devastating response to the patronizing reduction of Christ. His argument from desire (Sehnsucht) — that the longing for 'something' that nothing earthly satisfies points toward a transcendent object — is one of the most psychologically acute arguments for God. In fiction, his Narnia chronicles and Space Trilogy accomplished what argument cannot: they restored the imaginative plausibility of the Christian world. He remains the entry point for millions into serious engagement with the case for Christianity."
+  },
+  {
+    "id": "plantinga",
+    "name": "Alvin Plantinga",
+    "dates": "1932–present",
+    "portrait_svg_key": "plantinga",
+    "tradition": "Reformed / Analytic Philosophy",
+    "summary": "The most formidable analytic philosopher of religion of the 20th century, who single-handedly rehabilitated theism as a respectable intellectual position within academic philosophy and produced decisive responses to the logical problem of evil and the challenge of religious epistemology.",
+    "key_works": [
+      "God and Other Minds (1967)",
+      "The Nature of Necessity (1974)",
+      "God, Freedom, and Evil (1974)",
+      "Warranted Christian Belief (2000)",
+      "Where the Conflict Really Lies (2011)"
+    ],
+    "contribution": "Plantinga's free will defense demolished the logical problem of evil as stated by J.L. Mackie — a philosophical achievement acknowledged even by his opponents. His reformed epistemology — the claim that belief in God can be 'properly basic,' warranted without inference from other propositions — dismantled the evidentialist challenge to religious belief. His Evolutionary Argument Against Naturalism turned the tables on scientific naturalists: if our cognitive faculties evolved for survival rather than truth, we have no reason to trust their deliverances about metaphysical matters, including naturalism itself. Time magazine recognized him as 'America's leading orthodox Protestant philosopher of God.' His career demonstrates that rigorous analytic philosophy and robust orthodox theology are not merely compatible but mutually enriching."
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "islam",
+    "name": "Islam",
+    "symbol_svg_key": "crescent",
+    "overview": "Islam is the world's second-largest religion, with approximately 1.9 billion adherents. Founded in 7th-century Arabia through the prophethood of Muhammad, Islam holds that there is one God (Allah) who revealed his final and complete word through the Quran. The five pillars — declaration of faith, prayer, fasting, almsgiving, and pilgrimage — structure Muslim religious life. Islam shares with Christianity an affirmation of one personal creator God, the moral law, prophetic revelation, and final judgment, but diverges sharply on the nature of Jesus and the doctrine of the Trinity.",
+    "core_claims": [
+      "There is no god but Allah, and Muhammad is his messenger (the Shahada).",
+      "The Quran is the direct, uncreated word of God — verbatim and inerrant.",
+      "Jesus (Isa) was a prophet and Messiah but not divine; he was not crucified.",
+      "The Christian and Jewish scriptures have been corrupted (tahrif) and superseded by the Quran.",
+      "Salvation is achieved through submission to God's will, good deeds, and his mercy."
+    ],
+    "key_texts": [
+      "The Quran",
+      "Sahih al-Bukhari (Hadith collection)",
+      "Sahih Muslim (Hadith collection)",
+      "Al-Ghazali, Ihya Ulum al-Din (Revival of the Religious Sciences)"
+    ],
+    "christian_critique": "Islam and Christianity share a family resemblance — monotheism, prophethood, Scripture, judgment — that makes their differences theologically precise and historically consequential. The central disagreement concerns Jesus: Islam affirms his miraculous birth and prophetic ministry but denies his crucifixion (Quran 4:157), his resurrection, and his divine nature. Yet the crucifixion is among the most historically secure facts of antiquity, confirmed by Roman and Jewish sources independent of the New Testament. The Trinitarian critique — that Christians worship three gods — reflects a misunderstanding of Trinitarian theology (possibly the Collyridianism present in 7th-century Arabia). The charge of biblical corruption (tahrif) requires that thousands of manuscripts across multiple continents and centuries were systematically altered with no trace in the textual record — a claim that historical-critical scholarship does not support. Christianity's response is not to dismiss Islam but to argue that the fullness of revelation came in the person of Christ, who claimed equality with God (John 10:30), accepted worship (Matthew 28:17), and rose from the dead — claims that cannot be reduced to prophethood."
+  },
+  {
+    "id": "atheism-naturalism",
+    "name": "Atheism / Naturalism",
+    "symbol_svg_key": "atom",
+    "overview": "Atheism is the absence of belief in any god or gods; naturalism is the philosophical position that nature — the physical, material world — is all that exists. In contemporary Western intellectual culture, these positions are typically held together. Prominent advocates include Richard Dawkins, Daniel Dennett, Sam Harris, and Christopher Hitchens. Naturalism holds that science is the paradigmatic method for accessing truth about reality, that consciousness emerged from matter through evolutionary processes, and that morality is a product of natural selection and social negotiation rather than divine command.",
+    "core_claims": [
+      "There is no God, supernatural realm, or non-physical reality.",
+      "The universe is eternal or self-caused, or had a natural origin requiring no external agent.",
+      "Consciousness and mind are entirely produced by brain processes.",
+      "Morality is a human construction with evolutionary and social origins.",
+      "Science is the only reliable method for acquiring knowledge about reality."
+    ],
+    "key_texts": [
+      "Richard Dawkins, The God Delusion (2006)",
+      "Daniel Dennett, Breaking the Spell (2006)",
+      "Christopher Hitchens, God Is Not Great (2007)",
+      "Sam Harris, The End of Faith (2004)",
+      "David Hume, Dialogues Concerning Natural Religion (1779)"
+    ],
+    "christian_critique": "Naturalism is the most intellectually serious challenger to Christian theism in contemporary Western culture, and it deserves engagement rather than dismissal. Its commitment to evidence and coherence is one it shares with Christian thought. The challenge is whether naturalism can sustain that commitment on its own terms. The hard problem of consciousness remains unexplained within a purely physical framework. The fine-tuning of the universe demands accounting. The emergence of mathematical truth, rational inference, and moral obligation from purely material processes is deeply puzzling — C.S. Lewis's argument from reason contends that if naturalism is true, we have no grounds for trusting the reasoning by which we arrived at naturalism. Alvin Plantinga's Evolutionary Argument Against Naturalism argues that if our cognitive faculties were shaped solely by survival rather than truth-tracking, we have no reason to trust them about metaphysical questions. Naturalism's claim that science is the only road to knowledge is itself not a scientific claim but a philosophical one — and a self-undermining one. Christianity does not fear science; it welcomes it as the investigation of God's creation."
+  },
+  {
+    "id": "buddhism",
+    "name": "Buddhism",
+    "symbol_svg_key": "dharma-wheel",
+    "overview": "Buddhism originated in 5th-century BCE India through the enlightenment experience of Siddhartha Gautama, the historical Buddha. Its central insight is that suffering (dukkha) arises from craving and attachment, and that liberation (nirvana) is achieved through the Eightfold Path — right understanding, intention, speech, action, livelihood, effort, mindfulness, and concentration. Buddhism is non-theistic in most of its forms: it does not affirm a creator God, a permanent self, or an afterlife in the Western sense. It has flourished across Asia in diverse traditions — Theravada, Mahayana, and Vajrayana — and has gained significant intellectual prestige in the West.",
+    "core_claims": [
+      "All existence is characterized by impermanence (anicca), suffering (dukkha), and non-self (anatta).",
+      "Suffering arises from craving and attachment.",
+      "Liberation (nirvana) is achievable through the Eightfold Path.",
+      "There is no permanent self or soul — the sense of 'I' is a constructed illusion.",
+      "Reality is interdependent and empty of inherent existence (in Mahayana traditions)."
+    ],
+    "key_texts": [
+      "The Dhammapada",
+      "The Pali Canon (Tripitaka)",
+      "Nagarjuna, Mulamadhyamakakarika",
+      "Thich Nhat Hanh, The Heart of the Buddha's Teaching (1998)"
+    ],
+    "christian_critique": "Buddhism's moral seriousness, its diagnosis of human suffering, and its contemplative depth command respect. Christianity and Buddhism share concern for human suffering, the moral centrality of compassion, and the inadequacy of material satisfaction. But they diverge at the most fundamental level. Buddhism's anatman (non-self) doctrine holds that there is no permanent personal self — the illusion of self is the root of suffering. Christianity affirms that persons are created in the image of God (imago Dei) and are of infinite, irreducible worth — personhood is not the problem to be dissolved but the reality to be redeemed. Nirvana, particularly in Theravada, is understood as the cessation of craving rather than union with a personal God — it is closer to annihilation of the self than to resurrection and eternal fellowship. The Buddhist cosmos lacks a creator, and therefore lacks the framework for moral accountability, atoning love, and relational redemption that are central to the Christian gospel. Buddhist ethics, divorced from a personal God, can diagnose suffering and prescribe practice, but cannot ground the objective moral obligation that Christian ethics affirms."
+  },
+  {
+    "id": "secular-humanism",
+    "name": "Secular Humanism",
+    "symbol_svg_key": "human-figure",
+    "overview": "Secular humanism is a philosophical and ethical stance that affirms human dignity, rationality, and potential without reference to the supernatural. It draws from Enlightenment thought, scientific naturalism, and classical humanist traditions. Secular humanists hold that human beings, through reason and science, are capable of solving human problems and creating a flourishing society. It is institutionally represented by organizations such as the American Humanist Association and the Council for Secular Humanism, and its principles are articulated in various Humanist Manifestos.",
+    "core_claims": [
+      "Human beings are the measure of all things; ethics is grounded in human flourishing.",
+      "Reason and science are the primary tools for understanding reality and solving problems.",
+      "There is no supernatural realm, divine revelation, or transcendent moral order.",
+      "Human beings are autonomous moral agents capable of ethical life without religion.",
+      "Progress is achievable through education, democracy, and the expansion of human rights."
+    ],
+    "key_texts": [
+      "Humanist Manifesto I (1933), II (1973), III (2003)",
+      "Paul Kurtz, Forbidden Fruit: The Ethics of Humanism (1988)",
+      "Yuval Noah Harari, Homo Deus (2015)"
+    ],
+    "christian_critique": "Secular humanism is, in many ways, a parasite on Christian civilization — it inherits the doctrines of human dignity, universal rights, and moral progress without their theological foundation. The concept of universal human rights is historically rooted in the imago Dei — the conviction that every human being bears the image of God and is therefore of irreducible worth. On secular grounds, why should the interests of one species of primate command absolute moral respect? The 20th century provides sobering data on what secular utopianism produces when severed from transcendent accountability: regimes that pursued human flourishing by purely rational means and produced unprecedented atrocity. Christianity does not oppose reason or human dignity — it claims to provide their only coherent foundation. The secular humanist borrows moral capital from a tradition she has rejected and spends it without acknowledging the source."
+  }
+]

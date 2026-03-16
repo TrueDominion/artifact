@@ -1,0 +1,93 @@
+/**
+ * src/styles/globals.css
+ * Global base styles for artiFACT.
+ * Imports Tailwind layers and sets typographic defaults.
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-serif;
+    line-height: 1.2;
+  }
+
+  ::selection {
+    background-color: #C41E3A22;
+    color: #1A1A1A;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E8E8E8;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #C41E3A;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-sans text-xs tracking-widest uppercase text-graphite-muted;
+    letter-spacing: 0.2em;
+  }
+
+  .exhibit-title {
+    @apply font-serif text-4xl md:text-5xl lg:text-6xl text-ink;
+    letter-spacing: 0.02em;
+  }
+
+  .exhibit-subtitle {
+    @apply font-serif italic text-xl text-graphite-light;
+  }
+
+  .museum-body {
+    @apply font-sans text-base text-graphite-light leading-relaxed;
+    font-weight: 300;
+  }
+
+  .graphite-rule {
+    @apply border-t border-graphite-border;
+  }
+
+  .plaque-bg {
+    background-color: #FAF8F5;
+  }
+
+  .warm-bg {
+    background-color: #F5F3F0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-draw {
+    stroke-dashoffset: 0;
+  }
+}
