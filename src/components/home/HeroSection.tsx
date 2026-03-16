@@ -40,7 +40,12 @@ export default function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
       >
-        <StatueSVG />
+        <img
+  src="/images/statue.webp"
+  alt="Broken classical marble torso emerging from sand"
+  className="w-full max-w-xs mx-auto opacity-90"
+  style={{ filter: 'grayscale(100%) contrast(1.1)' }}
+/>
       </motion.div>
 
       {/* Subheadline */}
