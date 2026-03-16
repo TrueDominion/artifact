@@ -41,7 +41,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
       >
         <img
-  src="/images/statue.webp"
+  src="/images/statue.png"
   alt="Broken classical marble torso emerging from sand"
   className="w-full max-w-xs mx-auto opacity-90"
   style={{ filter: 'grayscale(100%) contrast(1.1)' }}
