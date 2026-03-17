@@ -43,7 +43,11 @@ export interface Argument {
 export interface Worldview {
   id: string
   name: string
+  tradition: string
+  founded: string
+  adherents: string
   symbol_svg_key: string
+  tagline: string
   overview: string
   core_claims: string[]
   key_texts: string[]
