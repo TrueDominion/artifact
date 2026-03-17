@@ -39,7 +39,6 @@ function FeaturedPortrait({ thinker }: { thinker: Thinker }) {
       alt={`Portrait of ${thinker.name}`}
       className="w-full h-full object-cover"
       style={{
-        filter: 'grayscale(100%) contrast(1.05)',
         minHeight: '280px',
         maxHeight: '420px',
       }}
