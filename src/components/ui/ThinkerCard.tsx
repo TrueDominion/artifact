@@ -34,7 +34,6 @@ function Portrait({ name, svgKey }: { name: string; svgKey: string }) {
       src={`/images/${svgKey}.webp`}
       alt={`Portrait of ${name}`}
       className="w-full h-full object-cover"
-      style={{ filter: 'grayscale(100%) contrast(1.05)' }}
       onError={() => setFailed(true)}
     />
   )
