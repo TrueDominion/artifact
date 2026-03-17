@@ -39,13 +39,14 @@ export interface Argument {
 }
 
 // ── Worldviews (The Gallery) ──────────────────────────────
-
 export interface Worldview {
   id: string
   name: string
   tradition: string
   founded: string
   adherents: string
+  adherents_count: number | null
+  adherents_unit: string
   symbol_svg_key: string
   tagline: string
   overview: string
