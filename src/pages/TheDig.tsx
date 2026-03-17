@@ -1,8 +1,8 @@
 /**
  * src/pages/TheDig.tsx
  * THE DIG — Arguments Uncovered.
- * 3-column grid of ArtifactCards with 3D flip-and-lift interaction.
- * Desktop: left sidebar with excavation depth labels.
+ * 8-card grid. Each card flips to reveal 4-step argument navigator.
+ * Desktop sidebar retains excavation depth metaphor.
  */
 
 import SectionHeader from '@/components/ui/SectionHeader'
@@ -31,7 +31,7 @@ export default function TheDig() {
           >
             <div className="flex flex-col items-center gap-0 relative">
               <div className="absolute top-5 bottom-5 left-1/2 -translate-x-1/2 w-px bg-graphite-border" />
-              {['SURFACE', 'LAYER 1', 'LAYER 2', 'BEDROCK'].map((level) => (
+              {['CLAIM', 'LOGIC', 'OBJECTION', 'RESPONSE'].map((level) => (
                 <div key={level} className="flex items-center gap-3 py-8 z-10 relative">
                   <div className="w-1.5 h-1.5 rounded-full border border-graphite-soft bg-white" />
                   <span className="label-museum text-graphite-soft whitespace-nowrap">
@@ -42,16 +42,15 @@ export default function TheDig() {
             </div>
           </aside>
 
-          {/* Arguments grid */}
+          {/* Grid */}
           <div className="flex-1">
-            <p className="font-sans text-sm text-graphite-light leading-body mb-10 max-w-xl">
-              Click any artifact to flip it. The argument excavates itself —
-              claim at the surface, logic beneath, counterargument underneath,
-              response at the deepest stratum.
-            </p>
+            <div className="flex items-center gap-4 mb-10">
+              <hr className="flex-1 border-t border-graphite-border" />
+              <p className="label-museum text-graphite-soft">CLICK ANY CARD TO EXCAVATE</p>
+              <hr className="flex-1 border-t border-graphite-border" />
+            </div>
 
-            {/* Gap-based grid so lifted cards have shadow room */}
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
               {args.map((arg) => (
                 <ArtifactCard key={arg.id} argument={arg} />
               ))}
