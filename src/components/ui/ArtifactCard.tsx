@@ -1,222 +1,321 @@
 /**
  * src/components/ui/ArtifactCard.tsx
- * Card component for The Dig section.
- * Front face: category label, title, summary, artifact icon.
- * Click: card flips 180° on Y-axis with CSS perspective + lifts off grid.
- * Back face: 4 argument layers + sources, staggered reveal after flip completes.
- * Mobile: tap flips; desktop: click flips. ESC or click-outside collapses.
+ * Redesigned card for The Dig section.
+ * Front face: category, title, summary, excavate prompt.
+ * Flip reveals back face with 4-step tab navigator.
+ * User steps through: CLAIM → LOGIC → OBJECTION → RESPONSE.
+ * Sources appear as collapsed footnote on final step.
+ * Progress indicator at top. Forward/back navigation. ESC closes.
  */
 
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Argument, ArgumentSource } from '@/types'
-import { ArtifactIcon } from '@/components/ui/ExhibitLabel'
 
 interface ArtifactCardProps {
   argument: Argument
 }
 
-const layers: {
+const steps: {
   key: keyof Pick<Argument, 'claim' | 'logic' | 'counterargument' | 'response'>
   label: string
-  number: string
+  sublabel: string
 }[] = [
-  { key: 'claim',           label: 'CLAIM',              number: '01' },
-  { key: 'logic',           label: 'LOGICAL STRUCTURE',  number: '02' },
-  { key: 'counterargument', label: 'COUNTERARGUMENT',    number: '03' },
-  { key: 'response',        label: 'RESPONSE',           number: '04' },
+  { key: 'claim',           label: 'CLAIM',         sublabel: 'The proposition' },
+  { key: 'logic',           label: 'LOGIC',         sublabel: 'The structure' },
+  { key: 'counterargument', label: 'OBJECTION',     sublabel: 'The challenge' },
+  { key: 'response',        label: 'RESPONSE',      sublabel: 'The rebuttal' },
 ]
 
 export default function ArtifactCard({ argument }: ArtifactCardProps) {
-  const [flipped, setFlipped] = useState(false)
-  const [showBack, setShowBack] = useState(false)
+  const [flipped, setFlipped]     = useState(false)
+  const [showBack, setShowBack]   = useState(false)
+  const [step, setStep]           = useState(0)
+  const [showSources, setShowSources] = useState(false)
   const cardRef = useRef<HTMLDivElement>(null)
 
-  // Show back-face content only after flip is halfway done (~300ms)
+  // Reveal back content after flip animation crosses midpoint
   useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>
+    let t: ReturnType<typeof setTimeout>
     if (flipped) {
-      timer = setTimeout(() => setShowBack(true), 320)
+      t = setTimeout(() => setShowBack(true), 340)
     } else {
       setShowBack(false)
+      setStep(0)
+      setShowSources(false)
     }
-    return () => clearTimeout(timer)
+    return () => clearTimeout(t)
   }, [flipped])
 
-  // ESC key to close
+  // ESC closes
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && flipped) setFlipped(false)
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
+    const fn = (e: KeyboardEvent) => { if (e.key === 'Escape' && flipped) setFlipped(false) }
+    window.addEventListener('keydown', fn)
+    return () => window.removeEventListener('keydown', fn)
   }, [flipped])
+
+  const isLast  = step === steps.length - 1
+  const isFirst = step === 0
 
   return (
-    // Perspective wrapper — does NOT move
     <div
       ref={cardRef}
       className="relative w-full"
-      style={{ perspective: '1200px', minHeight: '320px' }}
+      style={{ perspective: '1400px', minHeight: '380px' }}
     >
       <motion.div
         className="relative w-full cursor-pointer"
         style={{ transformStyle: 'preserve-3d' }}
         animate={{
-          rotateY: flipped ? 180 : 0,
-          y: flipped ? -16 : 0,
-          scale: flipped ? 1.02 : 1,
-          zIndex: flipped ? 50 : 1,
+          rotateY:   flipped ? 180 : 0,
+          y:         flipped ? -20 : 0,
+          scale:     flipped ? 1.02 : 1,
+          zIndex:    flipped ? 50 : 1,
           boxShadow: flipped
-            ? '0 24px 60px rgba(0,0,0,0.13), 0 4px 16px rgba(0,0,0,0.07)'
-            : '0 1px 4px rgba(0,0,0,0.04)',
+            ? '0 32px 72px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.08)'
+            : '0 1px 6px rgba(0,0,0,0.04)',
         }}
         transition={{
-          rotateY: { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
-          y:       { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
-          scale:   { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
+          rotateY:   { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
+          y:         { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
+          scale:     { duration: 0.65, ease: [0.4, 0, 0.2, 1] },
           boxShadow: { duration: 0.65 },
         }}
-        onClick={() => setFlipped(v => !v)}
+        onClick={() => !flipped && setFlipped(true)}
         role="button"
         aria-expanded={flipped}
-        aria-label={`${argument.title} — click to ${flipped ? 'collapse' : 'excavate'}`}
+        aria-label={`${argument.title} — click to excavate`}
         tabIndex={0}
-        onKeyDown={(e) => e.key === 'Enter' && setFlipped(v => !v)}
+        onKeyDown={(e) => e.key === 'Enter' && !flipped && setFlipped(true)}
       >
 
-        {/* ── FRONT FACE ── */}
+        {/* ── FRONT FACE ─────────────────────────────── */}
         <div
-          className="absolute inset-0 w-full h-full bg-white border border-graphite-border overflow-hidden group"
+          className="absolute inset-0 w-full h-full bg-white border border-graphite-border group overflow-hidden"
           style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
         >
-          {/* Sandy gradient overlay — fades on hover */}
+          {/* Linen overlay fades on hover */}
           <div
             className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
-            style={{
-              background:
-                'linear-gradient(145deg, rgba(250,248,245,0.75) 0%, rgba(245,243,240,0.45) 100%)',
-            }}
+            style={{ background: 'linear-gradient(150deg, rgba(250,248,245,0.8) 0%, rgba(245,243,240,0.4) 100%)' }}
           />
 
-          {/* Crimson annotation mark — appears on hover */}
-          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M2,12 L7,2 L12,12" stroke="#C41E3A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-              <line x1="4" y1="9" x2="10" y2="9" stroke="#C41E3A" strokeWidth="0.8" strokeLinecap="round" />
+          {/* Crimson mark on hover */}
+          <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M1,10 L6,2 L11,10" stroke="#C41E3A" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+              <line x1="3.5" y1="7.5" x2="8.5" y2="7.5" stroke="#C41E3A" strokeWidth="0.9" strokeLinecap="round"/>
             </svg>
           </div>
 
-          <div className="p-7 flex flex-col h-full min-h-[320px]">
-            {/* Icon + category */}
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 opacity-50 flex-shrink-0">
-                <ArtifactIcon svgKey={argument.artifact_svg_key} />
-              </div>
-              <p className="label-museum text-graphite-soft">{argument.category}</p>
-            </div>
+          <div className="p-8 flex flex-col min-h-[380px]">
+            {/* Category */}
+            <p className="label-museum text-graphite-soft mb-4">{argument.category}</p>
 
             {/* Title */}
-            <h3 className="font-serif font-bold text-xl text-ink mb-3 leading-snug tracking-heading">
+            <h3 className="font-serif font-bold text-xl text-ink mb-4 leading-snug tracking-heading">
               {argument.title}
             </h3>
 
-            {/* Thin rule */}
-            <div className="w-8 h-px bg-graphite-border mb-4" />
+            {/* Rule */}
+            <div className="w-6 h-px bg-graphite-border mb-5" />
 
             {/* Summary */}
             <p className="font-sans text-sm text-graphite-light leading-relaxed flex-1">
               {argument.summary}
             </p>
 
-            {/* Excavate prompt */}
-            <div className="mt-6 flex items-center gap-2 pt-4 border-t border-graphite-border">
-              <span className="label-museum text-graphite-soft">EXCAVATE</span>
-              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
-                <path d="M1 4H13M9 1L13 4L9 7" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            {/* Step preview dots */}
+            <div className="mt-6 pt-5 border-t border-graphite-border flex items-center justify-between">
+              <span className="label-museum text-graphite-soft group-hover:text-graphite transition-colors duration-300">
+                EXCAVATE
+              </span>
+              <div className="flex items-center gap-1.5">
+                {steps.map((_, i) => (
+                  <div key={i} className="w-3 h-px bg-graphite-border" />
+                ))}
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" className="ml-1" aria-hidden="true">
+                  <path d="M1 3.5H11M7.5 1L11 3.5L7.5 6" stroke="#C8C8C8" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* ── BACK FACE ── */}
+        {/* ── BACK FACE ──────────────────────────────── */}
         <div
-          className="w-full bg-white border border-graphite-border overflow-y-auto"
+          className="w-full bg-white border border-graphite-border overflow-hidden"
           style={{
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
-            minHeight: '320px',
-            maxHeight: '520px',
+            minHeight: '380px',
           }}
+          onClick={(e) => e.stopPropagation()}
         >
-          <div className="p-7">
-            {/* Back header */}
-            <div className="flex items-start justify-between mb-5">
-              <div>
-                <p className="label-museum text-graphite-soft mb-1">{argument.category}</p>
-                <h3 className="font-serif font-bold text-lg text-ink leading-snug tracking-heading">
-                  {argument.title}
-                </h3>
+          {/* ── Step progress bar ── */}
+          <div className="flex border-b border-graphite-border">
+            {steps.map((s, i) => (
+              <button
+                key={s.key}
+                onClick={() => { setStep(i); setShowSources(false) }}
+                className={`flex-1 py-3 px-2 text-center transition-colors duration-300 ${
+                  i === step
+                    ? 'bg-ink'
+                    : 'bg-white hover:bg-linen'
+                }`}
+                aria-label={`Go to step ${i + 1}: ${s.label}`}
+              >
+                <span className={`label-museum block ${i === step ? 'text-white' : 'text-graphite-soft'}`}>
+                  {s.label}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* ── Content area ── */}
+          <div className="p-7 flex flex-col" style={{ minHeight: '320px' }}>
+
+            {/* Close button */}
+            <div className="flex items-center justify-between mb-5">
+              <div className="flex items-baseline gap-3">
+                <span className="font-serif font-bold text-3xl text-graphite-border select-none">
+                  0{step + 1}
+                </span>
+                <div>
+                  <p className="font-serif font-bold text-base text-ink leading-tight">
+                    {steps[step].label}
+                  </p>
+                  <p className="label-museum text-graphite-soft">{steps[step].sublabel}</p>
+                </div>
               </div>
-              {/* Close hint */}
-              <div className="flex-shrink-0 mt-0.5">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                  <line x1="2" y1="2" x2="12" y2="12" stroke="#C41E3A" strokeWidth="1" strokeLinecap="round" />
-                  <line x1="12" y1="2" x2="2" y2="12" stroke="#C41E3A" strokeWidth="1" strokeLinecap="round" />
+              <button
+                onClick={() => setFlipped(false)}
+                className="flex-shrink-0 p-1 opacity-40 hover:opacity-100 transition-opacity duration-200"
+                aria-label="Close card"
+              >
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                  <line x1="1" y1="1" x2="11" y2="11" stroke="#C41E3A" strokeWidth="1.2" strokeLinecap="round"/>
+                  <line x1="11" y1="1" x2="1" y2="11" stroke="#C41E3A" strokeWidth="1.2" strokeLinecap="round"/>
                 </svg>
-              </div>
+              </button>
             </div>
 
             <hr className="rule-graphite mb-5" />
 
-            {/* Staggered layers — only render after flip completes */}
-            <AnimatePresence>
-              {showBack && (
-                <>
-                  {layers.map(({ key, label, number }, i) => (
-                    <motion.div
-                      key={key}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.09, duration: 0.35, ease: 'easeOut' }}
-                      className="mb-5"
-                    >
-                      <div className="flex items-baseline gap-2 mb-1.5">
-                        <span className="font-serif text-xs text-graphite-border font-bold">{number}</span>
-                        <p className="label-museum text-graphite-soft">{label}</p>
-                      </div>
-                      <p className="font-sans text-xs text-graphite leading-relaxed">
-                        {argument[key]}
-                      </p>
-                      {i < layers.length - 1 && <hr className="rule-graphite mt-5" />}
-                    </motion.div>
-                  ))}
+            {/* Step content — animated on step change */}
+            <div className="flex-1 overflow-hidden">
+              <AnimatePresence mode="wait" initial={false}>
+                {showBack && (
+                  <motion.div
+                    key={step}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.28, ease: 'easeOut' }}
+                  >
+                    <p className="font-sans text-sm text-graphite leading-relaxed">
+                      {argument[steps[step].key]}
+                    </p>
 
-                  {/* Sources */}
-                  {argument.sources.length > 0 && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.38, duration: 0.35, ease: 'easeOut' }}
-                    >
-                      <hr className="rule-graphite mb-4" />
-                      <p className="label-museum mb-2 text-graphite-soft">SOURCES</p>
-                      <ul className="space-y-1">
-                        {argument.sources.map((source: ArgumentSource, idx: number) => (
-                          <li key={idx} className="font-sans text-[0.6rem] text-graphite-soft leading-relaxed">
-                            <span className="text-graphite-light">{source.author}</span>
-                            {' — '}
-                            <span className="italic">{source.title}</span>
-                            {source.year && <span className="ml-1 not-italic">({source.year})</span>}
-                          </li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
-                </>
+                    {/* Sources — only on final step */}
+                    {isLast && argument.sources.length > 0 && (
+                      <div className="mt-5">
+                        <button
+                          onClick={() => setShowSources(v => !v)}
+                          className="flex items-center gap-2 label-museum text-graphite-soft hover:text-graphite transition-colors duration-200"
+                        >
+                          <span>{showSources ? 'HIDE' : 'SHOW'} SOURCES</span>
+                          <motion.svg
+                            animate={{ rotate: showSources ? 180 : 0 }}
+                            transition={{ duration: 0.25 }}
+                            width="8" height="5" viewBox="0 0 8 5" fill="none"
+                            aria-hidden="true"
+                          >
+                            <path d="M1 1L4 4L7 1" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                          </motion.svg>
+                        </button>
+                        <AnimatePresence>
+                          {showSources && (
+                            <motion.ul
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="mt-3 space-y-1.5 overflow-hidden"
+                            >
+                              {argument.sources.map((source: ArgumentSource, idx: number) => (
+                                <li key={idx} className="font-sans text-[0.6rem] text-graphite-soft leading-relaxed">
+                                  <span className="text-graphite-light not-italic">{source.author}</span>
+                                  {' — '}
+                                  <span className="italic">{source.title}</span>
+                                  {source.year && <span className="not-italic ml-1">({source.year})</span>}
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* ── Navigation ── */}
+            <div className="flex items-center justify-between pt-5 mt-4 border-t border-graphite-border">
+              <button
+                onClick={() => { setStep(s => s - 1); setShowSources(false) }}
+                disabled={isFirst}
+                className="flex items-center gap-2 label-museum text-graphite-soft hover:text-graphite disabled:opacity-20 transition-colors duration-200"
+                aria-label="Previous layer"
+              >
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true">
+                  <path d="M11 3.5H1M4.5 1L1 3.5L4.5 6" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                PREV
+              </button>
+
+              {/* Pip progress */}
+              <div className="flex items-center gap-1.5">
+                {steps.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`rounded-full transition-all duration-300 ${
+                      i === step
+                        ? 'w-4 h-1.5 bg-ink'
+                        : i < step
+                          ? 'w-1.5 h-1.5 bg-graphite-soft'
+                          : 'w-1.5 h-1.5 bg-graphite-border'
+                    }`}
+                  />
+                ))}
+              </div>
+
+              {isLast ? (
+                <button
+                  onClick={() => setFlipped(false)}
+                  className="flex items-center gap-2 label-museum text-crimson hover:opacity-70 transition-opacity duration-200"
+                  aria-label="Close card"
+                >
+                  CLOSE
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true">
+                    <path d="M1 3.5H11M7.5 1L11 3.5L7.5 6" stroke="#C41E3A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              ) : (
+                <button
+                  onClick={() => { setStep(s => s + 1); setShowSources(false) }}
+                  className="flex items-center gap-2 label-museum text-graphite-soft hover:text-graphite transition-colors duration-200"
+                  aria-label="Next layer"
+                >
+                  NEXT
+                  <svg width="12" height="7" viewBox="0 0 12 7" fill="none" aria-hidden="true">
+                    <path d="M1 3.5H11M7.5 1L11 3.5L7.5 6" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               )}
-            </AnimatePresence>
+            </div>
           </div>
         </div>
 
