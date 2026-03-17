@@ -2,20 +2,51 @@
  * src/pages/TheCollection.tsx
  * THE COLLECTION — Thinkers & Intellectual History.
  * Featured profile (large format) + secondary ThinkerCard grid.
- * Closing full-width italic line: "The excavation continues."
+ * Both use real portrait images from /public/images/{key}.webp.
+ * Graceful fallback to initials if image not yet uploaded.
  */
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeader from '@/components/ui/SectionHeader'
 import ThinkerCard from '@/components/ui/ThinkerCard'
 import CrimsonBrushstroke from '@/components/ui/CrimsonBrushstroke'
-import { ThinkerBust } from '@/components/ui/ExhibitLabel'
 import thinkersData from '@/data/thinkers.json'
 import type { Thinker } from '@/types'
 
 const thinkers = thinkersData as Thinker[]
 const featured = thinkers[0]
 const secondary = thinkers.slice(1)
+
+// Featured portrait with fallback
+function FeaturedPortrait({ thinker }: { thinker: Thinker }) {
+  const [failed, setFailed] = useState(false)
+
+  if (failed) {
+    const initials = thinker.name.split(' ').map((w: string) => w[0]).join('').slice(0, 2)
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-linen min-h-[280px]">
+        <span className="font-serif font-bold text-5xl text-graphite-border select-none">
+          {initials}
+        </span>
+      </div>
+    )
+  }
+
+  return (
+    <img
+      src={`/images/${thinker.portrait_svg_key}.webp`}
+      alt={`Portrait of ${thinker.name}`}
+      className="w-full h-full object-cover"
+      style={{
+        filter: 'grayscale(100%) contrast(1.05)',
+        minHeight: '280px',
+        maxHeight: '420px',
+      }}
+      onError={() => setFailed(true)}
+    />
+  )
+}
 
 export default function TheCollection() {
   return (
@@ -35,12 +66,11 @@ export default function TheCollection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <p className="label-museum mb-8 text-graphite-soft">FEATURED PROFILE</p>
-          <div className="border border-graphite-border grid grid-cols-1 lg:grid-cols-[280px_1fr]">
+          <div className="border border-graphite-border grid grid-cols-1 lg:grid-cols-[320px_1fr]">
+
             {/* Portrait */}
-            <div className="flex items-center justify-center p-10 border-b lg:border-b-0 lg:border-r border-graphite-border bg-linen">
-              <div className="w-40 h-52">
-                <ThinkerBust svgKey={featured.portrait_svg_key} className="w-full h-full" />
-              </div>
+            <div className="overflow-hidden border-b lg:border-b-0 lg:border-r border-graphite-border">
+              <FeaturedPortrait thinker={featured} />
             </div>
 
             {/* Museum placard */}
@@ -55,13 +85,11 @@ export default function TheCollection() {
               </div>
 
               <p className="font-sans text-sm text-graphite-soft mb-6">{featured.dates}</p>
-
               <hr className="rule-graphite mb-6" />
 
               <p className="font-sans text-sm text-graphite leading-body mb-6">
                 {featured.summary}
               </p>
-
               <p className="font-sans text-sm text-graphite-light leading-body mb-8">
                 {featured.contribution}
               </p>
@@ -90,11 +118,9 @@ export default function TheCollection() {
           <hr className="rule-graphite flex-1" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-graphite-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {secondary.map((thinker, index) => (
-            <div key={thinker.id} className="bg-white">
-              <ThinkerCard thinker={thinker} index={index} />
-            </div>
+            <ThinkerCard key={thinker.id} thinker={thinker} index={index} />
           ))}
         </div>
       </div>
