@@ -44,6 +44,7 @@ export default function HeroSection() {
   src="/images/statue.png"
   alt="Broken classical marble torso emerging from sand"
   className="w-full max-w-xs mx-auto opacity-90"
+style={{ filter: 'grayscale(100%) contrast(1.1)' }}
 />
       </motion.div>
 
