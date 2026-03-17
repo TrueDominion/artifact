@@ -1,8 +1,8 @@
 /**
  * src/pages/TheDig.tsx
  * THE DIG — Arguments Uncovered.
- * 8-card grid. Each card flips to reveal 4-step argument navigator.
- * Desktop sidebar retains excavation depth metaphor.
+ * 8-card grid with 4-step flip cards.
+ * Sidebar: vertical stratum key with rotated labels running top to bottom.
  */
 
 import SectionHeader from '@/components/ui/SectionHeader'
@@ -11,6 +11,13 @@ import argumentsData from '@/data/arguments.json'
 import type { Argument } from '@/types'
 
 const args = argumentsData as unknown as Argument[]
+
+const strata = [
+  { label: 'CLAIM',     number: '01' },
+  { label: 'LOGIC',     number: '02' },
+  { label: 'OBJECTION', number: '03' },
+  { label: 'RESPONSE',  number: '04' },
+]
 
 export default function TheDig() {
   return (
@@ -22,27 +29,65 @@ export default function TheDig() {
       />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">
-        <div className="flex gap-10 lg:gap-16">
+        <div className="flex gap-8 lg:gap-12">
 
-          {/* Depth sidebar — desktop only */}
+          {/* ── Stratum sidebar — desktop only ── */}
           <aside
-            className="hidden lg:flex flex-col items-center flex-shrink-0 pt-2"
-            aria-label="Excavation depth levels"
+            className="hidden lg:flex flex-col flex-shrink-0 w-10"
+            aria-label="Argument layers"
           >
-            <div className="flex flex-col items-center gap-0 relative">
-              <div className="absolute top-5 bottom-5 left-1/2 -translate-x-1/2 w-px bg-graphite-border" />
-              {['CLAIM', 'LOGIC', 'OBJECTION', 'RESPONSE'].map((level) => (
-                <div key={level} className="flex items-center gap-3 py-8 z-10 relative">
-                  <div className="w-1.5 h-1.5 rounded-full border border-graphite-soft bg-white" />
-                  <span className="label-museum text-graphite-soft whitespace-nowrap">
-                    {level}
+            <p
+              className="label-museum text-graphite-border text-center mb-3"
+              style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
+            >
+              DEPTH
+            </p>
+
+            <div className="flex flex-col flex-1 border border-graphite-border overflow-hidden">
+              {strata.map((s, i) => (
+                <div
+                  key={s.label}
+                  className={`flex-1 flex flex-col items-center justify-center gap-2 py-4 ${
+                    i < strata.length - 1 ? 'border-b border-graphite-border' : ''
+                  }`}
+                  style={{
+                    backgroundColor:
+                      i === 0 ? '#FFFFFF' :
+                      i === 1 ? '#FAF8F5' :
+                      i === 2 ? '#EFEDE9' :
+                               '#E8E5E0',
+                  }}
+                >
+                  <span
+                    className="font-serif font-bold text-graphite-border select-none"
+                    style={{ fontSize: '0.65rem' }}
+                  >
+                    {s.number}
+                  </span>
+                  <span
+                    className="label-museum text-graphite-soft"
+                    style={{
+                      writingMode: 'vertical-rl',
+                      transform: 'rotate(180deg)',
+                      letterSpacing: '0.1em',
+                      fontSize: '0.55rem',
+                    }}
+                  >
+                    {s.label}
                   </span>
                 </div>
               ))}
             </div>
+
+            <p
+              className="label-museum text-graphite-border text-center mt-3"
+              style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
+            >
+              SURFACE
+            </p>
           </aside>
 
-          {/* Grid */}
+          {/* ── Card grid ── */}
           <div className="flex-1">
             <div className="flex items-center gap-4 mb-10">
               <hr className="flex-1 border-t border-graphite-border" />
@@ -56,6 +101,7 @@ export default function TheDig() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>
