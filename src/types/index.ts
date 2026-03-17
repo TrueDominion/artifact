@@ -11,7 +11,10 @@ export interface BedrockEntry {
   title: string
   summary: string
   scripture: string
-  detail: string
+  scripture_text: string
+  confession: string
+  doctrine: string
+  islamic_contrast: string
 }
 
 // ── Arguments (The Dig) ───────────────────────────────────
