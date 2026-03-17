@@ -39,6 +39,7 @@ export interface Argument {
 }
 
 // ── Worldviews (The Gallery) ──────────────────────────────
+
 export interface Worldview {
   id: string
   name: string
@@ -62,10 +63,14 @@ export type Difficulty = 'foundational' | 'intermediate' | 'advanced'
 export interface Debate {
   id: string
   title: string
+  category: string
+  difficulty: Difficulty
+  severity: number
+  summary: string
   challenge: string
   response: string
   key_thinkers: string[]
-  difficulty: Difficulty
+  sources: string[]
 }
 
 // ── Thinkers (The Collection) ────────────────────────────
