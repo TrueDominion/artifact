@@ -2,81 +2,185 @@
   {
     "id": "islam",
     "name": "Islam",
+    "tradition": "Abrahamic",
+    "founded": "7th century AD",
+    "adherents": "1.9 billion",
     "symbol_svg_key": "crescent",
-    "overview": "Islam is the world's second-largest religion, with approximately 1.9 billion adherents. Founded in 7th-century Arabia through the prophethood of Muhammad, Islam holds that there is one God (Allah) who revealed his final and complete word through the Quran. The five pillars — declaration of faith, prayer, fasting, almsgiving, and pilgrimage — structure Muslim religious life. Islam shares with Christianity an affirmation of one personal creator God, the moral law, prophetic revelation, and final judgment, but diverges sharply on the nature of Jesus and the doctrine of the Trinity.",
+    "tagline": "Submission to the one God whose final word came through Muhammad.",
+    "overview": "Islam is the world's second-largest religion, founded in 7th-century Arabia through the prophethood of Muhammad. It holds that there is one God (Allah) whose final, uncreated, and verbatim revelation came through the Quran. The five pillars — declaration of faith, prayer, fasting, almsgiving, and pilgrimage — structure Muslim religious life. Islam shares with Christianity an affirmation of one personal creator God, moral law, prophetic revelation, and final judgment, but diverges sharply on the nature of Jesus, the doctrine of the Trinity, and the integrity of the biblical text.",
     "core_claims": [
-      "There is no god but Allah, and Muhammad is his messenger (the Shahada).",
-      "The Quran is the direct, uncreated word of God — verbatim and inerrant.",
+      "There is no god but Allah, and Muhammad is his final messenger.",
+      "The Quran is the direct, uncreated, verbatim word of God — inerrant and unsupersedable.",
       "Jesus (Isa) was a prophet and Messiah but not divine; he was not crucified.",
-      "The Christian and Jewish scriptures have been corrupted (tahrif) and superseded by the Quran.",
-      "Salvation is achieved through submission to God's will, good deeds, and his mercy."
+      "The Christian and Jewish scriptures have been corrupted (tahrif) and superseded.",
+      "Salvation is by submission to God's will, good deeds, and his sovereign mercy."
     ],
     "key_texts": [
       "The Quran",
       "Sahih al-Bukhari (Hadith collection)",
-      "Sahih Muslim (Hadith collection)",
-      "Al-Ghazali, Ihya Ulum al-Din (Revival of the Religious Sciences)"
+      "Al-Ghazali, Ihya Ulum al-Din"
     ],
-    "christian_critique": "Islam and Christianity share a family resemblance — monotheism, prophethood, Scripture, judgment — that makes their differences theologically precise and historically consequential. The central disagreement concerns Jesus: Islam affirms his miraculous birth and prophetic ministry but denies his crucifixion (Quran 4:157), his resurrection, and his divine nature. Yet the crucifixion is among the most historically secure facts of antiquity, confirmed by Roman and Jewish sources independent of the New Testament. The Trinitarian critique — that Christians worship three gods — reflects a misunderstanding of Trinitarian theology (possibly the Collyridianism present in 7th-century Arabia). The charge of biblical corruption (tahrif) requires that thousands of manuscripts across multiple continents and centuries were systematically altered with no trace in the textual record — a claim that historical-critical scholarship does not support. Christianity's response is not to dismiss Islam but to argue that the fullness of revelation came in the person of Christ, who claimed equality with God (John 10:30), accepted worship (Matthew 28:17), and rose from the dead — claims that cannot be reduced to prophethood."
+    "christian_critique": "Islam and Christianity share enough family resemblance — monotheism, prophethood, Scripture, judgment — that their differences are theologically precise rather than merely cultural. The central dispute is Christological: Islam affirms Jesus' miraculous birth and prophetic ministry but explicitly denies his crucifixion (Quran 4:157), resurrection, and divine nature. The crucifixion, however, is among the most historically secure facts of antiquity, confirmed by Tacitus, Josephus, and the Babylonian Talmud — none of whom had any motive to support Christian claims. The tahrif doctrine requires that thousands of manuscripts across multiple continents and centuries were systematically corrupted without a single trace in the textual record — a position no serious historian defends. The Trinitarian critique attacks tritheism, which Christianity itself condemned as heresy before Islam existed. The deeper question Islam cannot answer is soteriological: if Jesus was only a prophet, how are sins forgiven? Islam offers no atoning mediator — only deeds, divine mercy, and uncertainty."
   },
   {
-    "id": "atheism-naturalism",
-    "name": "Atheism / Naturalism",
+    "id": "atheism",
+    "name": "Atheism & Naturalism",
+    "tradition": "Secular",
+    "founded": "Enlightenment formalization",
+    "adherents": "~1.2 billion non-religious",
     "symbol_svg_key": "atom",
-    "overview": "Atheism is the absence of belief in any god or gods; naturalism is the philosophical position that nature — the physical, material world — is all that exists. In contemporary Western intellectual culture, these positions are typically held together. Prominent advocates include Richard Dawkins, Daniel Dennett, Sam Harris, and Christopher Hitchens. Naturalism holds that science is the paradigmatic method for accessing truth about reality, that consciousness emerged from matter through evolutionary processes, and that morality is a product of natural selection and social negotiation rather than divine command.",
+    "tagline": "The physical universe is all that exists. There is no God, no soul, no transcendent meaning.",
+    "overview": "Atheism in its contemporary form is almost always paired with philosophical naturalism — the view that the natural world, accessible to science, exhausts reality. There is no supernatural realm, no transcendent mind, no life after death. Consciousness, morality, and the sense of meaning are emergent properties of blind physical processes. Major contemporary proponents include Richard Dawkins, Daniel Dennett, Sam Harris, and in philosophy, Alex Rosenberg and Quentin Smith.",
     "core_claims": [
-      "There is no God, supernatural realm, or non-physical reality.",
-      "The universe is eternal or self-caused, or had a natural origin requiring no external agent.",
-      "Consciousness and mind are entirely produced by brain processes.",
-      "Morality is a human construction with evolutionary and social origins.",
-      "Science is the only reliable method for acquiring knowledge about reality."
+      "The physical universe is all that exists — there is no supernatural realm.",
+      "Science is the only reliable path to knowledge about reality.",
+      "Consciousness and moral experience are products of evolution, not transcendent realities.",
+      "The burden of proof lies entirely with those who assert God's existence.",
+      "Human beings can live meaningful, ethical lives without religious belief."
     ],
     "key_texts": [
       "Richard Dawkins, The God Delusion (2006)",
       "Daniel Dennett, Breaking the Spell (2006)",
-      "Christopher Hitchens, God Is Not Great (2007)",
-      "Sam Harris, The End of Faith (2004)",
-      "David Hume, Dialogues Concerning Natural Religion (1779)"
+      "Alex Rosenberg, The Atheist's Guide to Reality (2011)"
     ],
-    "christian_critique": "Naturalism is the most intellectually serious challenger to Christian theism in contemporary Western culture, and it deserves engagement rather than dismissal. Its commitment to evidence and coherence is one it shares with Christian thought. The challenge is whether naturalism can sustain that commitment on its own terms. The hard problem of consciousness remains unexplained within a purely physical framework. The fine-tuning of the universe demands accounting. The emergence of mathematical truth, rational inference, and moral obligation from purely material processes is deeply puzzling — C.S. Lewis's argument from reason contends that if naturalism is true, we have no grounds for trusting the reasoning by which we arrived at naturalism. Alvin Plantinga's Evolutionary Argument Against Naturalism argues that if our cognitive faculties were shaped solely by survival rather than truth-tracking, we have no reason to trust them about metaphysical questions. Naturalism's claim that science is the only road to knowledge is itself not a scientific claim but a philosophical one — and a self-undermining one. Christianity does not fear science; it welcomes it as the investigation of God's creation."
+    "christian_critique": "Naturalism faces what Thomas Nagel — himself an atheist — calls a structural explanatory failure: consciousness, the fine-tuning of the cosmos, the origin of the universe, and the objectivity of moral obligations all resist naturalistic explanation. Plantinga's Evolutionary Argument Against Naturalism (EAAN) demonstrates that if naturalism and evolution are both true, our cognitive faculties were selected for survival rather than truth — which defeats the very reasoning used to argue for naturalism. The moral argument cuts equally deep: naturalism may explain why we behave as if morality is real, but provides no account of why any of it is genuinely binding. Borrowed moral vocabulary — human dignity, universal rights, the evil of oppression — carries the freight of a Christian metaphysical framework that naturalism has abandoned. Christianity's invitation is not a retreat from reason but a demonstration that reason itself — its reliability, its purchase on truth — is only coherent within a theistic framework."
+  },
+  {
+    "id": "mormonism",
+    "name": "Mormonism",
+    "tradition": "Latter-day Saint",
+    "founded": "1830, Joseph Smith",
+    "adherents": "~17 million",
+    "symbol_svg_key": "human-figure",
+    "tagline": "A restoration of lost Christianity through new prophetic revelation — with a fundamentally different God.",
+    "overview": "The Church of Jesus Christ of Latter-day Saints was founded in 1830 by Joseph Smith, who claimed to receive golden plates containing the Book of Mormon. Mormonism presents itself as a restoration of true Christianity, lost through centuries of apostasy. It affirms the name of Jesus Christ and much Christian vocabulary, but the underlying theology is radically different: God the Father has a physical body, humans can become gods, and salvation is achieved through a combination of grace, ordinances, and exaltation through eternal progression.",
+    "core_claims": [
+      "God the Father (Heavenly Father) has a physical, glorified body of flesh and bones.",
+      "The Father, Son, and Holy Ghost are three separate beings — not one God.",
+      "Joseph Smith was a prophet who restored the true church after a universal apostasy.",
+      "The Book of Mormon, Doctrine and Covenants, and Pearl of Great Price are scripture alongside the Bible.",
+      "Humans can progress to become gods (exaltation) — 'As man is, God once was; as God is, man may become.'"
+    ],
+    "key_texts": [
+      "The Book of Mormon",
+      "Doctrine and Covenants",
+      "Lorenzo Snow, The Teachings of Lorenzo Snow"
+    ],
+    "christian_critique": "Mormonism is not a variant of Christianity but a different religion sharing Christian vocabulary. The God of Mormonism is not the God of classical theism or the Westminster Confession: he is a finite, embodied, progressing deity who was once a man — a concept utterly foreign to the biblical witness ('God is not man,' Numbers 23:19; 'Before me no god was formed,' Isaiah 43:10). The claim of universal apostasy — that the entire church lost the gospel from the 2nd century until 1830 — contradicts Christ's promise that the gates of hell would not prevail against His church (Matthew 16:18). The Book of Mormon has no archaeological, linguistic, or genetic corroboration for the civilizations it describes. The doctrine of exaltation — humans becoming gods — is precisely the temptation the serpent offered in Genesis 3:5. Mormonism's Jesus atoned for sins in Gethsemane rather than primarily on the cross, does not possess the eternal divine nature of the Logos of John 1, and is the spirit-brother of Lucifer. These are not peripheral differences but fundamental incompatibilities with historic Christian faith."
+  },
+  {
+    "id": "jehovahs-witnesses",
+    "name": "Jehovah's Witnesses",
+    "tradition": "Restorationist",
+    "founded": "1870s, Charles Taze Russell",
+    "adherents": "~8.7 million",
+    "symbol_svg_key": "human-figure",
+    "tagline": "Only Jehovah is God. Jesus is a created being. The Trinity is a pagan invention.",
+    "overview": "Jehovah's Witnesses originated in the 1870s through Charles Taze Russell. They reject the Trinity, holding that Jehovah alone is God and that Jesus Christ is his first and greatest creation. They use their own translation (the New World Translation) which systematically alters key Trinitarian texts. They deny the immortality of the soul, the existence of hell, and the bodily resurrection, believing instead in a future earthly paradise for faithful members.",
+    "core_claims": [
+      "Jehovah alone is the Almighty God — Jesus is a created being, not co-equal with the Father.",
+      "The Holy Spirit is not a person but an impersonal active force.",
+      "The Trinity doctrine is a pagan invention introduced into Christianity by apostates.",
+      "Jesus rose spiritually, not bodily — his physical body was dissolved or preserved elsewhere.",
+      "Only 144,000 go to heaven; faithful members inherit a restored earthly paradise."
+    ],
+    "key_texts": [
+      "New World Translation of the Holy Scriptures",
+      "The Watchtower (official magazine)",
+      "Aid to Bible Understanding"
+    ],
+    "christian_critique": "Jehovah's Witnesses represent a modern form of Arianism — the 4th-century heresy Athanasius defeated at Nicaea. Their New World Translation renders John 1:1 as 'the Word was a god' — a translation rejected by virtually every Greek scholar, including non-Christian ones, because it violates standard rules of Greek grammar. Thomas's confession in John 20:28 ('My Lord and my God') and Colossians 2:9 ('in him the whole fullness of deity dwells bodily') present an insurmountable obstacle to their Christology. The Watch Tower Society has made multiple failed end-times predictions (1914, 1925, 1975) — each subsequently reinterpreted — which by the biblical standard of Deuteronomy 18:21-22 disqualifies them as prophetic authority. Their Christ cannot save because a created being, however exalted, cannot bear infinite divine penalty — only the eternally divine Son can."
+  },
+  {
+    "id": "hinduism",
+    "name": "Hinduism",
+    "tradition": "Dharmic",
+    "founded": "c. 1500 BC (Vedic period)",
+    "adherents": "~1.2 billion",
+    "symbol_svg_key": "dharma-wheel",
+    "tagline": "Ultimate reality is one divine consciousness. The individual self is identical with Brahman.",
+    "overview": "Hinduism is the world's oldest major religion. At its philosophical core (Advaita Vedanta) stands the claim that ultimate reality is Brahman — a single, undifferentiated, impersonal divine consciousness — and that the individual self (Atman) is ultimately identical with Brahman. The apparent diversity of the world is maya (illusion). Liberation (moksha) is the recognition of this identity. Popular Hinduism also includes devotional theism, polytheism, and elaborate ritual traditions.",
+    "core_claims": [
+      "Brahman is the one ultimate reality — infinite, undifferentiated divine consciousness.",
+      "The individual self (Atman) is ultimately identical with Brahman.",
+      "The phenomenal world is maya — an illusion overlaid on true reality.",
+      "Karma and reincarnation govern the soul's journey across countless lifetimes.",
+      "Moksha — liberation from the cycle of rebirth — is the highest human goal."
+    ],
+    "key_texts": [
+      "The Upanishads",
+      "The Bhagavad Gita",
+      "Adi Shankaracharya, Vivekachudamani"
+    ],
+    "christian_critique": "Hinduism correctly identifies the inadequacy of purely materialist accounts of reality and affirms the primacy of consciousness. But an impersonal Brahman cannot love, cannot covenant, cannot act in history, and cannot forgive — which means Hinduism has a sophisticated metaphysics but no soteriology adequate to the problem of moral guilt. The karma system is works-righteousness taken to a cosmic extreme: there is no grace, no forgiveness, only the inexorable accumulation and discharge of karmic debt across infinite lifetimes. The doctrine of maya — that the world is illusion — undermines the significance of the Incarnation and Resurrection, which Christianity insists are real, datable, publicly witnessed acts of God in actual history. The self that Hinduism says must be dissolved into Brahman is the very self that Christianity says God created, loves, names, redeems, and glorifies."
   },
   {
     "id": "buddhism",
     "name": "Buddhism",
+    "tradition": "Dharmic",
+    "founded": "5th century BC, Siddhartha Gautama",
+    "adherents": "~500 million",
     "symbol_svg_key": "dharma-wheel",
-    "overview": "Buddhism originated in 5th-century BCE India through the enlightenment experience of Siddhartha Gautama, the historical Buddha. Its central insight is that suffering (dukkha) arises from craving and attachment, and that liberation (nirvana) is achieved through the Eightfold Path — right understanding, intention, speech, action, livelihood, effort, mindfulness, and concentration. Buddhism is non-theistic in most of its forms: it does not affirm a creator God, a permanent self, or an afterlife in the Western sense. It has flourished across Asia in diverse traditions — Theravada, Mahayana, and Vajrayana — and has gained significant intellectual prestige in the West.",
+    "tagline": "Suffering arises from craving. Liberation comes through extinguishing the self.",
+    "overview": "Buddhism originated in 5th-century BC India. It holds that all things are impermanent (anicca), marked by suffering (dukkha), and without a permanent self (anatta). Liberation (nirvana) is the cessation of craving and the dissolution of the illusion of selfhood. Buddhism does not affirm a creator God — reality operates through dependent origination. It encompasses major traditions including Theravada, Mahayana, and Vajrayana.",
     "core_claims": [
-      "All existence is characterized by impermanence (anicca), suffering (dukkha), and non-self (anatta).",
-      "Suffering arises from craving and attachment.",
-      "Liberation (nirvana) is achievable through the Eightfold Path.",
-      "There is no permanent self or soul — the sense of 'I' is a constructed illusion.",
-      "Reality is interdependent and empty of inherent existence (in Mahayana traditions)."
+      "All existence is characterized by impermanence, suffering, and the absence of a permanent self.",
+      "Suffering arises from craving and attachment to what is ultimately impermanent.",
+      "There is no creator God — the universe operates through dependent origination.",
+      "Liberation (nirvana) is achieved through the Noble Eightfold Path.",
+      "The self is an illusion — no permanent soul underlies conscious experience."
     ],
     "key_texts": [
-      "The Dhammapada",
-      "The Pali Canon (Tripitaka)",
+      "The Pali Canon (Tipitaka)",
       "Nagarjuna, Mulamadhyamakakarika",
-      "Thich Nhat Hanh, The Heart of the Buddha's Teaching (1998)"
+      "Thich Nhat Hanh, The Heart of the Buddha's Teaching"
     ],
-    "christian_critique": "Buddhism's moral seriousness, its diagnosis of human suffering, and its contemplative depth command respect. Christianity and Buddhism share concern for human suffering, the moral centrality of compassion, and the inadequacy of material satisfaction. But they diverge at the most fundamental level. Buddhism's anatman (non-self) doctrine holds that there is no permanent personal self — the illusion of self is the root of suffering. Christianity affirms that persons are created in the image of God (imago Dei) and are of infinite, irreducible worth — personhood is not the problem to be dissolved but the reality to be redeemed. Nirvana, particularly in Theravada, is understood as the cessation of craving rather than union with a personal God — it is closer to annihilation of the self than to resurrection and eternal fellowship. The Buddhist cosmos lacks a creator, and therefore lacks the framework for moral accountability, atoning love, and relational redemption that are central to the Christian gospel. Buddhist ethics, divorced from a personal God, can diagnose suffering and prescribe practice, but cannot ground the objective moral obligation that Christian ethics affirms."
+    "christian_critique": "Christianity and Buddhism share a diagnostic agreement: human existence as ordinarily lived is disordered. But they diverge on cause, cure, and goal. Buddhism locates the problem in desire; Christianity in sin — a moral rupture with a personal God that no meditative discipline can repair. Buddhism's cure is extinguishing craving; Christianity's is atonement. Buddhism's goal is dissolution of the self; Christianity's is the glorification and resurrection of the personal self in eternal communion with God. The anatta doctrine faces internal coherence problems: if the self is an illusion, it is unclear who practices the Eightfold Path or achieves liberation. Buddhism also has no account of moral guilt — only ignorance — which means it offers therapeutic wisdom but not forgiveness."
   },
   {
     "id": "secular-humanism",
     "name": "Secular Humanism",
+    "tradition": "Secular",
+    "founded": "Humanist Manifesto I, 1933",
+    "adherents": "Broad cultural influence",
     "symbol_svg_key": "human-figure",
-    "overview": "Secular humanism is a philosophical and ethical stance that affirms human dignity, rationality, and potential without reference to the supernatural. It draws from Enlightenment thought, scientific naturalism, and classical humanist traditions. Secular humanists hold that human beings, through reason and science, are capable of solving human problems and creating a flourishing society. It is institutionally represented by organizations such as the American Humanist Association and the Council for Secular Humanism, and its principles are articulated in various Humanist Manifestos.",
+    "tagline": "Human reason and compassion are sufficient. No God is needed for a good life.",
+    "overview": "Secular humanism affirms the dignity and worth of human beings without reference to the supernatural. It holds that human reason, ethics, and philosophical inquiry are sufficient guides to the good life. It champions human autonomy, scientific inquiry, and democratic values. It functions as the dominant implicit worldview of Western cultural institutions — universities, media, government — often as an unexamined default rather than a consciously chosen philosophy.",
     "core_claims": [
-      "Human beings are the measure of all things; ethics is grounded in human flourishing.",
-      "Reason and science are the primary tools for understanding reality and solving problems.",
-      "There is no supernatural realm, divine revelation, or transcendent moral order.",
-      "Human beings are autonomous moral agents capable of ethical life without religion.",
-      "Progress is achievable through education, democracy, and the expansion of human rights."
+      "Human beings are the measure of value and the source of moral purpose.",
+      "Reason and science are the appropriate and sufficient tools for understanding reality.",
+      "Ethics are derived from human experience and flourishing — not divine command.",
+      "Life has meaning and purpose without reference to God or an afterlife.",
+      "Human problems are best addressed through rational, cooperative, democratic effort."
     ],
     "key_texts": [
-      "Humanist Manifesto I (1933), II (1973), III (2003)",
-      "Paul Kurtz, Forbidden Fruit: The Ethics of Humanism (1988)",
-      "Yuval Noah Harari, Homo Deus (2015)"
+      "Humanist Manifesto III (2003)",
+      "Paul Kurtz, Forbidden Fruit: The Ethics of Secularism",
+      "Bertrand Russell, Why I Am Not a Christian"
     ],
-    "christian_critique": "Secular humanism is, in many ways, a parasite on Christian civilization — it inherits the doctrines of human dignity, universal rights, and moral progress without their theological foundation. The concept of universal human rights is historically rooted in the imago Dei — the conviction that every human being bears the image of God and is therefore of irreducible worth. On secular grounds, why should the interests of one species of primate command absolute moral respect? The 20th century provides sobering data on what secular utopianism produces when severed from transcendent accountability: regimes that pursued human flourishing by purely rational means and produced unprecedented atrocity. Christianity does not oppose reason or human dignity — it claims to provide their only coherent foundation. The secular humanist borrows moral capital from a tradition she has rejected and spends it without acknowledging the source."
+    "christian_critique": "Secular humanism is the worldview most guilty of philosophical parasitism. It inherited the moral vocabulary of Christian civilization — human dignity, universal rights, the intrinsic worth of persons — without the metaphysical foundations that gave those concepts force. Nietzsche recognized this and called it 'the shadow of God.' The central question secular humanism cannot answer is: on what basis is a human being intrinsically valuable if there is no God? Evolution produces organisms, not persons with inalienable worth. The 20th century demonstrated what consistently secular regimes produce when they abandon the transcendent grounding of human dignity: the most systematic atrocities in recorded history were committed by states that explicitly rejected the Christian framework."
+  },
+  {
+    "id": "judaism",
+    "name": "Judaism",
+    "tradition": "Abrahamic",
+    "founded": "c. 2000 BC (Abrahamic covenant)",
+    "adherents": "~15 million",
+    "symbol_svg_key": "crescent",
+    "tagline": "The covenant people of God await a Messiah yet to come. Jesus was not him.",
+    "overview": "Judaism is the oldest Abrahamic faith and the root from which Christianity emerged. It affirms the one God of Abraham, Isaac, and Jacob who revealed himself through Torah and the prophets. Rabbinic Judaism centers on Torah study, prayer, Sabbath observance, and synagogue community. It rejects New Testament claims about Jesus, holding that he did not fulfill messianic expectations and that the Torah remains the fullness of divine revelation.",
+    "core_claims": [
+      "The God of Israel — one, indivisible, incorporeal — revealed himself through Torah and the prophets.",
+      "The Jewish people are God's covenant people, chosen to be a light to the nations.",
+      "Jesus of Nazareth was not the Messiah — the messianic age he was expected to inaugurate did not arrive.",
+      "The Torah is the complete and binding revelation of God's will for human life.",
+      "The Messiah will be a human king who rebuilds the Temple, gathers the exiles, and brings world peace."
+    ],
+    "key_texts": [
+      "The Torah (Genesis–Deuteronomy)",
+      "The Talmud (Babylonian and Jerusalem)",
+      "Maimonides, Mishneh Torah"
+    ],
+    "christian_critique": "Christianity's relationship with Judaism is unique — Christianity does not claim to replace Judaism with a foreign religion but to fulfill it. The Christian argument is that Jesus is the Messiah the Hebrew prophets foretold: born in Bethlehem (Micah 5:2), entering Jerusalem on a donkey (Zechariah 9:9), betrayed for 30 pieces of silver (Zechariah 11:12), his hands and feet pierced (Psalm 22:16), bearing the iniquity of 'us all' (Isaiah 53). The Dead Sea Scrolls — predating Christ by 200-300 years — contain Isaiah 53 substantially identical to the text used today, eliminating any claim of post-Christian interpolation. The destruction of the Temple in 70 AD, which ended the Levitical sacrificial system, makes complete sense within Christianity — the ultimate sacrifice had already been offered. The most honest engagement with Judaism acknowledges its deep truth — the holiness of God, the reality of covenant, the certainty of judgment — while presenting Jesus as the one in whom every promise finds its yes and amen (2 Corinthians 1:20)."
   }
 ]
