@@ -73,6 +73,28 @@ export interface Debate {
   sources: string[]
 }
 
+// ── Field Guide ───────────────────────────────────────────
+
+export type FieldGuideTag =
+  | 'scripture'
+  | 'jesus'
+  | 'trinity'
+  | 'salvation'
+  | 'muhammad'
+  | 'quran'
+  | 'history'
+  | 'logic'
+
+export interface FieldGuideEntry {
+  id: string
+  challenge: string
+  one_liner: string
+  points: string[]
+  anchor_verse?: string
+  anchor_verse_ref?: string
+  tag: FieldGuideTag
+}
+
 // ── Thinkers (The Collection) ────────────────────────────
 
 export interface Thinker {
