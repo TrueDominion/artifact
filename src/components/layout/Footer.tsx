@@ -14,6 +14,7 @@ const footerLinks = [
   { label: 'THE STUDIO', path: '/the-studio' },
   { label: 'FAULTLINES', path: '/faultlines' },
   { label: 'THE COLLECTION', path: '/the-collection' },
+  { label: 'FIELD GUIDE', path: '/field-guide' },
 ]
 
 export default function Footer() {
