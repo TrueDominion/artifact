@@ -14,6 +14,7 @@ import TheGallery from '@/pages/TheGallery'
 import TheStudio from '@/pages/TheStudio'
 import Faultlines from '@/pages/Faultlines'
 import TheCollection from '@/pages/TheCollection'
+import FieldGuide from '@/pages/FieldGuide'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="the-studio" element={<TheStudio />} />
           <Route path="faultlines" element={<Faultlines />} />
           <Route path="the-collection" element={<TheCollection />} />
+          <Route path="field-guide" element={<FieldGuide />} />
           {/* Catch-all: redirect unknown routes to home */}
           <Route path="*" element={<Home />} />
         </Route>
