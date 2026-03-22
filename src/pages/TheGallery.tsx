@@ -1,11 +1,8 @@
 /**
  * src/pages/TheGallery.tsx
- * THE GALLERY — Beliefs in Context.
- * Grid of exhibit cards. Click expands in-place with 3-tab panel.
- * OVERVIEW tab features animated adherent counter triggered on panel open.
  */
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, Fragment } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SectionHeader from '@/components/ui/SectionHeader'
 import { WorldviewSymbol } from '@/components/ui/ExhibitLabel'
@@ -306,15 +303,21 @@ export default function TheGallery() {
     <div className="min-h-screen">
       <SectionHeader title="THE GALLERY" subtitle="Beliefs in Context." label="Section III" />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">
-     <p className="font-sans text-sm text-graphite-light leading-body mb-12 max-w-xl">
-  Eight major belief systems, each explained fairly on its own terms — then examined honestly
-  from a Christian perspective. Click any panel to open it and explore what that worldview
-  actually teaches, what it gets right, and where it falls short.
-</p>
+        <p className="font-sans text-sm text-graphite-light leading-body mb-12 max-w-xl">
+          Eight major belief systems, each explained fairly on its own terms — then examined honestly
+          from a Christian perspective. Click any panel to open it and explore what that worldview
+          actually teaches, what it gets right, and where it falls short.
+        </p>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-graphite-border">
           {worldviews.map((wv, index) => (
-            <>
-              <div key={wv.id} className="bg-white">
+            /*
+              FIX: key was on the inner <div>, not on the fragment wrapper.
+              Shorthand <> fragments cannot take a key prop — must use Fragment explicitly.
+              AnimatePresence relies on stable keys to animate exit correctly.
+            */
+            <Fragment key={wv.id}>
+              <div className="bg-white">
                 <ExhibitCard wv={wv} index={index} isOpen={openId === wv.id} onToggle={() => toggle(wv.id)} />
               </div>
               <AnimatePresence>
@@ -322,7 +325,7 @@ export default function TheGallery() {
                   <ExhibitPanel key={`panel-${wv.id}`} wv={wv} onClose={() => setOpenId(null)} />
                 )}
               </AnimatePresence>
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
