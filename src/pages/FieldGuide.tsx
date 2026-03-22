@@ -180,8 +180,9 @@ export default function FieldGuide() {
   const [activeTag, setActiveTag] = useState<FieldGuideTag | 'all'>('all')
 
   const filtered = useMemo(() => {
-    const q = search.trim().toLowerCase()
-    return entries.filter(e => {
+  const q = search.trim().toLowerCase()
+  return entries
+    .filter(e => {
       const matchesTag = activeTag === 'all' || e.tag === activeTag
       const matchesSearch =
         !q ||
@@ -190,7 +191,8 @@ export default function FieldGuide() {
         e.points.some(p => p.toLowerCase().includes(q))
       return matchesTag && matchesSearch
     })
-  }, [search, activeTag])
+    .sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3))
+}, [search, activeTag])
 
   return (
     <div className="min-h-screen">
