@@ -56,6 +56,15 @@ export default function TheCollection() {
         label="Section VI"
       />
 
+      <div className="max-w-2xl mx-auto px-6 lg:px-12 pb-12 text-center">
+  <p className="font-sans text-sm text-graphite-light leading-relaxed">
+    These are some of the brightest minds who made the case for Christian faith —
+    thinkers who wrestled seriously with the hardest questions and came out more
+    convinced, not less. The last three specifically engaged with Islam. Their work
+    is worth knowing before you need it.
+  </p>
+</div>
+
       {/* Featured profile */}
       {featured && (
         <motion.section
