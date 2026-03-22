@@ -11,7 +11,6 @@ import Home from '@/pages/Home'
 import Bedrock from '@/pages/Bedrock'
 import TheDig from '@/pages/TheDig'
 import TheGallery from '@/pages/TheGallery'
-import TheStudio from '@/pages/TheStudio'
 import Faultlines from '@/pages/Faultlines'
 import TheCollection from '@/pages/TheCollection'
 import FieldGuide from '@/pages/FieldGuide'
@@ -25,11 +24,9 @@ export default function App() {
           <Route path="bedrock" element={<Bedrock />} />
           <Route path="the-dig" element={<TheDig />} />
           <Route path="the-gallery" element={<TheGallery />} />
-          <Route path="the-studio" element={<TheStudio />} />
           <Route path="faultlines" element={<Faultlines />} />
           <Route path="the-collection" element={<TheCollection />} />
           <Route path="field-guide" element={<FieldGuide />} />
-          {/* Catch-all: redirect unknown routes to home */}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
