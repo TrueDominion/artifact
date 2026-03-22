@@ -66,7 +66,13 @@ export default function TheCollection() {
         >
           <p className="label-museum mb-8 text-graphite-soft">FEATURED PROFILE</p>
           <div className="border border-graphite-border grid grid-cols-1 lg:grid-cols-[320px_1fr]">
-
+<div className="max-w-2xl mx-auto px-6 lg:px-12 pb-12 text-center">
+  <p className="font-sans text-sm text-graphite-light leading-relaxed">
+    These are some of the brightest minds who have made the case for Christian faith —
+    thinkers who wrestled seriously with the hardest questions and came out more convinced,
+    not less. Their ideas are still worth knowing.
+  </p>
+</div>
             {/* Portrait */}
             <div className="overflow-hidden border-b lg:border-b-0 lg:border-r border-graphite-border">
               <FeaturedPortrait thinker={featured} />
