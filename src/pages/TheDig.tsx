@@ -40,7 +40,7 @@ export default function TheDig() {
               className="label-museum text-graphite-border text-center mb-3"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
             >
-              DEPTH
+              SURFACE
             </p>
 
             <div className="flex flex-col flex-1 border border-graphite-border overflow-hidden">
@@ -83,7 +83,7 @@ export default function TheDig() {
               className="label-museum text-graphite-border text-center mt-3"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
             >
-              SURFACE
+              DEPTH
             </p>
           </aside>
 
