@@ -259,17 +259,16 @@ export default function Faultlines() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
         <div className="flex flex-col sm:flex-row sm:items-start gap-8">
           <p className="font-sans text-sm text-graphite-light leading-body max-w-lg">
+            <p className="font-sans text-sm text-graphite-light leading-body max-w-lg">
   Eight of the hardest challenges Islamic theology raises against Christianity —
-  each one taken seriously and answered with honesty, history, and evidence.
-  These are the conversations that actually happen. Here's how to have them well.
+  each one taken seriously and answered honestly. The ones marked
+  <span className="inline-flex items-end gap-0.5 mx-1.5">
+    {[1,2,3,4,5].map(i => (
+      <span key={i} className="w-1 rounded-sm bg-crimson" style={{ height: `${6 + i * 2}px`, display: 'inline-block' }} />
+    ))}
+  </span>
+  are the ones you are most likely to encounter first.
 </p>
-```
-
-Also find the severity legend label text and update:
-```
-'SERIOUS'  →  'SERIOUS'   (keep)
-'CRITICAL'  →  'CRITICAL'  (keep)
-'FATAL'  →  'FATAL'        (keep)
           <div className="flex items-center gap-5 flex-shrink-0 sm:ml-auto border border-graphite-border px-5 py-3">
             <span className="label-museum text-graphite-soft">SEVERITY</span>
             <div className="flex items-center gap-4">
