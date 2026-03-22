@@ -1,8 +1,6 @@
 /**
  * tailwind.config.ts
  * Tailwind v3 configuration for artiFACT.
- * Extends with Playfair Display (serif) and Inter (sans) font families,
- * custom crimson accent, and graphite palette.
  */
 import type { Config } from 'tailwindcss'
 
@@ -26,6 +24,7 @@ const config: Config = {
         graphite: {
           DEFAULT: '#2D2D2D',
           light: '#4A4A4A',
+          soft: '#9A9A9A',   // was missing — used on labels, sublabels, muted UI text
           muted: '#8A8A8A',
           border: '#E8E8E8',
         },
@@ -40,10 +39,13 @@ const config: Config = {
         wider: '0.15em',
         wide: '0.08em',
         brand: '0.04em',
+        heading: '0.04em',   // was missing — used on h1-h3 across all pages
+        museum: '0.2em',     // was missing — used on all caps exhibit labels
       },
       lineHeight: {
         reading: '1.75',
         relaxed: '1.7',
+        body: '1.75',        // was missing — used on prose paragraphs
       },
       transitionDuration: {
         '400': '400ms',
@@ -51,7 +53,7 @@ const config: Config = {
         '800': '800ms',
       },
       boxShadow: {
-        'nav': '0 1px 12px rgba(0,0,0,0.06)',
+        'navbar': '0 1px 12px rgba(0,0,0,0.06)',  // renamed from 'nav' to match Navbar.tsx usage
         'card': '0 2px 20px rgba(0,0,0,0.06)',
         'card-hover': '0 8px 40px rgba(0,0,0,0.10)',
       },
