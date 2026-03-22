@@ -1,15 +1,5 @@
 /**
  * src/components/ui/MuseumPlaque.tsx
- * Redesigned Bedrock entry component.
- *
- * Layout:
- *   — Header bar: confession ref (left) + entry number (right)
- *   — Scripture block: reference bold, text italic, visually anchored
- *   — Summary: one-sentence thesis, larger weight
- *   — Expandable body: two named panels side by side on desktop
- *       Left  — THE DOCTRINE   (white bg)
- *       Right — ISLAMIC CONTRAST (warm linen bg, crimson top rule)
- *   — Expand/collapse toggle
  */
 
 import { useState } from 'react'
@@ -46,7 +36,6 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
 
           {/* Scripture block */}
           <div className="flex gap-4 mb-7">
-            {/* Crimson left rule */}
             <div className="w-0.5 flex-shrink-0 bg-crimson rounded-full" />
             <div>
               <p className="font-sans text-xs font-medium tracking-museum text-crimson mb-1.5">
@@ -63,7 +52,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
             {entry.title}
           </h2>
 
-          {/* Summary — thesis statement */}
+          {/* Summary */}
           <p className="font-sans text-sm font-medium text-graphite leading-relaxed max-w-2xl">
             {entry.summary}
           </p>
@@ -76,7 +65,8 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
             aria-label={expanded ? 'Collapse doctrine' : 'Expand doctrine'}
           >
             <span className="label-museum text-graphite-soft group-hover:text-graphite transition-colors duration-300">
-              {expanded ? 'COLLAPSE' : 'READ DOCTRINE'}
+              {/* FIX: renamed from 'READ DOCTRINE' to match the page legend */}
+              {expanded ? 'COLLAPSE' : 'READ THE FULL EXPLANATION'}
             </span>
             <motion.div
               animate={{ rotate: expanded ? 180 : 0 }}
@@ -101,7 +91,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
             >
               <div className="border-t border-graphite-border grid grid-cols-1 lg:grid-cols-2">
 
-                {/* Left — The Doctrine */}
+                {/* Left — What We Believe (was "THE DOCTRINE") */}
                 <motion.div
                   className="px-8 py-8 lg:px-10 lg:py-10 lg:border-r border-graphite-border"
                   initial={{ opacity: 0, y: 12 }}
@@ -109,14 +99,15 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                   transition={{ duration: 0.35, delay: 0.1, ease: 'easeOut' }}
                 >
                   <div className="flex items-center gap-2 mb-5">
-                    <p className="label-museum text-graphite-soft">THE DOCTRINE</p>
+                    {/* FIX: renamed from "THE DOCTRINE" to match Bedrock page legend */}
+                    <p className="label-museum text-graphite-soft">WHAT WE BELIEVE</p>
                   </div>
                   <p className="font-sans text-sm text-graphite leading-relaxed">
                     {entry.doctrine}
                   </p>
                 </motion.div>
 
-                {/* Right — Islamic Contrast */}
+                {/* Right — How Islam Differs (was "ISLAMIC CONTRAST") */}
                 <motion.div
                   className="px-8 py-8 lg:px-10 lg:py-10 border-t lg:border-t-0 border-graphite-border"
                   style={{ backgroundColor: '#FAF8F5' }}
@@ -124,10 +115,10 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, delay: 0.18, ease: 'easeOut' }}
                 >
-                  {/* Crimson top accent rule */}
                   <div className="w-full h-px bg-crimson mb-5 opacity-60" />
                   <div className="flex items-center gap-2 mb-5">
-                    <p className="label-museum text-graphite-soft">ISLAMIC CONTRAST</p>
+                    {/* FIX: renamed from "ISLAMIC CONTRAST" to match Bedrock page legend */}
+                    <p className="label-museum text-graphite-soft">HOW ISLAM DIFFERS</p>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
                       <path d="M1,8 L5,2 L9,8" stroke="#C41E3A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
                       <line x1="2.5" y1="6" x2="7.5" y2="6" stroke="#C41E3A" strokeWidth="0.7" strokeLinecap="round"/>
@@ -137,6 +128,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                     {entry.islamic_contrast}
                   </p>
                 </motion.div>
+
               </div>
             </motion.div>
           )}
