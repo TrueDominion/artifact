@@ -79,7 +79,7 @@ interface ExhibitPanelProps {
 }
 
 function ExhibitPanel({ wv, onClose }: ExhibitPanelProps) {
-  const [tab, setTab] = useState<Tab>('overview')
+  const [tab, setTab] = useState<Tab>('critique')
   const [counterTriggered, setCounterTriggered] = useState(false)
 
   useEffect(() => {
@@ -311,7 +311,7 @@ export default function TheGallery() {
   from a Christian perspective. Click any panel to open it and explore what that worldview
   actually teaches, what it gets right, and where it falls short.
 </p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-graphite-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-graphite-border">
           {worldviews.map((wv, index) => (
             <>
               <div key={wv.id} className="bg-white">
