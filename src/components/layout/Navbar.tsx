@@ -20,7 +20,6 @@ const navItems: NavItem[] = [
   { label: 'BEDROCK', path: '/bedrock' },
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
-  { label: 'THE STUDIO', path: '/the-studio' },
   { label: 'FAULTLINES', path: '/faultlines' },
   { label: 'THE COLLECTION', path: '/the-collection' },
   { label: 'FIELD GUIDE', path: '/field-guide' },
@@ -37,12 +36,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMenuOpen(false)
   }, [location.pathname])
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -59,7 +56,6 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
 
-          {/* Wordmark */}
           <Link
             to="/"
             className="flex-shrink-0 select-none"
@@ -71,7 +67,6 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {/* Desktop nav items */}
           <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
             {navItems.map((item) => (
               <li key={item.path} className="relative flex flex-col items-center">
@@ -100,7 +95,6 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Mobile hamburger */}
           <button
             className="lg:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
             onClick={() => setMenuOpen(true)}
@@ -113,7 +107,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile full-screen overlay */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -123,7 +116,6 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
           >
-            {/* Close button */}
             <button
               className="absolute top-5 right-6 text-graphite-light hover:text-ink transition-colors duration-300"
               onClick={() => setMenuOpen(false)}
@@ -135,7 +127,6 @@ export default function Navbar() {
               </svg>
             </button>
 
-            {/* Wordmark in overlay */}
             <Link to="/" className="mb-12 select-none" onClick={() => setMenuOpen(false)}>
               <span className="font-serif text-2xl tracking-heading text-ink">
                 <span style={{ fontWeight: 400 }}>arti</span>
@@ -143,7 +134,6 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Nav items */}
             <ul className="flex flex-col items-center gap-7">
               {navItems.map((item, i) => (
                 <motion.li
