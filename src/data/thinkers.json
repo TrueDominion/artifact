@@ -5,14 +5,14 @@
     "dates": "354–430 AD",
     "portrait_svg_key": "augustine",
     "tradition": "Patristic / Western Christianity",
-    "summary": "The most influential theologian of the Western church, whose synthesis of Platonic philosophy and Christian revelation shaped Catholic and Protestant thought alike. His Confessions remain the greatest spiritual autobiography in any language.",
+    "summary": "The most influential theologian of the Western church. His journey from pagan philosophy to Christian faith — documented in his Confessions — remains one of the most honest and searching accounts of a human being looking for truth.",
     "key_works": [
       "Confessions (397–400 AD)",
       "The City of God (413–426 AD)",
       "On the Trinity (399–419 AD)",
       "On Free Choice of the Will (388–395 AD)"
     ],
-    "contribution": "Augustine forged the philosophical vocabulary of Western Christianity: original sin, divine grace, predestination, the two cities (City of God vs. City of Man), and the restlessness of the human heart until it rests in God. His encounter with Manichaean dualism sharpened his theodicy; his engagement with Neoplatonism gave him categories for understanding the immaterial God; his reading of Paul transformed his soteriology. His dictum 'Our heart is restless until it rests in Thee' encapsulates the apologetic insight that human longing is itself a pointer toward the divine. No understanding of Western intellectual history — theological or secular — is possible without Augustine."
+    "contribution": "Augustine gave the Western church its foundational vocabulary — original sin, divine grace, the two cities (one built on love of God, one on love of self), and the restless human heart that finds no peace until it rests in God. His famous line — 'Our heart is restless until it rests in Thee' — captures the apologetic insight that human longing itself points toward something beyond what this world can provide. He wrestled seriously with Manichaean dualism (the idea that evil is a equal power to good), Neoplatonic philosophy, and the claims of Christianity — and emerged convinced that only Christianity answered the deepest questions. No serious understanding of Western thought, Christian or secular, is possible without him."
   },
   {
     "id": "aquinas",
@@ -20,14 +20,13 @@
     "dates": "1225–1274 AD",
     "portrait_svg_key": "aquinas",
     "tradition": "Scholastic / Roman Catholic",
-    "summary": "The Angelic Doctor, whose synthesis of Aristotelian philosophy and Christian theology in the Summa Theologica remains the intellectual summit of medieval thought and a living tradition in Catholic philosophy.",
+    "summary": "Medieval Europe's greatest thinker. Aquinas brought together Aristotle's philosophy and Christian theology in a way that showed faith and reason are allies, not enemies — a synthesis that still influences Catholic philosophy today.",
     "key_works": [
       "Summa Theologica (1265–1273 AD)",
       "Summa Contra Gentiles (1259–1265 AD)",
-      "On Being and Essence (1252–1256 AD)",
-      "Commentary on Aristotle's Metaphysics"
+      "On Being and Essence (1252–1256 AD)"
     ],
-    "contribution": "Aquinas's Five Ways — arguments for God's existence from motion, causation, contingency, gradation, and teleology — remain touchstones of natural theology. His doctrine of analogy addressed how human language can meaningfully speak of God without either equivocation or univocation. His synthesis of faith and reason — 'grace does not destroy nature but perfects it' — established that theology and philosophy are allies, not adversaries. Contemporary Thomism, represented by thinkers such as Edward Feser and Eleonore Stump, demonstrates that Aquinas's metaphysical framework is not antiquated but philosophically rigorous in ways that analytic philosophy is only beginning to appreciate."
+    "contribution": "Aquinas's Five Ways — five distinct arguments for the existence of God drawn from motion, cause, contingency, gradation, and purpose in nature — remain some of the most discussed arguments in philosophy. His core insight was that grace does not destroy nature but perfects it — meaning that human reason, used honestly, points toward God rather than away from him. His work on how human language can speak meaningfully about God (without either reducing God to human categories or making God unknowable) is especially relevant in conversations with Muslims, who share a deep concern for God's transcendence. Contemporary philosophers like Edward Feser have shown that Aquinas's arguments are more rigorous than most modern critics realise."
   },
   {
     "id": "pascal",
@@ -35,13 +34,12 @@
     "dates": "1623–1662 AD",
     "portrait_svg_key": "pascal",
     "tradition": "French Catholic / Jansenist",
-    "summary": "Mathematician, physicist, inventor, and Christian apologist whose Pensées is the most penetrating psychological and philosophical defense of Christianity ever written — a cathedral built from fragments.",
+    "summary": "Mathematician, physicist, and one of the most penetrating Christian thinkers who ever lived. His Pensées — a collection of fragments written toward a defence of Christianity he never finished — remains one of the most searching explorations of why human beings believe what they believe.",
     "key_works": [
       "Pensées (posthumous, 1670)",
-      "Provincial Letters (1656–1657)",
-      "Treatise on the Arithmetical Triangle (1654)"
+      "Provincial Letters (1656–1657)"
     ],
-    "contribution": "Pascal's apologetic method is experiential and existential before it is argumentative. He begins not with proofs but with the human condition: the grandeur and wretchedness of humanity, the misery of diversion, the infinite abyss in every human heart that only God can fill. His famous Wager is often misunderstood as a cynical bet — it is better read as a thought experiment about the rationality of commitment given infinite stakes and genuine uncertainty. Pascal was the first to articulate the hiddenness of God as a theological datum rather than an objection: 'God is hidden, and any religion that does not say that God is hidden is not true.' He anticipated modern existentialism in his diagnosis of human self-deception and the flight from meaning."
+    "contribution": "Pascal's approach to apologetics was psychological before it was philosophical. He started not with arguments but with the human condition: the fact that we are simultaneously capable of extraordinary greatness and profound wretchedness, that we fill our lives with distraction to avoid sitting quietly with ourselves, and that there is a kind of infinite longing in every person that nothing in this world satisfies. His famous Wager is often misunderstood as a cynical calculation — it is better read as a thought experiment about what it means to be rational when the stakes are infinite and the answer is genuinely uncertain. Pascal anticipated modern existentialism by centuries in his diagnosis of human self-deception."
   },
   {
     "id": "chesterton",
@@ -49,14 +47,14 @@
     "dates": "1874–1936 AD",
     "portrait_svg_key": "chesterton",
     "tradition": "Roman Catholic / English Literature",
-    "summary": "Journalist, novelist, poet, and polemicist whose Orthodoxy is the most joyful and paradox-laden defense of Christian faith in the English language — a man who arrived at Rome by following reason further than the skeptics dared.",
+    "summary": "Journalist, novelist, and debater whose Orthodoxy remains the most joyful defence of Christian faith in the English language. Chesterton had the rare gift of making ancient truth feel like a discovery rather than an obligation.",
     "key_works": [
       "Orthodoxy (1908)",
       "Heretics (1905)",
       "The Everlasting Man (1925)",
       "The Father Brown Stories (1910–1936)"
     ],
-    "contribution": "Chesterton's contribution to apologetics is tonal and methodological as much as argumentative: he demonstrated that Christianity is not the refuge of those who have stopped thinking but of those who have thought long enough to find that reason alone is insufficient. His paradox-rich style — 'The Christian ideal has not been tried and found wanting; it has been found difficult and left untried' — disarmed the comfortable skepticism of Edwardian England. The Everlasting Man, which converted C.S. Lewis, argued that the history of religion and the history of Christ are not parallel phenomena but ruptures: Christ is not the best of many wise teachers but an utterly singular intrusion into human history. Chesterton revived the apologetic power of joy: orthodoxy was not a cage but the dance floor of the universe."
+    "contribution": "Chesterton demonstrated that Christianity is not the refuge of people who have stopped thinking — it is what you arrive at when you think long enough and honestly enough. His paradox-driven style — 'The Christian ideal has not been tried and found wanting; it has been found difficult and left untried' — cut through the comfortable skepticism of his era. The Everlasting Man, which directly contributed to C.S. Lewis's conversion, argued that Jesus is not simply the best of a long line of wise teachers — he is a singular eruption into human history that cannot be explained by any of the usual categories. Chesterton recovered the idea that orthodoxy is not a cage but a foundation — the thing that makes everything else possible."
   },
   {
     "id": "lewis",
@@ -64,7 +62,7 @@
     "dates": "1898–1963 AD",
     "portrait_svg_key": "lewis",
     "tradition": "Anglican / Oxford Christianity",
-    "summary": "Scholar, novelist, and apologist whose conversion from atheism to Christianity produced the 20th century's most beloved works of Christian imagination and its most accessible defenses of the rational case for faith.",
+    "summary": "Former atheist, Oxford literary scholar, and the 20th century's most widely read Christian apologist. His conversion from committed atheism produced some of the most beloved works of Christian imagination ever written.",
     "key_works": [
       "Mere Christianity (1952)",
       "The Problem of Pain (1940)",
@@ -72,7 +70,7 @@
       "The Screwtape Letters (1942)",
       "Till We Have Faces (1956)"
     ],
-    "contribution": "Lewis's apologetic career began with his own defeat: a thoroughgoing atheist and literary scholar at Oxford, he was argued into theism by his colleague Hugo Dyson and his friend J.R.R. Tolkien. His Trilemma — that Jesus was either Lord, Liar, or Lunatic, but not merely a 'good moral teacher' — remains the most compact and devastating response to the patronizing reduction of Christ. His argument from desire (Sehnsucht) — that the longing for 'something' that nothing earthly satisfies points toward a transcendent object — is one of the most psychologically acute arguments for God. In fiction, his Narnia chronicles and Space Trilogy accomplished what argument cannot: they restored the imaginative plausibility of the Christian world. He remains the entry point for millions into serious engagement with the case for Christianity."
+    "contribution": "Lewis was argued into theism by his own intellectual honesty — he famously called himself the most reluctant convert in all of England. His Trilemma — that Jesus was either Lord, Liar, or Lunatic, but not simply a good moral teacher — remains the most compact and devastating response to the patronising reduction of Christ to an inspiring figure. His argument from desire — that the longing for something no earthly experience fully satisfies points toward a reality this world cannot provide — is one of the most psychologically honest arguments for God ever made. In fiction, the Narnia chronicles and the Space Trilogy did something argument cannot: they restored the imaginative plausibility of a world with God in it."
   },
   {
     "id": "plantinga",
@@ -80,7 +78,7 @@
     "dates": "1932–present",
     "portrait_svg_key": "plantinga",
     "tradition": "Reformed / Analytic Philosophy",
-    "summary": "The most formidable analytic philosopher of religion of the 20th century, who single-handedly rehabilitated theism as a respectable intellectual position within academic philosophy and produced decisive responses to the logical problem of evil and the challenge of religious epistemology.",
+    "summary": "The most respected Christian philosopher of the 20th century. Plantinga single-handedly made theism academically respectable again in professional philosophy — a field that had largely dismissed it.",
     "key_works": [
       "God and Other Minds (1967)",
       "The Nature of Necessity (1974)",
@@ -88,6 +86,48 @@
       "Warranted Christian Belief (2000)",
       "Where the Conflict Really Lies (2011)"
     ],
-    "contribution": "Plantinga's free will defense demolished the logical problem of evil as stated by J.L. Mackie — a philosophical achievement acknowledged even by his opponents. His reformed epistemology — the claim that belief in God can be 'properly basic,' warranted without inference from other propositions — dismantled the evidentialist challenge to religious belief. His Evolutionary Argument Against Naturalism turned the tables on scientific naturalists: if our cognitive faculties evolved for survival rather than truth, we have no reason to trust their deliverances about metaphysical matters, including naturalism itself. Time magazine recognized him as 'America's leading orthodox Protestant philosopher of God.' His career demonstrates that rigorous analytic philosophy and robust orthodox theology are not merely compatible but mutually enriching."
+    "contribution": "Plantinga's free will defence answered the logical problem of evil — the claim that God and evil cannot both exist — so decisively that even his opponents conceded the point. His reformed epistemology argued that belief in God can be perfectly rational without first being proved from other premises — just as we don't need to prove the external world exists before trusting our senses. His Evolutionary Argument Against Naturalism flipped the script on scientific naturalists: if our brains evolved for survival rather than truth, we have no reason to trust the reasoning that led us to naturalism in the first place. Time magazine named him America's leading orthodox Protestant philosopher. His career is proof that rigorous academic philosophy and robust orthodox Christianity are not only compatible but can strengthen each other."
+  },
+  {
+    "id": "qureshi",
+    "name": "Nabeel Qureshi",
+    "dates": "1983–2017",
+    "portrait_svg_key": "qureshi",
+    "tradition": "Evangelical Christianity / Former Muslim",
+    "summary": "A former devout Muslim who spent years investigating the historical claims of Christianity and Islam before becoming a Christian. His account of that journey — Seeking Allah, Finding Jesus — is one of the most important books for anyone engaging with Islam.",
+    "key_works": [
+      "Seeking Allah, Finding Jesus (2014)",
+      "Answering Jihad (2016)",
+      "No God But One: Allah or Jesus? (2016)"
+    ],
+    "contribution": "Nabeel Qureshi grew up in a loving, devout Muslim family and was trained from childhood to defend Islam. His journey to Christianity was driven not by emotion but by honest investigation — he examined the historical evidence for the Resurrection, the reliability of the New Testament, and the historical claims of Islam. What makes his work uniquely valuable is that he knew Islam from the inside — the prayers, the culture, the logic, the emotional weight of what it means to consider leaving it. His books explain not just the intellectual arguments but the human cost of following truth wherever it leads. For anyone preparing for serious conversations with Muslims, Seeking Allah, Finding Jesus is the single most important book to read first."
+  },
+  {
+    "id": "zwemer",
+    "name": "Samuel Zwemer",
+    "dates": "1867–1952",
+    "portrait_svg_key": "zwemer",
+    "tradition": "Reformed / Presbyterian",
+    "summary": "The most significant Christian missionary to the Muslim world in modern history. Called the Apostle to Islam, Zwemer spent decades in the Arabian Peninsula and Egypt engaging seriously and respectfully with Muslim scholars and ordinary people.",
+    "key_works": [
+      "Islam: A Challenge to Faith (1907)",
+      "The Moslem Doctrine of God (1905)",
+      "The Cross Above the Crescent (1941)"
+    ],
+    "contribution": "Zwemer's significance lies in his combination of deep respect for Muslims as people with unflinching clarity about the theological differences between Islam and Christianity. He learned Arabic, studied Islamic theology seriously, and engaged Muslim scholars on their own terms — which meant his critiques were informed and precise rather than superficial. His analysis of the Islamic doctrine of God — particularly the problem of divine will versus divine nature — remains relevant today. He understood that genuine love for Muslim people requires honesty about the Gospel, not a softening of its claims. His life is a model for what serious, respectful, truthful engagement with Islam looks like in practice."
+  },
+  {
+    "id": "lull",
+    "name": "Raymond Lull",
+    "dates": "1232–1316",
+    "portrait_svg_key": "lull",
+    "tradition": "Roman Catholic / Franciscan",
+    "summary": "A medieval Spanish scholar who learned Arabic, studied the Quran, and spent decades engaging Muslim scholars in direct dialogue. He may be the first Christian in history to develop a systematic method for debating Islam on its own terms.",
+    "key_works": [
+      "Book of the Gentile and the Three Wise Men (c. 1274)",
+      "Ars Magna (1305)",
+      "Blanquerna (c. 1283)"
+    ],
+    "contribution": "Raymond Lull lived at a time when the standard Christian response to Islam was the Crusade. He chose a different path — learning Arabic fluently, studying Islamic philosophy and theology, and developing a method of rational dialogue that he believed could persuade Muslim thinkers. He made three missions to North Africa to debate Muslim scholars, was expelled twice, and was eventually killed by a mob in what is now Algeria. His conviction was simple: if Christianity is true, it should be able to withstand honest intellectual comparison with Islam. His courage in pursuing that conviction through dialogue rather than violence, and his willingness to learn the language and think of the people he engaged with, makes him a remarkable figure for anyone serious about the same conversation today."
   }
 ]
