@@ -259,10 +259,17 @@ export default function Faultlines() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
         <div className="flex flex-col sm:flex-row sm:items-start gap-8">
           <p className="font-sans text-sm text-graphite-light leading-body max-w-lg">
-            Eight points where Islamic theology is historically and philosophically most
-            difficult to defend against Christian truth. Each fault examined on its own
-            terms — then answered with precision.
-          </p>
+  Eight of the hardest challenges Islamic theology raises against Christianity —
+  each one taken seriously and answered with honesty, history, and evidence.
+  These are the conversations that actually happen. Here's how to have them well.
+</p>
+```
+
+Also find the severity legend label text and update:
+```
+'SERIOUS'  →  'SERIOUS'   (keep)
+'CRITICAL'  →  'CRITICAL'  (keep)
+'FATAL'  →  'FATAL'        (keep)
           <div className="flex items-center gap-5 flex-shrink-0 sm:ml-auto border border-graphite-border px-5 py-3">
             <span className="label-museum text-graphite-soft">SEVERITY</span>
             <div className="flex items-center gap-4">
