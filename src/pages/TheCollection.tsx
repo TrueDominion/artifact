@@ -1,9 +1,5 @@
 /**
  * src/pages/TheCollection.tsx
- * THE COLLECTION — Thinkers & Intellectual History.
- * Featured profile (large format) + secondary ThinkerCard grid.
- * Both use real portrait images from /public/images/{key}.webp.
- * Graceful fallback to initials if image not yet uploaded.
  */
 
 import { useState } from 'react'
@@ -18,7 +14,6 @@ const thinkers = thinkersData as Thinker[]
 const featured = thinkers[0]
 const secondary = thinkers.slice(1)
 
-// Featured portrait with fallback
 function FeaturedPortrait({ thinker }: { thinker: Thinker }) {
   const [failed, setFailed] = useState(false)
 
@@ -38,10 +33,7 @@ function FeaturedPortrait({ thinker }: { thinker: Thinker }) {
       src={`/images/${thinker.portrait_svg_key}.webp`}
       alt={`Portrait of ${thinker.name}`}
       className="w-full h-full object-cover"
-      style={{
-        minHeight: '280px',
-        maxHeight: '420px',
-      }}
+      style={{ minHeight: '280px', maxHeight: '420px' }}
       onError={() => setFailed(true)}
     />
   )
@@ -57,13 +49,13 @@ export default function TheCollection() {
       />
 
       <div className="max-w-2xl mx-auto px-6 lg:px-12 pb-12 text-center">
-  <p className="font-sans text-sm text-graphite-light leading-relaxed">
-    These are some of the brightest minds who made the case for Christian faith —
-    thinkers who wrestled seriously with the hardest questions and came out more
-    convinced, not less. The last three specifically engaged with Islam. Their work
-    is worth knowing before you need it.
-  </p>
-</div>
+        <p className="font-sans text-sm text-graphite-light leading-relaxed">
+          These are some of the brightest minds who made the case for Christian faith —
+          thinkers who wrestled seriously with the hardest questions and came out more
+          convinced, not less. The last three specifically engaged with Islam. Their work
+          is worth knowing before you need it.
+        </p>
+      </div>
 
       {/* Featured profile */}
       {featured && (
@@ -74,14 +66,14 @@ export default function TheCollection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <p className="label-museum mb-8 text-graphite-soft">FEATURED PROFILE</p>
+
+          {/*
+            FIX: a duplicate <div> with description text was inserted here
+            as the first child of this 2-column grid, forcing a broken 3-cell layout.
+            Removed. The description lives above this section (correct location).
+          */}
           <div className="border border-graphite-border grid grid-cols-1 lg:grid-cols-[320px_1fr]">
-<div className="max-w-2xl mx-auto px-6 lg:px-12 pb-12 text-center">
-  <p className="font-sans text-sm text-graphite-light leading-relaxed">
-    These are some of the brightest minds who have made the case for Christian faith —
-    thinkers who wrestled seriously with the hardest questions and came out more convinced,
-    not less. Their ideas are still worth knowing.
-  </p>
-</div>
+
             {/* Portrait */}
             <div className="overflow-hidden border-b lg:border-b-0 lg:border-r border-graphite-border">
               <FeaturedPortrait thinker={featured} />
@@ -139,7 +131,6 @@ export default function TheCollection() {
         </div>
       </div>
 
-      {/* Closing line */}
       <motion.div
         className="border-t border-graphite-border py-20 text-center px-6"
         initial={{ opacity: 0 }}
