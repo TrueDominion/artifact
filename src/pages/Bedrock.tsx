@@ -1,8 +1,5 @@
 /**
  * src/pages/Bedrock.tsx
- * BEDROCK — The immovable foundation.
- * Six WCF-sequenced entries rendered as structured MuseumPlaques.
- * Each plaque: scripture anchor, thesis summary, expandable doctrine + Islamic contrast panels.
  */
 
 import SectionHeader from '@/components/ui/SectionHeader'
@@ -17,29 +14,27 @@ export default function Bedrock() {
     <div className="min-h-screen">
       <SectionHeader
         title="BEDROCK"
-        subtitle="The immovable foundation."
+        subtitle="The beliefs that don't move."
         label="Section I"
       />
 
-      {/* Intro */}
       <div className="max-w-2xl mx-auto px-6 lg:px-12 pb-14 text-center">
         <p className="font-sans text-sm text-graphite-light leading-body">
-          These are the doctrines that do not shift — the load-bearing walls of Christian belief,
-          sequenced according to the Westminster Confession of Faith.
-          Each entry presents the doctrine, then places it in direct contrast with the Islamic position.
+          These are the core beliefs of the Christian faith — the ones that hold everything else up.
+          Each entry explains what Christians believe, why it matters, and how it directly
+          conflicts with what Islam teaches. Expand any entry to read the full explanation.
         </p>
       </div>
 
-      {/* Legend */}
       <div className="max-w-4xl mx-auto px-6 lg:px-12 mb-8">
         <div className="flex items-center gap-8 py-4 border-t border-b border-graphite-border">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 border border-graphite-border bg-white rounded-sm" />
-            <span className="label-museum text-graphite-soft">THE DOCTRINE</span>
+            <span className="label-museum text-graphite-soft">THE BELIEF</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-0.5 bg-crimson opacity-60" />
-            <span className="label-museum text-graphite-soft">ISLAMIC CONTRAST</span>
+            <span className="label-museum text-graphite-soft">HOW ISLAM DIFFERS</span>
           </div>
           <div className="ml-auto flex items-center gap-2 opacity-50">
             <svg width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true">
@@ -50,7 +45,6 @@ export default function Bedrock() {
         </div>
       </div>
 
-      {/* Plaques */}
       <div className="max-w-4xl mx-auto px-6 lg:px-12 pb-32 space-y-4">
         {bedrock.map((entry, index) => (
           <MuseumPlaque key={entry.id} entry={entry} index={index} />
@@ -59,3 +53,18 @@ export default function Bedrock() {
     </div>
   )
 }
+```
+
+---
+
+## `src/components/ui/MuseumPlaque.tsx` — Rename panel labels
+
+Two label changes only — `THE DOCTRINE` → `WHAT WE BELIEVE` and `ISLAMIC CONTRAST` → `HOW ISLAM DIFFERS`. Find and replace those two strings in the file:
+```
+"THE DOCTRINE"  →  "WHAT WE BELIEVE"
+"ISLAMIC CONTRAST"  →  "HOW ISLAM DIFFERS"
+```
+
+And the button text:
+```
+'READ DOCTRINE'  →  'READ THE FULL EXPLANATION'
