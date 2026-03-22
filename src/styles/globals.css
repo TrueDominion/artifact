@@ -1,7 +1,6 @@
 /**
  * src/styles/globals.css
  * Global base styles for artiFACT.
- * Imports Tailwind layers and sets typographic defaults.
  */
 
 @tailwind base;
@@ -50,6 +49,23 @@
 }
 
 @layer components {
+  /*
+   * label-museum — all-caps exhibit label used throughout every section.
+   * Text color is NOT set here; callers always provide it (e.g. text-graphite-soft).
+   */
+  .label-museum {
+    @apply font-sans text-[0.6rem] uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  /*
+   * rule-graphite — thin horizontal rule used as a section divider.
+   * Applied to <hr> elements and empty <div> spacers.
+   */
+  .rule-graphite {
+    @apply border-t border-graphite-border;
+  }
+
   .section-label {
     @apply font-sans text-xs tracking-widest uppercase text-graphite-muted;
     letter-spacing: 0.2em;
