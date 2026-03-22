@@ -1,8 +1,5 @@
 /**
  * src/components/home/SectionPreview.tsx
- * Six section preview cards displayed below the hero on the homepage.
- * Each card: section name (serif), one-line description, thin rule, SVG icon.
- * Scroll-reveal: fade + translateY, staggered 100ms per card.
  */
 
 import { Link } from 'react-router-dom'
@@ -19,56 +16,49 @@ const previews: PreviewCardData[] = [
   {
     label: 'BEDROCK',
     path: '/bedrock',
-    description: 'The immovable doctrines at the foundation of Christian belief.',
+    description: 'The core beliefs of the Christian faith — what we believe, why it matters, and how it stands up when challenged.',
     sublabel: 'Foundation',
   },
   {
     label: 'THE DIG',
     path: '/the-dig',
-    description: 'Philosophical arguments excavated, structured, and examined.',
+    description: 'Six powerful arguments for God\'s existence — broken down step by step so anyone can understand and use them.',
     sublabel: 'Arguments',
   },
   {
     label: 'THE GALLERY',
     path: '/the-gallery',
-    description: 'Competing worldviews displayed in context — and in critique.',
+    description: 'Eight major belief systems examined honestly — what they teach, what they get right, and where they fall short.',
     sublabel: 'Worldviews',
-  },
-  {
-    label: 'THE STUDIO',
-    path: '/the-studio',
-    description: 'The atelier of reasoning: build your own argument step by step.',
-    sublabel: 'Workshop',
   },
   {
     label: 'FAULTLINES',
     path: '/faultlines',
-    description: 'Where the ground breaks — honest engagement with hard challenges.',
-    sublabel: 'Debates',
+    description: 'The hardest questions Islam raises about Christianity — and clear, honest answers backed by history and evidence.',
+    sublabel: 'Challenges',
   },
   {
     label: 'THE COLLECTION',
     path: '/the-collection',
-    description: 'Thinkers and intellectual history across twenty centuries.',
+    description: 'Six of the greatest Christian thinkers in history — their ideas, their impact, and why their work still matters today.',
     sublabel: 'Thinkers',
+  },
+  {
+    label: 'FIELD GUIDE',
+    path: '/field-guide',
+    description: 'Twenty real challenges you\'ll hear face to face — each with a clear one-line answer and the evidence to back it up.',
+    sublabel: 'Quick Reference',
   },
 ]
 
-// Small artifact icon for each preview card
 function PreviewIcon({ index }: { index: number }) {
   const icons = [
-    // Foundation slab
     <svg key={0} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><rect x="4" y="16" width="20" height="8" stroke="#2D2D2D" strokeWidth="0.9" rx="1"/><path d="M8,16 L8,10 L20,10 L20,16" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round"/></svg>,
-    // Trowel
     <svg key={1} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><path d="M14,22 L20,8 L8,8 Z" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/><line x1="14" y1="8" x2="14" y2="4" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round"/></svg>,
-    // Arch
     <svg key={2} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><path d="M6,22 L6,12 Q14,4 22,12 L22,22" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round"/><line x1="4" y1="22" x2="24" y2="22" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round"/></svg>,
-    // Compass
-    <svg key={3} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><circle cx="14" cy="14" r="10" stroke="#2D2D2D" strokeWidth="0.9"/><path d="M14,6 L15.5,14 L14,22 L12.5,14 Z" stroke="#2D2D2D" strokeWidth="0.8"/></svg>,
-    // Fault line
-    <svg key={4} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><path d="M4,14 L10,10 L18,18 L24,14" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/><line x1="4" y1="20" x2="24" y2="20" stroke="#2D2D2D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4"/></svg>,
-    // Pedestal
-    <svg key={5} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><ellipse cx="14" cy="8" rx="5" ry="6" stroke="#2D2D2D" strokeWidth="0.9"/><path d="M10,14 L8,22 L20,22 L18,14" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg key={3} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><path d="M4,14 L10,10 L18,18 L24,14" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/><line x1="4" y1="20" x2="24" y2="20" stroke="#2D2D2D" strokeWidth="0.5" strokeLinecap="round" opacity="0.4"/></svg>,
+    <svg key={4} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><ellipse cx="14" cy="8" rx="5" ry="6" stroke="#2D2D2D" strokeWidth="0.9"/><path d="M10,14 L8,22 L20,22 L18,14" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/></svg>,
+    <svg key={5} viewBox="0 0 28 28" fill="none" className="w-6 h-6"><circle cx="14" cy="10" r="4" stroke="#2D2D2D" strokeWidth="0.9"/><path d="M7,22 C7,18 10,15 14,15 C18,15 21,18 21,22" stroke="#2D2D2D" strokeWidth="0.9" strokeLinecap="round"/></svg>,
   ]
   return icons[index] ?? icons[0]
 }
@@ -76,7 +66,6 @@ function PreviewIcon({ index }: { index: number }) {
 export default function SectionPreview() {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
-      {/* Separator */}
       <div className="flex items-center gap-6 mb-16">
         <hr className="rule-graphite flex-1" />
         <span className="label-museum">THE EXHIBITION FLOOR</span>
