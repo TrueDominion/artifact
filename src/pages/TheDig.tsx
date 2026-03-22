@@ -89,6 +89,12 @@ export default function TheDig() {
 
           {/* ── Card grid ── */}
           <div className="flex-1">
+            <div className="mb-8 max-w-lg">
+  <p className="font-sans text-sm text-graphite-light leading-relaxed">
+    Each card below covers one argument for God's existence. Click a card to flip it open —
+    then step through the claim, the reasoning behind it, the strongest objection, and the response.
+  </p>
+</div>
             <div className="flex items-center gap-4 mb-10">
               <hr className="flex-1 border-t border-graphite-border" />
               <p className="label-museum text-graphite-soft">CLICK ANY CARD TO EXCAVATE</p>
