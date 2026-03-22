@@ -53,18 +53,3 @@ export default function Bedrock() {
     </div>
   )
 }
-```
-
----
-
-## `src/components/ui/MuseumPlaque.tsx` — Rename panel labels
-
-Two label changes only — `THE DOCTRINE` → `WHAT WE BELIEVE` and `ISLAMIC CONTRAST` → `HOW ISLAM DIFFERS`. Find and replace those two strings in the file:
-```
-"THE DOCTRINE"  →  "WHAT WE BELIEVE"
-"ISLAMIC CONTRAST"  →  "HOW ISLAM DIFFERS"
-```
-
-And the button text:
-```
-'READ DOCTRINE'  →  'READ THE FULL EXPLANATION'
