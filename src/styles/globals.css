@@ -54,9 +54,10 @@
    * Text color is NOT set here; callers always provide it (e.g. text-graphite-soft).
    */
   .label-museum {
-    @apply font-sans text-[0.6rem] uppercase;
-    letter-spacing: 0.2em;
-  }
+  @apply font-sans uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+}
 
   /*
    * rule-graphite — thin horizontal rule used as a section divider.
