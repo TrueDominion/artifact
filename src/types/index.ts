@@ -93,6 +93,7 @@ export interface FieldGuideEntry {
   anchor_verse?: string
   anchor_verse_ref?: string
   tag: FieldGuideTag
+  priority?: number
 }
 
 // ── Thinkers (The Collection) ────────────────────────────
