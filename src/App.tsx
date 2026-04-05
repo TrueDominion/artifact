@@ -12,7 +12,6 @@ import Bedrock from '@/pages/Bedrock'
 import TheDig from '@/pages/TheDig'
 import TheGallery from '@/pages/TheGallery'
 import Faultlines from '@/pages/Faultlines'
-import TheCollection from '@/pages/TheCollection'
 import FieldGuide from '@/pages/FieldGuide'
 
 export default function App() {
@@ -25,7 +24,6 @@ export default function App() {
           <Route path="the-dig" element={<TheDig />} />
           <Route path="the-gallery" element={<TheGallery />} />
           <Route path="faultlines" element={<Faultlines />} />
-          <Route path="the-collection" element={<TheCollection />} />
           <Route path="field-guide" element={<FieldGuide />} />
           <Route path="*" element={<Home />} />
         </Route>

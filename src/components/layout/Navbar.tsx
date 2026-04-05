@@ -21,7 +21,6 @@ const navItems: NavItem[] = [
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
-  { label: 'THE COLLECTION', path: '/the-collection' },
   { label: 'FIELD GUIDE', path: '/field-guide' },
 ]
 
