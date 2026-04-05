@@ -1,17 +1,58 @@
 /**
  * src/pages/FieldGuide.tsx
  * THE FIELD GUIDE — Rapid-reference apologetics for real conversations.
+ * Step 1: Select a religion. Step 2: Browse challenges and responses.
  * Mobile-first. Search by challenge text. Filter by tag.
- * Each card: the challenge heard → one-liner response → supporting points.
  */
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import SectionHeader from '@/components/ui/SectionHeader'
 import fieldGuideData from '@/data/fieldguide.json'
-import type { FieldGuideEntry, FieldGuideTag } from '@/types'
+import type { FieldGuideEntry, FieldGuideTag, FieldGuideReligion } from '@/types'
 
 const entries = fieldGuideData as FieldGuideEntry[]
+
+// ── Religion config ────────────────────────────────────────
+
+interface ReligionConfig {
+  id: FieldGuideReligion
+  label: string
+  sublabel: string
+  description: string
+  comingSoon?: boolean
+}
+
+const RELIGIONS: ReligionConfig[] = [
+  {
+    id: 'islam',
+    label: 'ISLAM',
+    sublabel: '1.9 billion adherents',
+    description: 'Challenges drawn from Islamic theology — the Quran, Muhammad, tahrif, and the nature of God.',
+  },
+  {
+    id: 'atheism',
+    label: 'ATHEISM & NATURALISM',
+    sublabel: '~1.2 billion',
+    description: 'Objections grounded in science, reason, and the problem of suffering.',
+  },
+  {
+    id: 'mormonism',
+    label: 'MORMONISM',
+    sublabel: '~17 million',
+    description: 'Challenges from Latter-day Saint theology — the nature of God, exaltation, and scripture.',
+    comingSoon: true,
+  },
+  {
+    id: 'jehovahs-witnesses',
+    label: "JEHOVAH'S WITNESSES",
+    sublabel: '~8.7 million',
+    description: "Challenges from Watch Tower theology — Arianism, Christ's divinity, and the New World Translation.",
+    comingSoon: true,
+  },
+]
+
+// ── Tag config ─────────────────────────────────────────────
 
 const TAG_LABELS: Record<FieldGuideTag, string> = {
   scripture:  'Scripture',
@@ -25,6 +66,84 @@ const TAG_LABELS: Record<FieldGuideTag, string> = {
 }
 
 const ALL_TAGS = Object.keys(TAG_LABELS) as FieldGuideTag[]
+
+// ── Religion selector ──────────────────────────────────────
+
+function ReligionSelector({ onSelect }: { onSelect: (r: FieldGuideReligion) => void }) {
+  return (
+    <div className="min-h-screen">
+      <SectionHeader
+        title="FIELD GUIDE"
+        subtitle="When someone says it to you face to face."
+        label="Reference"
+      />
+
+      <div className="max-w-2xl mx-auto px-5 pb-10 text-center">
+        <p className="font-sans text-sm text-graphite-light leading-relaxed">
+          Select the worldview you are engaging with. You will see clear, concise responses
+          to the challenges you are most likely to encounter.
+        </p>
+      </div>
+
+      <div className="max-w-3xl mx-auto px-5 pb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-graphite-border">
+          {RELIGIONS.map((religion, i) => (
+            <motion.div
+              key={religion.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.08 }}
+              className="bg-white"
+            >
+              <button
+                onClick={() => !religion.comingSoon && onSelect(religion.id)}
+                disabled={religion.comingSoon}
+                className={`w-full text-left p-8 h-full group transition-colors duration-300 ${
+                  religion.comingSoon
+                    ? 'cursor-not-allowed opacity-50'
+                    : 'hover:bg-linen cursor-pointer'
+                }`}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft">
+                    {religion.sublabel}
+                  </span>
+                  {religion.comingSoon && (
+                    <span className="font-sans text-[0.55rem] uppercase tracking-widest px-2 py-0.5 border border-graphite-border text-graphite-soft">
+                      Coming Soon
+                    </span>
+                  )}
+                </div>
+
+                <hr className="border-graphite-border mb-4" />
+
+                <h2 className={`font-serif font-bold text-xl tracking-heading mb-3 transition-colors duration-300 ${
+                  religion.comingSoon ? 'text-graphite-light' : 'text-ink group-hover:text-graphite'
+                }`}>
+                  {religion.label}
+                </h2>
+                <p className="font-sans text-sm text-graphite-light leading-relaxed">
+                  {religion.description}
+                </p>
+
+                {!religion.comingSoon && (
+                  <div className="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft">OPEN</span>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+                      <path d="M1 4H13M9 1L13 4L9 7" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                )}
+              </button>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ── Tag pill ───────────────────────────────────────────────
 
 function TagPill({
   tag,
@@ -50,6 +169,8 @@ function TagPill({
   )
 }
 
+// ── Entry card ─────────────────────────────────────────────
+
 function EntryCard({
   entry,
   index,
@@ -66,7 +187,6 @@ function EntryCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: 'easeOut', delay: Math.min(index * 0.04, 0.3) }}
     >
-      {/* Header — always visible */}
       <button
         onClick={() => setOpen(v => !v)}
         className="w-full text-left"
@@ -77,7 +197,6 @@ function EntryCard({
             open ? 'bg-ink' : 'bg-white hover:bg-linen'
           }`}
         >
-          {/* Tag pill */}
           <span
             className={`flex-shrink-0 mt-0.5 font-sans text-[0.55rem] uppercase tracking-widest px-1.5 py-0.5 border ${
               open
@@ -88,7 +207,6 @@ function EntryCard({
             {TAG_LABELS[entry.tag]}
           </span>
 
-          {/* Challenge text */}
           <p
             className={`flex-1 font-serif font-bold text-base leading-snug tracking-heading transition-colors duration-200 ${
               open ? 'text-white' : 'text-ink'
@@ -97,7 +215,6 @@ function EntryCard({
             "{entry.challenge}"
           </p>
 
-          {/* Chevron */}
           <motion.svg
             animate={{ rotate: open ? 180 : 0 }}
             transition={{ duration: 0.25 }}
@@ -119,7 +236,6 @@ function EntryCard({
         </div>
       </button>
 
-      {/* Expanded content */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
@@ -130,8 +246,6 @@ function EntryCard({
             className="overflow-hidden"
           >
             <div className="px-5 py-6 bg-white border-t border-graphite-border space-y-5">
-
-              {/* One-liner */}
               <div className="flex gap-3">
                 <div className="w-0.5 flex-shrink-0 bg-crimson rounded-full" />
                 <p className="font-sans text-sm font-medium text-graphite leading-relaxed">
@@ -139,7 +253,6 @@ function EntryCard({
                 </p>
               </div>
 
-              {/* Supporting points */}
               <div className="space-y-3 pl-3">
                 {entry.points.map((point, i) => (
                   <div key={i} className="flex gap-3 items-start">
@@ -153,7 +266,6 @@ function EntryCard({
                 ))}
               </div>
 
-              {/* Anchor verse */}
               {entry.anchor_verse && (
                 <div className="pt-4 border-t border-graphite-border">
                   <p className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft mb-2">
@@ -175,44 +287,72 @@ function EntryCard({
   )
 }
 
-export default function FieldGuide() {
+// ── Guide view (post-selection) ────────────────────────────
+
+function GuideView({
+  religion,
+  onBack,
+}: {
+  religion: FieldGuideReligion
+  onBack: () => void
+}) {
   const [search, setSearch] = useState('')
   const [activeTag, setActiveTag] = useState<FieldGuideTag | 'all'>('all')
 
+  const config = RELIGIONS.find(r => r.id === religion)!
+
+  const religionEntries = useMemo(
+    () => entries.filter(e => e.religion === religion),
+    [religion]
+  )
+
+  const availableTags = useMemo(
+    () => ALL_TAGS.filter(tag => religionEntries.some(e => e.tag === tag)),
+    [religionEntries]
+  )
+
   const filtered = useMemo(() => {
-  const q = search.trim().toLowerCase()
-  return entries
-    .filter(e => {
-      const matchesTag = activeTag === 'all' || e.tag === activeTag
-      const matchesSearch =
-        !q ||
-        e.challenge.toLowerCase().includes(q) ||
-        e.one_liner.toLowerCase().includes(q) ||
-        e.points.some(p => p.toLowerCase().includes(q))
-      return matchesTag && matchesSearch
-    })
-    .sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3))
-}, [search, activeTag])
+    const q = search.trim().toLowerCase()
+    return religionEntries
+      .filter(e => {
+        const matchesTag = activeTag === 'all' || e.tag === activeTag
+        const matchesSearch =
+          !q ||
+          e.challenge.toLowerCase().includes(q) ||
+          e.one_liner.toLowerCase().includes(q) ||
+          e.points.some(p => p.toLowerCase().includes(q))
+        return matchesTag && matchesSearch
+      })
+      .sort((a, b) => (a.priority ?? 3) - (b.priority ?? 3))
+  }, [search, activeTag, religionEntries])
 
   return (
     <div className="min-h-screen">
       <SectionHeader
         title="FIELD GUIDE"
-        subtitle="When someone says it to you face to face."
+        subtitle={config.label}
         label="Reference"
       />
 
-      {/* Intent statement */}
-      <div className="max-w-2xl mx-auto px-5 pb-10 text-center">
-        <p className="font-sans text-sm text-graphite-light leading-relaxed">
-          Twenty challenges you will actually hear — each with a one-line response and the
-          supporting evidence behind it. Built for real conversations, not lecture halls.
+      {/* Back button + intent */}
+      <div className="max-w-3xl mx-auto px-5 pb-8">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 font-sans text-xs text-graphite-soft hover:text-graphite transition-colors duration-200 mb-6"
+        >
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+            <path d="M13 4H1M5 1L1 4L5 7" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <span className="uppercase tracking-widest">Choose a different religion</span>
+        </button>
+
+        <p className="font-sans text-sm text-graphite-light leading-relaxed max-w-2xl">
+          {config.description} Each entry gives you a one-line response and the evidence behind it.
         </p>
       </div>
 
       {/* Search + filter bar */}
       <div className="max-w-3xl mx-auto px-5 pb-8 space-y-4">
-        {/* Search input */}
         <div className="relative">
           <svg
             className="absolute left-4 top-1/2 -translate-y-1/2 opacity-30"
@@ -246,14 +386,13 @@ export default function FieldGuide() {
           )}
         </div>
 
-        {/* Tag filters */}
         <div className="flex flex-wrap gap-2">
           <TagPill
             tag="all"
             active={activeTag === 'all'}
             onClick={() => setActiveTag('all')}
           />
-          {ALL_TAGS.map(tag => (
+          {availableTags.map(tag => (
             <TagPill
               key={tag}
               tag={tag}
@@ -263,7 +402,6 @@ export default function FieldGuide() {
           ))}
         </div>
 
-        {/* Result count */}
         <p className="font-sans text-xs text-graphite-soft">
           {filtered.length} {filtered.length === 1 ? 'challenge' : 'challenges'}
           {activeTag !== 'all' ? ` in ${TAG_LABELS[activeTag]}` : ''}
@@ -300,5 +438,40 @@ export default function FieldGuide() {
         </div>
       </div>
     </div>
+  )
+}
+
+// ── Root component ─────────────────────────────────────────
+
+export default function FieldGuide() {
+  const [selectedReligion, setSelectedReligion] = useState<FieldGuideReligion | null>(null)
+
+  return (
+    <AnimatePresence mode="wait">
+      {selectedReligion === null ? (
+        <motion.div
+          key="selector"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25 }}
+        >
+          <ReligionSelector onSelect={setSelectedReligion} />
+        </motion.div>
+      ) : (
+        <motion.div
+          key={selectedReligion}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <GuideView
+            religion={selectedReligion}
+            onBack={() => setSelectedReligion(null)}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }

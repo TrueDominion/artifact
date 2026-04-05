@@ -85,6 +85,8 @@ export type FieldGuideTag =
   | 'history'
   | 'logic'
 
+export type FieldGuideReligion = 'islam' | 'atheism' | 'mormonism' | 'jehovahs-witnesses'
+
 export interface FieldGuideEntry {
   id: string
   challenge: string
@@ -93,6 +95,7 @@ export interface FieldGuideEntry {
   anchor_verse?: string
   anchor_verse_ref?: string
   tag: FieldGuideTag
+  religion: FieldGuideReligion
   priority?: number
 }
 

@@ -38,12 +38,6 @@ const previews: PreviewCardData[] = [
     sublabel: 'Challenges',
   },
   {
-    label: 'THE COLLECTION',
-    path: '/the-collection',
-    description: 'Six of the greatest Christian thinkers in history — their ideas, their impact, and why their work still matters today.',
-    sublabel: 'Thinkers',
-  },
-  {
     label: 'FIELD GUIDE',
     path: '/field-guide',
     description: 'Twenty real challenges you\'ll hear face to face — each with a clear one-line answer and the evidence to back it up.',
