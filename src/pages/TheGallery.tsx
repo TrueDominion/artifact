@@ -301,12 +301,12 @@ export default function TheGallery() {
 
   return (
     <div className="min-h-screen">
-      <SectionHeader title="THE GALLERY" subtitle="Beliefs in Context." label="Section III" />
+      <SectionHeader title="THE GALLERY" subtitle="Eight worldviews, examined honestly." label="Section III" />
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">
         <p className="font-sans text-sm text-graphite-light leading-body mb-12 max-w-xl">
-          Eight major belief systems, each explained fairly on its own terms — then examined honestly
-          from a Christian perspective. Click any panel to open it and explore what that worldview
-          actually teaches, what it gets right, and where it falls short.
+          Eight worldviews — each presented on its own terms, then examined from a Reformed Christian
+          perspective. Open any panel to read the overview, the core claims, and the critique.
+          The goal is honest engagement, not caricature.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-graphite-border">

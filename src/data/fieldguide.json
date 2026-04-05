@@ -381,7 +381,7 @@
       "The philosophical case against God from evil has been largely answered. Philosopher Alvin Plantinga showed that an all-powerful God and genuine human freedom can coexist — and free human beings produce an enormous amount of the world's suffering.",
       "The evidential version of the argument — that there is too much suffering for God to have a good reason — requires the person making it to know that no sufficient reason exists. That requires a kind of knowledge nobody has.",
       "The cross is Christianity's answer — not an explanation, but a response. God did not watch suffering from a safe distance and offer philosophical notes. He entered it. The eternal Son of God experienced the worst the world could do — and redeemed it.",
-      "Islam has no equivalent. Allah permits suffering from total transcendence — he does not suffer with creation, does not enter it, and does not absorb it. The God of the Bible is different in kind, not just degree.",
+      "Naturalism has no answer to the problem of evil — it dissolves it. If there is no God, then suffering is just the collision of atoms. Nothing is genuinely wrong; things simply are. The outrage the objection runs on — that innocent suffering ought not to happen — only has traction if there is a real moral standard that makes 'ought' a meaningful word. That standard requires exactly the kind of God the objection is meant to disprove.",
       "Notice what the objection assumes: that suffering is genuinely wrong, that innocent people should not suffer, that something ought to be different. Those intuitions require an objective moral standard — which only makes sense if there is a God. The problem of evil is a problem that only exists inside a framework that needs God to resolve it."
     ],
     "anchor_verse": "He was despised and rejected by men, a man of sorrows and acquainted with grief.",
@@ -406,5 +406,90 @@
     "tag": "salvation",
     "priority": 3,
     "religion": "islam"
+  },
+  {
+    "id": "evolution-makes-god-unnecessary",
+    "challenge": "Evolution explains life — God is no longer needed to explain our existence",
+    "one_liner": "Evolution explains how life diversified once it existed. It does not explain why anything exists at all, why the laws of physics permit life, or how mindless matter produced minds that can ask the question.",
+    "points": [
+      "Natural selection is a mechanism that operates on living, replicating organisms. It cannot explain the origin of life, the origin of the universe, or the origin of the physical laws that make chemistry, biology, and evolution possible. Darwin's theory begins after the hard questions have been quietly set aside.",
+      "The fine-tuning problem is not addressed by evolution — it is sharpened by it. For evolution to work at all, you need a universe with precisely calibrated constants: the right gravitational force, the right strength of electromagnetism, the right ratio of matter to antimatter. The odds of this happening by chance are not merely improbable; they are incomprehensible.",
+      "The cosmological question — why is there something rather than nothing? — is entirely outside biology's reach. The Big Bang establishes that the universe had a beginning. Something caused that beginning from outside the universe. That cause is what theologians have always called God.",
+      "Even granting full Darwinian evolution, you still face the hard problem of consciousness: how do purely physical processes — neurons firing, chemicals reacting — produce subjective experience? Why is there something it feels like to be you? Materialist philosophy has no agreed answer. Philosopher Thomas Nagel, an atheist, concluded that mind cannot be fully explained by physics.",
+      "Evolution, if true, is God's mechanism — not his replacement. The theologians who resisted it most were not defending scripture; they were defending their assumption that God must have worked in a particular way. Nothing in the resurrection, the Trinity, or the moral argument depends on how species diversified."
+    ],
+    "anchor_verse": "For by him all things were created, in heaven and on earth, visible and invisible.",
+    "anchor_verse_ref": "Colossians 1:16",
+    "tag": "logic",
+    "priority": 2,
+    "religion": "atheism"
+  },
+  {
+    "id": "born-into-religion",
+    "challenge": "You only believe because of where you were born — religion is just cultural conditioning",
+    "one_liner": "Where a belief comes from says nothing about whether it is true. This is the genetic fallacy — and it cuts equally against atheism, since most atheists are also born into their cultural environment.",
+    "points": [
+      "This is a textbook genetic fallacy — the error of judging a belief's truth by its origin rather than its evidence. A person born in ancient Rome who concluded by observation that the earth orbits the sun was correct, regardless of what culture produced them. Origin and truth are separate questions.",
+      "The same argument applies symmetrically: most people in secular Western countries are atheists or agnostics largely because of their cultural environment. If being shaped by your culture disqualifies your beliefs from being true, then Western secular materialism is equally disqualified.",
+      "The relevant question is not how you came to hold a belief but whether the evidence supports it. Christianity's claims are historically testable: Did Jesus exist? Was he crucified? Was the tomb found empty? Were people claiming to see him alive within days? Those questions have answers that do not depend on where anyone was born.",
+      "Many Christians came to faith from explicitly secular, atheist, or hostile backgrounds — including figures like C.S. Lewis, Anthony Flew, and Francis Collins. The existence of converts from outside Christian cultures undermines the claim that Christianity is purely a product of cultural conditioning.",
+      "The deeper problem with this objection is that it proves too much. If cultural conditioning explains away all religious belief, it also explains away the secular skepticism that generated the objection. On its own logic, the objection cannot be trusted either."
+    ],
+    "anchor_verse": "Test everything; hold fast what is good.",
+    "anchor_verse_ref": "1 Thessalonians 5:21",
+    "tag": "logic",
+    "priority": 2,
+    "religion": "atheism"
+  },
+  {
+    "id": "no-evidence-for-god",
+    "challenge": "There is no evidence for God — extraordinary claims require extraordinary evidence",
+    "one_liner": "The claim that there is no evidence for God is simply false. There are multiple independent lines of evidence — philosophical, cosmological, and historical. The real question is whether the evidence is being evaluated fairly.",
+    "points": [
+      "The cosmological argument: the universe had a beginning (confirmed by the Big Bang). Everything that begins to exist has a cause. Therefore the universe has a cause that is itself uncaused, timeless, immaterial, and powerful enough to create space, time, matter, and energy from nothing. That description matches the classical definition of God almost exactly.",
+      "The fine-tuning argument: the physical constants of the universe — gravity, electromagnetism, the strong nuclear force — are calibrated to an extraordinary degree of precision for life to be possible. The probability of this happening by random chance is so vanishingly small that many physicists treat fine-tuning as one of the great unexplained facts of modern science.",
+      "The moral argument: almost all human beings in all cultures believe that some things are objectively wrong — torturing children for amusement, for example. If moral facts are real and binding on everyone, they require a foundation that is not just human preference or evolutionary instinct. Only a transcendent moral lawgiver provides that foundation.",
+      "Carl Sagan's 'extraordinary claims require extraordinary evidence' sounds reasonable, but it smuggles in a question-begging assumption: that God is extraordinary in the sense of being improbable. If God is the best explanation for the existence of the universe itself, then his existence is not improbable — it is the most basic explanatory fact there is.",
+      "The historical evidence for the resurrection — an empty tomb, multiple post-resurrection appearances, enemy attestation, and a group of people who gave their lives for the claim — meets the standard used by historians for any other ancient event. Demanding a different standard for religious claims is not rigor; it is special pleading."
+    ],
+    "anchor_verse": "For his invisible attributes, namely, his eternal power and divine nature, have been clearly perceived, ever since the creation of the world, in the things that have been made.",
+    "anchor_verse_ref": "Romans 1:20",
+    "tag": "logic",
+    "priority": 1,
+    "religion": "atheism"
+  },
+  {
+    "id": "good-without-god",
+    "challenge": "I am a good person — I do not need God to live morally",
+    "one_liner": "Nobody is disputing that atheists can behave well. The question is whether, on atheism, there is any objective reason they should — or whether morality is ultimately just personal preference with social enforcement.",
+    "points": [
+      "Christians fully agree that non-believers can and do act generously, justly, and compassionately — often better than many Christians. That is not the point. The point is whether, on a purely naturalistic account, morality is anything more than evolved social instinct dressed up in the language of obligation.",
+      "Behaving morally and having an ontological basis for moral obligation are different things. You can drive a car without knowing how the engine works. But the engine still has to exist. The question is not whether atheists can act morally — it is whether atheism can explain why anyone ought to.",
+      "If human beings are the product of blind, purposeless evolution, then our moral intuitions are adaptations that helped our ancestors survive and reproduce — not perceptions of objective truth. On this view, saying 'torturing innocent people is wrong' is not a fact about the world; it is a feeling our species developed. That is a very different claim from what most people mean when they call something evil.",
+      "The problem becomes clear at the extremes. If you want to argue that the Holocaust was not merely something you personally disliked but was genuinely, objectively wrong — wrong in a way that binds everyone, including the perpetrators — you need a standard that exists outside human opinion. Evolutionary ethics cannot provide that. It can only tell you what most people prefer.",
+      "Christianity's claim is not that you need God to be nice. It is that only a universe made by a moral God can support the weight of moral language we all use — words like 'ought,' 'wrong,' 'dignity,' 'justice.' Those words point beyond biology. They point toward a lawgiver."
+    ],
+    "anchor_verse": "For when Gentiles, who do not have the law, by nature do what the law requires, they are a law to themselves.",
+    "anchor_verse_ref": "Romans 2:14",
+    "tag": "logic",
+    "priority": 3,
+    "religion": "atheism"
+  },
+  {
+    "id": "bible-full-contradictions",
+    "challenge": "The Bible is full of contradictions — it cannot be trusted as a reliable source",
+    "one_liner": "Most claimed contradictions dissolve under careful reading. The ones that remain are textual details, not doctrinal substance — and no major Christian belief depends on any of the disputed passages.",
+    "points": [
+      "The first thing to do with a claimed contradiction is examine it. Most fall into one of a few categories: different authors emphasising different details (not a contradiction), events described from different perspectives (not a contradiction), copyist errors in minor details (a transmission issue, not a doctrinal issue), or alleged contradictions that assume the passage must mean something it does not say.",
+      "Bart Ehrman — one of the most prominent skeptical New Testament scholars, and a former Christian — is often cited as proof the Bible is unreliable. What he actually says is that the transmission of the text has minor variants. He also states that none of these variants affect any major Christian doctrine. The skeptic's go-to scholar does not support the conclusion he is being used to support.",
+      "The Bible is a library — 66 books written over 1,500 years across multiple cultures, genres, and languages. Expecting it to read like a legal document with no variation in detail between authors is a category mistake. You would not dismiss a historical event because four eyewitness accounts emphasise different details.",
+      "The Resurrection is the test case. The four Gospel accounts differ on peripheral details — how many angels, which women arrived first, precisely what was said. They agree completely on the core claim: the tomb was empty, and Jesus appeared alive to multiple witnesses afterwards. In any courtroom, consistent testimony on the central facts with variation in peripheral details is considered stronger evidence than perfect uniformity (which suggests collusion).",
+      "The question is not whether the Bible is a perfect document in every transmission detail. The question is whether it reliably preserves what its authors wrote, and whether what they wrote is historically credible. The manuscript evidence for the New Testament is vastly superior to any other ancient text — and scholars regularly trust those other texts without demanding they be free of all variants."
+    ],
+    "anchor_verse": "All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness.",
+    "anchor_verse_ref": "2 Timothy 3:16",
+    "tag": "scripture",
+    "priority": 2,
+    "religion": "atheism"
   }
 ]

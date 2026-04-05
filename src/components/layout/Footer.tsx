@@ -9,7 +9,6 @@ const footerLinks = [
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
-  { label: 'THE COLLECTION', path: '/the-collection' },
   { label: 'FIELD GUIDE', path: '/field-guide' },
 ]
 
@@ -42,7 +41,7 @@ export default function Footer() {
           </nav>
 
           <p className="font-serif italic text-sm text-graphite-soft flex-shrink-0">
-            The excavation continues.
+            Truth can withstand examination.
           </p>
         </div>
       </div>
