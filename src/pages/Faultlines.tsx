@@ -248,7 +248,7 @@ export default function Faultlines() {
 
   return (
     <div className="min-h-screen">
-      <SectionHeader title="FAULTLINES" subtitle="Where the Ground Breaks." label="Section V" />
+      <SectionHeader title="FAULTLINES" subtitle="The hardest Islamic challenges to Christianity." label="Section V" />
 
       <FaultlinesHero />
 
@@ -260,8 +260,9 @@ export default function Faultlines() {
             Outer tag changed to <div>; inline severity bars use <span> elements.
           */}
           <div className="font-sans text-sm text-graphite-light leading-body max-w-lg">
-            Eight of the hardest challenges Islamic theology raises against Christianity —
-            each one taken seriously and answered honestly. The ones marked{' '}
+            Eight Islamic challenges to Christian belief — each stated in its strongest form
+            and answered with historical evidence, textual analysis, and logical argument.
+            The ones marked{' '}
             <span className="inline-flex items-end gap-0.5 mx-1">
               {[1, 2, 3, 4, 5].map(i => (
                 <span
@@ -271,7 +272,7 @@ export default function Faultlines() {
                 />
               ))}
             </span>
-            {' '}are the ones you are most likely to encounter first.
+            {' '}are the ones most commonly raised in real conversations.
           </div>
 
           <div className="flex items-center gap-5 flex-shrink-0 sm:ml-auto border border-graphite-border px-5 py-3">

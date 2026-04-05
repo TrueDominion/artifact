@@ -14,15 +14,15 @@ export default function Bedrock() {
     <div className="min-h-screen">
       <SectionHeader
         title="BEDROCK"
-        subtitle="The beliefs that don't move."
+        subtitle="The beliefs that hold everything else up."
         label="Section I"
       />
 
       <div className="max-w-2xl mx-auto px-6 lg:px-12 pb-14 text-center">
         <p className="font-sans text-sm text-graphite-light leading-body">
-          These are the core beliefs of the Christian faith — the ones that hold everything else up.
-          Each entry explains what Christians believe, why it matters, and how it directly
-          conflicts with what Islam teaches. Expand any entry to read the full explanation.
+          Seven foundational doctrines of Christian faith — each one stating what Christians believe,
+          what is at stake if it is denied, and where Islamic theology directly contradicts it.
+          Click any entry to read the full explanation.
         </p>
       </div>
 

@@ -16,31 +16,31 @@ const previews: PreviewCardData[] = [
   {
     label: 'BEDROCK',
     path: '/bedrock',
-    description: 'The core beliefs of the Christian faith — what we believe, why it matters, and how it stands up when challenged.',
+    description: 'Seven non-negotiable foundations of Christian faith — what each doctrine means, why it cannot be abandoned, and where it stands in direct contrast to Islamic theology.',
     sublabel: 'Foundation',
   },
   {
     label: 'THE DIG',
     path: '/the-dig',
-    description: 'Six powerful arguments for God\'s existence — broken down step by step so anyone can understand and use them.',
+    description: 'Eight arguments for God\'s existence and the truth of Christianity — each examined through claim, logic, strongest objection, and response.',
     sublabel: 'Arguments',
   },
   {
     label: 'THE GALLERY',
     path: '/the-gallery',
-    description: 'Eight major belief systems examined honestly — what they teach, what they get right, and where they fall short.',
+    description: 'Eight worldviews examined fairly on their own terms — what each teaches, where it has genuine insight, and where the Christian account is more coherent.',
     sublabel: 'Worldviews',
   },
   {
     label: 'FAULTLINES',
     path: '/faultlines',
-    description: 'The hardest questions Islam raises about Christianity — and clear, honest answers backed by history and evidence.',
+    description: 'Eight Islamic challenges to Christian faith — each stated in its strongest form and answered with historical evidence, textual analysis, and logical argument.',
     sublabel: 'Challenges',
   },
   {
     label: 'FIELD GUIDE',
     path: '/field-guide',
-    description: 'Twenty real challenges you\'ll hear face to face — each with a clear one-line answer and the evidence to back it up.',
+    description: 'Real objections from Islam, atheism, and other worldviews — select a worldview, then get direct answers to the challenges you are most likely to hear.',
     sublabel: 'Quick Reference',
   },
 ]

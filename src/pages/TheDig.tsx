@@ -46,7 +46,7 @@ export default function TheDig() {
     <div className="min-h-screen">
       <SectionHeader
         title="THE DIG"
-        subtitle="Arguments uncovered."
+        subtitle="The case for Christianity, layer by layer."
         label="Section II"
       />
 
@@ -105,10 +105,10 @@ export default function TheDig() {
           <div className="flex-1">
 
             <p className="font-sans text-sm text-graphite-light leading-relaxed mb-8 max-w-lg">
-              Each card covers one argument for God's existence or the truth of Christianity.
-              Click a card to open it — then step through the core claim, the reasoning,
-              the strongest objection, and the response. Use the filter below to find
-              the arguments most relevant to conversations with Muslims.
+              Eight arguments for God's existence and the truth of Christianity — each examined
+              through four layers: the claim, the reasoning, the strongest objection, and the
+              response. Open any card to work through the full argument. Filter by type or by
+              what is most relevant to conversations with Muslims.
             </p>
 
             {/* Filter bar */}
@@ -130,7 +130,7 @@ export default function TheDig() {
 
             <div className="flex items-center gap-4 mb-8">
               <hr className="flex-1 border-t border-graphite-border" />
-              <p className="label-museum text-graphite-soft">CLICK ANY CARD TO OPEN</p>
+              <p className="label-museum text-graphite-soft">OPEN ANY CARD TO BEGIN</p>
               <hr className="flex-1 border-t border-graphite-border" />
             </div>
 

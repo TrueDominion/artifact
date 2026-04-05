@@ -22,14 +22,14 @@ export default function HeroSection() {
         transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
       >
         <h1 className="font-serif font-bold text-3xl md:text-4xl lg:text-5xl text-ink tracking-heading leading-tight max-w-2xl mx-auto">
-          Excavating the{' '}
+          The{' '}
           <span className="relative inline-block">
             foundations
             <span className="absolute -bottom-3 left-0 w-full flex justify-center">
               <CrimsonBrushstroke width={200} animate={true} />
             </span>
           </span>{' '}
-          of belief.
+          of Christian belief — examined.
         </h1>
       </motion.div>
 
@@ -55,7 +55,7 @@ style={{ filter: 'grayscale(100%) contrast(1.1)' }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }}
       >
-        A modern museum of ancient arguments.
+        Arguments. Evidence. Answers. A museum of ancient truth.
       </motion.p>
 
       {/* Scroll indicator */}
