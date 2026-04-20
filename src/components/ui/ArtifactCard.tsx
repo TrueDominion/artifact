@@ -91,9 +91,19 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
 
         {/* ── FRONT FACE ─────────────────────────────── */}
         <div
-          className="absolute inset-0 w-full h-full bg-white border border-graphite-border group overflow-hidden"
-          style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+          className="absolute inset-0 w-full h-full bg-white group overflow-hidden"
+          style={{
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            border: '1px solid rgba(45,45,45,0.12)',
+          }}
         >
+          {/* Crimson 2px top accent — visible on hover only */}
+          <div
+            className="absolute top-0 left-0 right-0 h-[2px] bg-crimson opacity-0 group-hover:opacity-100 transition-opacity duration-[400ms] pointer-events-none z-10"
+            aria-hidden="true"
+          />
+
           {/* Linen overlay fades on hover */}
           <div
             className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-0"
@@ -144,8 +154,9 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
 
         {/* ── BACK FACE ──────────────────────────────── */}
         <div
-          className="w-full bg-white border border-graphite-border overflow-hidden"
+          className="w-full bg-white overflow-hidden"
           style={{
+            border: '1px solid rgba(45,45,45,0.12)',
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
