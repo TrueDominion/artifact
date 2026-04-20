@@ -1,7 +1,3 @@
-/**
- * src/components/layout/Footer.tsx
- */
-
 import { Link } from 'react-router-dom'
 
 const footerLinks = [
@@ -12,26 +8,78 @@ const footerLinks = [
   { label: 'FIELD GUIDE', path: '/field-guide' },
 ]
 
+const linkStyle: React.CSSProperties = {
+  fontFamily: 'Inter, system-ui, sans-serif',
+  fontWeight: 400,
+  fontSize: '11px',
+  letterSpacing: '0.14em',
+  textTransform: 'uppercase',
+  color: '#9A9A9A',
+  textDecoration: 'none',
+  transition: 'color 250ms ease-out',
+}
+
 export default function Footer() {
   return (
-    <footer className="border-t border-graphite-border bg-white">
+    <footer
+      style={{
+        backgroundColor: '#FAF8F5',
+        borderTop: '1px solid rgba(45,45,45,0.1)',
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
 
-          <Link to="/" className="select-none flex-shrink-0" aria-label="artiFACT home">
-            <span className="font-serif text-sm tracking-heading text-ink">
-              <span style={{ fontWeight: 400 }}>arti</span>
-              <span style={{ fontWeight: 700 }}>FACT</span>
-            </span>
-          </Link>
+          {/* Left: site name + tagline */}
+          <div className="flex flex-col gap-2 flex-shrink-0">
+            <Link to="/" className="select-none flex items-baseline" aria-label="artiFACT home">
+              <span
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontWeight: 400,
+                  fontStyle: 'italic',
+                  fontSize: '1.1rem',
+                  color: '#C41E3A',
+                  lineHeight: 1,
+                }}
+              >
+                arti
+              </span>
+              <span
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '1.1rem',
+                  color: '#1A1A1A',
+                  lineHeight: 1,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em',
+                }}
+              >
+                FACT
+              </span>
+            </Link>
+            <p
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontStyle: 'italic',
+                fontSize: '0.8rem',
+                color: '#9A9A9A',
+              }}
+            >
+              Truth can withstand examination.
+            </p>
+          </div>
 
+          {/* Right: nav links */}
           <nav aria-label="Footer navigation">
-            <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <ul className="flex flex-wrap gap-x-6 gap-y-3">
               {footerLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="font-sans text-[0.625rem] tracking-museum text-graphite-soft hover:text-graphite-light transition-colors duration-300"
+                    style={linkStyle}
+                    className="hover:!text-graphite"
                   >
                     {link.label}
                   </Link>
@@ -39,10 +87,6 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-
-          <p className="font-serif italic text-sm text-graphite-soft flex-shrink-0">
-            Truth can withstand examination.
-          </p>
         </div>
       </div>
     </footer>

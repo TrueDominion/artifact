@@ -26,26 +26,26 @@ interface ReligionConfig {
 const RELIGIONS: ReligionConfig[] = [
   {
     id: 'islam',
-    label: 'ISLAM',
+    label: 'Islam',
     sublabel: '1.9 billion adherents',
     description: 'Challenges from Islamic theology — the Quran, Muhammad\'s credentials, the Trinity, tahrif, and the nature of God. Written for real conversations with Muslims.',
   },
   {
     id: 'atheism',
-    label: 'ATHEISM & NATURALISM',
+    label: 'Atheism & Naturalism',
     sublabel: '~1.2 billion',
     description: 'Objections from scientific naturalism and secular skepticism — evolution, the problem of evil, evidence for God, and moral grounding. Written for conversations with atheists and skeptics.',
   },
   {
     id: 'mormonism',
-    label: 'MORMONISM',
+    label: 'Mormonism',
     sublabel: '~17 million',
     description: 'Challenges from Latter-day Saint theology — the nature of God, eternal progression, the restoration narrative, and the Book of Mormon. Written for conversations with LDS members.',
     comingSoon: true,
   },
   {
     id: 'jehovahs-witnesses',
-    label: "JEHOVAH'S WITNESSES",
+    label: "Jehovah's Witnesses",
     sublabel: '~8.7 million',
     description: "Challenges from Watch Tower theology — the deity of Christ, the Trinity as alleged pagan invention, and the New World Translation. Written for conversations with Jehovah's Witnesses.",
     comingSoon: true,
@@ -69,73 +69,169 @@ const ALL_TAGS = Object.keys(TAG_LABELS) as FieldGuideTag[]
 
 // ── Religion selector ──────────────────────────────────────
 
+function ReligionCard({
+  religion,
+  index,
+  onSelect,
+}: {
+  religion: ReligionConfig
+  index: number
+  onSelect: (id: FieldGuideReligion) => void
+}) {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
+      style={{
+        border: '1px solid rgba(45,45,45,0.12)',
+        borderTop: hovered && !religion.comingSoon
+          ? '2px solid #C41E3A'
+          : '1px solid rgba(45,45,45,0.12)',
+        boxShadow: hovered && !religion.comingSoon
+          ? '0 4px 24px rgba(0,0,0,0.07)'
+          : 'none',
+        transition: 'border-top 250ms ease-out, box-shadow 250ms ease-out',
+        backgroundColor: '#ffffff',
+      }}
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => setHovered(false)}
+    >
+      <button
+        onClick={() => !religion.comingSoon && onSelect(religion.id)}
+        disabled={religion.comingSoon}
+        className={`w-full text-left p-8 h-full ${
+          religion.comingSoon ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
+        }`}
+      >
+        <div className="flex items-start justify-between mb-4">
+          <span
+            style={{
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontSize: '0.6rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#9A9A9A',
+            }}
+          >
+            {religion.sublabel}
+          </span>
+          {religion.comingSoon && (
+            <span
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '0.55rem',
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                padding: '2px 8px',
+                border: '1px solid rgba(45,45,45,0.12)',
+                color: '#9A9A9A',
+              }}
+            >
+              Coming Soon
+            </span>
+          )}
+        </div>
+
+        <div
+          style={{
+            width: '100%',
+            height: '1px',
+            backgroundColor: 'rgba(45,45,45,0.08)',
+            marginBottom: '1rem',
+          }}
+        />
+
+        <h2
+          style={{
+            fontFamily: '"Playfair Display", Georgia, serif',
+            fontWeight: 400,
+            fontSize: '1.25rem',
+            letterSpacing: '0.02em',
+            color: religion.comingSoon ? '#9A9A9A' : '#1A1A1A',
+            marginBottom: '0.75rem',
+            lineHeight: 1.3,
+          }}
+        >
+          {religion.label}
+        </h2>
+
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.85rem',
+            color: '#9A9A9A',
+            lineHeight: 1.7,
+          }}
+        >
+          {religion.description}
+        </p>
+
+        {!religion.comingSoon && (
+          <div
+            className="mt-6 flex items-center gap-2"
+            style={{
+              opacity: hovered ? 1 : 0,
+              transition: 'opacity 250ms ease-out',
+            }}
+          >
+            <span
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '0.6rem',
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#9A9A9A',
+              }}
+            >
+              OPEN
+            </span>
+            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
+              <path d="M1 4H13M9 1L13 4L9 7" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        )}
+      </button>
+    </motion.div>
+  )
+}
+
 function ReligionSelector({ onSelect }: { onSelect: (r: FieldGuideReligion) => void }) {
   return (
     <div className="min-h-screen">
       <SectionHeader
-        title="FIELD GUIDE"
+        title="Field Guide"
         subtitle="When someone says it to you face to face."
         label="Reference"
       />
 
       <div className="max-w-2xl mx-auto px-5 pb-10 text-center">
-        <p className="font-sans text-sm text-graphite-light leading-relaxed">
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.875rem',
+            color: '#9A9A9A',
+            lineHeight: 1.7,
+          }}
+        >
           Select the worldview you are engaging with. You will see clear, concise responses
           to the challenges you are most likely to encounter.
         </p>
       </div>
 
       <div className="max-w-3xl mx-auto px-5 pb-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-graphite-border">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {RELIGIONS.map((religion, i) => (
-            <motion.div
+            <ReligionCard
               key={religion.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.08 }}
-              className="bg-white"
-            >
-              <button
-                onClick={() => !religion.comingSoon && onSelect(religion.id)}
-                disabled={religion.comingSoon}
-                className={`w-full text-left p-8 h-full group transition-colors duration-300 ${
-                  religion.comingSoon
-                    ? 'cursor-not-allowed opacity-50'
-                    : 'hover:bg-linen cursor-pointer'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <span className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft">
-                    {religion.sublabel}
-                  </span>
-                  {religion.comingSoon && (
-                    <span className="font-sans text-[0.55rem] uppercase tracking-widest px-2 py-0.5 border border-graphite-border text-graphite-soft">
-                      Coming Soon
-                    </span>
-                  )}
-                </div>
-
-                <hr className="border-graphite-border mb-4" />
-
-                <h2 className={`font-serif font-bold text-xl tracking-heading mb-3 transition-colors duration-300 ${
-                  religion.comingSoon ? 'text-graphite-light' : 'text-ink group-hover:text-graphite'
-                }`}>
-                  {religion.label}
-                </h2>
-                <p className="font-sans text-sm text-graphite-light leading-relaxed">
-                  {religion.description}
-                </p>
-
-                {!religion.comingSoon && (
-                  <div className="mt-6 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft">OPEN</span>
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
-                      <path d="M1 4H13M9 1L13 4L9 7" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                )}
-              </button>
-            </motion.div>
+              religion={religion}
+              index={i}
+              onSelect={onSelect}
+            />
           ))}
         </div>
       </div>
@@ -158,11 +254,19 @@ function TagPill({
   return (
     <button
       onClick={onClick}
-      className={`px-3 py-1.5 border font-sans text-[0.6rem] tracking-widest uppercase transition-colors duration-200 ${
-        active
-          ? 'bg-ink text-white border-ink'
-          : 'bg-white text-graphite-soft border-graphite-border hover:border-graphite hover:text-graphite'
-      }`}
+      style={{
+        padding: '6px 12px',
+        border: `1px solid ${active ? '#1A1A1A' : 'rgba(45,45,45,0.12)'}`,
+        backgroundColor: active ? '#1A1A1A' : '#ffffff',
+        fontFamily: 'Inter, system-ui, sans-serif',
+        fontWeight: 400,
+        fontSize: '0.6rem',
+        letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: active ? '#ffffff' : '#9A9A9A',
+        cursor: 'pointer',
+        transition: 'all 200ms ease-out',
+      }}
     >
       {label}
     </button>
@@ -179,62 +283,95 @@ function EntryCard({
   index: number
 }) {
   const [open, setOpen] = useState(false)
+  const [hovered, setHovered] = useState(false)
 
   return (
     <motion.article
-      className="border-b border-graphite-border"
+      style={{ borderBottom: '1px solid rgba(45,45,45,0.08)' }}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, ease: 'easeOut', delay: Math.min(index * 0.04, 0.3) }}
+      transition={{ duration: 0.5, ease: 'easeOut', delay: Math.min(index * 0.04, 0.3) }}
     >
-      <button
-        onClick={() => setOpen(v => !v)}
-        className="w-full text-left"
-        aria-expanded={open}
+      <motion.div
+        onHoverStart={() => setHovered(true)}
+        onHoverEnd={() => setHovered(false)}
+        animate={{ x: hovered && !open ? 4 : 0 }}
+        transition={{ duration: 0.32, ease: 'easeOut' }}
+        style={{
+          borderLeft: `2px solid ${hovered || open ? '#C41E3A' : 'rgba(45,45,45,0.12)'}`,
+          transition: 'border-left-color 320ms ease-out',
+        }}
       >
-        <div
-          className={`px-5 py-5 flex gap-4 items-start transition-colors duration-200 ${
-            open ? 'bg-ink' : 'bg-white hover:bg-linen'
-          }`}
+        <button
+          onClick={() => setOpen(v => !v)}
+          className="w-full text-left"
+          aria-expanded={open}
         >
-          <span
-            className={`flex-shrink-0 mt-0.5 font-sans text-[0.55rem] uppercase tracking-widest px-1.5 py-0.5 border ${
-              open
-                ? 'border-white border-opacity-20 text-white text-opacity-50'
-                : 'border-graphite-border text-graphite-soft'
-            }`}
-          >
-            {TAG_LABELS[entry.tag]}
-          </span>
+          <div className="px-5 py-4 flex items-start gap-4">
+            <div className="flex-1 min-w-0">
+              {/* Challenge title */}
+              <p
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 500,
+                  fontSize: '0.95rem',
+                  color: '#1A1A1A',
+                  lineHeight: 1.4,
+                  marginBottom: '0.3rem',
+                }}
+              >
+                "{entry.challenge}"
+              </p>
+              {/* Response preview */}
+              <p
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '0.85rem',
+                  color: 'rgba(45,45,45,0.6)',
+                  lineHeight: 1.6,
+                }}
+              >
+                {entry.one_liner}
+              </p>
+            </div>
 
-          <p
-            className={`flex-1 font-serif font-bold text-base leading-snug tracking-heading transition-colors duration-200 ${
-              open ? 'text-white' : 'text-ink'
-            }`}
-          >
-            "{entry.challenge}"
-          </p>
-
-          <motion.svg
-            animate={{ rotate: open ? 180 : 0 }}
-            transition={{ duration: 0.25 }}
-            className="flex-shrink-0 mt-1"
-            width="10"
-            height="6"
-            viewBox="0 0 10 6"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M1 1L5 5L9 1"
-              stroke={open ? 'rgba(255,255,255,0.4)' : '#9A9A9A'}
-              strokeWidth="1"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </motion.svg>
-        </div>
-      </button>
+            {/* Tag + chevron */}
+            <div className="flex items-center gap-3 flex-shrink-0 mt-0.5">
+              <span
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontSize: '0.55rem',
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  padding: '2px 6px',
+                  border: '1px solid rgba(45,45,45,0.12)',
+                  color: 'rgba(45,45,45,0.5)',
+                }}
+              >
+                {TAG_LABELS[entry.tag]}
+              </span>
+              <motion.svg
+                animate={{ rotate: open ? 180 : 0 }}
+                transition={{ duration: 0.25 }}
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 1L5 5L9 1"
+                  stroke="#9A9A9A"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </motion.svg>
+            </div>
+          </div>
+        </button>
+      </motion.div>
 
       <AnimatePresence initial={false}>
         {open && (
@@ -245,21 +382,37 @@ function EntryCard({
             transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <div className="px-5 py-6 bg-white border-t border-graphite-border space-y-5">
-              <div className="flex gap-3">
-                <div className="w-0.5 flex-shrink-0 bg-crimson rounded-full" />
-                <p className="font-sans text-sm font-medium text-graphite leading-relaxed">
-                  {entry.one_liner}
-                </p>
-              </div>
-
-              <div className="space-y-3 pl-3">
+            <div
+              style={{
+                padding: '1.25rem 1.25rem 1.25rem 1.5rem',
+                backgroundColor: '#FAF8F5',
+                borderTop: '1px solid rgba(45,45,45,0.08)',
+              }}
+            >
+              <div className="space-y-3">
                 {entry.points.map((point, i) => (
                   <div key={i} className="flex gap-3 items-start">
-                    <span className="font-serif font-bold text-graphite-border flex-shrink-0 text-xs mt-0.5">
+                    <span
+                      style={{
+                        fontFamily: '"Playfair Display", Georgia, serif',
+                        fontWeight: 700,
+                        fontSize: '0.7rem',
+                        color: 'rgba(45,45,45,0.25)',
+                        flexShrink: 0,
+                        marginTop: '2px',
+                      }}
+                    >
                       {String(i + 1).padStart(2, '0')}
                     </span>
-                    <p className="font-sans text-sm text-graphite-light leading-relaxed">
+                    <p
+                      style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontWeight: 300,
+                        fontSize: '0.875rem',
+                        color: 'rgba(45,45,45,0.75)',
+                        lineHeight: 1.7,
+                      }}
+                    >
                       {point}
                     </p>
                   </div>
@@ -267,14 +420,44 @@ function EntryCard({
               </div>
 
               {entry.anchor_verse && (
-                <div className="pt-4 border-t border-graphite-border">
-                  <p className="font-sans text-[0.6rem] uppercase tracking-widest text-graphite-soft mb-2">
+                <div
+                  style={{
+                    paddingTop: '1rem',
+                    marginTop: '1rem',
+                    borderTop: '1px solid rgba(45,45,45,0.08)',
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontSize: '0.6rem',
+                      letterSpacing: '0.18em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(45,45,45,0.4)',
+                      marginBottom: '0.5rem',
+                    }}
+                  >
                     ANCHOR VERSE
                   </p>
-                  <p className="font-serif italic text-sm text-graphite leading-relaxed">
+                  <p
+                    style={{
+                      fontFamily: '"Playfair Display", Georgia, serif',
+                      fontStyle: 'italic',
+                      fontSize: '0.875rem',
+                      color: 'rgba(45,45,45,0.7)',
+                      lineHeight: 1.6,
+                    }}
+                  >
                     "{entry.anchor_verse}"
                   </p>
-                  <p className="font-sans text-xs text-crimson mt-1">
+                  <p
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontSize: '0.75rem',
+                      color: '#C41E3A',
+                      marginTop: '0.25rem',
+                    }}
+                  >
                     — {entry.anchor_verse_ref}
                   </p>
                 </div>
@@ -329,24 +512,48 @@ function GuideView({
   return (
     <div className="min-h-screen">
       <SectionHeader
-        title="FIELD GUIDE"
+        title="Field Guide"
         subtitle={config.label}
         label="Reference"
       />
 
-      {/* Back button + intent */}
+      {/* Back button */}
       <div className="max-w-3xl mx-auto px-5 pb-8">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 font-sans text-xs text-graphite-soft hover:text-graphite transition-colors duration-200 mb-6"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontWeight: 400,
+            fontSize: '12px',
+            letterSpacing: '0.14em',
+            textTransform: 'uppercase',
+            color: 'rgba(45,45,45,0.5)',
+            background: 'none',
+            border: 'none',
+            padding: 0,
+            cursor: 'pointer',
+            marginBottom: '1.5rem',
+            transition: 'color 200ms ease-out',
+          }}
+          className="hover:!text-graphite"
         >
-          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" aria-hidden="true">
-            <path d="M13 4H1M5 1L1 4L5 7" stroke="currentColor" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span className="uppercase tracking-widest">Choose a different religion</span>
+          <span aria-hidden="true" style={{ fontSize: '1rem', lineHeight: 1 }}>←</span>
+          Choose a different religion
         </button>
 
-        <p className="font-sans text-sm text-graphite-light leading-relaxed max-w-2xl">
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontWeight: 300,
+            fontSize: '0.875rem',
+            color: '#9A9A9A',
+            lineHeight: 1.7,
+            maxWidth: '56ch',
+          }}
+        >
           {config.description} Each entry gives you a one-line response and the evidence behind it.
         </p>
       </div>
@@ -370,7 +577,21 @@ function GuideView({
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search challenges..."
-            className="w-full pl-10 pr-4 py-3 border border-graphite-border bg-white font-sans text-sm text-graphite placeholder:text-graphite-border outline-none focus:border-graphite transition-colors duration-200"
+            style={{
+              width: '100%',
+              paddingLeft: '2.5rem',
+              paddingRight: '1rem',
+              paddingTop: '0.75rem',
+              paddingBottom: '0.75rem',
+              border: '1px solid rgba(45,45,45,0.12)',
+              backgroundColor: '#ffffff',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontWeight: 300,
+              fontSize: '0.875rem',
+              color: '#2D2D2D',
+              outline: 'none',
+              transition: 'border-color 200ms ease-out',
+            }}
           />
           {search && (
             <button
@@ -402,7 +623,13 @@ function GuideView({
           ))}
         </div>
 
-        <p className="font-sans text-xs text-graphite-soft">
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '0.75rem',
+            color: '#9A9A9A',
+          }}
+        >
           {filtered.length} {filtered.length === 1 ? 'challenge' : 'challenges'}
           {activeTag !== 'all' ? ` in ${TAG_LABELS[activeTag]}` : ''}
           {search ? ` matching "${search}"` : ''}
@@ -411,7 +638,7 @@ function GuideView({
 
       {/* Entry list */}
       <div className="max-w-3xl mx-auto px-5 pb-32">
-        <div className="border-t border-graphite-border">
+        <div style={{ borderTop: '1px solid rgba(45,45,45,0.08)' }}>
           <AnimatePresence mode="popLayout">
             {filtered.length > 0 ? (
               filtered.map((entry, i) => (

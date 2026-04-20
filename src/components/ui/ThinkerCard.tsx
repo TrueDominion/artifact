@@ -1,10 +1,3 @@
-/**
- * src/components/ui/ThinkerCard.tsx
- * Secondary thinker profile card for The Collection.
- * Uses real portrait image from /public/images/{key}.webp.
- * Falls back to initials block if image not yet uploaded.
- */
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import type { Thinker } from '@/types'
@@ -18,7 +11,6 @@ function Portrait({ name, svgKey }: { name: string; svgKey: string }) {
   const [failed, setFailed] = useState(false)
 
   if (failed) {
-    // Fallback: initials block while image not yet uploaded
     const initials = name.split(' ').map((w: string) => w[0]).join('').slice(0, 2)
     return (
       <div className="w-full h-full flex items-center justify-center bg-linen">
@@ -42,16 +34,32 @@ function Portrait({ name, svgKey }: { name: string; svgKey: string }) {
 export default function ThinkerCard({ thinker, index }: ThinkerCardProps) {
   return (
     <motion.article
-      className="border border-graphite-border bg-white flex flex-col hover:shadow-card-hover transition-shadow duration-400"
+      className="group relative bg-white flex flex-col"
+      style={{ border: '1px solid rgba(45,45,45,0.12)' }}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
+      whileHover={{
+        y: -4,
+        boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
+        transition: { duration: 0.4, ease: 'easeOut' },
+      }}
     >
+      {/* Crimson 2px top accent — visible on hover only */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[2px] bg-crimson opacity-0 group-hover:opacity-100 transition-opacity duration-[400ms] pointer-events-none"
+        aria-hidden="true"
+      />
+
       {/* Portrait image */}
       <div
-        className="w-full overflow-hidden border-b border-graphite-border"
-        style={{ aspectRatio: '2 / 3', maxHeight: '280px' }}
+        className="w-full overflow-hidden"
+        style={{
+          aspectRatio: '2 / 3',
+          maxHeight: '280px',
+          borderBottom: '1px solid rgba(45,45,45,0.08)',
+        }}
       >
         <Portrait name={thinker.name} svgKey={thinker.portrait_svg_key} />
       </div>
@@ -69,9 +77,11 @@ export default function ThinkerCard({ thinker, index }: ThinkerCardProps) {
           </p>
         </div>
 
-        {/* Key works */}
         {thinker.key_works.length > 0 && (
-          <div className="pt-4 border-t border-graphite-border mt-auto">
+          <div
+            className="mt-auto"
+            style={{ paddingTop: '1rem', borderTop: '1px solid rgba(45,45,45,0.08)' }}
+          >
             <p className="label-museum mb-2 text-graphite-soft">KEY WORKS</p>
             <ul className="space-y-1">
               {thinker.key_works.slice(0, 3).map((work: string, i: number) => (

@@ -1,12 +1,8 @@
-/**
- * src/pages/TheCollection.tsx
- */
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionHeader from '@/components/ui/SectionHeader'
+import HorizontalRule from '@/components/ui/HorizontalRule'
 import ThinkerCard from '@/components/ui/ThinkerCard'
-import CrimsonBrushstroke from '@/components/ui/CrimsonBrushstroke'
 import thinkersData from '@/data/thinkers.json'
 import type { Thinker } from '@/types'
 
@@ -43,7 +39,7 @@ export default function TheCollection() {
   return (
     <div className="min-h-screen">
       <SectionHeader
-        title="THE COLLECTION"
+        title="The Collection"
         subtitle="Thinkers & Intellectual History."
         label="Section VI"
       />
@@ -67,15 +63,15 @@ export default function TheCollection() {
         >
           <p className="label-museum mb-8 text-graphite-soft">FEATURED PROFILE</p>
 
-          {/*
-            FIX: a duplicate <div> with description text was inserted here
-            as the first child of this 2-column grid, forcing a broken 3-cell layout.
-            Removed. The description lives above this section (correct location).
-          */}
-          <div className="border border-graphite-border grid grid-cols-1 lg:grid-cols-[320px_1fr]">
-
+          <div
+            className="grid grid-cols-1 lg:grid-cols-[320px_1fr]"
+            style={{ border: '1px solid rgba(45,45,45,0.12)' }}
+          >
             {/* Portrait */}
-            <div className="overflow-hidden border-b lg:border-b-0 lg:border-r border-graphite-border">
+            <div
+              className="overflow-hidden"
+              style={{ borderBottom: '1px solid rgba(45,45,45,0.12)' }}
+            >
               <FeaturedPortrait thinker={featured} />
             </div>
 
@@ -83,11 +79,11 @@ export default function TheCollection() {
             <div className="p-10 lg:p-14">
               <p className="label-museum mb-4 text-graphite-soft">{featured.tradition}</p>
 
-              <div className="flex flex-col gap-1 mb-3">
+              <div className="flex flex-col gap-3 mb-3">
                 <h2 className="font-serif font-bold text-3xl lg:text-4xl text-ink tracking-heading">
                   {featured.name}
                 </h2>
-                <CrimsonBrushstroke width={200} animate={true} />
+                <HorizontalRule width="48px" />
               </div>
 
               <p className="font-sans text-sm text-graphite-soft mb-6">{featured.dates}</p>

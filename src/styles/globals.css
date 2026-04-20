@@ -18,11 +18,16 @@
     @apply bg-white text-ink font-sans;
     font-weight: 300;
     line-height: 1.75;
+    text-align: left;
   }
 
   h1, h2, h3, h4, h5 {
     @apply font-serif;
     line-height: 1.2;
+  }
+
+  p {
+    text-align: left;
   }
 
   ::selection {
@@ -54,10 +59,10 @@
    * Text color is NOT set here; callers always provide it (e.g. text-graphite-soft).
    */
   .label-museum {
-  @apply font-sans uppercase;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-}
+    @apply font-sans uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+  }
 
   /*
    * rule-graphite — thin horizontal rule used as a section divider.
@@ -68,8 +73,9 @@
   }
 
   .section-label {
-    @apply font-sans text-xs tracking-widest uppercase text-graphite-muted;
-    letter-spacing: 0.2em;
+    @apply font-sans text-xs uppercase;
+    letter-spacing: 0.18em;
+    color: #9A9A9A;
   }
 
   .exhibit-title {
@@ -96,6 +102,31 @@
 
   .warm-bg {
     background-color: #F5F3F0;
+  }
+
+  /* Prose blocks — paragraph spacing and max-width */
+  .prose {
+    max-width: 68ch;
+  }
+
+  .prose p + p {
+    margin-top: 1.5rem;
+  }
+
+  .prose p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Card surface — shared hover behavior */
+  .card-surface {
+    border: 1px solid rgba(45, 45, 45, 0.12);
+    transition: box-shadow 400ms ease-out, transform 400ms ease-out;
+    position: relative;
+  }
+
+  .card-surface:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
   }
 }
 

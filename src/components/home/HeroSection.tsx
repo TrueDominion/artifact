@@ -1,14 +1,6 @@
-/**
- * src/components/home/HeroSection.tsx
- * Full-viewport hero section for the artiFACT homepage.
- * Statue rises from below on load; headline appears after 400ms delay.
- * Crimson brushstroke draws beneath "foundations".
- * Scroll indicator: thin vertical line + animated downward chevron.
- */
-
 import { motion } from 'framer-motion'
 import StatueSVG from './StatueSVG'
-import CrimsonBrushstroke from '@/components/ui/CrimsonBrushstroke'
+import HorizontalRule from '@/components/ui/HorizontalRule'
 
 export default function HeroSection() {
   return (
@@ -25,8 +17,8 @@ export default function HeroSection() {
           The{' '}
           <span className="relative inline-block">
             foundations
-            <span className="absolute -bottom-3 left-0 w-full flex justify-center">
-              <CrimsonBrushstroke width={200} animate={true} />
+            <span className="absolute -bottom-2 left-1/2 -translate-x-1/2">
+              <HorizontalRule width="100%" />
             </span>
           </span>{' '}
           of Christian belief — examined.
@@ -41,11 +33,11 @@ export default function HeroSection() {
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.1 }}
       >
         <img
-  src="/images/statue.png"
-  alt="Broken classical marble torso emerging from sand"
-  className="w-full max-w-xs mx-auto opacity-90"
-style={{ filter: 'grayscale(100%) contrast(1.1)' }}
-/>
+          src="/images/statue.png"
+          alt="Broken classical marble torso emerging from sand"
+          className="w-full max-w-xs mx-auto opacity-90"
+          style={{ filter: 'grayscale(100%) contrast(1.1)' }}
+        />
       </motion.div>
 
       {/* Subheadline */}
