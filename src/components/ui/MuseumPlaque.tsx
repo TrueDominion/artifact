@@ -1,7 +1,3 @@
-/**
- * src/components/ui/MuseumPlaque.tsx
- */
-
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { BedrockEntry } from '@/types'
@@ -34,7 +30,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
       <div className="bg-white">
         <div className="px-8 pt-8 pb-6 lg:px-10">
 
-          {/* Scripture block */}
+          {/* Scripture block — crimson bar is intentional, stays */}
           <div className="flex gap-4 mb-7">
             <div className="w-0.5 flex-shrink-0 bg-crimson rounded-full" />
             <div>
@@ -65,7 +61,6 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
             aria-label={expanded ? 'Collapse doctrine' : 'Expand doctrine'}
           >
             <span className="label-museum text-graphite-soft group-hover:text-graphite transition-colors duration-300">
-              {/* FIX: renamed from 'READ DOCTRINE' to match the page legend */}
               {expanded ? 'COLLAPSE' : 'READ THE FULL EXPLANATION'}
             </span>
             <motion.div
@@ -91,7 +86,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
             >
               <div className="border-t border-graphite-border grid grid-cols-1 lg:grid-cols-2">
 
-                {/* Left — What We Believe (was "THE DOCTRINE") */}
+                {/* Left — What We Believe */}
                 <motion.div
                   className="px-8 py-8 lg:px-10 lg:py-10 lg:border-r border-graphite-border"
                   initial={{ opacity: 0, y: 12 }}
@@ -99,7 +94,6 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                   transition={{ duration: 0.35, delay: 0.1, ease: 'easeOut' }}
                 >
                   <div className="flex items-center gap-2 mb-5">
-                    {/* FIX: renamed from "THE DOCTRINE" to match Bedrock page legend */}
                     <p className="label-museum text-graphite-soft">WHAT WE BELIEVE</p>
                   </div>
                   <p className="font-sans text-sm text-graphite leading-relaxed">
@@ -107,7 +101,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                   </p>
                 </motion.div>
 
-                {/* Right — How Islam Differs (was "ISLAMIC CONTRAST") */}
+                {/* Right — How Islam Differs */}
                 <motion.div
                   className="px-8 py-8 lg:px-10 lg:py-10 border-t lg:border-t-0 border-graphite-border"
                   style={{ backgroundColor: '#FAF8F5' }}
@@ -115,13 +109,14 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, delay: 0.18, ease: 'easeOut' }}
                 >
-                  <div className="w-full h-px bg-crimson mb-5 opacity-60" />
+                  {/* Graphite rule — was crimson, corrected */}
+                  <div className="w-full h-px bg-graphite-border mb-5" />
                   <div className="flex items-center gap-2 mb-5">
-                    {/* FIX: renamed from "ISLAMIC CONTRAST" to match Bedrock page legend */}
                     <p className="label-museum text-graphite-soft">HOW ISLAM DIFFERS</p>
+                    {/* Icon strokes corrected from crimson to graphite-soft */}
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                      <path d="M1,8 L5,2 L9,8" stroke="#C41E3A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
-                      <line x1="2.5" y1="6" x2="7.5" y2="6" stroke="#C41E3A" strokeWidth="0.7" strokeLinecap="round"/>
+                      <path d="M1,8 L5,2 L9,8" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
+                      <line x1="2.5" y1="6" x2="7.5" y2="6" stroke="#9A9A9A" strokeWidth="0.7" strokeLinecap="round"/>
                     </svg>
                   </div>
                   <p className="font-sans text-sm text-graphite leading-relaxed">
