@@ -12,18 +12,16 @@ import type { Argument } from '@/types'
 const args = argumentsData as unknown as Argument[]
 
 const FILTERS = [
-  { key: 'all',          label: 'ALL ARGUMENTS' },
-  { key: 'islam',        label: 'MOST RELEVANT FOR ISLAM' },
-  { key: 'historical',   label: 'HISTORICAL' },
-  { key: 'philosophical',label: 'PHILOSOPHICAL' },
+  { key: 'all',           label: 'ALL ARGUMENTS' },
+  { key: 'islam',         label: 'MOST RELEVANT FOR ISLAM' },
+  { key: 'historical',    label: 'HISTORICAL' },
+  { key: 'philosophical', label: 'PHILOSOPHICAL' },
 ]
 
-const ISLAM_RELEVANT    = ['kalam', 'resurrection', 'moral', 'prophecy']
-const HISTORICAL_IDS    = ['resurrection', 'prophecy']
-const PHILOSOPHICAL_IDS = ['kalam', 'teleological', 'moral', 'reason', 'ontological', 'consciousness']
+const ISLAM_RELEVANT     = ['kalam', 'resurrection', 'moral', 'prophecy']
+const HISTORICAL_IDS     = ['resurrection', 'prophecy']
+const PHILOSOPHICAL_IDS  = ['kalam', 'teleological', 'moral', 'reason', 'ontological', 'consciousness']
 
-// Strata ordered surface → depth (top of sidebar → bottom)
-// Shading gets progressively darker as you go deeper
 const strata = [
   { label: 'CLAIM',     number: '01' },
   { label: 'LOGIC',     number: '02' },
@@ -35,10 +33,10 @@ export default function TheDig() {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filtered = args.filter(arg => {
-    if (activeFilter === 'all')          return true
-    if (activeFilter === 'islam')        return ISLAM_RELEVANT.includes(arg.id)
-    if (activeFilter === 'historical')   return HISTORICAL_IDS.includes(arg.id)
-    if (activeFilter === 'philosophical')return PHILOSOPHICAL_IDS.includes(arg.id)
+    if (activeFilter === 'all')           return true
+    if (activeFilter === 'islam')         return ISLAM_RELEVANT.includes(arg.id)
+    if (activeFilter === 'historical')    return HISTORICAL_IDS.includes(arg.id)
+    if (activeFilter === 'philosophical') return PHILOSOPHICAL_IDS.includes(arg.id)
     return true
   })
 
@@ -53,10 +51,8 @@ export default function TheDig() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">
         <div className="flex gap-8 lg:gap-12">
 
-          {/* ── Stratum sidebar — desktop only ── */}
+          {/* Stratum sidebar — desktop only */}
           <aside className="hidden lg:flex flex-col flex-shrink-0 w-10" aria-label="Argument layers">
-
-            {/* FIX: was DEPTH — correct label is SURFACE (you start at the surface) */}
             <p
               className="label-museum text-graphite-border text-center mb-3"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
@@ -72,7 +68,6 @@ export default function TheDig() {
                     i < strata.length - 1 ? 'border-b border-graphite-border' : ''
                   }`}
                   style={{
-                    // Shading gets darker top→bottom (surface=light, depth=dark)
                     backgroundColor:
                       i === 0 ? '#FFFFFF' :
                       i === 1 ? '#FAF8F5' :
@@ -92,7 +87,6 @@ export default function TheDig() {
               ))}
             </div>
 
-            {/* FIX: was SURFACE — correct label is DEPTH (you end deeper) */}
             <p
               className="label-museum text-graphite-border text-center mt-3"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', letterSpacing: '0.12em' }}
@@ -101,14 +95,15 @@ export default function TheDig() {
             </p>
           </aside>
 
-          {/* ── Card grid ── */}
+          {/* Card grid */}
           <div className="flex-1">
 
-            <p className="font-sans text-sm text-graphite-light leading-relaxed mb-8 max-w-lg">
+            {/* Intro paragraph — now Playfair italic to match the editorial tier */}
+            <p className="font-serif italic text-base text-graphite-light leading-relaxed mb-8 max-w-lg">
               Eight arguments for God's existence and the truth of Christianity — each examined
-              through four layers: the claim, the reasoning, the strongest objection, and the
-              response. Open any card to work through the full argument. Filter by type or by
-              what is most relevant to conversations with Muslims.
+              through four layers: claim, reasoning, strongest objection, and response. Open any
+              card to work through the full argument. Filter by type or by what is most relevant
+              to conversations with Muslims.
             </p>
 
             {/* Filter bar */}
