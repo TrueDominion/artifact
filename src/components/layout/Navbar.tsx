@@ -8,11 +8,11 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { label: 'FIELD GUIDE', path: '/field-guide' },
   { label: 'BEDROCK', path: '/bedrock' },
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
-  { label: 'FIELD GUIDE', path: '/field-guide' },
 ]
 
 export default function Navbar() {
@@ -143,11 +143,10 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile drawer — slides in from right */}
+      {/* Mobile drawer */}
       <AnimatePresence>
         {menuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               className="fixed inset-0 z-[99]"
               style={{ backgroundColor: 'rgba(0,0,0,0.18)' }}
@@ -159,7 +158,6 @@ export default function Navbar() {
               aria-hidden="true"
             />
 
-            {/* Drawer */}
             <motion.div
               className="fixed top-0 right-0 bottom-0 z-[100] bg-white flex flex-col"
               style={{ width: '280px' }}
@@ -168,7 +166,6 @@ export default function Navbar() {
               exit={{ x: '100%' }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
             >
-              {/* Drawer header */}
               <div
                 className="flex items-center justify-between px-6"
                 style={{ height: '68px', borderBottom: '1px solid rgba(45,45,45,0.08)' }}
@@ -215,7 +212,6 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Nav items */}
               <ul className="flex flex-col px-6 pt-8 gap-6">
                 {navItems.map((item, i) => (
                   <motion.li
