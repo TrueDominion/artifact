@@ -215,7 +215,7 @@ function ExhibitPanel({ wv, onClose }: ExhibitPanelProps) {
 
               {tab === 'critique' && (
                 <div className="max-w-3xl">
-                  <div className="w-full h-px bg-crimson opacity-60 mb-6" />
+                  <div className="w-full h-px bg-graphite-border mb-6" />
                   <div className="flex items-center gap-2 mb-5">
                     <p className="label-museum text-graphite-soft">REFORMED CHRISTIAN CRITIQUE</p>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
@@ -301,21 +301,18 @@ export default function TheGallery() {
 
   return (
     <div className="min-h-screen">
-      <SectionHeader title="THE GALLERY" subtitle="Eight worldviews, examined honestly." label="Section III" />
+      <SectionHeader
+        title="THE GALLERY"
+        subtitle="Eight worldviews, examined honestly."
+        label="Section III"
+        intro="Each tradition presented on its own terms, then examined from a Reformed Christian perspective. The goal is honest engagement, not caricature."
+      />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">
-        <p className="font-sans text-sm text-graphite-light leading-body mb-12 max-w-xl">
-          Eight worldviews — each presented on its own terms, then examined from a Reformed Christian
-          perspective. Open any panel to read the overview, the core claims, and the critique.
-          The goal is honest engagement, not caricature.
-        </p>
+        {/* Intro paragraph removed — content now lives in SectionHeader intro prop */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-graphite-border">
           {worldviews.map((wv, index) => (
-            /*
-              FIX: key was on the inner <div>, not on the fragment wrapper.
-              Shorthand <> fragments cannot take a key prop — must use Fragment explicitly.
-              AnimatePresence relies on stable keys to animate exit correctly.
-            */
             <Fragment key={wv.id}>
               <div className="bg-white">
                 <ExhibitCard wv={wv} index={index} isOpen={openId === wv.id} onToggle={() => toggle(wv.id)} />
