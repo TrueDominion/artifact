@@ -4,9 +4,10 @@ interface SectionHeaderProps {
   title: string
   subtitle: string
   label?: string
+  intro?: string
 }
 
-export default function SectionHeader({ title, subtitle, label }: SectionHeaderProps) {
+export default function SectionHeader({ title, subtitle, label, intro }: SectionHeaderProps) {
   return (
     <header className="pt-20 pb-16 px-6 lg:px-12 text-center max-w-4xl mx-auto">
       {label && (
@@ -57,6 +58,21 @@ export default function SectionHeader({ title, subtitle, label }: SectionHeaderP
       >
         {subtitle}
       </motion.p>
+
+      {/* Editorial intro tier — Playfair italic, slightly smaller than subtitle,
+          slightly darker than subtitle to create a distinct weight in the scale */}
+      {intro && (
+        <motion.p
+          className="font-serif italic text-base md:text-lg text-graphite font-normal mt-5 max-w-2xl mx-auto"
+          style={{ lineHeight: '1.8' }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
+        >
+          {intro}
+        </motion.p>
+      )}
     </header>
   )
 }
