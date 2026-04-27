@@ -16,15 +16,8 @@ export default function Bedrock() {
         title="BEDROCK"
         subtitle="The beliefs that hold everything else up."
         label="Section I"
+        intro="Seven foundational doctrines of Christian faith — what each one means, what is at stake if it is denied, and where Islamic theology directly contradicts it."
       />
-
-      <div className="max-w-2xl mx-auto px-6 lg:px-12 pb-14 text-center">
-        <p className="font-sans text-sm text-graphite-light leading-body">
-          Seven foundational doctrines of Christian faith — each one stating what Christians believe,
-          what is at stake if it is denied, and where Islamic theology directly contradicts it.
-          Click any entry to read the full explanation.
-        </p>
-      </div>
 
       <div className="max-w-4xl mx-auto px-6 lg:px-12 mb-8">
         <div className="flex items-center gap-8 py-4 border-t border-b border-graphite-border">
@@ -33,7 +26,7 @@ export default function Bedrock() {
             <span className="label-museum text-graphite-soft">THE BELIEF</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-3 h-0.5 bg-crimson opacity-60" />
+            <div className="w-3 h-0.5 bg-graphite-border" />
             <span className="label-museum text-graphite-soft">HOW ISLAM DIFFERS</span>
           </div>
           <div className="ml-auto flex items-center gap-2 opacity-50">
