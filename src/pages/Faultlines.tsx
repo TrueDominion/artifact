@@ -105,7 +105,7 @@ function FaultCard({ debate, index, isOpen, onToggle }: FaultCardProps) {
         <div className={`flex gap-0 transition-colors duration-300 ${isOpen ? 'bg-ink' : 'bg-white hover:bg-linen'}`}>
           <div
             className="w-1 flex-shrink-0 transition-colors duration-300"
-            style={{ backgroundColor: isOpen ? '#C41E3A' : 'transparent' }}
+            style={{ backgroundColor: isOpen ? 'rgba(255,255,255,0.18)' : 'transparent' }}
           />
           <div className="flex-1 px-7 py-6">
             <div className="flex items-start justify-between gap-6">
