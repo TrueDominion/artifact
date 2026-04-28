@@ -41,14 +41,12 @@ const RELIGIONS: ReligionConfig[] = [
     label: 'Mormonism',
     sublabel: '~17 million',
     description: 'Challenges from Latter-day Saint theology — the nature of God, eternal progression, the restoration narrative, and the Book of Mormon. Written for conversations with LDS members.',
-    comingSoon: true,
   },
   {
     id: 'jehovahs-witnesses',
     label: "Jehovah's Witnesses",
     sublabel: '~8.7 million',
     description: "Challenges from Watch Tower theology — the deity of Christ, the Trinity as alleged pagan invention, and the New World Translation. Written for conversations with Jehovah's Witnesses.",
-    comingSoon: true,
   },
 ]
 
