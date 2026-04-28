@@ -136,23 +136,6 @@
     "religion": "islam"
   },
   {
-    "id": "christmas-easter-pagan",
-    "challenge": "Christmas and Easter are pagan inventions — they have nothing to do with Jesus",
-    "one_liner": "The dates may have been chosen strategically, but the events themselves — the birth and resurrection of Jesus — are historically grounded, not pagan inventions.",
-    "points": [
-      "The historical events of the Incarnation (God becoming human) and the Resurrection are what matter — not the specific calendar dates chosen to commemorate them. Christianity does not stand or fall on when December 25th came from.",
-      "The claim that Christmas was invented from a pagan festival is historically complicated — scholars debate whether early Christians chose December 25th to coincide with Roman festivals or whether they calculated it independently. The evidence is not as clear-cut as the objection suggests.",
-      "Easter's connection to the Hebrew Passover is direct and intentional — Jesus was crucified during Passover, and Paul explicitly calls him 'our Passover lamb' (1 Corinthians 5:7). The Christian Passover connection predates any pagan association.",
-      "Even if we granted that dates were borrowed, that says nothing about whether the events actually happened. The Resurrection either occurred or it didn't — that question is answered by historical evidence, not by calendar origins.",
-      "This argument, even if fully accepted, would prove that some Christian traditions developed in a cultural context. It would not prove that Jesus did not exist, did not die, or did not rise. Those claims need historical evidence to challenge — not observations about ancient calendars."
-    ],
-    "anchor_verse": "Christ, our Passover lamb, has been sacrificed.",
-    "anchor_verse_ref": "1 Corinthians 5:7",
-    "tag": "history",
-    "priority": 2,
-    "religion": "atheism"
-  },
-  {
     "id": "god-universe-while-jesus-on-earth",
     "challenge": "If Jesus was God, who was running the universe while he was on earth?",
     "one_liner": "The Trinity means God is not a single isolated individual — the Father, Son, and Spirit are always distinct. The Son becoming human did not leave the universe without God.",
@@ -234,40 +217,6 @@
     "anchor_verse": "Enter by the narrow gate. For the gate is wide and the way is easy that leads to destruction, and those who enter by it are many.",
     "anchor_verse_ref": "Matthew 7:13",
     "tag": "logic",
-    "priority": 2,
-    "religion": "islam"
-  },
-  {
-    "id": "jesus-not-died-risen",
-    "challenge": "Jesus did not really rise from the dead — the disciples were mistaken or lying",
-    "one_liner": "Five basic facts accepted by most historians — including non-Christian ones — are best explained by a real resurrection. No alternative theory accounts for all five simultaneously.",
-    "points": [
-      "Historian Gary Habermas identified five facts accepted across the scholarly spectrum regardless of belief: Jesus died by crucifixion; was buried in a known tomb; the tomb was found empty; multiple people and groups saw him alive afterwards; the disciples were so convinced they died for this claim.",
-      "The hallucination theory fails on two counts — hallucinations are private individual experiences, not shared by groups, and they cannot explain an empty tomb.",
-      "Enemy attestation confirms the empty tomb: Jewish and Roman authorities did not deny the tomb was empty — they explained it as body theft (Matthew 28:13). You do not invent an explanation for something that did not happen.",
-      "The first witnesses in every Gospel account are women — who were not considered reliable legal witnesses in first-century Jewish culture. An invented story would never choose women as the primary witnesses. This detail only survives because it actually happened.",
-      "People sometimes die for things they believe but are wrong about. Nobody willingly dies for something they know is a lie. The disciples were in a position to know whether the resurrection was real — and they gave their lives for it."
-    ],
-    "anchor_verse": "And if Christ has not been raised, your faith is futile and you are still in your sins.",
-    "anchor_verse_ref": "1 Corinthians 15:17",
-    "tag": "history",
-    "priority": 1,
-    "religion": "atheism"
-  },
-  {
-    "id": "christianity-changed-councils",
-    "challenge": "Christianity was changed by the Council of Nicaea — the Trinity was invented in 325 AD",
-    "one_liner": "Nicaea did not invent the Trinity — it put precise language to what the apostolic church already believed. The council clarified; it did not create.",
-    "points": [
-      "The Council of Nicaea was called because a man named Arius was teaching that Jesus was a created being — a departure from what the church had taught. Nicaea ruled against Arius, which means the pre-Nicene majority already held a high view of Christ.",
-      "Christian writers long before Nicaea — Ignatius around 107 AD, Justin Martyr around 150 AD, Irenaeus around 180 AD — all clearly affirm the divinity of Christ. The council formalised language that was already present in the church.",
-      "John 1:1, Colossians 2:9, and Philippians 2:6 — all written in the first century, before any council — present a Christ who is fully divine. Nicaea did not add this; it gave it a philosophical framework.",
-      "The 'invented at Nicaea' claim was popularised by a novel (The Da Vinci Code) but is rejected by every serious historian of early Christianity, including non-Christian scholars who have no motive to defend the church.",
-      "Of roughly 300 bishops at Nicaea, only 2 refused to sign the final statement. That near-unanimity reflects how deeply the church already held a high view of Christ — not a new idea being forced through."
-    ],
-    "anchor_verse": "For in him the whole fullness of deity dwells bodily.",
-    "anchor_verse_ref": "Colossians 2:9",
-    "tag": "history",
     "priority": 2,
     "religion": "islam"
   },
@@ -357,6 +306,74 @@
     "religion": "islam"
   },
   {
+    "id": "christianity-changed-councils",
+    "challenge": "Christianity was changed by the Council of Nicaea — the Trinity was invented in 325 AD",
+    "one_liner": "Nicaea did not invent the Trinity — it put precise language to what the apostolic church already believed. The council clarified; it did not create.",
+    "points": [
+      "The Council of Nicaea was called because a man named Arius was teaching that Jesus was a created being — a departure from what the church had taught. Nicaea ruled against Arius, which means the pre-Nicene majority already held a high view of Christ.",
+      "Christian writers long before Nicaea — Ignatius around 107 AD, Justin Martyr around 150 AD, Irenaeus around 180 AD — all clearly affirm the divinity of Christ. The council formalised language that was already present in the church.",
+      "John 1:1, Colossians 2:9, and Philippians 2:6 — all written in the first century, before any council — present a Christ who is fully divine. Nicaea did not add this; it gave it a philosophical framework.",
+      "The 'invented at Nicaea' claim was popularised by a novel (The Da Vinci Code) but is rejected by every serious historian of early Christianity, including non-Christian scholars who have no motive to defend the church.",
+      "Of roughly 300 bishops at Nicaea, only 2 refused to sign the final statement. That near-unanimity reflects how deeply the church already held a high view of Christ — not a new idea being forced through."
+    ],
+    "anchor_verse": "For in him the whole fullness of deity dwells bodily.",
+    "anchor_verse_ref": "Colossians 2:9",
+    "tag": "history",
+    "priority": 2,
+    "religion": "islam"
+  },
+  {
+    "id": "islamic-prayer-five-times",
+    "challenge": "Islam's five daily prayers show greater devotion and discipline than Christianity",
+    "one_liner": "Frequency of ritual is not the same as relationship. Christianity offers something Islam cannot — direct access to God as a Father, available at any moment, not five prescribed times.",
+    "points": [
+      "The five daily prayers (salat) reflect a genuine discipline of remembrance. But in Islamic theology they are primarily acts of submission — the word Islam literally means submission — rather than conversation between a child and a parent.",
+      "Christianity offers something categorically different: not scheduled access to God but adoption into his family. Romans 8:15 says believers have received 'the Spirit of adoption' by which they cry 'Abba — Father.' This is a child speaking to a dad, not a subject petitioning a king.",
+      "When Jesus was crucified, the Temple curtain tore in two (Matthew 27:51). That curtain was what separated ordinary people from the presence of God. Its tearing signalled permanent, unmediated access — available to all believers at all times, in any direction.",
+      "In Islamic theology, Allah does not have a personal relationship with believers in the way the New Testament describes. He is merciful and compassionate — but a believer cannot know they are loved as a child. They are servant to a Master.",
+      "The question is not which religion produces more visible religious activity. The question is which God actually wants to be known — and on what terms."
+    ],
+    "anchor_verse": "For you did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, 'Abba! Father!'",
+    "anchor_verse_ref": "Romans 8:15",
+    "tag": "salvation",
+    "priority": 3,
+    "religion": "islam"
+  },
+  {
+    "id": "christmas-easter-pagan",
+    "challenge": "Christmas and Easter are pagan inventions — they have nothing to do with Jesus",
+    "one_liner": "The dates may have been chosen strategically, but the events themselves — the birth and resurrection of Jesus — are historically grounded, not pagan inventions.",
+    "points": [
+      "The historical events of the Incarnation (God becoming human) and the Resurrection are what matter — not the specific calendar dates chosen to commemorate them. Christianity does not stand or fall on when December 25th came from.",
+      "The claim that Christmas was invented from a pagan festival is historically complicated — scholars debate whether early Christians chose December 25th to coincide with Roman festivals or whether they calculated it independently. The evidence is not as clear-cut as the objection suggests.",
+      "Easter's connection to the Hebrew Passover is direct and intentional — Jesus was crucified during Passover, and Paul explicitly calls him 'our Passover lamb' (1 Corinthians 5:7). The Christian Passover connection predates any pagan association.",
+      "Even if we granted that dates were borrowed, that says nothing about whether the events actually happened. The Resurrection either occurred or it didn't — that question is answered by historical evidence, not by calendar origins.",
+      "This argument, even if fully accepted, would prove that some Christian traditions developed in a cultural context. It would not prove that Jesus did not exist, did not die, or did not rise. Those claims need historical evidence to challenge — not observations about ancient calendars."
+    ],
+    "anchor_verse": "Christ, our Passover lamb, has been sacrificed.",
+    "anchor_verse_ref": "1 Corinthians 5:7",
+    "tag": "history",
+    "priority": 2,
+    "religion": "atheism"
+  },
+  {
+    "id": "jesus-not-died-risen",
+    "challenge": "Jesus did not really rise from the dead — the disciples were mistaken or lying",
+    "one_liner": "Five basic facts accepted by most historians — including non-Christian ones — are best explained by a real resurrection. No alternative theory accounts for all five simultaneously.",
+    "points": [
+      "Historian Gary Habermas identified five facts accepted across the scholarly spectrum regardless of belief: Jesus died by crucifixion; was buried in a known tomb; the tomb was found empty; multiple people and groups saw him alive afterwards; the disciples were so convinced they died for this claim.",
+      "The hallucination theory fails on two counts — hallucinations are private individual experiences, not shared by groups, and they cannot explain an empty tomb.",
+      "Enemy attestation confirms the empty tomb: Jewish and Roman authorities did not deny the tomb was empty — they explained it as body theft (Matthew 28:13). You do not invent an explanation for something that did not happen.",
+      "The first witnesses in every Gospel account are women — who were not considered reliable legal witnesses in first-century Jewish culture. An invented story would never choose women as the primary witnesses. This detail only survives because it actually happened.",
+      "People sometimes die for things they believe but are wrong about. Nobody willingly dies for something they know is a lie. The disciples were in a position to know whether the resurrection was real — and they gave their lives for it."
+    ],
+    "anchor_verse": "And if Christ has not been raised, your faith is futile and you are still in your sins.",
+    "anchor_verse_ref": "1 Corinthians 15:17",
+    "tag": "history",
+    "priority": 1,
+    "religion": "atheism"
+  },
+  {
     "id": "science-disproves-religion",
     "challenge": "Science has disproved religion — we do not need God to explain the universe",
     "one_liner": "Science explains how the universe works. It cannot answer why anything exists at all, why the laws of physics are what they are, or why there is something rather than nothing.",
@@ -389,23 +406,6 @@
     "tag": "logic",
     "priority": 3,
     "religion": "atheism"
-  },
-  {
-    "id": "islamic-prayer-five-times",
-    "challenge": "Islam's five daily prayers show greater devotion and discipline than Christianity",
-    "one_liner": "Frequency of ritual is not the same as relationship. Christianity offers something Islam cannot — direct access to God as a Father, available at any moment, not five prescribed times.",
-    "points": [
-      "The five daily prayers (salat) reflect a genuine discipline of remembrance. But in Islamic theology they are primarily acts of submission — the word Islam literally means submission — rather than conversation between a child and a parent.",
-      "Christianity offers something categorically different: not scheduled access to God but adoption into his family. Romans 8:15 says believers have received 'the Spirit of adoption' by which they cry 'Abba — Father.' This is a child speaking to a dad, not a subject petitioning a king.",
-      "When Jesus was crucified, the Temple curtain tore in two (Matthew 27:51). That curtain was what separated ordinary people from the presence of God. Its tearing signalled permanent, unmediated access — available to all believers at all times, in any direction.",
-      "In Islamic theology, Allah does not have a personal relationship with believers in the way the New Testament describes. He is merciful and compassionate — but a believer cannot know they are loved as a child. They are servant to a Master.",
-      "The question is not which religion produces more visible religious activity. The question is which God actually wants to be known — and on what terms."
-    ],
-    "anchor_verse": "For you did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, 'Abba! Father!'",
-    "anchor_verse_ref": "Romans 8:15",
-    "tag": "salvation",
-    "priority": 3,
-    "religion": "islam"
   },
   {
     "id": "evolution-makes-god-unnecessary",
@@ -491,5 +491,209 @@
     "tag": "scripture",
     "priority": 2,
     "religion": "atheism"
+  },
+  {
+    "id": "book-of-mormon-scripture",
+    "challenge": "The Book of Mormon is another testament of Jesus Christ — it proves Joseph Smith was a real prophet",
+    "one_liner": "The Book of Mormon has no archaeological, linguistic, or genetic corroboration for the civilizations it describes — and its translation method raises serious problems Joseph Smith never resolved.",
+    "points": [
+      "The Book of Mormon describes large civilizations — Nephites and Lamanites — inhabiting the Americas for a thousand years, with horses, steel, chariots, wheat, and barley. No archaeological evidence for any of these has been found in the relevant time periods and locations. The Smithsonian Institution has formally stated it does not use the Book of Mormon as a guide to archaeological research.",
+      "DNA evidence is decisive: the indigenous peoples of the Americas descend from Asian populations who crossed the Bering land bridge, not from ancient Israelites migrating across the Atlantic. The LDS Church has acknowledged this by quietly rewriting its introduction — the Book of Mormon's people were once 'the principal ancestors' of Native Americans; they are now 'among the ancestors.'",
+      "Joseph Smith claimed to translate the golden plates using a seer stone placed in a hat, into which he would stare while the text appeared. This was concealed from members for generations. More critically, the Book of Mormon reproduces passages from the King James Version of Isaiah — including translation choices unique to the KJV that are now known to be inaccurate renderings of the Hebrew. An ancient document cannot contain 17th-century English translation errors.",
+      "The Bible provides its own test for claimed additional revelation: if a book contradicts the God of Scripture on core matters — the nature of God, salvation, the uniqueness of Christ — it is to be rejected regardless of claimed supernatural origins (Galatians 1:8-9). The Book of Mormon's companion doctrines contradict historic Christianity on all three.",
+      "The most direct test is historical corroboration. The New Testament world is extensively verified by archaeology, coinage, inscriptions, and hostile external sources. After nearly 200 years of searching, not one confirmed artifact, city, or inscription from the Book of Mormon's civilizations has been found. Absence of evidence for civilizations this size, over this duration, is significant."
+    ],
+    "anchor_verse": "But even if we or an angel from heaven should preach to you a gospel contrary to the one we preached to you, let him be accursed.",
+    "anchor_verse_ref": "Galatians 1:8",
+    "tag": "scripture",
+    "priority": 1,
+    "religion": "mormonism"
+  },
+  {
+    "id": "great-apostasy",
+    "challenge": "Joseph Smith restored the true church — there was a complete apostasy after the apostles died",
+    "one_liner": "Jesus promised the gates of hell would not prevail against his church. A complete apostasy requires that promise to have failed — and the historical record contradicts total apostasy anyway.",
+    "points": [
+      "The Great Apostasy doctrine claims that after the last apostle died, true Christianity vanished entirely from the earth until Joseph Smith in 1830. But Jesus explicitly promised otherwise: 'I will build my church, and the gates of hell shall not prevail against it' (Matthew 16:18). A total apostasy makes Jesus a failed prophet.",
+      "The historical record contradicts total apostasy. Ignatius of Antioch (107 AD, discipled by John) called Jesus 'our God.' Justin Martyr (150 AD) and Irenaeus (180 AD) both preserve core doctrines continuous with the New Testament — the physical resurrection, the divinity of Christ, salvation by grace. These men were discipled by disciples of the apostles.",
+      "LDS theology requires that priesthood authority was completely lost and had to be physically restored by John the Baptist and by Peter, James, and John appearing to Joseph Smith. There are no external witnesses to these appearances. In Christian theology, authority flows from the indwelling Holy Spirit — not a physical chain of ordination.",
+      "If the church truly fell into total apostasy, millions of martyrs between 100 AD and 1830 AD died for a corrupted faith. Augustine, Anselm, Luther, Calvin — all were outside true Christianity. This claim requires an enormous historical rewrite with no documentary support.",
+      "The Protestant Reformation, not Joseph Smith, addressed genuine corruption in the medieval church. Luther, Calvin, and Zwingli recovered biblical doctrine from Scripture itself — without claiming new prophetic office, physical angelic visitations, or golden plates. The Reformation's method is more coherent: return to what was written, not claim new revelation."
+    ],
+    "anchor_verse": "I will build my church, and the gates of hell shall not prevail against it.",
+    "anchor_verse_ref": "Matthew 16:18",
+    "tag": "history",
+    "priority": 1,
+    "religion": "mormonism"
+  },
+  {
+    "id": "god-has-physical-body",
+    "challenge": "God the Father has a physical, glorified body — that is what 'made in his image' means",
+    "one_liner": "Scripture consistently describes God as spirit, omnipresent, and not a man. A God with a physical body cannot be present everywhere, sustain all creation simultaneously, or be the uncaused ground of all existence.",
+    "points": [
+      "Joseph Smith taught 'God himself was once as we are now, and is an exalted man' (King Follett Discourse, 1844). This is a fundamental replacement of the biblical God. Scripture is explicit: 'God is not man' (Numbers 23:19), 'God is not a human being' (Hosea 11:9), 'God is spirit' (John 4:24). These are not metaphors awaiting reinterpretation.",
+      "A God with a physical body cannot be omnipresent. If the Father occupies a location, he cannot simultaneously sustain all matter, uphold all things by his power (Hebrews 1:3), and be the one 'in whom we live and move and have our being' (Acts 17:28). An embodied God cannot perform the functions Scripture attributes to God.",
+      "The 'image of God' (imago Dei) in Genesis 1:26-27 has been interpreted by virtually every major theologian in Christian history as referring to rational, moral, and relational capacity — the ability to reason, love, and represent God — not physical resemblance. The LDS physical reading is not exegesis; it is a reinterpretation driven by a prior theological commitment.",
+      "Isaiah 40:25 records God asking: 'To whom will you compare me, or who is my equal?' If God the Father was once a finite man who progressed to godhood, the answer is: prior versions of himself. This collapses divine uniqueness and sovereignty. A God who had to progress is not the self-existent Creator of all things.",
+      "The LDS doctrine that God was once a man leads directly to an infinite regression of gods — our God was exalted by a prior God, who was exalted by a prior God, infinitely. This is not monotheism. It is a cosmology of endless divine progression with no ultimate uncaused ground of existence."
+    ],
+    "anchor_verse": "God is spirit, and those who worship him must worship in spirit and truth.",
+    "anchor_verse_ref": "John 4:24",
+    "tag": "logic",
+    "priority": 1,
+    "religion": "mormonism"
+  },
+  {
+    "id": "mormons-are-christians",
+    "challenge": "We believe in Jesus Christ — Mormons are Christians just like you",
+    "one_liner": "Mormonism and Christianity use the same name but describe a fundamentally different Jesus — one who is a created spirit being, the spirit-brother of Lucifer, whose primary atonement occurred in Gethsemane rather than on the cross.",
+    "points": [
+      "The LDS Jesus is the first spirit child of Heavenly Father and Heavenly Mother — a created being who progressed to divinity. The Christian Jesus is the eternal, uncreated Son: 'In the beginning was the Word, and the Word was with God, and the Word was God' (John 1:1). There was never a time when the Son did not exist. These are not the same Jesus.",
+      "In LDS theology, Jesus and Lucifer are literal spirit brothers — both spirit children of Heavenly Father — who submitted competing plans for humanity's salvation. Christianity has no category for this. The eternal Creator and a rebellious creature are not siblings in any theological sense.",
+      "LDS theology places the primary atonement in the Garden of Gethsemane, where Jesus bore the weight of human sin as he bled from every pore. The cross becomes a physical death more than an atoning sacrifice. Historic Christianity locates the atonement specifically on the cross: 'He himself bore our sins in his body on the tree' (1 Peter 2:24). The difference is not minor — it changes what the gospel is.",
+      "The LDS atonement does not provide complete forgiveness for those who trust in Christ. Members still face judgment based on works, ordinances, temple worthiness, and continued faithfulness. Grace covers only what personal effort cannot. This is not salvation by grace through faith — it adds conditions the New Testament does not.",
+      "Using the same name does not make two things identical. The eternal, uncreated, fully divine Jesus of the New Testament — who bore sin completely on the cross, rose bodily, and saves by grace through faith — differs from the LDS Jesus in nature, origin, and saving work. The same name does not resolve the difference."
+    ],
+    "anchor_verse": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+    "anchor_verse_ref": "John 1:1",
+    "tag": "jesus",
+    "priority": 1,
+    "religion": "mormonism"
+  },
+  {
+    "id": "eternal-progression-exaltation",
+    "challenge": "Humans can become gods through eternal progression — Lorenzo Snow taught 'As man is, God once was; as God is, man may become'",
+    "one_liner": "This doctrine directly contradicts Scripture's description of God as uniquely eternal and self-existent — and it transforms salvation from God's gift into a human achievement across infinite time.",
+    "points": [
+      "Isaiah 43:10 records God saying: 'Before me no god was formed, nor shall there be any after me.' If humans can become gods through eternal progression, this statement is false. The LDS response requires reading a qualification into the text that is not there — that this refers only to gods within our sphere. The text makes no such restriction.",
+      "When Peter writes that believers 'become partakers of the divine nature' (2 Peter 1:4), he means sharing in God's moral character and relational life — not becoming independent gods who rule their own planets and eternally produce spirit children. These are categorically different claims. Christian deification (theosis) is participation in God; LDS exaltation is becoming a separate god.",
+      "The Lorenzo Snow couplet implies God the Father was once a mortal sinner who progressed. This requires a God above him who enabled that progression, and a God above that God, infinitely. LDS theology is functionally polytheistic — an unending series of gods, each produced by a prior god — with no ultimate uncaused first cause.",
+      "Eternal progression also restructures the atonement. If humans achieve godhood through effort, temple ordinances, and faithfulness, then Christ's finished work is not sufficient on its own. The LDS system requires baptism, confirmation, Melchizedek priesthood, temple endowments, celestial marriage, and continued worthiness. Galatians 1:8-9 addresses adding conditions to the gospel with unmistakable clarity.",
+      "The doctrine was not present in Joseph Smith's earliest teachings and emerged gradually. It contradicts not only the Bible but also the Book of Mormon itself, which in multiple passages affirms a more orthodox view of God — creating an internal inconsistency within LDS scripture that the church has never fully resolved."
+    ],
+    "anchor_verse": "Before me no god was formed, nor shall there be any after me.",
+    "anchor_verse_ref": "Isaiah 43:10",
+    "tag": "salvation",
+    "priority": 2,
+    "religion": "mormonism"
+  },
+  {
+    "id": "lds-trinity-three-separate-beings",
+    "challenge": "The Father, Son, and Holy Ghost are three separate beings — the Council of Nicaea invented the Trinity by fusing them into one",
+    "one_liner": "Pre-Nicene Christian writers already taught the unity of the Godhead decades before Nicaea. The council clarified language against a specific heresy — it did not invent a new doctrine. And three wholly separate gods is tritheism, not biblical monotheism.",
+    "points": [
+      "Christian writers long before Nicaea clearly taught the unity of the one God in three Persons. Ignatius of Antioch (107 AD) called Jesus 'our God.' Justin Martyr (150 AD) wrote of the Father, Son, and Spirit as one divine power. Nicaea in 325 AD gave precise philosophical language to what the church already believed against Arius — who was the innovator, not the church.",
+      "LDS theology teaches tritheism — three completely separate, embodied beings who share the same purpose and goals. This is numerically three gods. The Shema of Deuteronomy 6:4 — 'The Lord our God, the Lord is one' — does not describe three distinct individuals who happen to agree. It asserts a profound, unique oneness.",
+      "The Joseph Smith History claims two physically separate beings appeared to him, establishing the LDS rejection of the Trinity. This is Joseph Smith's uncorroborated testimony, written twelve years after the alleged event, with versions that changed substantially between 1832 and 1838. No contemporary account corroborates it.",
+      "John 10:30 — 'I and the Father are one' — is cited by LDS theology as unity of purpose only. But the Jewish listeners who heard this immediately picked up stones and charged Jesus with claiming to be God — not accusing him of merely asserting agreement with his Father. The blasphemy charge requires a claim of divine nature, not agreement.",
+      "The unity Jesus prays for in John 17:21 — 'that they may all be one, just as you, Father, are in me, and I in you' — is cited to show that divine unity is merely relational. But this argument cuts the other way: Jesus prays that believers would have the same kind of unity he has with the Father. If that unity is only relational, then the unity Jesus seeks for believers is already present — which makes the prayer unnecessary."
+    ],
+    "anchor_verse": "The Lord our God, the Lord is one.",
+    "anchor_verse_ref": "Deuteronomy 6:4",
+    "tag": "trinity",
+    "priority": 2,
+    "religion": "mormonism"
+  },
+  {
+    "id": "jesus-is-michael-archangel",
+    "challenge": "Jesus is Michael the archangel — the first and greatest of God's creations, not God himself",
+    "one_liner": "The New Testament describes Jesus receiving worship, forgiving sins, and bearing the exclusive titles of God himself — none of which would be appropriate or possible if Jesus were a created angelic being.",
+    "points": [
+      "Thomas, the most skeptical of the disciples, fell before the risen Christ and declared 'My Lord and my God' (John 20:28). Jesus did not correct him. Throughout the New Testament, angels and faithful men immediately redirect worship to God when offered it (Acts 10:25-26; Revelation 22:8-9). Jesus accepts worship repeatedly. This is only appropriate if he is God.",
+      "Hebrews 1 explicitly distinguishes Jesus from every angel — including Michael. The text says God never said to any angel 'You are my Son,' and commands 'Let all God's angels worship him.' If Jesus were an angel, Hebrews 1 collapses — its entire argument for Christ's superiority over angels requires that he is categorically different from them.",
+      "Colossians 1:16-17 states that by Jesus 'all things were created, in heaven and on earth, visible and invisible, whether thrones or dominions or rulers or authorities — all things were created through him and for him.' This includes every angelic being. A creature cannot be the creator of other creatures — including itself. The text places Jesus as Creator, not creation.",
+      "The Watch Tower's New World Translation renders John 1:1c as 'the Word was a god' — adding an indefinite article absent from the Greek. Every major Greek scholar, including those with no theological stake in the outcome, rejects this. The Greek predicate nominative construction describes the nature of the Word — divine — not membership in a class of lesser gods.",
+      "Isaiah 44:6 records God saying: 'I am the first and I am the last; besides me there is no god.' Revelation 1:17-18 and 22:13 apply this identical title to Jesus. Either Jesus is the God of Isaiah, or Revelation teaches polytheism. The Watch Tower position has no coherent answer to this direct identification."
+    ],
+    "anchor_verse": "Thomas answered him, 'My Lord and my God!'",
+    "anchor_verse_ref": "John 20:28",
+    "tag": "jesus",
+    "priority": 1,
+    "religion": "jehovahs-witnesses"
+  },
+  {
+    "id": "trinity-pagan-invention-jw",
+    "challenge": "The Trinity is a pagan invention — the word 'Trinity' never appears in the Bible",
+    "one_liner": "The word 'Trinity' is a theological summary, not a proof text. The reality it describes — one God eternally existing as Father, Son, and Spirit — is woven throughout every layer of the New Testament.",
+    "points": [
+      "The word 'Trinity' does not appear in the Bible — in the same way that 'monotheism,' 'Bible,' 'rapture,' and 'Jehovah' also do not appear in the Bible. The absence of a summary word does not disprove the doctrine it summarizes. The question is whether the teaching itself is present — and it is throughout the New Testament.",
+      "Matthew 28:19 commands baptism into 'the name' (singular) 'of the Father and of the Son and of the Holy Spirit.' Three distinct Persons, one name — one divine identity. The singular 'name' is not accidental: it is a precise statement of unity within plurality that the Watch Tower has never satisfactorily explained.",
+      "The claim that the Trinity is pagan borrowing originated in 19th-century revisionist history and has been thoroughly refuted by scholars of early Christianity. The Church Fathers who formulated Trinitarian language — Tertullian, Athanasius, the Cappadocians — were explicitly opposing paganism, not absorbing it. Their project was distinguishing Christianity from Greek polytheism.",
+      "The Holy Spirit in Watch Tower theology is reduced to an impersonal force — like electricity. But the New Testament consistently attributes personal characteristics to the Spirit: he can be grieved (Ephesians 4:30), he intercedes with groanings (Romans 8:26), he speaks (Acts 13:2), he decides (Acts 15:28), and he can be lied to (Acts 5:3-4). Impersonal forces do not grieve, decide, or be deceived.",
+      "The Watch Tower Society's own history is relevant here. The NWT renders John 8:58 — 'Before Abraham was, I am' — as 'Before Abraham came into existence, I have been,' deliberately erasing the connection to Exodus 3:14 where God names himself 'I AM WHO I AM.' This is not translation; it is theological editing to avoid the divine self-identification."
+    ],
+    "anchor_verse": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.",
+    "anchor_verse_ref": "Matthew 28:19",
+    "tag": "trinity",
+    "priority": 1,
+    "religion": "jehovahs-witnesses"
+  },
+  {
+    "id": "john-1-1-word-was-a-god",
+    "challenge": "John 1:1 says 'the Word was a god' — Jesus is divine but not Almighty God",
+    "one_liner": "Every major Greek scholar — including those with no stake in Christian doctrine — rejects the New World Translation's rendering of John 1:1. The grammar requires 'the Word was God,' identifying his nature, not his rank.",
+    "points": [
+      "The Greek of John 1:1c reads: 'kai theos ēn ho logos.' The Watch Tower renders this 'the Word was a god' because 'theos' (God) lacks the definite article. But this is a standard Greek grammatical construction called a predicate nominative: when a noun precedes the verb without the article, it describes the nature or quality of the subject — not indefinite membership in a class. Grammarians call this Colwell's Rule.",
+      "Dr. Julius Mantey, one of the Greek scholars the Watch Tower cited in its own Kingdom Interlinear to support this rendering, wrote a formal letter demanding they stop misquoting him. He called their translation 'a gross mistranslation' and 'not honest.' The scholarship the Society appeals to does not support its conclusion.",
+      "If John meant 'a god' — a lesser divine being among others — Greek had direct ways to say this. John did not use them. He used the construction that best conveys divine nature without making the Son identical with the Father in Person, which is exactly what Trinitarian theology maintains. The grammar fits orthodox Christianity more naturally than it fits the Watch Tower position.",
+      "The same predicate nominative construction appears throughout John. John 4:24: 'God is spirit' (pneuma ho theos). By Watch Tower grammar, this should read 'God is a spirit.' The NWT does not apply its own rule consistently — because consistent application would produce readings the Society cannot accept.",
+      "John 1:3 places Jesus entirely outside the category of created things: 'All things were made through him, and without him was not any thing made that was made.' If Jesus is a creature — even the first and greatest — then he falls within 'all things that were made.' But John explicitly makes him the agent of all creation. He cannot be both Creator of all things and a created thing."
+    ],
+    "anchor_verse": "In the beginning was the Word, and the Word was with God, and the Word was God.",
+    "anchor_verse_ref": "John 1:1",
+    "tag": "scripture",
+    "priority": 1,
+    "religion": "jehovahs-witnesses"
+  },
+  {
+    "id": "jesus-rose-spiritually",
+    "challenge": "Jesus was raised as a spirit creature — his physical body was dissolved or preserved. Resurrection means spiritual existence, not a physical body",
+    "one_liner": "Jesus explicitly said a spirit does not have flesh and bones as he had. The disciples touched him, ate with him, and saw the nail marks. A spiritual resurrection cannot account for the empty tomb or the physical appearances.",
+    "points": [
+      "Luke 24:39 records Jesus saying: 'See my hands and my feet, that it is I myself. Touch me, and see. For a spirit does not have flesh and bones as you see that I have.' Jesus is explicitly distinguishing himself from a spirit and inviting physical verification. The Watch Tower position requires this passage to mean something opposite to what it plainly says.",
+      "The empty tomb is one of the most historically secure facts of the resurrection accounts. The Jewish authorities did not claim the body was spiritually transformed — they accused the disciples of stealing it (Matthew 28:13). You do not fabricate a body-theft narrative if the body is still present in some form. The tomb was physically empty.",
+      "1 Corinthians 15:3-8 — the earliest creed in Christianity, dated within 2-5 years of the crucifixion — records that Christ 'was raised on the third day' and then appeared to Peter, the Twelve, five hundred people at once, James, and Paul. These appearances were treated as encounters with a physically present person — they were not visions or spiritual impressions.",
+      "The Watch Tower teaches that Jesus appeared in different physical forms to accommodate his followers — creating deliberate impressions he knew were misleading. This makes the risen Christ a deceiver who manufactured false physical appearances to build faith in something he knew was untrue. This contradicts the character of the perfectly truthful God the Society claims to represent.",
+      "John 20:27 records Jesus inviting Thomas to put his finger into the nail marks and his hand into Jesus's side. A dissolved or dematerialized body cannot be touched at specific wounds. Jesus's invitation is either genuine — meaning a physical resurrection — or it is a manipulative illusion designed to produce false belief. No coherent middle position exists."
+    ],
+    "anchor_verse": "A spirit does not have flesh and bones as you see that I have.",
+    "anchor_verse_ref": "Luke 24:39",
+    "tag": "jesus",
+    "priority": 1,
+    "religion": "jehovahs-witnesses"
+  },
+  {
+    "id": "144000-heavenly-class",
+    "challenge": "Only 144,000 people go to heaven — the rest of the faithful will live on a paradise earth",
+    "one_liner": "The 144,000 in Revelation are explicitly identified as the twelve tribes of Israel in a specific prophetic context. Jesus describes all his followers being with him where he is — not a two-tier salvation system.",
+    "points": [
+      "Revelation 7:4-8 identifies the 144,000 as exactly 12,000 from each of the twelve tribes of Israel — Judah, Reuben, Gad, Asher, and the rest by name. This is a specific group in a specific prophetic context, not a general number for all faithful Christians across history. If taken literally, it describes a Jewish remnant, not a class of specially anointed Watch Tower members.",
+      "Jesus consistently describes the destination of his followers without dividing them into two tiers. John 14:1-3: 'In my Father's house are many rooms... I go to prepare a place for you... I will come again and will take you to myself, that where I am you may be also.' John 17:24: 'Father, I desire that they also, whom you have given me, may be with me where I am.' Jesus speaks of all his people being with him.",
+      "The 'great crowd' of Revelation 7:9 — which the Watch Tower assigns to an earthly paradise class — is described as standing 'before the throne' and 'before the Lamb.' This language is consistently heavenly throughout Revelation. The attempt to relocate this group to earth requires reading against the plain context of the passage.",
+      "The Watch Tower Society began with a fixed number of 'anointed' members claiming the heavenly calling. That number has increased in recent years — creating theological problems for a doctrine that requires exactly 144,000. The Society has issued contradictory explanations, and the instability of the number undermines the doctrine's credibility.",
+      "Paul writes that there is 'one body and one Spirit — just as you were called to the one hope that belongs to your call' (Ephesians 4:4). One hope. Not two tracks — heaven for 144,000 and earth for everyone else. Romans 8:17 says all believers are 'joint heirs with Christ.' The two-tier doctrine was introduced by Charles Taze Russell in the 19th century, not derived from the New Testament."
+    ],
+    "anchor_verse": "In my Father's house are many rooms... I go to prepare a place for you.",
+    "anchor_verse_ref": "John 14:2",
+    "tag": "salvation",
+    "priority": 2,
+    "religion": "jehovahs-witnesses"
+  },
+  {
+    "id": "gods-name-is-jehovah",
+    "challenge": "God's true name is Jehovah — Bible translators removed it thousands of times and replaced it with 'LORD'",
+    "one_liner": "The rendering of YHWH as 'Lord' follows ancient Jewish tradition, not Christian suppression. And the Watch Tower's insertion of 'Jehovah' into the New Testament has no manuscript support whatsoever.",
+    "points": [
+      "The Hebrew divine name YHWH was not removed by Christian translators as a conspiracy. Ancient Jewish scribal tradition — reflected in the Septuagint, the Greek translation of the Hebrew Scriptures completed centuries before Christ — rendered YHWH as 'Lord' (Kyrios in Greek). Jesus and the apostles quoted from the Septuagint. This was not Christian suppression; it was Jewish reverence for the divine name, practiced long before Christianity existed.",
+      "The Watch Tower's New World Translation inserts 'Jehovah' into the New Testament 237 times — in passages where no surviving Greek manuscript contains the word. The Society's justification is that early copyists removed the name. This is a claim with zero textual evidence. No manuscript, papyrus, or fragment of the New Testament contains 'Jehovah.' The insertions are fabrications, not restorations.",
+      "The name 'Jehovah' is itself a modern hybrid. The Tetragrammaton YHWH has no vowels in ancient Hebrew. Medieval scribes inserted vowels from 'Adonai' (Lord) as a reading prompt, producing 'Yahowah,' later anglicized as 'Jehovah.' The Watch Tower's preferred pronunciation of the divine name did not exist in ancient Hebrew.",
+      "New Testament authors consistently apply Old Testament YHWH texts to Jesus. Joel 2:32 says 'everyone who calls on the name of the LORD (YHWH) will be saved' — Romans 10:13 applies this to calling on the name of Jesus. Isaiah 45:23 — 'to me every knee shall bow' (YHWH speaking) — is applied to Jesus in Philippians 2:10-11. The New Testament writers identified Jesus with the God of the Tetragrammaton.",
+      "The Watch Tower's focus on the pronunciation of the divine name misses what the name actually reveals. 'I AM WHO I AM' declares God's self-existence, eternality, and covenant faithfulness. Jesus claimed this name for himself: 'Before Abraham was, I AM' (John 8:58). His listeners understood this immediately as a divine claim and picked up stones. The name points to who Jesus is — which is precisely what the Watch Tower must avoid."
+    ],
+    "anchor_verse": "Everyone who calls on the name of the Lord will be saved.",
+    "anchor_verse_ref": "Romans 10:13",
+    "tag": "scripture",
+    "priority": 2,
+    "religion": "jehovahs-witnesses"
   }
 ]
