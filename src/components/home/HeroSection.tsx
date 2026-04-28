@@ -47,7 +47,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.9 }}
       >
-        Arguments. Evidence. Answers. A museum of ancient truth.
+        Truth can withstand examination.
       </motion.p>
 
       {/* CTA buttons */}
@@ -107,7 +107,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: 'easeOut', delay: 1.35 }}
       >
-        Truth can withstand examination.
+        Arguments. Evidence. Answers. A museum of ancient truth.
       </motion.p>
 
       {/* Scroll indicator — no bounce */}
