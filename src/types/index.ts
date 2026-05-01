@@ -112,6 +112,86 @@ export interface Thinker {
   contribution: string
 }
 
+// ── The Strata (Historical Record) ───────────────────────
+
+export interface StrataFigure {
+  name: string
+  role: string
+}
+
+export interface StrataPower {
+  name: string
+  description: string
+}
+
+export interface StrataFlashpoint {
+  title: string
+  description: string
+}
+
+export interface StrataEra {
+  id: string
+  number: number
+  name: string
+  dates: string
+  summary: string
+  key_figures: StrataFigure[]
+  dominant_powers: StrataPower[]
+  religious_flashpoint: StrataFlashpoint
+  defining_moment: string
+}
+
+export interface StrataEmpire {
+  id: string
+  name: string
+  dates: string
+  impact: string
+  gods: string
+  era_peak: string
+}
+
+export interface StrataGod {
+  id: string
+  name: string
+  origin: string
+  represents: string
+  confrontation: string
+}
+
+export interface StrataTribeEntry {
+  name: string
+  note: string
+}
+
+export interface JudaeaTier {
+  id: string
+  level: number
+  name: string
+  subtitle: string
+  description: string
+  figures: string[]
+}
+
+export interface JudaeaSurprise {
+  title: string
+  description: string
+}
+
+export interface StrataData {
+  eras: StrataEra[]
+  empires: StrataEmpire[]
+  gods: StrataGod[]
+  tribes: {
+    north: StrataTribeEntry[]
+    south: StrataTribeEntry[]
+    priestly: StrataTribeEntry[]
+  }
+  judaea: {
+    tiers: JudaeaTier[]
+    surprises: JudaeaSurprise[]
+  }
+}
+
 // ── UI Utility Types ──────────────────────────────────────
 
 export interface NavItem {
