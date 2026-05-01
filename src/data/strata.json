@@ -1,0 +1,427 @@
+{
+  "eras": [
+    {
+      "id": "patriarchs",
+      "number": 1,
+      "name": "The Patriarchs",
+      "dates": "~2000 – 1700 BCE",
+      "summary": "God calls Abraham out of Ur (modern Iraq) to the land of Canaan, promising him three things: land, countless descendants, and that through him all nations on earth would be blessed. Abraham's son Isaac, then Isaac's son Jacob — whom God renames Israel — continue the covenant line. Jacob has twelve sons, the future twelve tribes. One son, Joseph, is sold into slavery by his jealous brothers, rises to become second-in-command of all Egypt, and eventually rescues the entire family during a famine. Around seventy people enter Egypt. Four hundred years later, millions will leave.",
+      "key_figures": [
+        { "name": "Abraham", "role": "The founding covenant — called from Ur to Canaan" },
+        { "name": "Isaac", "role": "Son of promise; nearly sacrificed, then spared" },
+        { "name": "Jacob (Israel)", "role": "Wrestled with God; renamed Israel; twelve sons" },
+        { "name": "Joseph", "role": "Sold by brothers; rose to rule Egypt; saved his family" }
+      ],
+      "dominant_powers": [
+        { "name": "Egypt", "description": "The family enters Egypt as honored guests of Pharaoh during the famine. No oppression yet — that comes later." },
+        { "name": "Mesopotamian city-states", "description": "Abraham came from Ur, a major Sumerian city with a sophisticated moon-god cult (Nanna). Leaving it meant leaving that entire religious system." }
+      ],
+      "religious_flashpoint": {
+        "title": "Surrounding polytheism",
+        "description": "Ur worshipped Nanna (moon god). Canaan was full of Baal and Asherah worship. The radical claim of this era: one God, personal, covenant-making, interested in a particular people. Circumcision was established as the covenant sign — the visible mark of belonging to this God."
+      },
+      "defining_moment": "God asks Abraham to sacrifice his son Isaac on Mount Moriah — and then stops him at the last second. A ram appears in the thicket. The point: Abraham's God, unlike the gods of every surrounding nation, does not demand child sacrifice. The moment also establishes the hill where Solomon will later build the Temple."
+    },
+    {
+      "id": "exodus",
+      "number": 2,
+      "name": "Egypt & the Exodus",
+      "dates": "~1700 – 1200 BCE",
+      "summary": "The seventy who entered Egypt multiply over four centuries until a pharaoh 'who did not know Joseph' enslaves them. Moses is born, raised in Pharaoh's palace, flees to the Sinai desert, and encounters God in a burning bush. He returns to demand Pharaoh release the people. Ten plagues destroy Egypt's agriculture, economy, and firstborn sons. After the Passover — the night the destroying angel passes over homes marked with lamb's blood — Pharaoh releases the Israelites. They walk through a miraculously divided sea. Forty years of wilderness follow: manna from the sky, water from rocks, the giving of the Torah at Mount Sinai, and the construction of the Tabernacle. Moses dies at the edge of Canaan without entering.",
+      "key_figures": [
+        { "name": "Moses", "role": "Lawgiver, liberator, the human face of the Exodus" },
+        { "name": "Aaron", "role": "Moses's brother; first High Priest; made the golden calf" },
+        { "name": "Miriam", "role": "Moses's sister; prophetess; led the women in song after crossing" },
+        { "name": "Pharaoh", "role": "Possibly Ramesses II (~1279–1213 BCE), though debated" },
+        { "name": "Joshua", "role": "Moses's military commander; will succeed him into Canaan" }
+      ],
+      "dominant_powers": [
+        { "name": "Egypt", "description": "The most advanced civilization on earth. The ten plagues systematically attack Egyptian gods — Hapi (the Nile), Ra (darkness), Pharaoh himself (seen as a god). Each plague is a theological statement, not merely a natural disaster." }
+      ],
+      "religious_flashpoint": {
+        "title": "The Golden Calf",
+        "description": "While Moses receives the Ten Commandments on the mountain, Aaron melts the people's gold and casts a calf. 'Here are your gods who brought you out of Egypt.' Three thousand people die in the aftermath. The first two commandments — 'no other gods before me' and 'no carved images' — are the direct response to this recurring pattern."
+      },
+      "defining_moment": "Passover. Lamb's blood on the doorposts. The angel of death passes over Hebrew homes and strikes Egypt's firstborn. Every major biblical theme — sacrifice, substitution, liberation, covenant — traces back to this night. Jews eat unleavened bread (matzah) to this day because the bread had no time to rise before they fled."
+    },
+    {
+      "id": "conquest-judges",
+      "number": 3,
+      "name": "Conquest & Judges",
+      "dates": "~1200 – 1020 BCE",
+      "summary": "Joshua leads the Israelites across the Jordan into Canaan. The walls of Jericho collapse. The land is divided among the twelve tribes by lot — each tribe given a territory. But the conquest is incomplete. Israel fails to drive out the Canaanites, begins intermarrying, and starts worshipping Canaanite gods. The Book of Judges is dominated by a relentless cycle: Israel abandons God and worships Baal → God allows a foreign oppressor to dominate them → Israel cries out in suffering → God raises a judge (a military deliverer) → the judge defeats the enemy → peace → the judge dies → repeat. This cycle runs for roughly 180 years. It ends with Samuel, the last judge, who bridges into the monarchy.",
+      "key_figures": [
+        { "name": "Joshua", "role": "Military commander; conquered Canaan; divided the land" },
+        { "name": "Deborah", "role": "Only female judge; prophetess; led Israel to victory over Sisera" },
+        { "name": "Gideon", "role": "Defeated 135,000 Midianites with 300 men; later made an idol" },
+        { "name": "Samson", "role": "Nazirite; supernatural strength; died destroying the Philistine temple of Dagon" },
+        { "name": "Samuel", "role": "Last judge; first great prophet; anointed Israel's first two kings" }
+      ],
+      "dominant_powers": [
+        { "name": "Canaanite city-states", "description": "Hazor, Jericho, Jerusalem — each a fortified city with its own king and local gods." },
+        { "name": "Philistines", "description": "Sea people from the Aegean; occupied the coastal strip (Gaza, Ashkelon, Ashdod, Gath, Ekron); advanced in iron-working; the main military threat of this era. God: Dagon." },
+        { "name": "Midianites, Moabites, Ammonites", "description": "Rotating oppressors during the Judges cycle — each representing a failed attempt by Israel to find security outside of God." }
+      ],
+      "religious_flashpoint": {
+        "title": "Baal & Asherah",
+        "description": "The dominant temptation. Baal was the Canaanite storm and fertility god — he was supposed to send the rain that made crops grow. If you're a farmer who just arrived in a new land, you might worship the local rain god just to be safe. The Asherah pole — a carved wooden post — was his consort's symbol, set up on hilltops alongside altars. These 'high places' will plague Israel for the next 600 years."
+      },
+      "defining_moment": "The end of Judges contains the darkest story in the Bible: a Levite's concubine is gang-raped to death in Gibeah, a Benjaminite city. The resulting civil war nearly wipes out the tribe of Benjamin entirely. The narrative closes: 'In those days Israel had no king; everyone did as they saw fit.' The monarchy is being prepared as a solution — but it will create its own catastrophic problems."
+    },
+    {
+      "id": "united-kingdom",
+      "number": 4,
+      "name": "The United Kingdom",
+      "dates": "~1020 – 930 BCE",
+      "summary": "The people demand a king 'like the other nations.' God grants the request, warning through Samuel that kings will tax, conscript, and dominate. Saul from the tribe of Benjamin is anointed first — tall, impressive, militarily capable — but he repeatedly disobeys God and is rejected. David, a young shepherd from Bethlehem, is anointed secretly while Saul still reigns. He kills Goliath, serves as musician and warrior, survives years of persecution, and eventually becomes king of all Israel. He captures Jerusalem, makes it the capital, brings the Ark of the Covenant there. Solomon builds the First Temple in Jerusalem (~957 BCE) — a structure of breathtaking beauty covered in gold, with the Ark of the Covenant in the innermost room. Solomon's wisdom is legendary. But his 700 wives turn his heart to their gods in old age, and the kingdom begins to fracture before he dies.",
+      "key_figures": [
+        { "name": "Saul", "role": "First king; from Benjamin; starts well, disobeys, declines" },
+        { "name": "David", "role": "Israel's greatest king; poet; adulterer; man 'after God's own heart'" },
+        { "name": "Solomon", "role": "Wisest king; built the Temple; 700 wives; died apostate" },
+        { "name": "Nathan", "role": "Prophet who confronted David over Bathsheba and Uriah" }
+      ],
+      "dominant_powers": [
+        { "name": "Philistines (defeated)", "description": "David definitively defeats them — including Goliath. This is Israel's high point of military dominance." },
+        { "name": "Phoenicia (Tyre)", "description": "Trade and building partner. Lebanon's cedar for the Temple. Solomon's navy partnered with Hiram's fleet." },
+        { "name": "Egypt", "description": "Solomon marries Pharaoh's daughter — a remarkable diplomatic coup suggesting Israel's international prestige at its peak." }
+      ],
+      "religious_flashpoint": {
+        "title": "Solomon's apostasy",
+        "description": "He built high places for Chemosh (Moab's god), Molech (Ammon's god requiring child sacrifice), and Ashtoreth (Phoenician love goddess) — for his foreign wives. The text is blunt: 'His wives turned his heart after other gods, and his heart was not fully devoted to the Lord his God.' The kingdom splits immediately after his death as a direct consequence."
+      },
+      "defining_moment": "The dedication of Solomon's Temple (~957 BCE). The priests bring the Ark of the Covenant into the Holy of Holies. A cloud fills the Temple — the same cloud that led Israel through the wilderness — and the priests cannot stand to minister because of it. Solomon prays: 'Will God really dwell on earth? The heavens cannot contain you.' It is the high point of Israel's history. Everything after is descent toward exile."
+    },
+    {
+      "id": "divided-kingdom",
+      "number": 5,
+      "name": "The Divided Kingdom",
+      "dates": "~930 – 722 BCE",
+      "summary": "When Solomon dies, his son Rehoboam refuses to lighten the tax burden. Ten northern tribes revolt under Jeroboam and form the separate nation of Israel (capital: Samaria). The two southern tribes of Judah and Benjamin remain as Judah (capital: Jerusalem). The split is permanent. Israel (North) lasts 209 years with 19 kings — not one of them considered righteous in the biblical record. The most catastrophic period is the reign of Ahab, who marries the Phoenician princess Jezebel and aggressively imports Baal worship as the national religion. The prophet Elijah confronts 450 prophets of Baal on Mount Carmel in one of Scripture's most dramatic scenes.",
+      "key_figures": [
+        { "name": "Rehoboam", "role": "Solomon's son; his arrogance causes the split" },
+        { "name": "Jeroboam I", "role": "First king of the North; immediately sets up golden calves at Dan and Bethel" },
+        { "name": "Ahab & Jezebel", "role": "Most wicked royal couple; Baal worship as state religion" },
+        { "name": "Elijah", "role": "Prophet; confronted Ahab; Mount Carmel showdown; taken to heaven in a whirlwind" },
+        { "name": "Elisha", "role": "Elijah's successor; miracles; healed Naaman the Syrian general" }
+      ],
+      "dominant_powers": [
+        { "name": "Assyria (rising)", "description": "The empire to the northeast begins demanding tribute. The northern kings pay to buy time. The clock is running." },
+        { "name": "Aram / Syria (Damascus)", "description": "Israel's immediate northeastern neighbor and frequent military enemy. Multiple wars involving Elisha and the royal courts." },
+        { "name": "Phoenicia (Tyre)", "description": "Jezebel came from here. Cultural and religious influence through trade — and a catastrophic one at the royal level." }
+      ],
+      "religious_flashpoint": {
+        "title": "Jeroboam's golden calves and Baal as state policy",
+        "description": "Jeroboam set up golden calves at Dan and Bethel declaring 'Here are your gods who brought you out of Egypt' — deliberately echoing Aaron's golden calf at Sinai. A political move to stop his people from traveling to worship in Jerusalem. Then Jezebel imported 450 Baal prophets and 400 Asherah prophets at royal expense. Elijah believed he was the last YHWH follower alive on earth."
+      },
+      "defining_moment": "Mount Carmel (1 Kings 18). Elijah vs 450 prophets of Baal. Two altars, two bulls. The prophets of Baal pray all day, dancing and cutting themselves — nothing. Elijah drenches his altar with water and prays one sentence. Fire falls from heaven and consumes everything: the bull, the wood, the stones, the water in the trench. The watching people fall on their faces: 'The Lord — he is God!' Jezebel immediately issues a death warrant for Elijah, who flees into the wilderness and asks God to let him die. God sends an angel with food."
+    },
+    {
+      "id": "assyrian-era",
+      "number": 6,
+      "name": "The Assyrian Era",
+      "dates": "~722 – 605 BCE",
+      "summary": "The Assyrian Empire is the most feared military machine of the ancient world — iron weapons, mobile siege equipment, and psychological terror (impaled captives displayed at city walls as a message). After years of demanding tribute, Assyria lays siege to Samaria for three years. It falls in 722 BCE. The Assyrian deportation policy: remove the educated and skilled Israelites and scatter them across the empire — they become the 'Lost Ten Tribes.' Mixed settlers replace them, becoming the Samaritans — which explains exactly why Jews despise Samaritans 700 years later in Jesus's time. Meanwhile Judah in the south pays tribute and survives — for now. Jerusalem is besieged by Sennacherib in 701 BCE but miraculously not captured.",
+      "key_figures": [
+        { "name": "Sargon II", "role": "Assyrian king who completed the conquest of Samaria (722 BCE)" },
+        { "name": "Sennacherib", "role": "Besieged Jerusalem in 701 BCE; mysteriously withdrew — 185,000 Assyrian soldiers died overnight" },
+        { "name": "Hezekiah", "role": "One of Judah's best kings; removed high places; trusted God during the siege" },
+        { "name": "Manasseh", "role": "Hezekiah's son; worst king of Judah; placed an Asherah pole in the Temple; 55-year reign" },
+        { "name": "Isaiah", "role": "Prophet in Jerusalem throughout this era; wrote the most Messianic prophecies" },
+        { "name": "Josiah", "role": "Discovered the lost Torah; most sweeping religious reform in Israel's history; died at Megiddo 609 BCE" }
+      ],
+      "dominant_powers": [
+        { "name": "Assyria", "description": "Capital: Nineveh (modern Mosul, Iraq). Symbol: the winged bull (lamassu). Method: brutal deportation, psychological terror, empire-wide infrastructure. Destroyed by the combined forces of Babylon and the Medes in 612 BCE." },
+        { "name": "Egypt (weakening)", "description": "Trying to counterbalance Assyria. Isaiah repeatedly warns against trusting Egypt instead of God — one of his most consistent prophetic themes." }
+      ],
+      "religious_flashpoint": {
+        "title": "Manasseh's comprehensive apostasy",
+        "description": "He rebuilt the high places Hezekiah destroyed, erected altars to Baal, placed an Asherah pole inside the Temple itself, practiced child sacrifice in the Valley of Hinnom (Gehenna — from which Jesus later draws the image of hell), and consulted mediums. His 55-year reign undoes three generations of reform. The prophets say the fall of Jerusalem is sealed because of Manasseh — even Josiah's later revival can only delay it, not prevent it."
+      },
+      "defining_moment": "King Josiah (640–609 BCE) discovers a lost scroll of the Torah during Temple renovations. When it is read to him, he tears his clothes in grief — the people have been violating the covenant for generations without even knowing what it said. He demolishes every high place, burns the Asherah poles, destroys Jeroboam's golden calf altar at Bethel. Then he dies at Megiddo fighting the Egyptians. The reform dies with him."
+    },
+    {
+      "id": "babylonian-exile",
+      "number": 7,
+      "name": "The Babylonian Exile",
+      "dates": "~605 – 539 BCE",
+      "summary": "Babylon under Nebuchadnezzar II defeats Egypt at the Battle of Carchemish (605 BCE) and immediately turns its attention to Judah. The conquest happens in three waves. First wave (605 BCE): Daniel and other noble young men taken to Babylon to be educated in Babylonian culture. Second wave (597 BCE): King Jehoiachin, the prophet Ezekiel, and most of Jerusalem's skilled population deported. Third wave (586 BCE): Jerusalem finally falls. The Temple is burned. The walls demolished. Everything looted. Most of the remaining population is marched to Babylon. Yet something remarkable happens: Jewish identity crystallizes in exile. The synagogue is invented. The Torah is compiled and organized. Babylon itself falls in 539 BCE when Cyrus the Great of Persia walks in — reportedly without a battle.",
+      "key_figures": [
+        { "name": "Nebuchadnezzar II", "role": "Most powerful Babylonian king; destroyed Jerusalem; later went mad for seven years (Daniel 4)" },
+        { "name": "Belshazzar", "role": "Last Babylonian king; saw the writing on the wall at his feast — that same night Persia conquered the city" },
+        { "name": "Daniel", "role": "Taken in first wave; rose to prominence; refused to stop praying; survived the lions' den; interpreted dreams" },
+        { "name": "Ezekiel", "role": "Priest-prophet in exile; elaborate visions; the valley of dry bones" },
+        { "name": "Jeremiah", "role": "Stayed in Jerusalem; wept over its fall; thrown into a pit for his prophecies; wrote Lamentations" }
+      ],
+      "dominant_powers": [
+        { "name": "Babylon (Neo-Babylonian Empire)", "description": "Capital: Babylon on the Euphrates (modern Iraq). The Hanging Gardens — one of the Seven Wonders of the Ancient World — were here. Under Nebuchadnezzar it was the largest city on earth. Lasted only 88 years as a dominant empire before Persia ended it. Chief god: Marduk." }
+      ],
+      "religious_flashpoint": {
+        "title": "Assimilation vs. identity",
+        "description": "The temptation in Babylon was to give up — to assimilate into the empire's culture and religion. Daniel's entire story is about maintaining identity under pressure: refusing to eat the king's food, refusing to stop praying, refusing to bow to Nebuchadnezzar's gold statue (Shadrach, Meshach, Abednego). Ironically, exile produces the most intense monotheism Israel has ever had. Stripped of land and Temple, the only thing left is God."
+      },
+      "defining_moment": "586 BCE. The Temple burns. For the Israelites, this is not merely the destruction of a building — it is the apparent abandonment of God's dwelling place. Had God left? Could they worship without the Temple? Ezekiel's vision of God's glory departing the Temple before the Babylonians arrived suggests God left before they could destroy it. The question 'where is God?' that exile forces on the Jewish people shapes the theology of every book written from this point forward — including the New Testament."
+    },
+    {
+      "id": "persian-restoration",
+      "number": 8,
+      "name": "The Persian Restoration",
+      "dates": "~539 – 330 BCE",
+      "summary": "In 538 BCE, Cyrus the Great issues the Edict of Cyrus — the exiles may return to their homelands and rebuild their temples. This was Persian policy, not generosity: Cyrus understood that subject peoples who could practice their religion were easier to govern. The Isaiah scroll had actually called Cyrus by name over 150 years before his birth (Isaiah 44:28–45:1), calling him God's 'anointed.' About 50,000 Jews return in the first wave under Zerubbabel. Many choose to stay in Babylon. Under Zerubbabel they rebuild the Temple (completed 516 BCE — the Second Temple). Nehemiah rebuilds Jerusalem's walls in 52 days. Ezra, a priest and scholar, leads a sweeping covenant renewal. The book of Esther is set during this period.",
+      "key_figures": [
+        { "name": "Cyrus the Great", "role": "Persian king; issued the edict of return; called 'God's anointed' in Isaiah" },
+        { "name": "Zerubbabel", "role": "Governor; led first return; oversaw rebuilding of the Temple" },
+        { "name": "Ezra", "role": "Priest and Torah scholar; led covenant renewal; insisted on separation from foreign wives" },
+        { "name": "Nehemiah", "role": "Persian court official; rebuilt Jerusalem's walls in 52 days against fierce opposition" },
+        { "name": "Esther", "role": "Jewish queen of Persia; prevented the genocide of all Jews in the empire" }
+      ],
+      "dominant_powers": [
+        { "name": "Persia (Achaemenid Empire)", "description": "The most benevolent empire Israel ever lived under. Policy of religious and cultural tolerance. Stretched from Greece to India. Major kings: Cyrus, Darius I, Xerxes, Artaxerxes. Ended by Alexander the Great in 330 BCE. Chief religion: Zoroastrianism." }
+      ],
+      "religious_flashpoint": {
+        "title": "Intermarriage and apathy",
+        "description": "The returning community begins intermarrying with surrounding peoples. Ezra and Nehemiah both respond with what seems harsh by modern standards: demanding the men divorce foreign wives. Their concern: the children don't speak Hebrew or know the Torah — within a generation the identity is gone. Haggai also scolds the returned exiles for building paneled houses for themselves while the Temple foundation sits unfinished."
+      },
+      "defining_moment": "Ezra's public reading of the Torah (Nehemiah 8). The entire community gathers in the city square. Ezra reads from dawn until noon. The Levites walk through the crowd explaining what was read. The people weep when they hear the words of the law, realizing how far they have strayed. Nehemiah tells them: 'Do not mourn or weep. The joy of the Lord is your strength.' The Old Testament closes here. Then 400 years of prophetic silence before John the Baptist."
+    },
+    {
+      "id": "greek-maccabean",
+      "number": 9,
+      "name": "The Greek & Maccabean Period",
+      "dates": "~330 – 63 BCE",
+      "summary": "Alexander the Great of Macedonia defeats Persia in 334–331 BCE and conquers everything from Greece to India in eleven years, dying at 32. His empire fractures into successor kingdoms. Judaea initially falls under the Ptolemies of Egypt (favorable) and then, in 198 BCE, to the Seleucids of Syria. The Seleucid king Antiochus IV Epiphanes decides Hellenization is not optional. In 167 BCE he bans circumcision, Sabbath observance, and Torah reading under penalty of death, and sacrifices a pig on the altar of Zeus in the Jerusalem Temple. The response is the Maccabean revolt. An elderly priest named Mattathias and his five sons launch a guerrilla war. Against all military logic, they win. Jerusalem is retaken in 164 BCE.",
+      "key_figures": [
+        { "name": "Alexander the Great", "role": "Conquered the known world in 11 years; spread Greek language (koine) — the language of the New Testament" },
+        { "name": "Antiochus IV Epiphanes", "role": "The villain of Hanukkah; desecrated the Temple; referenced by Daniel and later by Jesus as the 'abomination of desolation'" },
+        { "name": "Mattathias", "role": "Elderly priest who sparked the revolt by killing a Jew about to sacrifice to a Greek god" },
+        { "name": "Judas Maccabeus", "role": "'The Hammer'; military genius; led the revolt to victory; died in battle 161 BCE" }
+      ],
+      "dominant_powers": [
+        { "name": "Greece / Hellenism", "description": "Not just a military empire but a cultural one. Greek language, philosophy, gymnasiums, theater, and religious syncretism penetrated everywhere. Many Jews voluntarily adopted Greek culture — the 'Hellenized Jews.' Others (forerunners of the Pharisees and Essenes) resisted as apostasy." },
+        { "name": "Rome (rising)", "description": "The Maccabees signed a friendship treaty with Rome in 161 BCE — hoping Rome would counterbalance the Seleucids. Rome will eventually consume them all." }
+      ],
+      "religious_flashpoint": {
+        "title": "The abomination of desolation",
+        "description": "A pig sacrificed to Zeus on God's altar in God's Temple in Jerusalem. The ultimate desecration — referenced by Daniel and later by Jesus. The Maccabean revolt is directly triggered by this act. Hellenism also created a new internal threat: some Jews so thoroughly adopted Greek culture that they underwent reverse circumcision surgery."
+      },
+      "defining_moment": "The rededication of the Temple in 164 BCE. According to tradition, the priests found only enough ritually pure oil to burn the menorah for one day. It would take eight days to prepare more. They lit it anyway. It burned for eight days. Hanukkah (Hebrew: 'dedication') commemorates this annually — the Festival of Lights. Note: Hanukkah is a minor festival in Jewish tradition but gained prominence in the modern West through proximity to Christmas."
+    },
+    {
+      "id": "roman-period",
+      "number": 10,
+      "name": "The Roman Period",
+      "dates": "~63 BCE – 70 CE",
+      "summary": "The Hasmonean dynasty tears itself apart in civil war. Two brothers — Hyrcanus and Aristobulus — both appeal to Rome for support. Roman general Pompey arrives in 63 BCE, walks into the Holy of Holies, looks around (takes nothing), and makes Judaea a Roman client state. Rome eventually appoints Herod the Great — an Idumean whose family had been forcibly converted to Judaism — as 'King of the Jews' in 37 BCE. Herod rules for 33 years with extraordinary brutality and extraordinary building. He massively expands the Jerusalem Temple into one of the most magnificent structures in the Roman world — the one Jesus teaches in. After Herod's death (4 BCE), direct Roman prefects govern Judaea, including Pontius Pilate (26–36 CE). Jesus is born ~4 BCE, crucified ~30 CE. The Jewish revolts of 66–73 CE end with Titus destroying the Temple in 70 CE.",
+      "key_figures": [
+        { "name": "Pompey", "role": "Roman general; entered Jerusalem 63 BCE; walked into the Holy of Holies" },
+        { "name": "Herod the Great", "role": "Client king; brilliant builder; massacred the Bethlehem infants; paranoid; rebuilt the Temple" },
+        { "name": "Augustus Caesar", "role": "Roman Emperor during Jesus's birth; his census triggered the Bethlehem journey" },
+        { "name": "Tiberius Caesar", "role": "Emperor during Jesus's ministry and crucifixion" },
+        { "name": "Pontius Pilate", "role": "Prefect of Judaea (26–36 CE); authorized Jesus's crucifixion" },
+        { "name": "Jesus of Nazareth", "role": "Born ~4 BCE; ministry begins ~27 CE; crucified ~30 CE; the axis around which this entire 2,000-year timeline turns" }
+      ],
+      "dominant_powers": [
+        { "name": "Rome (absolute)", "description": "The entire Mediterranean world is Roman. Pax Romana means no major external wars. But occupation means taxation, troops, and the humiliation of a foreign power ruling God's promised land. Crucifixion is used as public deterrence. Roads, law, and infrastructure span the empire." }
+      ],
+      "religious_flashpoint": {
+        "title": "The five factions",
+        "description": "Pharisees (oral law, synagogue), Sadducees (Temple, Roman cooperation), Essenes (desert withdrawal), Zealots (armed revolt), and the emerging Jesus movement — all simultaneously competing for the answer to one question: how do God's people survive under empire while remaining faithful? By Jesus's time the Temple had also become a commercial operation — money-changers, animal sellers — in the Court of the Gentiles. Jesus's overturning of those tables was a direct theological act."
+      },
+      "defining_moment": "70 CE. Roman general Titus besieges Jerusalem. After five months of famine and disease, the Temple is set on fire. The soldiers pry apart every stone to recover the melted gold — just as Jesus predicted: 'Not one stone will be left on another' (Mark 13:2). The Menorah and Temple vessels are carried in triumph to Rome — depicted on the Arch of Titus, still standing in the Roman Forum today. The Sadducees vanish. The Zealots are destroyed. Only the Pharisees survive — they become the rabbis who create the Talmud and modern Judaism."
+    }
+  ],
+  "empires": [
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "dates": "~3000 BCE onward",
+      "impact": "The original oppressor — slavery, Exodus. Returns repeatedly as a military actor, sometimes Israel's ally, sometimes enemy. Isaiah repeatedly warns against trusting Egypt instead of God.",
+      "gods": "Ra, Osiris, Horus, dozens more. Nile-dependent civilization. The ten plagues directly attacked these gods.",
+      "era_peak": "Eras 2 – 6"
+    },
+    {
+      "id": "philistia",
+      "name": "Philistia",
+      "dates": "~1200 – 600 BCE",
+      "impact": "Sea people from the Aegean who settled the coastal strip (modern Gaza area). Advanced iron technology Israel lacked. Primary military enemy during Judges and the early monarchy. Famous figures: Goliath, Delilah.",
+      "gods": "Dagon (grain god). His temples stood at Ashdod and Gaza.",
+      "era_peak": "Eras 3 – 4"
+    },
+    {
+      "id": "assyria",
+      "name": "Assyria",
+      "dates": "~900 – 609 BCE dominant",
+      "impact": "Conquered the Northern Kingdom in 722 BCE. Deported its educated population — the 'Lost Ten Tribes.' Created the Samaritans by resettling conquered peoples in their place. Psychological terror as a deliberate military strategy.",
+      "gods": "Ashur (chief god). Symbol: the winged lamassu bull. Capital: Nineveh (modern Mosul, Iraq).",
+      "era_peak": "Era 6"
+    },
+    {
+      "id": "babylon",
+      "name": "Babylon",
+      "dates": "~626 – 539 BCE dominant",
+      "impact": "Destroyed Jerusalem and the First Temple in 586 BCE. Deported Judah's leadership to Babylon. The Hanging Gardens — one of the Seven Wonders. Empire lasted only 88 years before Persia ended it.",
+      "gods": "Marduk (chief god). Capital: Babylon on the Euphrates (modern Iraq).",
+      "era_peak": "Era 7"
+    },
+    {
+      "id": "persia",
+      "name": "Persia",
+      "dates": "~539 – 330 BCE dominant",
+      "impact": "Most benevolent empire Israel ever lived under. Policy of religious and cultural tolerance — subject peoples could keep their language, religion, and customs. Cyrus freed the exiles. Stretched from Greece to India.",
+      "gods": "Ahura Mazda (Zoroastrianism). Capital: Persepolis (modern Iran).",
+      "era_peak": "Era 8"
+    },
+    {
+      "id": "greece",
+      "name": "Greece / Hellenism",
+      "dates": "~330 – 63 BCE",
+      "impact": "Greek became the common language of the Mediterranean — which is why the New Testament is written in Greek 300 years later. The Seleucid successor state nearly destroyed Judaism with forced Hellenization. The Maccabean revolt is the Jewish resistance to this.",
+      "gods": "Zeus, Athena, and the full Olympian pantheon. Cultural religion, not just political. Many Jews voluntarily adopted Greek culture.",
+      "era_peak": "Era 9"
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "dates": "63 BCE – 70 CE (and beyond)",
+      "impact": "Absolute power over the Mediterranean. Brilliant infrastructure: roads, law, Pax Romana. Brutal enforcement: crucifixion as public deterrence. Destroyed the Second Temple in 70 CE, ending the sacrificial system permanently.",
+      "gods": "Emperor worship (Augustus declared divine after death), Jupiter, Mars, and the full Roman pantheon. Jews were exempt from emperor worship — a source of constant tension.",
+      "era_peak": "Era 10"
+    }
+  ],
+  "gods": [
+    {
+      "id": "baal",
+      "name": "Baal",
+      "origin": "Canaan / Phoenicia",
+      "represents": "Storm and fertility god. He was supposed to send the rain that made crops grow. If you're a farmer who just arrived in a new land, you might worship the local rain god just to be safe. Baal worship was not seen as apostasy — it was seen as agricultural common sense. That is what made it so persistent and so dangerous.",
+      "confrontation": "Mount Carmel (1 Kings 18). Elijah vs 450 prophets of Baal. Two altars, two bulls. The prophets of Baal dance and cut themselves all day — nothing. Elijah drenches his altar with water and prays one sentence. Fire falls from heaven and consumes everything: the bull, the wood, the stones, and the water in the trench. The watching people fall on their faces: 'The Lord — he is God!' The 450 prophets of Baal are then executed. Jezebel had imported these 450 Baal prophets at royal expense — Baal worship was state policy under Ahab and Jezebel's reign."
+    },
+    {
+      "id": "asherah",
+      "name": "Asherah",
+      "origin": "Canaan / Phoenicia",
+      "represents": "Mother goddess; Baal's consort. Represented by a wooden pole set up beside altars on hilltops. Almost always appears alongside Baal in the biblical record. The Asherah pole was the default visual symbol of local worship gone wrong.",
+      "confrontation": "King Manasseh placed an Asherah pole inside the Jerusalem Temple itself — the ultimate desecration. 'High places' with Asherah poles are the default form of local apostasy throughout the monarchy period. Even 'good' kings often failed to remove them. The biblical shorthand for an incomplete reform is 'the high places were not removed' — meaning: the king's heart was right but the people still had unofficial worship centers scattered across the land."
+    },
+    {
+      "id": "molech",
+      "name": "Molech",
+      "origin": "Ammon",
+      "represents": "Required child sacrifice — children burned alive in the Valley of Hinnom (Gehenna in Hebrew) outside Jerusalem. From this valley's name, Jesus later draws the image of hell. The god who demanded the worst from his worshippers was also, somehow, the most persistent temptation.",
+      "confrontation": "King Solomon built a high place for Molech. King Manasseh sacrificed his own son there. Josiah defiles the site to prevent future use. Jeremiah says God never commanded this and it 'never even entered his mind' (Jeremiah 19:5). The prophetic condemnation of Molech worship is among the most severe in Scripture — it represents the sharpest possible contrast with the God who stopped Abraham from doing the same thing."
+    },
+    {
+      "id": "golden-calves",
+      "name": "The Golden Calves",
+      "origin": "Israel (Jeroboam I)",
+      "represents": "Political religion. After the kingdom split, Jeroboam set up golden calves at Dan (far north) and Bethel (southern edge of his kingdom) and declared: 'Here are your gods who brought you out of Egypt.' Deliberately echoes Aaron's golden calf at Sinai. The goal was to stop his people from traveling to Jerusalem to worship — they might switch their political allegiance to Rehoboam's kingdom.",
+      "confrontation": "Every king of the Northern Kingdom is assessed by whether he 'walked in the sins of Jeroboam.' Not one king is considered righteous. The entire northern kingdom is condemned through this one decision to create a convenient, state-controlled alternative to the worship God had authorized. It is a sobering demonstration of what happens when religion serves political convenience."
+    },
+    {
+      "id": "chemosh",
+      "name": "Chemosh",
+      "origin": "Moab",
+      "represents": "National god of Moab (east of the Dead Sea). Solomon built a high place for Chemosh to please his Moabite wives. Like Baal, Chemosh was understood as a national deity who commanded warfare and received credit for military victories.",
+      "confrontation": "The Mesha Stele — a real Moabite stone inscription discovered in 1868 — mentions Chemosh demanding the massacre of an Israelite town. It shows that these gods were not merely figurative. They were understood as rival national deities. Chemosh and YHWH appear as competing territorial gods in this inscription, making it one of the most significant extra-biblical texts for understanding the religious world of the Divided Kingdom."
+    },
+    {
+      "id": "dagon",
+      "name": "Dagon",
+      "origin": "Philistia",
+      "represents": "Philistine grain god. His temples stood at Ashdod and Gaza. Dagon represents the standard ancient Mediterranean assumption: every territory has its own divine patron, and military victory means your god is stronger than theirs.",
+      "confrontation": "When the Philistines captured the Ark of the Covenant and placed it in Dagon's temple, they found Dagon fallen face-down before it the next morning. The second morning, Dagon had fallen again — this time decapitated. Samson's final act: pulling down the temple of Dagon in Gaza with his bare hands, killing 3,000 Philistines and himself. The text notes he killed more at his death than in his life — the God of Israel having the final word against Dagon's house."
+    },
+    {
+      "id": "ashtoreth",
+      "name": "Ashtoreth (Astarte)",
+      "origin": "Phoenicia / Canaan",
+      "represents": "Goddess of love, war, and fertility. Phoenician equivalent of Babylonian Ishtar and Greek Aphrodite. Solomon built a high place for Ashtoreth to please his Phoenician wives. Her worship often involved sacred prostitution at the high places.",
+      "confrontation": "The 'Queen of Heaven' worshipped by women in Jeremiah's time — who baked cakes in her image — is likely Ashtoreth or a closely related figure (Jeremiah 7:18, 44:17). Jeremiah confronts the women who worship her, and they respond defiantly: when they worshipped the Queen of Heaven, things went well; when they stopped, things went badly. It is one of the most candid records in Scripture of how ordinary Israelites actually practiced religion outside the officially approved system."
+    },
+    {
+      "id": "high-places",
+      "name": "The High Places (Bamot)",
+      "origin": "A practice, not a deity",
+      "represents": "Local hilltop shrines where sacrifices were made — usually with Asherah poles and altars to Baal. The problem was decentralization: no oversight, no standards, and easy mixing with Canaanite practices. Even people who worshipped YHWH used the high places, which meant YHWH worship was constantly being blended with whatever local religious customs surrounded it.",
+      "confrontation": "The phrase 'the high places were not removed' is the biblical shorthand for an incomplete reform — appearing repeatedly in Kings as the verdict on otherwise decent rulers. This pattern runs continuously from the Judges period (~1200 BCE) to the Babylonian exile (586 BCE) — six centuries of decentralized syncretism. The great reformers, Hezekiah and Josiah, are specifically praised for removing them, and the detail matters: it was rare enough to be notable."
+    }
+  ],
+  "tribes": {
+    "north": [
+      { "name": "Ephraim", "note": "Most powerful northern tribe; 'Ephraim' used as shorthand for the entire north; Jeroboam was from here" },
+      { "name": "Manasseh", "note": "Joseph's other son; had eastern and western portions on both sides of the Jordan" },
+      { "name": "Issachar", "note": "Fertile Jezreel Valley; Megiddo (Armageddon) is in their territory" },
+      { "name": "Zebulun", "note": "Galilee — where Jesus grew up and ministered" },
+      { "name": "Naphtali", "note": "Northern Galilee; Sea of Galilee region; 'Galilee of the Gentiles'" },
+      { "name": "Asher", "note": "Coastal plain north of Mount Carmel" },
+      { "name": "Dan", "note": "Originally coastal near Philistia, later migrated to the far north; one of Jeroboam's golden calves placed here" },
+      { "name": "Gad", "note": "East of the Jordan River" },
+      { "name": "Reuben", "note": "East of Jordan, south of Gad; Jacob's firstborn but lost that status" },
+      { "name": "Simeon", "note": "Originally in the far south; gradually absorbed into Judah over the centuries" }
+    ],
+    "south": [
+      { "name": "Judah", "note": "Largest tribe; David's tribe; Jesus's tribe; gave its name to 'Judaism' and 'Jews'; the royal line (and the messianic promise) runs through here" },
+      { "name": "Benjamin", "note": "Smallest tribe; Saul was a Benjaminite; Jerusalem sits on its border with Judah; Paul of Tarsus was 'of the tribe of Benjamin'" }
+    ],
+    "priestly": [
+      { "name": "Levi", "note": "No territorial inheritance; lived in 48 cities scattered among all tribes; Moses, Aaron, and Miriam were Levites; responsible for the Tabernacle, then the Temple" }
+    ]
+  },
+  "judaea": {
+    "tiers": [
+      {
+        "id": "rome",
+        "level": 1,
+        "name": "Rome",
+        "subtitle": "The Empire",
+        "description": "The Roman Emperor — Tiberius during Jesus's ministry — held ultimate authority over the entire Mediterranean world. The Senate provided legal legitimacy. In Judaea specifically, Rome governed through a Prefect. Pontius Pilate served from 26–36 CE. Rome kept ultimate control over life-and-death sentences, which is exactly why the Jewish leaders had to bring Jesus to Pilate for execution — they could not legally carry it out themselves.",
+        "figures": ["Emperor Tiberius (14–37 CE)", "The Roman Senate", "Pontius Pilate, Prefect of Judaea (26–36 CE)"]
+      },
+      {
+        "id": "herodian",
+        "level": 2,
+        "name": "Herodian Client Kings",
+        "subtitle": "Rome's local rulers",
+        "description": "After Herod the Great died (4 BCE), his kingdom was divided among his sons. Herod Antipas ruled Galilee and Perea — he is the Herod who beheaded John the Baptist and briefly examined Jesus before his crucifixion. Archelaus ruled Judaea and Samaria so badly he was removed and replaced by a Roman prefect. These were client kings: they held power only with Roman approval, which made them politically insecure and often brutal.",
+        "figures": ["Herod Antipas (Galilee & Perea)", "Archelaus (Judaea & Samaria, deposed 6 CE)", "Philip (NE territories)"]
+      },
+      {
+        "id": "temple",
+        "level": 3,
+        "name": "Temple Establishment",
+        "subtitle": "The religious elite",
+        "description": "The High Priest was the most powerful Jewish official — but Rome appointed him. Crucially, Rome also kept the High Priest's sacred ceremonial robes locked in the Antonia Fortress adjacent to the Temple, releasing them only for major festivals. No robes meant no ability to perform the holiest rituals. The Sanhedrin was the Jewish supreme court of 71 members. The Sadducees were the priestly aristocracy who controlled the Temple — they cooperated with Rome because they had the most to lose from instability.",
+        "figures": ["The High Priest (Rome-appointed)", "The Sanhedrin (71-member supreme court)", "The Sadducees (Temple aristocracy)"]
+      },
+      {
+        "id": "factions",
+        "level": 4,
+        "name": "Factions & Movements",
+        "subtitle": "Competing visions of faithfulness",
+        "description": "The Pharisees had no army, no Temple, no government title — but they ran the synagogues and taught the law to ordinary people every week. That gave them more real influence over everyday Jewish life than anyone above them in the formal power structure. The Essenes withdrew entirely to the desert (Qumran — where the Dead Sea Scrolls were found). The Zealots believed armed revolt was the only faithful response to Roman occupation. The Scribes were Torah scholars who interpreted the law — many were aligned with the Pharisees.",
+        "figures": ["Pharisees (oral law; synagogue network)", "Essenes (desert withdrawal; Dead Sea Scrolls)", "Zealots (armed revolt against Rome)", "Scribes (Torah scholars and interpreters)"]
+      },
+      {
+        "id": "people",
+        "level": 5,
+        "name": "The People",
+        "subtitle": "Am Ha'aretz — the common folk",
+        "description": "Peasants, fishermen, craftsmen, tax collectors, shepherds, servants, and slaves. These are the people Jesus spent most of his time with. Tax collectors were despised because they collected for Rome and could overcharge at will — Matthew was one. Fishermen like Peter, James, and John were working class but not destitute. The Pharisees sometimes looked down on the Am Ha'aretz as ignorant of the law — which makes Jesus's comment that the tax collectors and prostitutes were entering the kingdom ahead of the Pharisees all the more pointed.",
+        "figures": ["Peasants and farmers", "Fishermen and craftsmen", "Tax collectors (Roman revenue agents)", "Slaves (common throughout the empire)"]
+      }
+    ],
+    "surprises": [
+      {
+        "title": "The Robe Trick",
+        "description": "Rome literally kept the High Priest's sacred ceremonial robes locked in the Antonia Fortress, the Roman military installation built directly adjacent to the Temple. The Prefect released them only for major festivals like Passover. No robes meant no ability to perform the holiest rituals of Judaism — silent, invisible leverage over the entire Jewish religious system, exercised without ever making a speech or drawing a sword."
+      },
+      {
+        "title": "Who Really Had Influence",
+        "description": "The Pharisees had no army, no Temple, and no government title. But they ran the synagogues and taught the law to ordinary people every week. That gave them more real influence over everyday Jews than anyone above them in the formal power structure — including the Temple establishment, the Herodians, and certainly the Romans. This is why Jesus's debates are almost always with the Pharisees, not the Sadducees: the Pharisees were where the people were."
+      },
+      {
+        "title": "What 70 CE Changed Forever",
+        "description": "When Rome destroyed the Temple in 70 CE, the Sadducees vanished — no Temple meant no purpose, no income, no identity. The Zealots were crushed in the revolt. Only the Pharisees survived — they became the rabbis who shaped all modern Judaism. Everything in the Talmud traces back to them. This is why the Judaism Jesus debated in the Gospels looks so similar to the Judaism practiced today: the Pharisees won — by surviving when everyone else did not."
+      }
+    ]
+  }
+}
