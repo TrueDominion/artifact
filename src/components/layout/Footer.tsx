@@ -6,6 +6,7 @@ const footerLinks = [
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
+  { label: 'THE STRATA', path: '/the-strata' },
 ]
 
 const linkStyle: React.CSSProperties = {
