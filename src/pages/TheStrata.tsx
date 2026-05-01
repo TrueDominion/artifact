@@ -71,7 +71,6 @@ function ModuleNav({
               textTransform: 'uppercase',
               padding: '14px 18px',
               color: active === m.key ? '#1A1A1A' : '#9A9A9A',
-              borderBottom: active === m.key ? '2px solid #1A1A1A' : '2px solid transparent',
               background: 'none',
               border: 'none',
               borderBottom: active === m.key ? '2px solid #1A1A1A' : '2px solid transparent',
