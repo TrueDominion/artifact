@@ -56,6 +56,13 @@ const explorePreviews: PreviewCardData[] = [
     sublabel: 'Worldviews',
     iconIndex: 2,
   },
+  {
+    label: 'THE STRATA',
+    path: '/the-strata',
+    description: 'Ten eras, seven empires, twelve tribes, and the gods Israel kept chasing — the historical world Scripture was written into, mapped layer by layer.',
+    sublabel: 'History',
+    iconIndex: 3,
+  },
 ]
 
 function PreviewIcon({ index }: { index: number }) {
