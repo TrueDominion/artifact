@@ -13,7 +13,6 @@ import TheDig from '@/pages/TheDig'
 import TheGallery from '@/pages/TheGallery'
 import Faultlines from '@/pages/Faultlines'
 import FieldGuide from '@/pages/FieldGuide'
-import FieldGuide from '@/pages/FieldGuide'
 import TheStrata from '@/pages/TheStrata'
 
 export default function App() {
