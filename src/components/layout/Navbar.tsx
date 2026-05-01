@@ -13,6 +13,7 @@ const navItems: NavItem[] = [
   { label: 'THE DIG', path: '/the-dig' },
   { label: 'THE GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
+  { label: 'THE STRATA', path: '/the-strata' },
 ]
 
 export default function Navbar() {
