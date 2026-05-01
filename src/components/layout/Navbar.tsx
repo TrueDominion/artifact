@@ -10,10 +10,10 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'FIELD GUIDE', path: '/field-guide' },
   { label: 'BEDROCK', path: '/bedrock' },
-  { label: 'THE DIG', path: '/the-dig' },
-  { label: 'THE GALLERY', path: '/the-gallery' },
+  { label: 'DIG', path: '/the-dig' },
+  { label: 'GALLERY', path: '/the-gallery' },
   { label: 'FAULTLINES', path: '/faultlines' },
-  { label: 'THE STRATA', path: '/the-strata' },
+  { label: 'STRATA', path: '/the-strata' },
 ]
 
 export default function Navbar() {
