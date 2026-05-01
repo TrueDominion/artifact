@@ -20,14 +20,12 @@ const strata = strataRaw as unknown as StrataData
 type StrataModule = 'timeline' | 'empires' | 'gods' | 'tribes' | 'judaea'
 
 const MODULES: { key: StrataModule; label: string }[] = [
-  { key: 'timeline', label: 'TIMELINE'       },
-  { key: 'empires',  label: 'EMPIRES'        },
-  { key: 'gods',     label: 'THE GODS'       },
-  { key: 'tribes',   label: 'THE TRIBES'     },
-  { key: 'judaea',   label: "JESUS'S WORLD"  },
+  { key: 'timeline', label: 'TIMELINE'      },
+  { key: 'empires',  label: 'EMPIRES'       },
+  { key: 'gods',     label: 'THE GODS'      },
+  { key: 'tribes',   label: 'THE TRIBES'    },
+  { key: 'judaea',   label: "JESUS'S WORLD" },
 ]
-
-// ── Shared style tokens ──────────────────────────────────
 
 const label: React.CSSProperties = {
   fontFamily: 'Inter, system-ui, sans-serif',
@@ -59,29 +57,29 @@ function ModuleNav({
     <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
       <div
         className="flex border-b border-graphite-border overflow-x-auto"
-        style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
+        style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}
       >
         {MODULES.map((m) => (
           <button
             key={m.key}
             onClick={() => onSelect(m.key)}
             style={{
-              ...label,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontWeight: 400,
+              fontSize: '0.6rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
               padding: '14px 18px',
               color: active === m.key ? '#1A1A1A' : '#9A9A9A',
-              borderBottom: active === m.key
-                ? '2px solid #1A1A1A'
-                : '2px solid transparent',
+              borderBottom: active === m.key ? '2px solid #1A1A1A' : '2px solid transparent',
               background: 'none',
               border: 'none',
-              borderBottom: active === m.key
-                ? '2px solid #1A1A1A'
-                : '2px solid transparent',
+              borderBottom: active === m.key ? '2px solid #1A1A1A' : '2px solid transparent',
               cursor: 'pointer',
               whiteSpace: 'nowrap' as const,
               marginBottom: '-1px',
               transition: 'color 250ms ease-out, border-color 250ms ease-out',
-            }}
+            } as React.CSSProperties}
           >
             {m.label}
           </button>
@@ -162,9 +160,7 @@ function TimelineModule() {
             PREV
           </button>
 
-          <span style={label}>
-            ERA {eraIndex + 1} OF {eras.length}
-          </span>
+          <span style={label}>ERA {eraIndex + 1} OF {eras.length}</span>
 
           <button
             onClick={() => navigate(eraIndex + 1)}
@@ -202,8 +198,14 @@ function TimelineModule() {
         >
           {/* Era header */}
           <div
-            className="border-b border-graphite-border pb-6 mb-8"
-            style={{ display: 'flex', alignItems: 'baseline', gap: '1.25rem' }}
+            style={{
+              display: 'flex',
+              alignItems: 'baseline',
+              gap: '1.25rem',
+              borderBottom: '1px solid #E8E8E8',
+              paddingBottom: '1.5rem',
+              marginBottom: '2rem',
+            }}
           >
             <span
               style={{
@@ -315,7 +317,7 @@ function TimelineModule() {
             </div>
           </div>
 
-          {/* Religious flashpoint — crimson left accent */}
+          {/* Religious flashpoint */}
           <div
             style={{
               display: 'flex',
@@ -401,7 +403,7 @@ function EmpiresModule() {
           maxWidth: '60ch',
         }}
       >
-        Seven superpowers that ruled, invaded, or dominated Israel — what each one did and why Israel was in their crosshairs.
+        Seven superpowers that ruled, invaded, or dominated Israel — what each one did and why Israel was always in their crosshairs.
       </p>
 
       <div
@@ -431,11 +433,8 @@ function EmpiresModule() {
               >
                 {empire.name}
               </h3>
-
               <div style={{ width: '100%', height: '1px', backgroundColor: '#E8E8E8', marginBottom: '1rem' }} />
-
               <p style={{ ...bodyLight, marginBottom: '1.25rem' }}>{empire.impact}</p>
-
               <div style={{ paddingTop: '0.75rem', borderTop: '1px solid #F0F0F0' }}>
                 <p
                   style={{
@@ -501,12 +500,17 @@ function GodEntry({
             justifyContent: 'space-between',
             alignItems: 'flex-start',
             padding: '1.25rem 0',
-            transition: 'background-color 300ms ease-out',
           }}
         >
           <div style={{ flex: 1 }}>
             <div
-              style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '4px', flexWrap: 'wrap' }}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                marginBottom: '4px',
+                flexWrap: 'wrap',
+              }}
             >
               <span
                 style={{
@@ -574,17 +578,12 @@ function GodEntry({
           >
             <div
               style={{
-                padding: '0 0 1.5rem 0',
+                padding: '0.75rem 1rem 1.5rem',
                 backgroundColor: '#FAF8F5',
-                paddingLeft: '1rem',
-                paddingRight: '1rem',
-                paddingBottom: '1.5rem',
                 marginBottom: '2px',
               }}
             >
-              <p style={{ ...bodyLight, marginBottom: '1.25rem', paddingTop: '0.75rem' }}>
-                {god.represents}
-              </p>
+              <p style={{ ...bodyLight, marginBottom: '1.25rem' }}>{god.represents}</p>
               <div style={{ borderTop: '1px solid #E8E8E8', paddingTop: '1.25rem' }}>
                 <p
                   style={{
@@ -645,47 +644,6 @@ function GodsModule() {
 function TribesModule() {
   const { north, south, priestly } = strata.tribes
 
-  const columnStyle: React.CSSProperties = {
-    padding: '1.75rem',
-  }
-
-  const kingdomLabel: React.CSSProperties = {
-    ...label,
-    marginBottom: '4px',
-  }
-
-  const kingdomTitle: React.CSSProperties = {
-    fontFamily: '"Playfair Display", Georgia, serif',
-    fontWeight: 700,
-    fontSize: '1.35rem',
-    color: '#1A1A1A',
-    lineHeight: 1.1,
-  }
-
-  const kingdomFell: React.CSSProperties = {
-    fontFamily: 'Inter, system-ui, sans-serif',
-    fontWeight: 300,
-    fontSize: '0.75rem',
-    color: '#9A9A9A',
-    marginTop: '2px',
-  }
-
-  const tribeName: React.CSSProperties = {
-    fontFamily: 'Inter, system-ui, sans-serif',
-    fontWeight: 500,
-    fontSize: '0.82rem',
-    color: '#2D2D2D',
-    display: 'block',
-  }
-
-  const tribeNote: React.CSSProperties = {
-    fontFamily: 'Inter, system-ui, sans-serif',
-    fontWeight: 300,
-    fontSize: '0.72rem',
-    color: '#9A9A9A',
-    lineHeight: 1.55,
-  }
-
   return (
     <div className="max-w-5xl mx-auto px-6 lg:px-12 pb-32">
       <p
@@ -714,18 +672,58 @@ function TribesModule() {
           transition={{ duration: 0.45, ease: 'easeOut' }}
           style={{ backgroundColor: '#ffffff' }}
         >
-          <div style={columnStyle}>
+          <div style={{ padding: '1.75rem' }}>
             <div style={{ marginBottom: '1.25rem' }}>
-              <p style={kingdomLabel}>Northern Kingdom</p>
-              <p style={kingdomTitle}>Israel</p>
-              <p style={kingdomFell}>Fell to Assyria, 722 BCE</p>
+              <p style={{ ...label, marginBottom: '4px' }}>Northern Kingdom</p>
+              <p
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontWeight: 700,
+                  fontSize: '1.35rem',
+                  color: '#1A1A1A',
+                  lineHeight: 1.1,
+                }}
+              >
+                Israel
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '0.75rem',
+                  color: '#9A9A9A',
+                  marginTop: '2px',
+                }}
+              >
+                Fell to Assyria, 722 BCE
+              </p>
             </div>
             <div style={{ width: '100%', height: '1px', backgroundColor: '#E8E8E8', marginBottom: '1.25rem' }} />
             <ul className="space-y-3">
               {north.map((t) => (
                 <li key={t.name}>
-                  <span style={tribeName}>{t.name}</span>
-                  <span style={tribeNote}>{t.note}</span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '0.82rem',
+                      color: '#2D2D2D',
+                      display: 'block',
+                    }}
+                  >
+                    {t.name}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '0.72rem',
+                      color: '#9A9A9A',
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {t.note}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -740,18 +738,58 @@ function TribesModule() {
           transition={{ duration: 0.45, ease: 'easeOut', delay: 0.08 }}
           style={{ backgroundColor: '#FAF8F5' }}
         >
-          <div style={columnStyle}>
+          <div style={{ padding: '1.75rem' }}>
             <div style={{ marginBottom: '1.25rem' }}>
-              <p style={kingdomLabel}>Southern Kingdom</p>
-              <p style={kingdomTitle}>Judah</p>
-              <p style={kingdomFell}>Fell to Babylon, 586 BCE</p>
+              <p style={{ ...label, marginBottom: '4px' }}>Southern Kingdom</p>
+              <p
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontWeight: 700,
+                  fontSize: '1.35rem',
+                  color: '#1A1A1A',
+                  lineHeight: 1.1,
+                }}
+              >
+                Judah
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '0.75rem',
+                  color: '#9A9A9A',
+                  marginTop: '2px',
+                }}
+              >
+                Fell to Babylon, 586 BCE
+              </p>
             </div>
             <div style={{ width: '100%', height: '1px', backgroundColor: '#E8E8E8', marginBottom: '1.25rem' }} />
             <ul className="space-y-3">
               {south.map((t) => (
                 <li key={t.name}>
-                  <span style={tribeName}>{t.name}</span>
-                  <span style={tribeNote}>{t.note}</span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '0.82rem',
+                      color: '#2D2D2D',
+                      display: 'block',
+                    }}
+                  >
+                    {t.name}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '0.72rem',
+                      color: '#9A9A9A',
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {t.note}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -766,18 +804,58 @@ function TribesModule() {
           transition={{ duration: 0.45, ease: 'easeOut', delay: 0.16 }}
           style={{ backgroundColor: '#ffffff' }}
         >
-          <div style={columnStyle}>
+          <div style={{ padding: '1.75rem' }}>
             <div style={{ marginBottom: '1.25rem' }}>
-              <p style={kingdomLabel}>Priestly Tribe</p>
-              <p style={kingdomTitle}>Levi</p>
-              <p style={kingdomFell}>No territorial inheritance</p>
+              <p style={{ ...label, marginBottom: '4px' }}>Priestly Tribe</p>
+              <p
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontWeight: 700,
+                  fontSize: '1.35rem',
+                  color: '#1A1A1A',
+                  lineHeight: 1.1,
+                }}
+              >
+                Levi
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontWeight: 300,
+                  fontSize: '0.75rem',
+                  color: '#9A9A9A',
+                  marginTop: '2px',
+                }}
+              >
+                No territorial inheritance
+              </p>
             </div>
             <div style={{ width: '100%', height: '1px', backgroundColor: '#E8E8E8', marginBottom: '1.25rem' }} />
             <ul className="space-y-3">
               {priestly.map((t) => (
                 <li key={t.name}>
-                  <span style={tribeName}>{t.name}</span>
-                  <span style={tribeNote}>{t.note}</span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '0.82rem',
+                      color: '#2D2D2D',
+                      display: 'block',
+                    }}
+                  >
+                    {t.name}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontWeight: 300,
+                      fontSize: '0.72rem',
+                      color: '#9A9A9A',
+                      lineHeight: 1.55,
+                    }}
+                  >
+                    {t.note}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -810,10 +888,16 @@ function TribesModule() {
 
 // ── JUDAEA MODULE ────────────────────────────────────────
 
-const TIER_BG    = ['#1A1A1A', '#2D2D2D', '#FAF8F5', '#F5F3F0', '#ffffff']
-const TIER_TEXT  = ['#ffffff', '#ffffff', '#1A1A1A', '#1A1A1A', '#1A1A1A']
-const TIER_SUB   = ['rgba(255,255,255,0.45)', 'rgba(255,255,255,0.45)', '#9A9A9A', '#9A9A9A', '#9A9A9A']
-const TIER_PAD   = ['0 14%', '0 9%', '0 4%', '0 1%', '0']
+const TIER_BG   = ['#1A1A1A', '#2D2D2D', '#FAF8F5', '#F5F3F0', '#ffffff']
+const TIER_TEXT = ['#ffffff', '#ffffff', '#1A1A1A', '#1A1A1A', '#1A1A1A']
+const TIER_SUB  = [
+  'rgba(255,255,255,0.45)',
+  'rgba(255,255,255,0.45)',
+  '#9A9A9A',
+  '#9A9A9A',
+  '#9A9A9A',
+]
+const TIER_PAD  = ['0 14%', '0 9%', '0 4%', '0 1%', '0']
 
 function JudaeaTierCard({
   tier,
@@ -846,7 +930,7 @@ function JudaeaTierCard({
           alignItems: 'center',
           border: 'none',
           cursor: 'pointer',
-          transition: 'opacity 200ms ease-out',
+          width: '100%',
         }}
       >
         <div>
@@ -889,4 +973,174 @@ function JudaeaTierCard({
             strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
-            opacity={0.45
+            opacity={0.45}
+          />
+        </motion.svg>
+      </button>
+
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+            style={{ overflow: 'hidden' }}
+          >
+            <div
+              style={{
+                padding: '1.25rem 1.5rem 1.5rem',
+                backgroundColor: '#FAF8F5',
+                borderBottom: '1px solid #E8E8E8',
+              }}
+            >
+              <p style={{ ...bodyLight, marginBottom: '1rem' }}>{tier.description}</p>
+              <div>
+                <p style={{ ...label, fontSize: '0.55rem', marginBottom: '6px' }}>
+                  KEY FIGURES
+                </p>
+                <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  {tier.figures.map((f) => (
+                    <li
+                      key={f}
+                      style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontSize: '0.72rem',
+                        fontWeight: 300,
+                        color: '#9A9A9A',
+                        border: '1px solid #E8E8E8',
+                        padding: '3px 8px',
+                        fontStyle: 'italic',
+                        listStyle: 'none',
+                      }}
+                    >
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  )
+}
+
+function JudaeaModule() {
+  const { tiers, surprises } = strata.judaea
+  const [openId, setOpenId] = useState<string | null>(null)
+
+  return (
+    <div className="max-w-3xl mx-auto px-6 lg:px-12 pb-32">
+      <p
+        style={{
+          fontFamily: '"Playfair Display", Georgia, serif',
+          fontStyle: 'italic',
+          fontSize: '1rem',
+          color: '#9A9A9A',
+          lineHeight: 1.7,
+          marginBottom: '2.5rem',
+        }}
+      >
+        Five layers of authority in the world Jesus moved through — from Rome at the top to ordinary people at the base. Tap any layer to learn who held power and why.
+      </p>
+
+      {/* Power pyramid */}
+      <div style={{ marginBottom: '3.5rem' }}>
+        {tiers.map((tier, i) => (
+          <JudaeaTierCard
+            key={tier.id}
+            tier={tier}
+            index={i}
+            isOpen={openId === tier.id}
+            onToggle={() =>
+              setOpenId((prev) => (prev === tier.id ? null : tier.id))
+            }
+          />
+        ))}
+      </div>
+
+      {/* Surprises */}
+      <div style={{ borderTop: '1px solid #E8E8E8', paddingTop: '2.5rem' }}>
+        <p style={{ ...label, marginBottom: '1.5rem' }}>
+          THREE THINGS THAT WILL SURPRISE YOU
+        </p>
+        <div className="space-y-6">
+          {surprises.map((s: JudaeaSurprise, i: number) => (
+            <motion.div
+              key={s.title}
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: i * 0.1 }}
+              style={{ display: 'flex', gap: '1rem' }}
+            >
+              <span
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontWeight: 700,
+                  fontSize: '0.6rem',
+                  color: '#E8E8E8',
+                  flexShrink: 0,
+                  paddingTop: '3px',
+                }}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <div>
+                <p
+                  style={{
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    fontWeight: 500,
+                    fontSize: '0.88rem',
+                    color: '#1A1A1A',
+                    marginBottom: '5px',
+                  }}
+                >
+                  {s.title}
+                </p>
+                <p style={bodyLight}>{s.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// ── Root ─────────────────────────────────────────────────
+
+export default function TheStrata() {
+  const [activeModule, setActiveModule] = useState<StrataModule>('timeline')
+
+  return (
+    <div className="min-h-screen">
+      <SectionHeader
+        title="THE STRATA"
+        subtitle="The world Scripture was written into."
+        label="Historical Record"
+        intro="Ten eras, seven empires, twelve tribes, and the gods Israel kept chasing. This is the ground beneath the text."
+      />
+
+      <ModuleNav active={activeModule} onSelect={setActiveModule} />
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeModule}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+        >
+          {activeModule === 'timeline' && <TimelineModule />}
+          {activeModule === 'empires'  && <EmpiresModule />}
+          {activeModule === 'gods'     && <GodsModule />}
+          {activeModule === 'tribes'   && <TribesModule />}
+          {activeModule === 'judaea'   && <JudaeaModule />}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  )
+}
