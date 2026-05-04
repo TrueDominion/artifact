@@ -78,6 +78,8 @@ function ReligionCard({
 }) {
   const [hovered, setHovered] = useState(false)
 
+  const isIslam = religion.id === 'islam'
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -85,6 +87,7 @@ function ReligionCard({
       transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
       style={{
         border: '1px solid rgba(45,45,45,0.12)',
+        borderLeft: isIslam ? '2px solid #C41E3A' : '1px solid rgba(45,45,45,0.12)',
         borderTop: hovered && !religion.comingSoon
           ? '2px solid #C41E3A'
           : '1px solid rgba(45,45,45,0.12)',
@@ -105,17 +108,22 @@ function ReligionCard({
         }`}
       >
         <div className="flex items-start justify-between mb-4">
-          <span
-            style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '0.6rem',
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: '#9A9A9A',
-            }}
-          >
-            {religion.sublabel}
-          </span>
+          <div>
+            {isIslam && (
+              <p className="type-label text-[#C41E3A] mb-1" style={{ fontSize: '0.65rem' }}>PRIMARY TRADITION</p>
+            )}
+            <span
+              style={{
+                fontFamily: 'Inter, system-ui, sans-serif',
+                fontSize: '0.6rem',
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#9A9A9A',
+              }}
+            >
+              {religion.sublabel}
+            </span>
+          </div>
           {religion.comingSoon && (
             <span
               style={{
@@ -309,6 +317,7 @@ function EntryCard({
             <div className="flex-1 min-w-0">
               {/* Challenge title */}
               <p
+                className="prose-constrained"
                 style={{
                   fontFamily: 'Inter, system-ui, sans-serif',
                   fontWeight: 500,
@@ -322,6 +331,7 @@ function EntryCard({
               </p>
               {/* Response preview */}
               <p
+                className="prose-constrained"
                 style={{
                   fontFamily: 'Inter, system-ui, sans-serif',
                   fontWeight: 300,
@@ -337,8 +347,8 @@ function EntryCard({
             {/* Tag + chevron */}
             <div className="flex items-center gap-3 flex-shrink-0 mt-0.5">
               <span
+                className="type-caption"
                 style={{
-                  fontFamily: 'Inter, system-ui, sans-serif',
                   fontSize: '0.55rem',
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
@@ -403,6 +413,7 @@ function EntryCard({
                       {String(i + 1).padStart(2, '0')}
                     </span>
                     <p
+                      className="prose-constrained"
                       style={{
                         fontFamily: 'Inter, system-ui, sans-serif',
                         fontWeight: 300,
@@ -519,27 +530,10 @@ function GuideView({
       <div className="max-w-3xl mx-auto px-5 pb-8">
         <button
           onClick={onBack}
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '6px',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontWeight: 400,
-            fontSize: '12px',
-            letterSpacing: '0.14em',
-            textTransform: 'uppercase',
-            color: 'rgba(45,45,45,0.5)',
-            background: 'none',
-            border: 'none',
-            padding: 0,
-            cursor: 'pointer',
-            marginBottom: '1.5rem',
-            transition: 'color 200ms ease-out',
-          }}
-          className="hover:!text-graphite"
+          className="type-label text-[#6B6B6B] hover:opacity-70 transition-opacity duration-300 mb-8 block"
+          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
         >
-          <span aria-hidden="true" style={{ fontSize: '1rem', lineHeight: 1 }}>←</span>
-          Choose a different religion
+          ← CHANGE TRADITION
         </button>
 
         <p

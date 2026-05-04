@@ -91,8 +91,9 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
 
         {/* ── FRONT FACE ─────────────────────────────── */}
         <div
-          className="absolute inset-0 w-full h-full bg-white group overflow-hidden"
+          className="absolute inset-0 w-full h-full group overflow-hidden"
           style={{
+            background: '#FFFFFF',
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
             border: '1px solid rgba(45,45,45,0.12)',
@@ -135,8 +136,11 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
               {argument.summary}
             </p>
 
+            {/* Interactivity hint — always visible */}
+            <p className="type-label mt-auto pt-4" style={{ fontSize: '0.65rem' }}>EXAMINE →</p>
+
             {/* Step preview dots */}
-            <div className="mt-6 pt-5 border-t border-graphite-border flex items-center justify-between">
+            <div className="mt-2 pt-5 border-t border-graphite-border flex items-center justify-between">
               <span className="label-museum text-graphite-soft group-hover:text-graphite transition-colors duration-300">
                 EXCAVATE
               </span>
@@ -154,8 +158,9 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
 
         {/* ── BACK FACE ──────────────────────────────── */}
         <div
-          className="w-full bg-white overflow-hidden"
+          className="w-full overflow-hidden"
           style={{
+            background: '#FAF8F5',
             border: '1px solid rgba(45,45,45,0.12)',
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
@@ -225,7 +230,7 @@ export default function ArtifactCard({ argument }: ArtifactCardProps) {
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.28, ease: 'easeOut' }}
                   >
-                    <p className="font-sans text-sm text-graphite leading-relaxed">
+                    <p className="prose-constrained font-sans text-sm text-graphite leading-relaxed">
                       {argument[steps[step].key]}
                     </p>
 

@@ -62,14 +62,14 @@ function ResponseText({ text }: { text: string }) {
               <span className="font-serif font-bold text-graphite-border flex-shrink-0 mt-0.5 text-sm">
                 {para.match(/^(\d+)\./)?.[1]}
               </span>
-              <p className="font-sans text-sm text-graphite leading-relaxed">
+              <p className="prose-constrained font-sans text-sm text-graphite leading-relaxed">
                 {para.replace(/^\d+\.\s*/, '')}
               </p>
             </div>
           )
         }
         return (
-          <p key={i} className="font-sans text-sm text-graphite leading-relaxed">
+          <p key={i} className="prose-constrained font-sans text-sm text-graphite leading-relaxed">
             {para}
           </p>
         )
@@ -87,6 +87,7 @@ interface FaultCardProps {
 
 function FaultCard({ debate, index, isOpen, onToggle }: FaultCardProps) {
   const [showSources, setShowSources] = useState(false)
+  const [mobileResponseOpen, setMobileResponseOpen] = useState(false)
 
   return (
     <motion.article
@@ -159,7 +160,45 @@ function FaultCard({ debate, index, isOpen, onToggle }: FaultCardProps) {
             transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
             className="overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]">
+            {/* ── Mobile: stacked accordion ── */}
+            <div className="md:hidden">
+              {/* Challenge — always visible */}
+              <div className="py-6 px-7 border-t border-[#E8E4DF]">
+                <p className="type-label text-[#6B6B6B] mb-3">CHALLENGE</p>
+                <div className="prose-constrained font-light text-[#2D2D2D] text-sm leading-relaxed">
+                  <ResponseText text={debate.challenge} />
+                </div>
+              </div>
+
+              {/* Response — collapsible */}
+              <div className="border-t border-[#E8E4DF]">
+                <button
+                  onClick={() => setMobileResponseOpen(v => !v)}
+                  className="w-full flex items-center justify-between py-4 px-7"
+                >
+                  <span className="type-label text-[#C41E3A]">RESPONSE</span>
+                  <span className="type-label text-[#6B6B6B]">{mobileResponseOpen ? '↑' : '↓'}</span>
+                </button>
+                <AnimatePresence>
+                  {mobileResponseOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4, ease: 'easeOut' }}
+                      className="overflow-hidden pb-6 px-7"
+                    >
+                      <div className="prose-constrained font-light text-[#2D2D2D] text-sm leading-relaxed">
+                        <ResponseText text={debate.response} />
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* ── Desktop: split panel ── */}
+            <div className="hidden md:grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr]">
 
               <motion.div
                 className="p-8 lg:p-10 border-t border-graphite-border"
@@ -170,7 +209,7 @@ function FaultCard({ debate, index, isOpen, onToggle }: FaultCardProps) {
               >
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-1.5 h-1.5 rounded-full bg-graphite-soft" />
-                  <p className="label-museum text-graphite-soft">THE ISLAMIC CLAIM</p>
+                  <p className="type-label text-[#6B6B6B]">THE ISLAMIC CLAIM</p>
                 </div>
                 <ResponseText text={debate.challenge} />
               </motion.div>
@@ -188,13 +227,13 @@ function FaultCard({ debate, index, isOpen, onToggle }: FaultCardProps) {
                     <path d="M1,8 L5,2 L9,8" stroke="#C41E3A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
                     <line x1="2.5" y1="6" x2="7.5" y2="6" stroke="#C41E3A" strokeWidth="0.8" strokeLinecap="round"/>
                   </svg>
-                  <p className="label-museum text-graphite-soft">THE CHRISTIAN RESPONSE</p>
+                  <p className="type-label text-[#C41E3A]">THE CHRISTIAN RESPONSE</p>
                 </div>
                 <ResponseText text={debate.response} />
 
                 {debate.key_thinkers.length > 0 && (
                   <div className="mt-7 pt-5 border-t border-graphite-border">
-                    <p className="label-museum text-graphite-soft mb-2">KEY THINKERS</p>
+                    <p className="type-label mb-2">KEY THINKERS</p>
                     <p className="font-sans text-xs text-graphite-soft leading-relaxed">
                       {debate.key_thinkers.join(' · ')}
                     </p>
@@ -255,10 +294,6 @@ export default function Faultlines() {
       {/* ── Intro + severity legend ── */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
         <div className="flex flex-col sm:flex-row sm:items-start gap-8">
-          {/*
-            FIX: was a <p> nested inside a <p> (invalid HTML/JSX).
-            Outer tag changed to <div>; inline severity bars use <span> elements.
-          */}
           <div className="font-sans text-sm text-graphite-light leading-body max-w-lg">
             Eight Islamic challenges to Christian belief — each stated in its strongest form
             and answered with historical evidence, textual analysis, and logical argument.
@@ -290,7 +325,7 @@ export default function Faultlines() {
               ))}
             </div>
           </div>
-        </div>{/* ← FIX: this closing tag was missing, leaving the flex wrapper unclosed */}
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-32">

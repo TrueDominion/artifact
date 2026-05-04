@@ -139,3 +139,46 @@
     stroke-dashoffset: 0;
   }
 }
+
+/* ── artiFACT Design System Utilities ── */
+
+.type-display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.type-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #6B6B6B;
+  line-height: 1.4;
+}
+
+.type-caption {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: #6B6B6B;
+  line-height: 1.6;
+}
+
+.prose-constrained {
+  max-width: 65ch;
+}
+
+.card-hover-bg {
+  transition: background-color 400ms ease-out;
+}
+.card-hover-bg:hover {
+  background-color: #F5F0EB;
+}
+
+/* Removes default list styling from nav elements */
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
