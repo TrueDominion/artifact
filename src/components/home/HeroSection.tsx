@@ -14,7 +14,7 @@ export default function HeroSection() {
         >
           {/* Eyebrow */}
           <p className="type-label mb-6">
-            Built for conversations with Muslims · Reformed apologetics
+            Built to inform conversations that dig for Truth. 
           </p>
 
           {/* Headline */}
