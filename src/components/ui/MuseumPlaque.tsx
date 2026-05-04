@@ -12,23 +12,23 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
 
   return (
     <motion.article
-      className="border border-graphite-border overflow-hidden"
+      className="border border-[#E8E4DF] overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
     >
       {/* ── Header bar ── */}
-      <div className="flex items-center justify-between px-8 py-4 bg-linen border-b border-graphite-border">
-        <span className="label-museum text-graphite-soft">{entry.confession}</span>
-        <span className="label-museum text-graphite-soft">
+      <div className="flex items-center justify-between px-8 py-4 bg-linen border-b border-[#E8E4DF]">
+        <span className="type-label">{entry.confession}</span>
+        <span className="type-label">
           FOUNDATION {String(index + 1).padStart(2, '0')}
         </span>
       </div>
 
       {/* ── Main body ── */}
       <div className="bg-white">
-        <div className="px-8 pt-8 pb-6 lg:px-10">
+        <div className="p-8 lg:p-8">
 
           {/* Scripture block — crimson bar is intentional, stays */}
           <div className="flex gap-4 mb-7">
@@ -49,7 +49,7 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
           </h2>
 
           {/* Summary */}
-          <p className="font-sans text-sm font-medium text-graphite leading-relaxed max-w-2xl">
+          <p className="prose-constrained font-sans text-sm font-light text-graphite leading-[1.75]">
             {entry.summary}
           </p>
 
@@ -84,42 +84,42 @@ export default function MuseumPlaque({ entry, index }: MuseumPlaqueProps) {
               transition={{ duration: 0.45, ease: 'easeInOut' }}
               className="overflow-hidden"
             >
-              <div className="border-t border-graphite-border grid grid-cols-1 lg:grid-cols-2">
+              <div className="border-t border-[#E8E4DF] grid grid-cols-1 lg:grid-cols-2">
 
                 {/* Left — What We Believe */}
                 <motion.div
-                  className="px-8 py-8 lg:px-10 lg:py-10 lg:border-r border-graphite-border"
+                  className="px-8 py-8 lg:px-10 lg:py-10 lg:border-r border-[#E8E4DF]"
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, delay: 0.1, ease: 'easeOut' }}
                 >
                   <div className="flex items-center gap-2 mb-5">
-                    <p className="label-museum text-graphite-soft">WHAT WE BELIEVE</p>
+                    <p className="type-label">WHAT WE BELIEVE</p>
                   </div>
-                  <p className="font-sans text-sm text-graphite leading-relaxed">
+                  <p className="prose-constrained font-sans text-sm font-light text-graphite leading-[1.75]">
                     {entry.doctrine}
                   </p>
                 </motion.div>
 
                 {/* Right — How Islam Differs */}
                 <motion.div
-                  className="px-8 py-8 lg:px-10 lg:py-10 border-t lg:border-t-0 border-graphite-border"
+                  className="px-8 py-8 lg:px-10 lg:py-10 border-t lg:border-t-0 border-[#E8E4DF]"
                   style={{ backgroundColor: '#FAF8F5' }}
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, delay: 0.18, ease: 'easeOut' }}
                 >
                   {/* Graphite rule — was crimson, corrected */}
-                  <div className="w-full h-px bg-graphite-border mb-5" />
+                  <div className="w-full h-px bg-[#E8E4DF] mb-5" />
                   <div className="flex items-center gap-2 mb-5">
-                    <p className="label-museum text-graphite-soft">HOW ISLAM DIFFERS</p>
+                    <p className="type-label">HOW ISLAM DIFFERS</p>
                     {/* Icon strokes corrected from crimson to graphite-soft */}
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
                       <path d="M1,8 L5,2 L9,8" stroke="#9A9A9A" strokeWidth="0.9" strokeLinecap="round" strokeLinejoin="round"/>
                       <line x1="2.5" y1="6" x2="7.5" y2="6" stroke="#9A9A9A" strokeWidth="0.7" strokeLinecap="round"/>
                     </svg>
                   </div>
-                  <p className="font-sans text-sm text-graphite leading-relaxed">
+                  <p className="prose-constrained font-sans text-sm font-light text-graphite leading-[1.75]">
                     {entry.islamic_contrast}
                   </p>
                 </motion.div>
