@@ -302,7 +302,7 @@ export default function TheGallery() {
   return (
     <div className="min-h-screen">
       <SectionHeader
-        title="THE GALLERY"
+        title="GALLERY"
         subtitle="Eight worldviews, examined honestly."
         label="Section III"
         intro="Each tradition presented on its own terms, then examined from a Reformed Christian perspective. The goal is honest engagement, not caricature."
