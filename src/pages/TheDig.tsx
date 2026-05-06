@@ -43,7 +43,7 @@ export default function TheDig() {
   return (
     <div className="min-h-screen">
       <SectionHeader
-        title="THE DIG"
+        title="DIG"
         subtitle="The case for Christianity, layer by layer."
         label="Section II"
       />
