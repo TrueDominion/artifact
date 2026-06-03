@@ -12,12 +12,10 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
         >
-          {/* Eyebrow */}
           <p className="type-label mb-6">
             Built to inform conversations that dig for Truth.
           </p>
 
-          {/* Headline */}
           <h1 className="type-display text-4xl md:text-5xl lg:text-6xl text-[#1A1A1A] leading-tight max-w-3xl">
             The{' '}
             <span className="relative inline-block">
@@ -26,22 +24,18 @@ export default function HeroSection() {
             of Christian belief — examined.
           </h1>
 
-          {/* Subheadline */}
           <p className="prose-constrained text-[#2D2D2D] font-light text-lg leading-relaxed mt-4 max-w-2xl">
             Truth can withstand examination. Equip yourself with clear, historically
             grounded answers to the hardest questions Christians face.
           </p>
 
-          {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            {/* PRIMARY — red filled */}
             
               href="/field-guide"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#a01830] transition-colors duration-300"
             >
               ENTER THE FIELD GUIDE
             </a>
-            {/* SECONDARY — outline */}
             
               href="/bedrock"
               className="inline-flex items-center justify-center px-8 py-3.5 border border-[#2D2D2D] text-[#2D2D2D] bg-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#FAF8F5] transition-colors duration-300"
