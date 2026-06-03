@@ -44,7 +44,7 @@ export default function HeroSection() {
             {/* SECONDARY */}
             <a
               href="/bedrock"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-[#2D2D2D] text-[#2D2D2D] type-label hover:bg-[#FAF8F5] transition-colors duration-300 rounded-none"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#a01830] transition-colors duration-300 rounded-none no-underline"
             >
               EXPLORE BEDROCK
             </a>
