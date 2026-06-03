@@ -14,7 +14,7 @@ export default function HeroSection() {
         >
           {/* Eyebrow */}
           <p className="type-label mb-6">
-            Built to inform conversations that dig for Truth. 
+            Built to inform conversations that dig for Truth.
           </p>
 
           {/* Headline */}
@@ -34,17 +34,17 @@ export default function HeroSection() {
 
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            {/* PRIMARY */}
-            <a
+            {/* PRIMARY — red filled */}
+            
               href="/field-guide"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white type-label hover:bg-[#a01830] transition-colors duration-300 rounded-none"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#a01830] transition-colors duration-300"
             >
               ENTER THE FIELD GUIDE
             </a>
-            {/* SECONDARY */}
-            <a
+            {/* SECONDARY — outline */}
+            
               href="/bedrock"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#a01830] transition-colors duration-300 rounded-none no-underline"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-[#2D2D2D] text-[#2D2D2D] bg-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#FAF8F5] transition-colors duration-300"
             >
               EXPLORE BEDROCK
             </a>
