@@ -30,15 +30,15 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            
+            <a
               href="/field-guide"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-[#C41E3A] text-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#a01830] transition-colors duration-300"
             >
               ENTER THE FIELD GUIDE
             </a>
-            
+            <a
               href="/bedrock"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-[#2D2D2D] text-[#2D2D2D] bg-white font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#FAF8F5] transition-colors duration-300"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-[#1A1A1A] text-[#1A1A1A] bg-transparent font-sans font-medium text-xs tracking-widest uppercase hover:bg-[#f0ece6] transition-colors duration-300"
             >
               EXPLORE BEDROCK
             </a>
