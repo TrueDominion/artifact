@@ -8,7 +8,15 @@ export default function Footer() {
           </p>
           <p className="type-caption">The excavation continues.</p>
         </div>
-        <p className="type-caption">© {new Date().getFullYear()} artiFACT. Reformed apologetics.</p>
+        <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+          <a
+            href="mailto:info@artifacttruth.org"
+            className="type-caption px-4 py-2 border border-[#1A1A1A] text-[#1A1A1A] hover:bg-[#1A1A1A] hover:text-[#FAF8F5] transition-colors duration-200"
+          >
+            Contact Us
+          </a>
+          <p className="type-caption">© {new Date().getFullYear()} artiFACT. Reformed apologetics.</p>
+        </div>
       </div>
     </footer>
   )
