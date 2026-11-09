@@ -46,9 +46,7 @@ export default function Footer() {
           <span className="ft-a">arti</span><span className="ft-b">FACT</span>
         </p>
         <div className="ft-bottom m-text-3">
-          <span>
-            © {new Date().getFullYear()} artiFACT · Reformed apologetics · Design system: <a href="https://8b.com/templates/evenkeel/" style={{ color: 'inherit' }}>8B</a>
-          </span>
+          <span>© {new Date().getFullYear()} artiFACT</span>
           <a className="m-link" href="#top" onClick={e => { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }) }}>Back to the top</a>
         </div>
       </div>
