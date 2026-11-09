@@ -52,7 +52,7 @@ export default function Nav() {
   return (
     <header className={`nav${hidden && !open ? ' is-hidden' : ''}`} onFocus={() => setHidden(false)}>
       <Link className="nav__logo" to="/">
-        <span className="nav__mark" aria-hidden="true" />
+        <img className="nav__mark" src="/images/logo-192.webp" alt="" width="192" height="192" />
         <span className="sr-only">artiFACT, home</span>
       </Link>
       <button

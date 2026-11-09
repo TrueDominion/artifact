@@ -377,8 +377,6 @@
 }
 @layer sections {
 .op .op-fact { letter-spacing: -0.03em; }
-.op .op-tile:has(.op-glyph) { background: #1c1c1c; color: var(--color-1); display: grid; place-items: center; }
-.op .op-glyph { width: 62%; height: 62%; }
 .op .op-tile .m-photo { background: var(--color-1); }
 
 .sv .sv-row { isolation: isolate; }

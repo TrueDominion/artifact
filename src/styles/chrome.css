@@ -4,9 +4,8 @@
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 40; height: 64px; pointer-events: none; transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1); }
 .nav.is-hidden { transform: translateY(-110%); }
 .nav .nav__logo { position: absolute; top: 14px; left: var(--space-2); display: block; width: 38px; height: 38px; pointer-events: auto; }
-.nav .nav__mark { position: absolute; inset: 0; border-radius: 50%; background: var(--color-2); box-shadow: var(--shadow-1); }
-.nav .nav__mark::before { content: ""; position: absolute; left: 20%; right: 20%; top: calc(50% + 4px); height: 2px; background: var(--color-1); }
-.nav .nav__mark::after { content: ""; position: absolute; left: calc(50% - 4px); top: calc(50% - 5px); width: 8px; height: 8px; border-radius: 50%; background: var(--color-6); }
+.nav .nav__mark { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; box-shadow: var(--shadow-1); transition: transform 0.6s cubic-bezier(0.7, 0, 0.2, 1); }
+@media (hover: hover) { .nav .nav__logo:hover .nav__mark { transform: rotate(-12deg); } }
 .nav .nav__menu { position: absolute; top: 16px; right: var(--space-1); pointer-events: auto; }
 .nav .menu { position: fixed; inset: 0; z-index: 60; display: grid; grid-template-rows: auto 1fr auto; background: var(--color-1); pointer-events: auto; overflow-y: auto; padding: 18px var(--space-1) 24px 0; }
 .nav .menu[hidden] { display: none; }
