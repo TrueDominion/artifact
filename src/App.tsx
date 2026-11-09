@@ -1,8 +1,6 @@
 /**
  * src/App.tsx
- * Root application component for artiFACT.
- * Defines all routes via React Router v6.
- * Wraps all pages in the shared Layout component.
+ * Routes. Every page renders inside the shared Layout (nav, footer, scroll and motion wiring).
  */
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'

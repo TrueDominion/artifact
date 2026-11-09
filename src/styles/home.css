@@ -1,0 +1,434 @@
+/* Home page sections and their scroll scenes. Each section is scoped by its root class. */
+/* ported from Evenkeel (section:opening) */
+@layer sections {
+.op { position: relative; overflow-x: clip; }
+.op .op-one { position: relative; min-height: 100svh; display: flex; flex-direction: column; padding: 20px var(--space-1) calc(clamp(44px, 6.25vw, 112px) * 0.9 + 34px) 0; }
+.op .op-rule { transform-origin: 50% 0; }
+.op .op-where { display: grid; gap: 2px; margin-top: 2px; }
+.op .op-head { margin-top: auto; padding-top: 40px; }
+.op .op-name { display: grid; grid-template-columns: var(--space-3) minmax(0, 1fr); align-items: end; }
+.op .op-what { padding: 0 var(--space-4) 4px var(--space-2); }
+.op .op-h1 { padding-left: var(--space-4); }
+.op .ln { display: block; }
+.op .ln__i { display: inline-block; position: relative; }
+.op .op-sub { margin-top: 0.12em; }
+.op .op-a .ln__i { background: var(--color-1); padding-right: 0.08em; }
+.op .op-in { padding-left: 1.6em; }
+.op .op-foot { display: grid; grid-template-columns: var(--space-3) minmax(0, 1fr); align-items: center; margin-top: clamp(22px, 4vh, 40px); }
+.op .op-actions { margin-left: var(--space-4); display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
+.op .op-level { position: relative; margin: 0 var(--space-4) 0 var(--space-2); height: 26px; border: 1px solid var(--color-2); border-radius: var(--radius-1); --op-travel: max(18px, calc((var(--space-3) - var(--space-2) - var(--space-4)) / 2 - 22px)); }
+.op .op-level::before, .op .op-level::after { content: ""; position: absolute; top: 4px; bottom: 4px; width: 1px; background: var(--color-2); }
+.op .op-level::before { left: calc(50% - 14px); }
+.op .op-level::after { left: calc(50% + 14px); }
+.op .op-level__bubble { position: absolute; top: 5px; left: calc(50% - 8px); width: 16px; height: 14px; border-radius: 50%; background: var(--color-6); }
+.op .op-two { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: space-between; gap: clamp(28px, 6vh, 64px); padding: clamp(72px, 13vh, 132px) var(--space-1) clamp(48px, 9vh, 96px) 0; color: var(--color-1); background: var(--color-2); clip-path: inset(0 0 0 0); --op-tile: clamp(112px, 13vw, 220px); }
+.op .op-two > * { position: relative; }
+.op .op-tiles { height: var(--op-tile); }
+.op .op-tile { position: absolute; top: 0; width: var(--op-tile); height: var(--op-tile); overflow: hidden; }
+.op .op-tile:nth-child(1) { left: var(--space-1); }
+.op .op-tile:nth-child(2) { left: calc(var(--space-3) + var(--space-4)); }
+.op .op-tile:nth-child(3) { left: calc(var(--space-3) + var(--space-4) + var(--op-tile) + 10px); }
+.op .op-tile:nth-child(4) { right: 0; }
+.op .op-para { max-width: 40ch; margin-right: var(--space-1); }
+.op .op-para .m-link-2 { margin-left: 0.2em; }
+.op .op-say { white-space: nowrap; }
+@media (max-width: 700px) {
+  .op .op-foot { grid-template-columns: var(--space-3) minmax(0, 1fr); align-items: start; }
+  .op .op-level { margin-top: 11px; }
+  .op .op-actions { flex-direction: column; align-items: flex-start; }
+  .op .op-tiles { height: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-left: var(--space-1); }
+  .op .op-tile { position: relative; left: auto; right: auto; width: auto; height: auto; aspect-ratio: 1; }
+  .op .op-tile:nth-child(n) { left: auto; right: auto; }
+  .op .op-para { margin-left: var(--space-1); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .op .op-rule { animation: op-draw 1s cubic-bezier(0.7, 0, 0.2, 1) backwards; }
+  .op .op-one .ln { animation: op-from-rule-r 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+  .op .op-one .op-a { animation-name: op-from-rule-l; }
+  .op .op-h1 .ln:nth-child(2) { animation-delay: 0.06s; }
+  .op .op-sub .ln:nth-child(1) { animation-delay: 0.12s; }
+  .op .op-sub .ln:nth-child(2) { animation-delay: 0.18s; }
+  .op .op-sub .ln:nth-child(3) { animation-delay: 0.24s; }
+  .op .op-sub .ln:nth-child(4) { animation-delay: 0.3s; }
+  .op .op-foot { animation: op-rise 0.8s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) backwards; }
+  .op .op-level__bubble { animation: op-level 5.4s ease-in-out infinite; }
+  .op .op-level.is-paused .op-level__bubble { animation-play-state: paused; }
+}
+@keyframes op-draw { from { transform: scaleY(0); } }
+@keyframes op-from-rule-r { from { transform: translateX(-44px); } }
+@keyframes op-from-rule-l { from { transform: translateX(44px); } }
+@keyframes op-rise { from { transform: translateY(14px); } }
+@keyframes op-level {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(calc(var(--op-travel) * -1)); }
+  45% { transform: translateX(calc(var(--op-travel) * 0.75)); }
+  65% { transform: translateX(calc(var(--op-travel) * -0.35)); }
+  82% { transform: translateX(calc(var(--op-travel) * 0.12)); }
+}
+}
+/* ported from Evenkeel (scene:opening) */
+@layer scenes {
+[data-live] { --ease-power3-out: linear(0, 0.0963, 0.1855, 0.2679, 0.3439, 0.4138, 0.478, 0.5367, 0.5904, 0.6392, 0.6836, 0.7237, 0.7599, 0.7924, 0.8215, 0.8474, 0.8704, 0.8907, 0.9085, 0.924, 0.9375, 0.9491, 0.959, 0.9674, 0.9744, 0.9802, 0.985, 0.9888, 0.9919, 0.9943, 0.9961, 0.9974, 0.9984, 0.9991, 0.9995, 0.9998, 0.9999, 1, 1, 1, 1); }
+[data-live] .op { view-timeline: --opening-t1 block; view-timeline-inset: 0; }
+[data-live] .op .op-sub > span:nth-of-type(-n+2) > .ln__i { animation-name: opening-span-ln-i-translate; }
+[data-live] .op .op-h1 > span:nth-of-type(-n+2) > .ln__i, [data-live] .op .op-sub > span:nth-of-type(3) > .ln__i, [data-live] .op .op-in > .ln__i { animation-name: opening-span-ln-i-translate-3; }
+[data-live] .op .op-sub > span:nth-of-type(-n+3) > .ln__i, [data-live] .op .op-h1 > span:nth-of-type(-n+2) > .ln__i, [data-live] .op .op-in > .ln__i { animation-timeline: --opening-t1; animation-range: cover 100vh cover calc(100vh + var(--opening-run, 100vh) * 0.6); animation-timing-function: cubic-bezier(0.3333, 0, 0.6667, 0); animation-fill-mode: both; transform: none; }
+[data-live] .op .op-two { animation-name: opening-slit; animation-timeline: --opening-t1; animation-range: cover calc(100vh + var(--opening-run, 100vh) * 0.12) cover calc(100vh + var(--opening-run, 100vh) * 0.82); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); animation-fill-mode: both; }
+[data-live] .op .op-tiles > li { animation-name: opening-li-op-tile-translate; animation-timeline: --opening-t1; animation-range: cover calc(100vh + var(--opening-run, 100vh) * 0.3) cover calc(100vh + var(--opening-run, 100vh) * 0.92); animation-timing-function: cubic-bezier(0.3333, 1, 0.6667, 1); animation-fill-mode: both; transform: none; }
+[data-live] .op .m-text { animation-name: opening-p-m-text-translate; animation-timeline: --opening-t1; animation-range: cover calc(100vh + var(--opening-run, 100vh) * 0.42) cover calc(100vh + var(--opening-run, 100vh) * 0.92); animation-timing-function: cubic-bezier(0.3333, 1, 0.6667, 1); animation-fill-mode: both; transform: none; }
+[data-live] .op .op-say > .l-a > .ln__i { --opening-at: calc(0.5 + 0.08 * var(--opening-step, 0)); animation-name: opening-row; animation-timeline: --opening-t1; animation-range: cover calc(100vh + var(--opening-run, 100vh) * var(--opening-at)) cover calc(100vh + var(--opening-run, 100vh) * (var(--opening-at) + 0.42)); animation-timing-function: var(--ease-power3-out); animation-fill-mode: both; transform: none; }
+@keyframes opening-span-ln-i-translate { 0% { translate: 0px 0px; } 100% { translate: -8vw 0px; } }
+@keyframes opening-span-ln-i-translate-3 { 0% { translate: 0px 0px; } 100% { translate: 8vw 0px; } }
+@keyframes opening-slit { 0% { clip-path: inset(0px calc(100% - var(--opening-slit, 0px) - 1px) 0px var(--opening-slit, 0px)); } 100% { clip-path: inset(0px 0px 0px 0px); } }
+@keyframes opening-li-op-tile-translate { 0% { translate: 0px var(--opening-li-op-tile-translate-from-2, 150px); } 100% { translate: 0px 0px; } }
+@keyframes opening-p-m-text-translate { 0% { translate: 0px 70px; } 100% { translate: 0px 0px; } }
+@keyframes opening-row { 0% { translate: var(--opening-row, 0px) 0px; } 100% { translate: 0px 0px; } }
+}
+/* ported from Evenkeel (section:services) */
+@layer sections {
+.sv { position: relative; overflow-x: clip; padding: clamp(110px, 18vh, 200px) 0 clamp(90px, 14vh, 160px); }
+.sv .sv-h { margin-bottom: clamp(48px, 9vh, 96px); }
+.sv .sv-in { padding-left: 1.4em; }
+.sv .sv-ledger { position: relative; }
+.sv .sv-rule { transform-origin: 50% 0; }
+.sv .sv-head { color: var(--color-4); padding-bottom: 14px; }
+.sv .sv-head span:nth-child(2) { text-align: right; padding-right: var(--space-4); }
+.sv .sv-head span:nth-child(3) { padding-left: var(--space-4); }
+.sv .sv-head span:nth-child(4) { text-align: right; }
+.sv .sv-row { position: relative; padding-top: 22px; padding-bottom: 30px; }
+.sv .sv-line { position: absolute; top: 0; left: var(--space-1); right: var(--space-1); height: 1px; background: var(--color-8); transform-origin: 0 50%; }
+.sv .sv-name { padding-right: 18px; }
+.sv .sv-send { text-align: right; padding-right: var(--space-4); }
+.sv .sv-return { padding-left: var(--space-4); padding-right: 24px; max-width: 46ch; }
+.sv .sv-often { text-align: right; padding-top: 4px; }
+@media (max-width: 700px) {
+  .sv .sv-rule { left: 50%; }
+  .sv .l-ledger { grid-template-columns: 1fr 1fr; }
+  .sv .sv-head { display: none; }
+  .sv .sv-name { grid-column: 1; padding-bottom: 10px; background: var(--color-1); justify-self: start; position: relative; padding-right: 8px; }
+  .sv .sv-often { grid-column: 2; grid-row: 1; padding-left: var(--space-4); }
+  .sv .sv-send { grid-column: 1; grid-row: 2; }
+  .sv .sv-return { grid-column: 2; grid-row: 2; padding-right: 0; }
+}
+}
+/* ported from Evenkeel (section:month) */
+@layer sections {
+.mo { position: relative; height: 320vh; }
+.mo .mo-stage { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: clamp(32px, 7vh, 72px); padding: 64px var(--space-1) clamp(56px, 12vh, 120px) 0; }
+.mo .mo-board { position: relative; margin-left: var(--space-2); }
+.mo .mo-scale { position: relative; height: 34px; border-right: 1px solid var(--color-2); background:
+  linear-gradient(var(--color-2), var(--color-2)) 0 100% / 100% 1px no-repeat,
+  repeating-linear-gradient(to right, var(--color-2) 0 1px, transparent 1px calc(100% / 4)) 0 100% / 100% 30px no-repeat,
+  repeating-linear-gradient(to right, var(--color-2) 0 1px, transparent 1px calc(100% / 28)) 0 100% / 100% 12px no-repeat; }
+.mo .mo-fill { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--color-6); transform-origin: 0 50%; }
+.mo .mo-marker { position: absolute; top: -12px; bottom: 0; right: -1px; width: 2px; background: var(--color-6); }
+.mo .mo-tasks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.mo .mo-task { padding: 22px clamp(14px, 2vw, 32px) 0 0; display: grid; align-content: start; gap: 8px; transition: color 0.3s; }
+.mo .mo-day { color: var(--color-6); transition: color 0.3s; }
+.mo .mo-task .m-text { max-width: 30ch; }
+.mo .mo-note { margin-top: -8px; }
+@media (max-width: 700px) {
+  .mo { height: 300vh; }
+  .mo .mo-stage { gap: 26px; padding-bottom: 76px; }
+  .mo .mo-board { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 14px; }
+  .mo .mo-scale { height: auto; border-right: 0; border-bottom: 1px solid var(--color-2); background:
+    linear-gradient(var(--color-2), var(--color-2)) 0 0 / 1px 100% no-repeat,
+    repeating-linear-gradient(to bottom, var(--color-2) 0 1px, transparent 1px calc(100% / 4)) 0 0 / 22px 100% no-repeat,
+    repeating-linear-gradient(to bottom, var(--color-2) 0 1px, transparent 1px calc(100% / 28)) 0 0 / 9px 100% no-repeat; }
+  .mo .mo-fill { top: 0; bottom: 0; left: -1px; right: auto; width: 3px; height: auto; transform-origin: 50% 0; }
+  .mo .mo-marker { top: auto; left: -6px; right: 0; bottom: 0; width: auto; height: 2px; }
+  .mo .mo-tasks { grid-template-columns: 1fr; grid-auto-rows: 1fr; }
+  .mo .mo-task { padding: 0 0 16px; gap: 4px; }
+  .mo .mo-task .m-text { font-size: 14px; line-height: 1.38; }
+}
+}
+/* ported from Evenkeel (scene:month) */
+@layer scenes {
+@media (prefers-reduced-motion: no-preference) {
+  [data-live] .mo .mo-task:not(.is-on) { color: var(--color-4); }
+  [data-live] .mo .mo-task:not(.is-on) .mo-day { color: var(--color-4); }
+}
+}
+@layer scenes {
+[data-live] .mo { view-timeline: --month-t1 block; view-timeline-inset: 0; }
+[data-live] .mo .mo-fill, [data-live] .mo .mo-marker { animation-timeline: --month-t1; animation-range: cover 100vh cover calc(100% - 100vh); animation-timing-function: linear; animation-fill-mode: both; transform: none; }
+@keyframes month-span-mo-fill-scale-d { 0% { scale: 0 1; } 100% { scale: 1; } }
+@keyframes month-span-mo-fill-scale-m { 0% { scale: 1 0; } 100% { scale: 1; } }
+@keyframes month-span-mo-marker-translate-d { 0% { translate: calc(-1 * var(--month-board-w, 0px)) 0px; } 100% { translate: 0px 0px; } }
+@keyframes month-span-mo-marker-translate-m { 0% { translate: 0px calc(-1 * var(--month-board-h, 0px)); } 100% { translate: 0px 0px; } }
+@media (min-width: 701px) {
+  [data-live] .mo .mo-fill { animation-name: month-span-mo-fill-scale-d; }
+  [data-live] .mo .mo-marker { animation-name: month-span-mo-marker-translate-d; }
+}
+@media (max-width: 700px) {
+  [data-live] .mo .mo-fill { animation-name: month-span-mo-fill-scale-m; }
+  [data-live] .mo .mo-marker { animation-name: month-span-mo-marker-translate-m; }
+}
+}
+/* ported from Evenkeel (section:clients) */
+@layer sections {
+.cl { position: relative; height: 340vh; }
+.cl .cl-stage { position: sticky; top: 0; height: 100svh; overflow: hidden; perspective: 1500px; }
+.cl .cl-title { position: absolute; left: 0; right: 0; top: 50%; z-index: 2; display: flex; justify-content: space-between; align-items: center; padding: 0 var(--space-1); transform: translateY(-50%); font-size: clamp(34px, 5vw, 88px); white-space: nowrap; pointer-events: none; }
+.cl .cl-half { display: inline-block; }
+.cl .cl-globe { position: absolute; left: 50%; top: 50%; width: 0; height: 0; transform-style: preserve-3d; --cl-r: clamp(150px, 19vw, 300px); --cl-w: clamp(70px, 9.6vw, 150px); --cl-h: calc(var(--cl-w) * 0.76); }
+.cl .cl-card { position: absolute; left: calc(var(--cl-w) / -2); top: calc(var(--cl-h) / -2); width: var(--cl-w); height: var(--cl-h); transform-style: preserve-3d; transform: rotateY(var(--lon)) rotateX(var(--lat)) translateZ(var(--cl-r)); }
+.cl .cl-face { position: absolute; inset: 0; overflow: hidden; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 8px; }
+.cl .cl-face:has(img) { padding: 0; }
+.cl .cl-card::after { content: ""; position: absolute; inset: 0; background: var(--color-1); box-shadow: var(--shadow-3); transform: rotateY(180deg) translateZ(1px); backface-visibility: hidden; }
+.cl .cl-trade { color: var(--color-4); font-weight: 500; }
+.cl .cl-note { position: absolute; left: calc(var(--space-3) + var(--space-4)); bottom: clamp(64px, 12vh, 120px); }
+@media (max-width: 700px) {
+  .cl { height: 300vh; }
+  .cl .cl-title { top: 0; bottom: 0; transform: none; display: block; padding: 0; }
+  .cl .cl-half { position: absolute; }
+  .cl .cl-half--a { left: var(--space-1); top: 88px; }
+  .cl .cl-half--b { right: var(--space-1); bottom: 118px; }
+  .cl .cl-globe { --cl-r: 118px; --cl-w: 62px; }
+  .cl .cl-face { padding: 5px; }
+  .cl .cl-face .m-text-3 { font-size: 8px; }
+  .cl .cl-note { left: var(--space-1); bottom: 84px; }
+}
+}
+/* ported from Evenkeel (scene:clients) */
+@layer scenes {
+@property --clients-lift { syntax: "<length>"; inherits: false; initial-value: 0px; }
+@property --clients-turn-y { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@property --clients-turn-x { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+[data-live] .cl { view-timeline: --clients-t block; view-timeline-inset: 0; }
+[data-live] .cl .cl-globe { transform: translateY(var(--clients-lift)) rotateY(var(--clients-turn-y)) rotateX(var(--clients-turn-x)); animation-name: clients-lift, clients-turn; animation-timeline: --clients-t, --clients-t; animation-range: cover 100vh cover calc(100vh + (100% - 200vh) * 0.5), cover 100vh cover calc(100% - 100vh); animation-timing-function: cubic-bezier(0.3333, 1, 0.6667, 1), cubic-bezier(0.3333, 0.6667, 0.6667, 1); animation-fill-mode: both; }
+[data-live] .cl .cl-half { animation-name: clients-part; animation-timeline: --clients-t; animation-range: cover calc(100vh + (100% - 200vh) * 0.1) cover calc(100vh + (100% - 200vh) * 0.52); animation-timing-function: linear(0, 0.0001, 0.0005, 0.0017, 0.004, 0.0078, 0.0135, 0.0214, 0.032, 0.0456, 0.0625, 0.0832, 0.108, 0.1373, 0.1715, 0.2109, 0.256, 0.3071, 0.3645, 0.4287, 0.5, 0.5713, 0.6355, 0.6929, 0.744, 0.7891, 0.8285, 0.8627, 0.892, 0.9168, 0.9375, 0.9544, 0.968, 0.9786, 0.9865, 0.9922, 0.996, 0.9983, 0.9995, 0.9999, 1); animation-fill-mode: both; }
+@keyframes clients-lift { 0% { --clients-lift: 80vh; } 100% { --clients-lift: 0px; } }
+@keyframes clients-turn { 0% { --clients-turn-y: -330deg; --clients-turn-x: 22deg; } 100% { --clients-turn-y: 0deg; --clients-turn-x: 0deg; } }
+@keyframes clients-part { 0% { translate: var(--clients-x, 0px) var(--clients-y, 0px); } 100% { translate: 0px 0px; } }
+}
+/* ported from Evenkeel (section:prices) */
+@layer sections {
+.pr { position: relative; overflow-x: clip; padding: clamp(110px, 18vh, 200px) 0 clamp(90px, 14vh, 160px); }
+.pr .pr-h { margin-bottom: clamp(48px, 9vh, 96px); }
+.pr .pr-cols { color: var(--color-4); padding-bottom: 12px; }
+.pr .pr-cols span:nth-child(3) { padding-left: var(--space-4); }
+.pr .pr-cols span:nth-child(4) { text-align: right; }
+.pr .pr-plan { position: relative; padding-top: 20px; padding-bottom: 34px; }
+.pr .pr-rule { position: absolute; top: 0; left: var(--space-1); right: var(--space-1); height: 1px; background: var(--color-2); transform-origin: 0 50%; }
+.pr .pr-for { padding-right: 20px; color: var(--color-4); }
+.pr .pr-items { padding-left: var(--space-4); padding-right: 24px; }
+.pr .pr-items li { padding: 3px 0 4px; border-bottom: 1px solid var(--color-8); }
+.pr .pr-fee { text-align: right; }
+.pr .pr-fee .m-text-3 { display: block; margin-top: 4px; color: var(--color-4); }
+.pr .pr-note { margin-top: 36px; max-width: 52ch; }
+@media (max-width: 700px) {
+  .pr .pr-cols { display: none; }
+  .pr .l-ledger { grid-template-columns: minmax(0, 1fr) auto; row-gap: 10px; padding-left: var(--space-1); }
+  .pr .l-ledger > :first-child { padding-left: 0; }
+  .pr .pr-for { grid-column: 1 / -1; grid-row: 2; }
+  .pr .pr-items { grid-column: 1 / -1; padding: 0; }
+  .pr .pr-fee { grid-column: 2; grid-row: 1; }
+  .pr .pr-note { margin-left: var(--space-1); margin-right: var(--space-1); }
+}
+}
+/* ported from Evenkeel (section:switch) */
+@layer sections {
+.sw { position: relative; height: 260vh; }
+.sw .sw-stage { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: clamp(36px, 7vh, 72px); padding: 64px var(--space-1) clamp(64px, 13vh, 130px) 0; }
+.sw .sw-body { position: relative; display: grid; grid-template-columns: var(--space-3) minmax(0, 1fr); }
+.sw .sw-rule { top: -24px; bottom: -24px; }
+.sw .sw-old { padding: 0 var(--space-4) 0 var(--space-2); text-align: right; display: grid; gap: 10px; align-content: start; }
+.sw .sw-old .m-text-3 { color: var(--color-4); }
+.sw .sw-tiles { display: flex; gap: 10px; padding-left: var(--space-4); }
+.sw .sw-tile { position: relative; width: clamp(170px, 17vw, 270px); aspect-ratio: 1; display: flex; flex-direction: column; gap: 8px; padding: 16px; transition: background-color 0.35s, color 0.35s; }
+.sw .sw-ring { width: 40px; height: 40px; margin-bottom: auto; transform: rotate(-90deg); }
+.sw .sw-ring circle { fill: none; stroke-width: 2.5; }
+.sw .sw-ring__track { stroke: var(--color-5); }
+.sw .sw-ring__arc { stroke: var(--color-6); stroke-dasharray: 1; stroke-dashoffset: 0; }
+.sw .sw-text { opacity: 1; }
+@media (max-width: 900px) {
+  .sw .sw-body { grid-template-columns: 1fr; gap: 22px; }
+  .sw .sw-rule { display: none; }
+  .sw .sw-old { text-align: left; padding: 0 0 0 var(--space-1); }
+  .sw .sw-tiles { flex-direction: column; padding-left: var(--space-1); gap: 8px; }
+  .sw .sw-tile { width: auto; aspect-ratio: auto; display: grid; grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; row-gap: 2px; padding: 12px 14px; }
+  .sw .sw-ring { grid-row: 1 / 3; margin: 0; }
+  .sw .sw-text { font-size: 14px; line-height: 1.35; }
+}
+}
+/* ported from Evenkeel (scene:switch) */
+@layer scenes {
+@media (prefers-reduced-motion: no-preference) {
+  [data-live] .sw .sw-tile:not(.is-done) { background: var(--color-3); color: var(--color-2); }
+}
+}
+@layer scenes {
+[data-live] .sw { view-timeline: --switch-t1 block; view-timeline-inset: 0; }
+[data-live] .sw .sw-tiles > li > .sw-ring > .sw-ring__arc { animation-name: switch-circle-sw-ring-arc-strokedashoffset; animation-timeline: --switch-t1; animation-range: cover calc(100vh - 66.6667vh * var(--i) + 33.3333% * var(--i)) cover calc(33.3333% + 33.3334% * var(--i) + 33.3333vh - 66.6666vh * var(--i)); animation-timing-function: linear; animation-fill-mode: both; }
+@keyframes switch-circle-sw-ring-arc-strokedashoffset { 0% { stroke-dashoffset: 1px; } 100% { stroke-dashoffset: 0px; } }
+}
+/* ported from Evenkeel (section:team) */
+@layer sections {
+.tm { position: relative; padding: clamp(110px, 18vh, 200px) 0 clamp(90px, 14vh, 160px); }
+.tm .tm-h { margin-bottom: clamp(48px, 9vh, 96px); }
+.tm .tm-row { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.4vw, 20px); margin: 0 var(--space-1) 0 var(--space-2); }
+.tm .tm-card { display: grid; align-content: start; gap: 8px; background: var(--color-1); }
+.tm .tm-photo { aspect-ratio: 3 / 4; overflow: hidden; margin-bottom: 8px; }
+.tm .tm-role { color: var(--color-4); }
+.tm .tm-card .m-text { max-width: 32ch; }
+@media (max-width: 700px) {
+  .tm .tm-row { grid-template-columns: 1fr 1fr; row-gap: 32px; margin-left: var(--space-1); }
+  .tm .tm-photo { aspect-ratio: 4 / 5; }
+  .tm .tm-card .m-text { font-size: 14px; line-height: 1.38; }
+}
+}
+/* ported from Evenkeel (scene:team) */
+@layer scenes {
+[data-live] { --ease-power2-inout: linear(0, 0.0001, 0.0005, 0.0017, 0.004, 0.0078, 0.0135, 0.0214, 0.032, 0.0456, 0.0625, 0.0832, 0.108, 0.1373, 0.1715, 0.2109, 0.256, 0.3071, 0.3645, 0.4287, 0.5, 0.5713, 0.6355, 0.6929, 0.744, 0.7891, 0.8285, 0.8627, 0.892, 0.9168, 0.9375, 0.9544, 0.968, 0.9786, 0.9865, 0.9922, 0.996, 0.9983, 0.9995, 0.9999, 1); }
+[data-live] .tm .tm-row { view-timeline: --team-row block; view-timeline-inset: 0; }
+[data-live] .tm .tm-row > li { --team-total: calc(1 + 0.08 * (var(--n, 1) - 1)); animation-name: team-deal; animation-timeline: --team-row; animation-range: cover calc(8vh + (50% - 10vh) * 0.08 * var(--i, 0) / var(--team-total)) cover calc(8vh + (50% - 10vh) * (0.08 * var(--i, 0) + 1) / var(--team-total)); animation-timing-function: var(--ease-power2-inout); animation-fill-mode: both; transform: none; }
+@keyframes team-deal { 0% { translate: var(--team-x, 0px) var(--team-y, 0px); rotate: var(--team-tilt, 0deg); } 100% { translate: 0px 0px; rotate: 0deg; } }
+}
+/* ported from Evenkeel (section:principle) */
+@layer sections {
+.pc { position: relative; padding: clamp(110px, 20vh, 220px) var(--space-1) clamp(110px, 20vh, 220px) 0; overflow-x: clip; }
+.pc .pc-cap { margin-bottom: 28px; color: var(--color-4); }
+.pc .pc-q { font-size: clamp(38px, 8.6vw, 156px); line-height: 0.9; }
+.pc .pc-l { white-space: nowrap; }
+.pc .pc-in { padding-left: 1.2em; }
+.pc .pc-dot { display: inline-block; color: var(--color-6); }
+}
+/* ported from Evenkeel (scene:principle) */
+@layer scenes {
+[data-live] { --ease-640c4e: linear(0, 0.1444, 0.278, 0.4011, 0.514, 0.6172, 0.711, 0.7958, 0.872, 0.9399, 1, 1.0526, 1.098, 1.1367, 1.169, 1.1953, 1.216, 1.2314, 1.242, 1.2481, 1.25, 1.2482, 1.243, 1.2348, 1.224, 1.2109, 1.196, 1.1796, 1.162, 1.1437, 1.125, 1.1063, 1.088, 1.0704, 1.054, 1.0391, 1.026, 1.0152, 1.007, 1.0018, 1); }
+[data-live] .pc .pc-in { view-timeline: --principle-last block; view-timeline-inset: 0; }
+[data-live] .pc .pc-dot { animation-name: principle-dot; animation-timeline: --principle-last; animation-range: cover 38vh cover 54vh; animation-timing-function: var(--ease-640c4e); animation-fill-mode: both; transform: none; transform-origin: 50% 80%; }
+@keyframes principle-dot { 0% { scale: 0; } 0.002% { scale: 0.0012; } 100% { scale: 1; } }
+}
+/* ported from Evenkeel (section:faq) */
+@layer sections {
+.fq { position: relative; padding: clamp(110px, 18vh, 200px) 0 clamp(90px, 14vh, 160px); }
+.fq .fq-h { margin-bottom: clamp(48px, 9vh, 96px); }
+.fq .fq-list { margin: 0 var(--space-1) 0 calc(var(--space-3) + var(--space-4)); }
+.fq .fq-item { position: relative; }
+.fq .fq-line { position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--color-2); transform-origin: 0 50%; }
+.fq .fq-q { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 20px 0 22px; cursor: pointer; list-style: none; }
+.fq .fq-q::-webkit-details-marker { display: none; }
+.fq .fq-icon { position: relative; flex: none; width: 18px; height: 18px; margin-top: 4px; }
+.fq .fq-icon::before, .fq .fq-icon::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 1px); height: 2px; background: var(--color-2); transition: transform 0.35s cubic-bezier(0.7, 0, 0.2, 1); }
+.fq .fq-icon::after { transform: rotate(90deg); }
+.fq details[open] .fq-icon::after { transform: rotate(0deg); }
+.fq .fq-a { max-width: 58ch; padding: 0 0 26px; }
+@media (max-width: 700px) {
+  .fq .fq-list { margin-left: var(--space-1); }
+}
+}
+/* ported from Evenkeel (section:reviews) */
+@layer sections {
+.rv { position: relative; padding: clamp(110px, 18vh, 200px) 0 clamp(60px, 10vh, 120px); }
+.rv .rv-h { margin-bottom: clamp(48px, 9vh, 96px); }
+.rv .rv-stack { position: relative; margin: 0 var(--space-1) 0 var(--space-2); }
+.rv .rv-sheet { position: sticky; top: calc(12vh + var(--i) * 16px); min-height: min(62vh, 560px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; padding: clamp(22px, 3vw, 44px); margin-bottom: 18vh; }
+.rv .rv-sheet:last-child { margin-bottom: 0; }
+.rv .rv-quote { font-size: clamp(24px, 3.2vw, 50px); line-height: 1.05; letter-spacing: -0.035em; max-width: 22ch; }
+.rv .rv-who { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.rv .rv-who span + span { color: var(--color-4); }
+@media (max-width: 700px) {
+  .rv .rv-stack { margin-left: var(--space-1); }
+  .rv .rv-sheet { top: calc(80px + var(--i) * 12px); min-height: 56vh; margin-bottom: 14vh; }
+}
+}
+/* ported from Evenkeel (scene:reviews) */
+@layer scenes {
+[data-live] .rv .rv-stack { view-timeline: --reviews-stack block; view-timeline-inset: 0; }
+[data-live] .rv .rv-stack > li:not(:last-child) { animation-name: reviews-step-back; animation-timeline: --reviews-stack; animation-range: cover var(--reviews-at, 0px) cover calc(var(--reviews-at, 0px) + 100vh - var(--reviews-top, 0px)); animation-timing-function: linear; animation-fill-mode: both; transform: none; transform-origin: 50% 0%; }
+@keyframes reviews-step-back { 0% { scale: 1; } 100% { scale: 0.92; } }
+}
+/* ported from Evenkeel (section:contact) */
+@layer sections {
+.ct { position: relative; overflow-x: clip; padding: clamp(110px, 18vh, 200px) 0 clamp(90px, 14vh, 160px); }
+.ct .ct-clock { display: flex; justify-content: space-between; align-items: center; padding: 0 var(--space-1); white-space: nowrap; }
+.ct .ct-frame { flex: none; width: clamp(92px, 11vw, 180px); aspect-ratio: 3 / 4; background: var(--color-2); overflow: hidden; }
+.ct .ct-days { margin: 18px 0 clamp(72px, 14vh, 140px); text-align: center; }
+.ct .ct-grid { position: relative; display: grid; grid-template-columns: var(--space-3) minmax(0, 1fr); }
+.ct .ct-rule { top: 0; bottom: 0; }
+.ct .ct-lines { padding: 6px var(--space-4) 0 var(--space-2); display: grid; gap: 20px; align-content: start; }
+.ct .ct-lines dt { color: var(--color-4); margin-bottom: 4px; }
+.ct .ct-lines dd { font-weight: 500; }
+.ct .ct-right { padding: 0 var(--space-1) 0 var(--space-4); }
+.ct .ct-h { margin-bottom: clamp(36px, 6vh, 60px); }
+.ct .ct-form { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 28px; max-width: 760px; }
+.ct .ct-wide { grid-column: 1 / -1; }
+.ct .ct-send { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.ct .ct-thanks { color: var(--color-2); }
+@media (max-width: 700px) {
+  .ct .ct-clock { font-size: 30px; }
+  .ct .ct-frame { width: 70px; }
+  .ct .ct-grid { grid-template-columns: 1fr; gap: 48px; }
+  .ct .ct-rule { display: none; }
+  .ct .ct-lines { padding: 0 var(--space-1); order: 2; }
+  .ct .ct-right { padding-left: var(--space-1); }
+  .ct .ct-form { grid-template-columns: 1fr; }
+}
+}
+
+/* ── artiFACT additions to the home sections ───────────────── */
+@layer atoms {
+.m-arrow { display: inline-block; width: 0.62em; height: 0.4em; margin-left: 0.32em; vertical-align: 0.12em; transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1); }
+.m-severity { display: inline-flex; align-items: flex-end; gap: 3px; height: 21px; }
+.m-severity > span { width: 4px; background: var(--color-8); }
+.m-severity > span.is-on { background: var(--color-6); }
+}
+@layer sections {
+.op .op-fact { letter-spacing: -0.03em; }
+.op .op-tile:has(.op-glyph) { background: #1c1c1c; color: var(--color-1); display: grid; place-items: center; }
+.op .op-glyph { width: 62%; height: 62%; }
+.op .op-tile .m-photo { background: var(--color-1); }
+
+.sv .sv-row { isolation: isolate; }
+.sv .sv-link { text-decoration: none; }
+.sv .sv-link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.sv .sv-row .m-arrow { color: var(--color-6); opacity: 0; transform: translateX(-8px); }
+@media (hover: hover) {
+  .sv .sv-row:hover .m-arrow { opacity: 1; transform: none; }
+  .sv .sv-row:hover .sv-name { color: var(--color-6); }
+}
+.sv .sv-link:focus-visible { outline: none; }
+.sv .sv-link:focus-visible::after { outline: 2px solid var(--color-6); outline-offset: -2px; }
+
+.mo .mo-scale { background:
+  linear-gradient(var(--color-2), var(--color-2)) 0 100% / 100% 1px no-repeat,
+  repeating-linear-gradient(to right, var(--color-2) 0 1px, transparent 1px calc(100% / 4)) 0 100% / 100% 30px no-repeat,
+  repeating-linear-gradient(to right, var(--color-2) 0 1px, transparent 1px calc(100% / 20)) 0 100% / 100% 12px no-repeat; }
+
+.cl .cl-face .m-text-3:first-child { font-weight: 500; }
+.cl .m-surface-3 .cl-trade { color: var(--color-5); }
+
+.pr .pr-link { text-decoration: none; display: grid; gap: 6px; }
+.pr .pr-num { color: var(--color-4); }
+@media (hover: hover) { .pr .pr-link:hover { color: var(--color-6); } }
+.pr .pr-fee { display: grid; justify-items: end; gap: 6px; }
+.pr .pr-items { max-width: 52ch; }
+
+.sw .sw-old .m-text-3:last-child { margin-top: 6px; }
+
+.tm .tm-link { display: grid; align-content: start; gap: 8px; text-decoration: none; }
+.tm .tm-count { aspect-ratio: 3 / 4; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; transition: background-color 0.35s; }
+.tm .tm-count .m-text-2 { font-size: clamp(56px, 7vw, 120px); }
+@media (hover: hover) { .tm .tm-link:hover .tm-count { background: var(--color-6); } }
+
+.fq .fq-num { display: inline-block; min-width: 3.2em; color: var(--color-4); vertical-align: 0.28em; }
+.fq .fq-a { display: grid; gap: 14px; }
+.fq .fq-ref { color: var(--color-6); }
+.fq .fq-verse { max-width: 36ch; }
+
+.rv .rv-kicker { color: var(--color-4); }
+.rv .rv-sheet { justify-content: flex-start; }
+.rv .rv-quote { margin-top: auto; }
+.rv .rv-more { margin-top: clamp(48px, 9vh, 96px); max-width: 52ch; padding-right: var(--space-1); }
+@media (max-width: 700px) { .rv .rv-more { margin-left: var(--space-1); } }
+
+.ct .ct-frame .m-photo { background: var(--color-1); }
+}
+
+@layer sections {
+@media (max-width: 700px) {
+  .op .op-where { padding-right: 96px; }
+}
+}
