@@ -1,48 +1,44 @@
 /**
- * src/components/layout/Layout.tsx
- * Root layout wrapper for artiFACT.
- * Composes Navbar + main content + Footer.
- * Applies Framer Motion page transition on route change.
+ * Root layout: nav, the routed page, footer.
+ * Owns route-level scroll (top on navigation, or the #hash target), the smooth wheel and
+ * the reveal watcher for [data-motion] elements.
  */
 
+import { useEffect, useLayoutEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import Navbar from './Navbar'
+import Nav from './Nav'
 import Footer from './Footer'
-
-const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-}
-
-const pageTransition = {
-  duration: 0.3,
-  ease: 'easeInOut',
-}
+import { initWheel, remeasure, useReveal, wheel } from '@/lib/motion'
 
 export default function Layout() {
-  const location = useLocation()
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => { initWheel() }, [])
+
+  useLayoutEffect(() => {
+    if (!hash) scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+    wheel.reset()
+    remeasure()
+  }, [pathname, hash])
+
+  useEffect(() => {
+    if (!hash) return
+    const frame = requestAnimationFrame(() => {
+      document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView()
+      wheel.reset()
+    })
+    return () => cancelAnimationFrame(frame)
+  }, [pathname, hash])
+
+  useReveal(pathname)
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-ink">
-      <Navbar />
-
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.main
-          key={location.pathname}
-          variants={pageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={pageTransition}
-          className="flex-1 pt-16"
-        >
-          <Outlet />
-        </motion.main>
-      </AnimatePresence>
-
+    <>
+      <Nav />
+      <main id="top">
+        <Outlet />
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }

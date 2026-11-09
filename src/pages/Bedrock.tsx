@@ -1,48 +1,51 @@
 /**
  * src/pages/Bedrock.tsx
+ * BEDROCK — the immovable foundation. Each doctrine is an entry: confession left of the rule,
+ * the doctrine and its scripture right of it; opened, what we believe beside how Islam differs.
  */
 
-import MuseumPlaque from '@/components/ui/MuseumPlaque'
-import bedrockData from '@/data/bedrock.json'
-import type { BedrockEntry } from '@/types'
-
-const bedrock = bedrockData as unknown as BedrockEntry[]
+import { PageHead, PageBody, Entry, Prose } from '@/components/ui/Page'
+import { Word, bedrock, pad } from '@/lib/content'
 
 export default function Bedrock() {
   return (
-    <div className="min-h-screen">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 pt-32 pb-8">
-        <p className="type-label mb-4">Section I</p>
-        <h1 className="type-display text-4xl md:text-5xl text-[#1A1A1A] mb-4">BEDROCK</h1>
-        <p className="prose-constrained text-[#2D2D2D] font-light text-base leading-relaxed mb-8">
-          Seven foundational doctrines of Christian faith — what each one means, what is at stake if it is denied, and where Islamic theology directly contradicts it.
-        </p>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 mb-8">
-        <div className="flex items-center gap-8 py-4 border-t border-b border-[#E8E4DF]">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 border border-[#E8E4DF] bg-white" />
-            <span className="type-label">THE BELIEF</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-0.5 bg-[#E8E4DF]" />
-            <span className="type-label">HOW ISLAM DIFFERS</span>
-          </div>
-          <div className="ml-auto flex items-center gap-2 opacity-50">
-            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true">
-              <path d="M1 1L4 4L7 1" stroke="#9A9A9A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            <span className="type-label">CLICK TO EXPAND</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 pb-32 space-y-4">
-        {bedrock.map((entry, index) => (
-          <MuseumPlaque key={entry.id} entry={entry} index={index} />
+    <>
+      <PageHead
+        kicker="Section I · Bedrock"
+        meta={`${bedrock.length} foundations`}
+        lines={['Bedrock,', 'the immovable', 'foundation.']}
+        side="Open any foundation to read the full explanation"
+        lede={`${Word(bedrock.length)} foundational doctrines of Christian faith: what each one means, what is at stake if it is denied, and where Islamic theology directly contradicts it.`}
+      />
+      <PageBody>
+        {bedrock.map((entry, i) => (
+          <Entry
+            key={entry.id}
+            id={entry.id}
+            side={<>
+              <span className="m-text-3 is-accent">Foundation {pad(i + 1)}</span>
+              <span className="m-text-3">{entry.confession}</span>
+            </>}
+            title={entry.title}
+            sub={entry.summary}
+          >
+            <blockquote className="m-verse">
+              <p className="m-text-4">“{entry.scripture_text}”</p>
+              <cite className="m-label is-accent" style={{ fontStyle: 'normal' }}>{entry.scripture}</cite>
+            </blockquote>
+            <div className="ex-split">
+              <div className="m-panel m-surface-2">
+                <p className="m-label">What we believe</p>
+                <Prose text={entry.doctrine} />
+              </div>
+              <div className="m-panel m-surface">
+                <p className="m-label">How Islam differs</p>
+                <Prose text={entry.islamic_contrast} />
+              </div>
+            </div>
+          </Entry>
         ))}
-      </div>
-    </div>
+      </PageBody>
+    </>
   )
 }
