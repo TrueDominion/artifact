@@ -27,7 +27,7 @@
 .ft .ft-tag { padding-right: var(--space-4); }
 .ft .ft-links { display: flex; flex-wrap: wrap; gap: 10px 22px; padding-left: var(--space-4); }
 .ft .ft-icons { display: flex; gap: 8px; }
-.ft .ft-word { display: flex; margin-top: clamp(48px, 10vh, 110px); font-size: min(34vw, (100vw - 2 * var(--space-1)) / (var(--len) * 0.45)); line-height: 0.8; white-space: nowrap; }
+.ft .ft-word { display: flex; margin-top: clamp(48px, 10vh, 110px); font-size: min(34vw, (100vw - 2 * var(--space-1)) / (var(--len) * 0.48)); line-height: 0.8; white-space: nowrap; }
 .ft .ft-a, .ft .ft-b { display: inline-block; }
 .ft .ft-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; padding: 16px 0 20px; }
 .ft .ghost { position: fixed; left: 0; right: 0; bottom: 0; z-index: 0; display: flex; justify-content: space-between; padding: 0 var(--space-1) 14px; color: var(--color-5); font-size: clamp(44px, 6.25vw, 112px); pointer-events: none; overflow: hidden; }
