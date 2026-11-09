@@ -64,7 +64,8 @@ artifact/
 ├── public/
 │   ├── _headers          Cloudflare security & cache headers
 │   ├── _redirects        SPA fallback routing
-│   └── favicon.svg
+│   ├── favicon.png       Logo mark, also apple-touch-icon.png
+│   └── images/           Logo and exhibit photographs (WebP)
 ├── src/
 │   ├── components/
 │   │   ├── layout/       Nav (full-screen menu), Footer (wordmark), Layout

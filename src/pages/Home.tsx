@@ -22,7 +22,7 @@ import {
   EMAIL, LAYERS, RELIGIONS, ROOMS, SEVERITY_LABEL, Word, args, bedrock, debates, fieldGuide, pad,
   religionCount, worldviews,
 } from '@/lib/content'
-import { Arrow, Glyph, Plus, Severity } from '@/components/ui/Glyphs'
+import { Arrow, Plus, Severity } from '@/components/ui/Glyphs'
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>
 
@@ -58,10 +58,10 @@ function Opening() {
   }, [])
 
   const tiles: { from: number; content: JSX.Element }[] = [
-    { from: 150, content: <img className="m-photo" src="/images/statue.png" alt="A broken marble head, struck through with a black brushstroke" width="1024" height="1024" /> },
-    { from: 240, content: <Glyph name="cosmos" className="op-glyph" /> },
-    { from: 190, content: <Glyph name="scales" className="op-glyph" /> },
-    { from: 280, content: <Glyph name="strata" className="op-glyph" /> },
+    { from: 150, content: <img className="m-photo" src="/images/statue.webp" alt="A broken marble head, struck through with a black brushstroke" width="800" height="800" /> },
+    { from: 240, content: <img className="m-photo" src="/images/tile-sphere.webp" alt="An antique armillary sphere, struck through with a black brushstroke" width="800" height="800" /> },
+    { from: 190, content: <img className="m-photo" src="/images/tile-scales.webp" alt="An ancient bronze balance scale, struck through with a black brushstroke" width="800" height="800" /> },
+    { from: 280, content: <img className="m-photo" src="/images/tile-lamp.webp" alt="A first century clay oil lamp, struck through with a black brushstroke" width="800" height="800" /> },
   ]
 
   return (
@@ -482,7 +482,7 @@ function Contact() {
       <p className="m-text-2 ct-clock">
         <span aria-hidden="true">(</span>
         <span>Ask</span>
-        <span className="ct-frame"><img className="m-photo" src="/images/statue.png" alt="" width="1024" height="1024" loading="lazy" /></span>
+        <span className="ct-frame"><img className="m-photo" src="/images/contact-hand.webp" alt="" width="598" height="800" loading="lazy" /></span>
         <span>anything</span>
         <span aria-hidden="true">)</span>
       </p>
