@@ -50,7 +50,7 @@ export const ROOMS: Room[] = [
     name: 'Field Guide',
     kicker: 'Quick reference',
     question: 'What do I say when someone raises it face to face?',
-    description: 'Real objections from Islam, atheism, and other worldviews. Select a tradition and get direct answers to the challenges you are most likely to hear in conversation.',
+    description: 'The objections Muslims most often raise, each with a one-line answer you can give in the moment, the evidence behind it, and an anchor verse.',
     count: `${fieldGuide.length} challenges`,
   },
   {
@@ -80,10 +80,10 @@ export const ROOMS: Room[] = [
   {
     path: '/the-gallery',
     name: 'Gallery',
-    kicker: 'Worldviews',
-    question: 'What do other worldviews actually teach?',
-    description: `${Word(worldviews.length)} worldviews examined fairly on their own terms: what each teaches, where it has genuine insight, and where the Christian account is more coherent.`,
-    count: `${worldviews.length} worldviews`,
+    kicker: 'Islam',
+    question: 'What does Islam actually teach?',
+    description: 'Islam presented fairly on its own terms: what Muslims believe, the texts it rests on, and where the Christian account differs.',
+    count: `${worldviews[0]?.core_claims.length ?? 0} core claims`,
   },
   {
     path: '/the-strata',
@@ -109,25 +109,7 @@ export const RELIGIONS: ReligionConfig[] = [
     id: 'islam',
     label: 'Islam',
     sublabel: '1.9 billion adherents',
-    description: "Challenges from Islamic theology — the Quran, Muhammad's credentials, the Trinity, tahrif, and the nature of God. Written for real conversations with Muslims.",
-  },
-  {
-    id: 'atheism',
-    label: 'Atheism & Naturalism',
-    sublabel: '~1.2 billion',
-    description: 'Objections from scientific naturalism and secular skepticism — evolution, the problem of evil, evidence for God, and moral grounding. Written for conversations with atheists and skeptics.',
-  },
-  {
-    id: 'mormonism',
-    label: 'Mormonism',
-    sublabel: '~17 million',
-    description: 'Challenges from Latter-day Saint theology — the nature of God, eternal progression, the restoration narrative, and the Book of Mormon. Written for conversations with LDS members.',
-  },
-  {
-    id: 'jehovahs-witnesses',
-    label: "Jehovah's Witnesses",
-    sublabel: '~8.7 million',
-    description: "Challenges from Watch Tower theology — the deity of Christ, the Trinity as alleged pagan invention, and the New World Translation. Written for conversations with Jehovah's Witnesses.",
+    description: "Challenges from Islamic theology: the Quran, Muhammad's credentials, the Trinity, tahrif, and the nature of God. Written for real conversations with Muslims.",
   },
 ]
 

@@ -1,8 +1,8 @@
 # artiFACT
 
-A Christian apologetics knowledge platform that equips users with clear, structured arguments supporting Christianity and responding to competing worldviews.
+A Christian apologetics knowledge platform focused on the conversation between Christianity and Islam, with the historical world of Scripture as context.
 
-artiFACT functions like a curated museum of ideas — users explore a modern archaeological exhibition about truth, belief, and the history of ideas.
+artiFACT functions like a curated museum of ideas: users explore a modern archaeological exhibition about truth, belief, and the history of ideas.
 
 ---
 
@@ -107,7 +107,9 @@ All content lives in `src/data/`:
 |------|----------|
 | `bedrock.json` | Core Christian doctrines |
 | `arguments.json` | Apologetic arguments (Kalam, Moral, etc.) |
-| `worldviews.json` | Competing belief systems |
+| `worldviews.json` | The Islam exhibit (Gallery) |
+| `fieldguide.json` | Challenges Muslims raise, with short answers (Field Guide) |
+| `strata.json` | Eras, empires, gods, tribes and Jesus's world (Strata) |
 | `debates.json` | Major theological challenges |
 | `thinkers.json` | Historical and contemporary apologists |
 

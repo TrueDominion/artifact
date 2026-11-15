@@ -1,6 +1,6 @@
 /**
  * src/pages/Bedrock.tsx
- * BEDROCK — the immovable foundation. Each doctrine is an entry: confession left of the rule,
+ * BEDROCK: the immovable foundation. Each doctrine is an entry: confession left of the rule,
  * the doctrine and its scripture right of it; opened, what we believe beside how Islam differs.
  */
 

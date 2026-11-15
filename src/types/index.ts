@@ -85,7 +85,7 @@ export type FieldGuideTag =
   | 'history'
   | 'logic'
 
-export type FieldGuideReligion = 'islam' | 'atheism' | 'mormonism' | 'jehovahs-witnesses'
+export type FieldGuideReligion = 'islam'
 
 export interface FieldGuideEntry {
   id: string

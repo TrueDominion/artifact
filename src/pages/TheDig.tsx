@@ -1,6 +1,6 @@
 /**
  * src/pages/TheDig.tsx
- * THE DIG — arguments uncovered. Filter chips, then one entry per argument; opened, the
+ * THE DIG: arguments uncovered. Filter chips, then one entry per argument; opened, the
  * home page's ruler becomes a four-layer stepper: Claim, Logic, Objection, Response.
  */
 
