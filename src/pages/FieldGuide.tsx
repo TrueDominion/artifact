@@ -6,7 +6,7 @@
 
 import { useMemo, useState } from 'react'
 import { PageHead, PageBody, Entry } from '@/components/ui/Page'
-import { ALL_TAGS, TAG_LABELS, fieldGuide, pad } from '@/lib/content'
+import { ALL_TAGS, TAG_LABELS, askBack, fieldGuide, pad } from '@/lib/content'
 import type { FieldGuideTag } from '@/types'
 
 export default function FieldGuide() {
@@ -51,6 +51,7 @@ export default function FieldGuide() {
             <button key={t} type="button" className="m-chip" aria-pressed={tag === t} onClick={() => setTag(t)}>{TAG_LABELS[t]}</button>
           ))}
         </div>
+        <p className="m-text-3"><a className="m-link" href="#ask-back">Questions to ask back</a></p>
         <p className="m-text-3 pg-count" role="status">
           {shown.length} {shown.length === 1 ? 'challenge' : 'challenges'}
           {tag !== 'all' ? ` in ${TAG_LABELS[tag]}` : ''}
@@ -88,6 +89,25 @@ export default function FieldGuide() {
           </div>
         )}
       </PageBody>
+
+      <section className="pg-ask" id="ask-back">
+        <h2 className="m-text-2 pg-h"><span className="ln l-a"><span className="ln__i">Questions</span></span> <span className="ln l-b"><span className="ln__i">to ask back.</span></span></h2>
+        <div className="pg-intro">
+          <p className="m-text-3 pg-side">Move the conversation forward</p>
+          <p className="m-text pg-lede">Answers defend; questions invite. These open the conversations the answers above prepare you for, and most start from what your friend already believes.</p>
+        </div>
+        <ol className="pg-body pg-ask__list">
+          {askBack.map((q, i) => (
+            <li key={q.id} className="pg-block" id={q.id}>
+              <div className="m-text-3 pg-side"><span className="m-label is-accent">{pad(i + 1)}</span></div>
+              <div className="pg-block__main">
+                <p className="m-text-4" style={{ maxWidth: '40ch' }}>{q.question}</p>
+                <p className="m-text" style={{ color: 'var(--color-4)' }}>{q.why}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
     </>
   )
 }

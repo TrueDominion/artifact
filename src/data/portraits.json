@@ -1,0 +1,128 @@
+[
+  {
+    "id": "birth",
+    "topic": "Birth",
+    "verdict": "shared",
+    "gospels": {
+      "text": "Born of the virgin Mary by the Holy Spirit, announced by the angel Gabriel, in Bethlehem.",
+      "refs": "Matthew 1:18-25; Luke 1:26-38, 2:1-7"
+    },
+    "quran": {
+      "text": "Born of the virgin Mary by God's command 'Be', announced by an angel; Mary gives birth alone beneath a palm tree.",
+      "refs": "3:45-47; 19:16-26"
+    },
+    "note": "Both affirm the virgin birth. The Quran compares it to the creation of Adam (3:59): a sign of power, not of divinity."
+  },
+  {
+    "id": "titles",
+    "topic": "Titles",
+    "verdict": "partly",
+    "gospels": {
+      "text": "Messiah, Son of God, Son of Man, Lord, and the eternal Word who was with God and was God.",
+      "refs": "Mark 1:1, 14:61-62; John 1:1, 1:14"
+    },
+    "quran": {
+      "text": "Messiah (al-Masih), a Word from God, a Spirit from Him, but 'no more than a messenger'.",
+      "refs": "3:45; 4:171; 5:75"
+    },
+    "note": "The Quran uses 'Messiah' and 'Word' without defining them. In the Gospels both titles carry their full meaning."
+  },
+  {
+    "id": "miracles",
+    "topic": "Miracles",
+    "verdict": "shared",
+    "gospels": {
+      "text": "Heals the sick and the blind, calms the storm, feeds thousands, raises the dead, all by his own authority.",
+      "refs": "Mark 2:1-12, 4:35-41; John 11"
+    },
+    "quran": {
+      "text": "Speaks from the cradle, makes birds from clay that come to life, heals the blind and lepers, raises the dead, each 'by God's permission'.",
+      "refs": "3:49; 5:110; 19:29-33"
+    },
+    "note": "Both record mighty works. Two of the Quran's (the cradle speech and the clay birds) match later infancy legends, not the Gospels."
+  },
+  {
+    "id": "sinless",
+    "topic": "Sinlessness",
+    "verdict": "shared",
+    "gospels": {
+      "text": "Tempted in every way, yet without sin.",
+      "refs": "Hebrews 4:15; John 8:46; 2 Corinthians 5:21"
+    },
+    "quran": {
+      "text": "Called a 'pure boy'. A hadith says Satan touches every newborn except Mary and her son.",
+      "refs": "19:19; Sahih al-Bukhari 3431"
+    },
+    "note": "Both present Jesus as sinless. The Quran tells Muhammad to ask forgiveness for his own sins (47:19); it never says this of Jesus."
+  },
+  {
+    "id": "death",
+    "topic": "Death",
+    "verdict": "divergent",
+    "gospels": {
+      "text": "Crucified under Pontius Pilate; he died and was buried.",
+      "refs": "Mark 15; 1 Corinthians 15:3-4"
+    },
+    "quran": {
+      "text": "'They did not kill him, nor did they crucify him, but it was made to appear so to them.'",
+      "refs": "4:157"
+    },
+    "note": "The sharpest divide. Roman and Jewish sources confirm the crucifixion; the Quran's denial comes about six centuries later."
+  },
+  {
+    "id": "resurrection",
+    "topic": "Resurrection",
+    "verdict": "divergent",
+    "gospels": {
+      "text": "Rose bodily on the third day, appeared to hundreds, and ascended.",
+      "refs": "Luke 24; 1 Corinthians 15:5-8; Acts 1:9"
+    },
+    "quran": {
+      "text": "God raised him up to Himself, which most Muslim interpreters take to mean without dying.",
+      "refs": "4:158; compare 3:55"
+    },
+    "note": "Christianity stands or falls on the resurrection (1 Corinthians 15:17). Islam has no resurrection of Jesus because it has no death."
+  },
+  {
+    "id": "identity",
+    "topic": "Worship",
+    "verdict": "divergent",
+    "gospels": {
+      "text": "Accepts worship and is called 'my Lord and my God'; claims to exist before Abraham.",
+      "refs": "Matthew 14:33, 28:9; John 8:58, 20:28"
+    },
+    "quran": {
+      "text": "Denies ever telling people to worship him and his mother; those who call him God have disbelieved.",
+      "refs": "5:72, 5:116-117"
+    },
+    "note": "Here the two portraits cannot both be true: either Jesus is rightly worshipped, or worshipping him is the gravest sin."
+  },
+  {
+    "id": "mission",
+    "topic": "Mission",
+    "verdict": "divergent",
+    "gospels": {
+      "text": "Came 'to give his life as a ransom for many' and to make a new covenant in his blood.",
+      "refs": "Mark 10:45; Luke 22:20"
+    },
+    "quran": {
+      "text": "A messenger to the Children of Israel, confirming the Torah and announcing a messenger to come named Ahmad.",
+      "refs": "3:49-50; 61:6"
+    },
+    "note": "In the Gospels the cross is the purpose of Jesus' coming. In the Quran it never happened."
+  },
+  {
+    "id": "return",
+    "topic": "Return",
+    "verdict": "partly",
+    "gospels": {
+      "text": "Will return in glory as the judge of all nations.",
+      "refs": "Matthew 25:31-46; Acts 1:11"
+    },
+    "quran": {
+      "text": "Hadith say he will descend, break the cross and kill the swine; the Quran links him to the coming Hour.",
+      "refs": "43:61; Sahih al-Bukhari 2222"
+    },
+    "note": "Both expect him to return. In the Gospels he comes as judge; in the hadith he comes to establish Islam."
+  }
+]

@@ -338,5 +338,165 @@
     "tag": "salvation",
     "priority": 3,
     "religion": "islam"
+  },
+  {
+    "id": "deuteronomy-18",
+    "challenge": "Deuteronomy 18:18 foretells Muhammad: a prophet like Moses from among their brothers",
+    "one_liner": "In Deuteronomy, 'your brothers' means fellow Israelites, and the prophet like Moses is marked by signs and face-to-face knowledge of God. The New Testament finds both in Jesus.",
+    "points": [
+      "In Deuteronomy, 'your brothers' consistently means fellow Israelites. Three verses earlier the promise is a prophet 'from among you, from your brothers' (18:15), and the same phrase describes Israel's future king, who must be an Israelite (17:15).",
+      "Deuteronomy itself says what made Moses unique: God knew him 'face to face', and he performed great signs and wonders (34:10-12). The Quran records that Muhammad's opponents asked for such signs and were told that signs are with God (29:50).",
+      "Moses mediated a covenant sealed with blood (Exodus 24:8). Jesus did the same at the Last Supper (Luke 22:20), and the apostles applied this very prophecy to him (Acts 3:22-26).",
+      "The passage also carries a warning: a prophet whose words do not come true, or who speaks in the name of other gods, is not from God (18:20-22). Applying the text to Muhammad means applying its test as well."
+    ],
+    "anchor_verse": "The Lord your God will raise up for you a prophet like me from among you, from your brothers. It is to him you shall listen.",
+    "anchor_verse_ref": "Deuteronomy 18:15",
+    "tag": "muhammad",
+    "religion": "islam",
+    "priority": 1
+  },
+  {
+    "id": "gospel-of-barnabas",
+    "challenge": "The Gospel of Barnabas is the true Gospel, and it confirms Islam",
+    "one_liner": "Its oldest manuscripts are Italian and Spanish copies from the late 16th century, and it contradicts the Quran by denying that Jesus is the Messiah.",
+    "points": [
+      "No ancient manuscript, quotation or translation of it exists. The two known manuscripts, one Italian and one Spanish (the Spanish now known only from an 18th-century copy), date from the late 16th century.",
+      "It contradicts the Quran: its Jesus denies that he is the Messiah and gives that title to Muhammad, while the Quran calls Jesus al-Masih, the Messiah (3:45).",
+      "It contains medieval details, such as a year of jubilee every hundred years, a practice that began with Pope Boniface VIII in 1300.",
+      "Muslim academic scholars generally do not rely on it. It cannot be the Gospel the Quran refers to, which the Quran says the Christians of Muhammad's day already had (5:47)."
+    ],
+    "anchor_verse": "But even if we or an angel from heaven should preach to you a gospel contrary to the one we preached to you, let him be accursed.",
+    "anchor_verse_ref": "Galatians 1:8",
+    "tag": "history",
+    "religion": "islam",
+    "priority": 2
+  },
+  {
+    "id": "injil-lost",
+    "challenge": "The original Injil given to Jesus was lost. The four Gospels are not it",
+    "one_liner": "The Quran assumes Christians of Muhammad's day had the Injil, and the Gospels they had then survive in manuscripts anyone can still read.",
+    "points": [
+      "The Quran tells the people of the Gospel to judge by what God revealed in it (5:47), and says Muhammad is found written in the Torah and the Gospel that they have with them (7:157). It treats the Injil as present, not lost.",
+      "Manuscripts of the four Gospels from centuries before Muhammad survive, including complete copies in Codex Vaticanus and Codex Sinaiticus (4th century). The Gospel of 610 is the Gospel of today.",
+      "No manuscript, quotation or early reference anywhere mentions a different, single book written by Jesus. The first Christians spoke of 'the gospel' as the good news about Jesus, recorded by his followers.",
+      "If God let his Gospel vanish, the Quran's own promise of protection (15:9) raises a question: why would God preserve one revelation and not the other?"
+    ],
+    "anchor_verse": "The grass withers, the flower fades, but the word of our God will stand forever.",
+    "anchor_verse_ref": "Isaiah 40:8",
+    "tag": "scripture",
+    "religion": "islam",
+    "priority": 1
+  },
+  {
+    "id": "no-bearer-of-burdens",
+    "challenge": "No soul bears the burden of another (6:164). Jesus cannot die for my sins",
+    "one_liner": "Scripture agrees that guilt is not loaded onto an unwilling third party. The cross is God himself, freely bearing the cost of forgiving.",
+    "points": [
+      "The Bible teaches personal responsibility too: 'The soul who sins shall die. The son shall not suffer for the iniquity of the father' (Ezekiel 18:20). Christians do not believe God punishes the innocent against their will.",
+      "Jesus was not an unwilling third party: 'No one takes it from me, but I lay it down of my own accord' (John 10:18). And Christians believe he is God the Son: in the cross, 'God was reconciling the world to himself' (2 Corinthians 5:19).",
+      "All real forgiveness costs the one who forgives. When someone wrongs you, either they pay or you absorb the loss. The cross is God absorbing it.",
+      "The Quran itself tells of a ransom: Abraham's son was redeemed 'with a great sacrifice' (37:107). A life given in place of another is not a foreign idea to the Quran."
+    ],
+    "anchor_verse": "He himself bore our sins in his body on the tree, that we might die to sin and live to righteousness.",
+    "anchor_verse_ref": "1 Peter 2:24",
+    "tag": "salvation",
+    "religion": "islam",
+    "priority": 1
+  },
+  {
+    "id": "forgive-without-sacrifice",
+    "challenge": "God is merciful. He can simply forgive without a sacrifice",
+    "one_liner": "God is both merciful and just. Forgiveness that ignores evil would make him a judge who does not care about wrong.",
+    "points": [
+      "Islam also teaches that God is just and that deeds will be weighed on just scales (21:47). Mercy that simply cancels the scales leaves justice unanswered.",
+      "A human judge who freed the guilty because he felt kindly towards them would be corrupt, not merciful. Paul says the cross shows God to be 'just and the justifier' at the same time (Romans 3:26).",
+      "The Torah, which the Quran says God gave to Moses (5:44), taught that forgiveness has a cost (Leviticus 17:11; Hebrews 9:22).",
+      "The question is not whether God can forgive but how he can forgive and remain just. The cross is the Christian answer: God pays the cost himself."
+    ],
+    "anchor_verse": "It was to show his righteousness at the present time, so that he might be just and the justifier of the one who has faith in Jesus.",
+    "anchor_verse_ref": "Romans 3:26",
+    "tag": "salvation",
+    "religion": "islam",
+    "priority": 2
+  },
+  {
+    "id": "paul-corrupted",
+    "challenge": "Paul invented Christianity and corrupted Jesus' message",
+    "one_liner": "Paul's teaching on Jesus' death and resurrection is what he 'received' from the first disciples, and they approved his gospel.",
+    "points": [
+      "Paul's letters are the earliest Christian writings (about AD 48-60). In 1 Corinthians 15:3-5 he hands on a creed he had 'received': Christ died for our sins, was buried, was raised, and appeared to Peter and the Twelve. Most scholars date it to within a few years of the crucifixion.",
+      "Paul met Peter and James in Jerusalem (Galatians 1:18-19), and later they gave him 'the right hand of fellowship' after examining his gospel (Galatians 2:1-10).",
+      "The Gospels, written independently of Paul, teach the same essentials: Jesus forgives sins, calls himself the Son of Man who will come in judgment, and gives his life 'as a ransom for many' (Mark 2:5-10, 10:45, 14:61-62).",
+      "The Quran praises Jesus' disciples as 'helpers of God' (3:52, 61:14). Those disciples preached his death and resurrection."
+    ],
+    "anchor_verse": "For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures.",
+    "anchor_verse_ref": "1 Corinthians 15:3",
+    "tag": "history",
+    "religion": "islam",
+    "priority": 1
+  },
+  {
+    "id": "god-cannot-die",
+    "challenge": "If Jesus was God, then God died. God cannot die",
+    "one_liner": "Christians do not believe God ceased to exist. The eternal Son took a human nature, and it was in that human nature that he died.",
+    "points": [
+      "The incarnation means the Son added a full human nature to his divine nature (John 1:14). He could be hungry, tired, and die as a man, while remaining God.",
+      "Death is the separation of soul and body, not the end of existence. When Jesus died, his body lay in the tomb; the eternal Son did not stop being.",
+      "Muslims and Christians agree that death is not annihilation: every soul will taste death and then be raised (3:185).",
+      "That the one who died was God the Son is what gives the cross its weight: a mere creature could not bear the sin of the world."
+    ],
+    "anchor_verse": "And being found in human form, he humbled himself by becoming obedient to the point of death, even death on a cross.",
+    "anchor_verse_ref": "Philippians 2:8",
+    "tag": "jesus",
+    "religion": "islam",
+    "priority": 2
+  },
+  {
+    "id": "we-honour-jesus",
+    "challenge": "Muslims believe in Jesus too. We honour him more than you think",
+    "one_liner": "That's true, and it's the best place to start. The question is which Jesus: the one in the Gospels, written in the first century, or the one in the Quran, given six centuries later.",
+    "points": [
+      "Islam affirms much about Jesus: virgin birth (3:47), Messiah (3:45), a Word from God and a Spirit from Him (4:171), sinless (19:19), a worker of miracles (3:49), and coming again.",
+      "The two accounts part on the questions that matter most: whether Jesus died on the cross, whether he rose, and whether he is God the Son. Two Portraits sets them side by side.",
+      "The Gospels were written within living memory of Jesus by his followers and their associates. The Quran was given around 600 years later.",
+      "Ask your friend: if Jesus is the Word of God, as the Quran says, what does that title mean?"
+    ],
+    "anchor_verse": "He said to them, \"But who do you say that I am?\"",
+    "anchor_verse_ref": "Matthew 16:15",
+    "tag": "jesus",
+    "religion": "islam",
+    "priority": 1
+  },
+  {
+    "id": "same-god",
+    "challenge": "Allah and the Christian God are the same God, so why argue?",
+    "one_liner": "Arab Christians also call God Allah. Both faiths mean the Creator who spoke to Abraham, but they describe him differently, and both descriptions cannot be true.",
+    "points": [
+      "'Allah' is simply the Arabic word for God. Arabic-speaking Christians used it before Islam and still do.",
+      "Muslims and Christians agree there is one Creator who spoke to Abraham and Moses. The disagreement is about what that one God is like: whether he is Father, Son and Spirit, and whether he became man in Jesus.",
+      "Two people can refer to the same man and still disagree about who he is. The question is not the name but which description is true.",
+      "Jesus said that knowing him and knowing the Father go together (John 14:7-9). Christians cannot set that aside to agree on a lowest common denominator."
+    ],
+    "anchor_verse": "No one who denies the Son has the Father. Whoever confesses the Son has the Father also.",
+    "anchor_verse_ref": "1 John 2:23",
+    "tag": "logic",
+    "religion": "islam",
+    "priority": 2
+  },
+  {
+    "id": "mary-in-trinity",
+    "challenge": "Christians made Mary part of the Trinity (5:116)",
+    "one_liner": "No church has ever taught that the Trinity is Father, Mary and Son. The Quran is rejecting a belief Christians do not hold.",
+    "points": [
+      "Surah 5:116 has God ask Jesus whether he told people to take him and his mother as two gods besides God, and 5:73 rejects saying that God is 'the third of three'. Christians reject both of those ideas too.",
+      "The Christian Trinity is the Father, the Son and the Holy Spirit (Matthew 28:19), as confessed at the councils of Nicaea (325) and Constantinople (381). Mary has never been part of it.",
+      "Some Christians of Muhammad's time and region gave Mary great honour, which may explain the misunderstanding. Honouring Mary is not worshipping her as God.",
+      "If the Quran is correcting the Trinity, it is correcting a belief Christians do not hold. Ask gently: what does your friend think Christians believe?"
+    ],
+    "anchor_verse": "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.",
+    "anchor_verse_ref": "Matthew 28:19",
+    "tag": "trinity",
+    "religion": "islam",
+    "priority": 1
   }
 ]

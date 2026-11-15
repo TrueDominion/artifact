@@ -371,9 +371,11 @@
 /* ── artiFACT additions to the home sections ───────────────── */
 @layer atoms {
 .m-arrow { display: inline-block; width: 0.62em; height: 0.4em; margin-left: 0.32em; vertical-align: 0.12em; transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1); }
-.m-severity { display: inline-flex; align-items: flex-end; gap: 3px; height: 21px; }
-.m-severity > span { width: 4px; background: var(--color-8); }
-.m-severity > span.is-on { background: var(--color-6); }
+.m-strength { display: inline-flex; align-items: flex-end; gap: 8px; }
+.m-strength__bars { display: inline-flex; align-items: flex-end; gap: 3px; height: 19px; }
+.m-strength__bars > span { width: 5px; background: var(--color-8); }
+.m-strength__bars > span.is-on { background: var(--color-6); }
+.m-strength .m-text-3 { line-height: 1; }
 }
 @layer sections {
 .op .op-fact { letter-spacing: -0.03em; }
@@ -429,4 +431,8 @@
 @media (max-width: 700px) {
   .op .op-where { padding-right: 96px; }
 }
+}
+
+@layer sections {
+.pr .pr-name { padding-right: 20px; min-width: 0; }
 }

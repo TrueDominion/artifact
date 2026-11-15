@@ -12,6 +12,7 @@ import TheGallery from '@/pages/TheGallery'
 import Faultlines from '@/pages/Faultlines'
 import FieldGuide from '@/pages/FieldGuide'
 import TheStrata from '@/pages/TheStrata'
+import TwoPortraits from '@/pages/TwoPortraits'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="faultlines" element={<Faultlines />} />
           <Route path="field-guide" element={<FieldGuide />} />
           <Route path="the-strata" element={<TheStrata />} />
+          <Route path="two-portraits" element={<TwoPortraits />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>

@@ -5,7 +5,8 @@
  */
 
 import { PageHead, PageBody, Prose } from '@/components/ui/Page'
-import { pad, worldviews } from '@/lib/content'
+import { Word, pad, worldviews } from '@/lib/content'
+import type { NamedText } from '@/types'
 
 function Block({ side, children }: { side: React.ReactNode; children: React.ReactNode }) {
   return (
@@ -13,6 +14,19 @@ function Block({ side, children }: { side: React.ReactNode; children: React.Reac
       <div className="m-text-3 pg-side">{side}</div>
       <div className="pg-block__main">{children}</div>
     </div>
+  )
+}
+
+function Named({ items, numbered }: { items: NamedText[]; numbered?: boolean }) {
+  return (
+    <ul className="sx-list gl-named">
+      {items.map((it, i) => (
+        <li key={it.name}>
+          <span className="m-text-4" style={{ fontSize: 17 }}>{numbered && <span className="gl-n m-text-3">{pad(i + 1)}</span>}{it.name}</span>
+          <span className="m-text">{it.text}</span>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -52,6 +66,42 @@ export default function TheGallery() {
             {wv.core_claims.map((c, i) => <p key={i} className="is-num" data-n={pad(i + 1)}>{c}</p>)}
           </div>
         </Block>
+
+        {wv.articles && (
+          <Block side={`${Word(wv.articles.length)} articles of faith`}>
+            <Named items={wv.articles} numbered />
+          </Block>
+        )}
+
+        {wv.pillars && (
+          <Block side={`${Word(wv.pillars.length)} pillars of practice`}>
+            <Named items={wv.pillars} numbered />
+          </Block>
+        )}
+
+        {wv.sources && (
+          <Block side="How the sources relate">
+            <Named items={wv.sources} />
+          </Block>
+        )}
+
+        {wv.branches && (
+          <Block side="Branches">
+            <Named items={wv.branches} />
+          </Block>
+        )}
+
+        {wv.schools && (
+          <Block side="Schools of thought and law">
+            <Named items={wv.schools} />
+          </Block>
+        )}
+
+        {wv.why_it_matters && (
+          <Block side={<span className="m-label is-accent">Why it matters</span>}>
+            <p className="m-text-4" style={{ maxWidth: '44ch' }}>{wv.why_it_matters}</p>
+          </Block>
+        )}
 
         <Block side="Key texts">
           <ul className="sx-list">

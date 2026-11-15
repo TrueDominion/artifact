@@ -15,7 +15,7 @@ import { PageHead, PageBody, Entry, Prose } from '@/components/ui/Page'
 import { Plus } from '@/components/ui/Glyphs'
 import { Word, pad, strata, word } from '@/lib/content'
 
-type Module = 'timeline' | 'empires' | 'gods' | 'tribes' | 'judaea'
+type Module = 'timeline' | 'empires' | 'gods' | 'tribes' | 'judaea' | 'conversation'
 
 const MODULES: { key: Module; label: string }[] = [
   { key: 'timeline', label: 'Timeline' },
@@ -23,6 +23,7 @@ const MODULES: { key: Module; label: string }[] = [
   { key: 'gods', label: 'The gods' },
   { key: 'tribes', label: 'The tribes' },
   { key: 'judaea', label: "Jesus's world" },
+  { key: 'conversation', label: 'The long conversation' },
 ]
 
 function Block({ side, children }: { side?: React.ReactNode; children: React.ReactNode }) {
@@ -43,7 +44,7 @@ function Timeline() {
 
   return (
     <>
-      <Block side="Ten eras, one ruler">
+      <Block side={`${Word(strata.eras.length)} eras, one ruler`}>
         <div className="st" style={{ '--steps': eras.length, '--st-p': (index + 1) / eras.length } as React.CSSProperties}>
           <div className="st-scale" aria-hidden="true"><span className="st-fill" /></div>
           <div className="st-tabs" role="tablist" aria-label="Eras">
@@ -208,6 +209,31 @@ function Tribes() {
   )
 }
 
+// ── The long conversation ─────────────────────────────────
+
+function Conversation() {
+  return (
+    <>
+      <Block side="Christians and Muslims, 730 to today">
+        <p className="m-text" style={{ maxWidth: '52ch' }}>Christians have been answering Islam for almost thirteen centuries, often as a minority under Muslim rule. Their best work joins conviction to courtesy. Each figure here leaves a lesson for the conversation today.</p>
+      </Block>
+      {strata.conversation.map(c => (
+        <Block key={c.name} side={<span style={{ display: 'grid', gap: 6, justifyItems: 'inherit' }}>
+          <span className="m-text-2 sx-year">{c.year}</span>
+          <span>{c.place}</span>
+        </span>}>
+          <div style={{ display: 'grid', gap: 6 }}>
+            <h3 className="m-text-4">{c.name}</h3>
+            <p className="m-text-3" style={{ color: 'var(--color-4)' }}>{c.title}</p>
+          </div>
+          <p className="m-text" style={{ maxWidth: '64ch' }}>{c.text}</p>
+          <p className="m-label is-accent">{c.lesson}</p>
+        </Block>
+      ))}
+    </>
+  )
+}
+
 // ── Judaea ────────────────────────────────────────────────
 
 const TIER_SURFACE = ['m-surface-3', 'm-surface-3', 'm-surface', 'm-surface', 'm-surface-2']
@@ -265,7 +291,7 @@ export default function TheStrata() {
         meta="Historical record"
         lines={['The world', 'Scripture was', 'written into.']}
         side="The ground beneath the text"
-        lede={`${Word(strata.eras.length)} eras, ${word(strata.empires.length)} empires, twelve tribes, and the gods Israel kept chasing. This is the ground beneath the text.`}
+        lede={`${Word(strata.eras.length)} eras from Abraham to the rise of Islam, ${word(strata.empires.length)} empires, twelve tribes, the gods Israel kept chasing, and the long conversation between Christians and Muslims. This is the ground beneath the text, and the world the Quran entered.`}
       />
       <div className="sx-bar">
         <div className="m-chips" role="tablist" aria-label="Strata modules">
@@ -290,6 +316,7 @@ export default function TheStrata() {
           {active === 'gods' && <Gods />}
           {active === 'tribes' && <Tribes />}
           {active === 'judaea' && <Judaea />}
+          {active === 'conversation' && <Conversation />}
         </div>
       </PageBody>
     </>

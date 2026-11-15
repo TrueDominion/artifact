@@ -110,7 +110,9 @@ All content lives in `src/data/`:
 | `worldviews.json` | The Islam exhibit (Gallery) |
 | `fieldguide.json` | Challenges Muslims raise, with short answers (Field Guide) |
 | `strata.json` | Eras, empires, gods, tribes and Jesus's world (Strata) |
-| `debates.json` | Major theological challenges |
+| `debates.json` | Faultlines: challenge, strongest Muslim reply, answer, evidence strength |
+| `portraits.json` | Two Portraits: Jesus in the Gospels and the Quran |
+| `questions.json` | Field Guide: questions to ask back |
 | `thinkers.json` | Historical and contemporary apologists |
 
 ---
@@ -157,7 +159,8 @@ No environment variables are required. The site is fully static.
 | `/the-dig` | The Dig | Arguments uncovered |
 | `/the-gallery` | The Gallery | Beliefs in context |
 | `/faultlines` | Faultlines | Where the ground breaks |
-| `/field-guide` | Field Guide | Quick reference for conversations |
+| `/field-guide` | Field Guide | Quick reference for conversations with Muslims |
+| `/two-portraits` | Two Portraits | Jesus in the Gospels and the Quran, side by side |
 | `/the-strata` | The Strata | The world Scripture was written into |
 
 ---

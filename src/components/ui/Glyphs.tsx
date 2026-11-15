@@ -1,12 +1,17 @@
-/** Small inline marks shared across pages: severity bars, the plus/minus toggle, an arrow. */
+import { STRENGTH } from '@/lib/content'
+import type { Strength as StrengthKey } from '@/types'
 
-/** Five rising bars; filled to the given level in the accent colour. */
-export function Severity({ level }: { level: number }) {
+/** Small inline marks shared across pages: the evidence-strength meter, the plus/minus toggle, an arrow. */
+
+/** Three rising bars filled to the strength of the evidence (settled 3, strong 2, debated 1), with its label. */
+export function Strength({ value, label = true }: { value: StrengthKey; label?: boolean }) {
+  const s = STRENGTH[value]
   return (
-    <span className="m-severity" role="img" aria-label={`Severity ${level} of 5`}>
-      {[1, 2, 3, 4, 5].map(i => (
-        <span key={i} className={i <= level ? 'is-on' : undefined} style={{ height: `${6 + i * 3}px` }} />
-      ))}
+    <span className="m-strength" title={s.text}>
+      <span className="m-strength__bars" role="img" aria-label={`Evidence: ${s.label}`}>
+        {[1, 2, 3].map(i => <span key={i} className={i <= s.level ? 'is-on' : undefined} style={{ height: `${7 + i * 4}px` }} />)}
+      </span>
+      {label && <span className="m-text-3">{s.label}</span>}
     </span>
   )
 }

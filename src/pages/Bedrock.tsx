@@ -14,8 +14,8 @@ export default function Bedrock() {
         kicker="Section I · Bedrock"
         meta={`${bedrock.length} foundations`}
         lines={['Bedrock,', 'the immovable', 'foundation.']}
-        side="Open any foundation to read the full explanation"
-        lede={`${Word(bedrock.length)} foundational doctrines of Christian faith: what each one means, what is at stake if it is denied, and where Islamic theology directly contradicts it.`}
+        side="Each paired with the Islamic teaching it stands against"
+        lede={`${Word(bedrock.length)} foundational doctrines of Christian faith, each set against its Islamic counterpart: what the doctrine means, what is at stake if it is denied, and exactly where Islam parts from it.`}
       />
       <PageBody>
         {bedrock.map((entry, i) => (
@@ -25,6 +25,7 @@ export default function Bedrock() {
             side={<>
               <span className="m-text-3 is-accent">Foundation {pad(i + 1)}</span>
               <span className="m-text-3">{entry.confession}</span>
+              <span className="m-text-3 bd-vs">Against <strong>{entry.counterpart.term}</strong></span>
             </>}
             title={entry.title}
             sub={entry.summary}
@@ -39,7 +40,7 @@ export default function Bedrock() {
                 <Prose text={entry.doctrine} />
               </div>
               <div className="m-panel m-surface">
-                <p className="m-label">How Islam differs</p>
+                <p className="m-label">How Islam differs: {entry.counterpart.term}, {entry.counterpart.gloss}</p>
                 <Prose text={entry.islamic_contrast} />
               </div>
             </div>

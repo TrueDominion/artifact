@@ -15,6 +15,8 @@ export interface BedrockEntry {
   confession: string
   doctrine: string
   islamic_contrast: string
+  /** The Islamic doctrine this foundation stands against. */
+  counterpart: { term: string; gloss: string }
 }
 
 // ── Arguments (The Dig) ───────────────────────────────────
@@ -36,6 +38,10 @@ export interface Argument {
   counterargument: string
   response: string
   sources: ArgumentSource[]
+  /** 'common': Muslims largely agree; 'contested': the evidence divides the two faiths. */
+  ground: 'common' | 'contested'
+  /** How the argument works in a conversation with a Muslim. */
+  islam_note: string
 }
 
 // ── Worldviews (The Gallery) ──────────────────────────────
@@ -54,18 +60,34 @@ export interface Worldview {
   core_claims: string[]
   key_texts: string[]
   christian_critique: string
+  articles?: NamedText[]
+  pillars?: NamedText[]
+  sources?: NamedText[]
+  branches?: NamedText[]
+  schools?: NamedText[]
+  why_it_matters?: string
+}
+
+export interface NamedText {
+  name: string
+  text: string
 }
 
 // ── Debates (Faultlines) ──────────────────────────────────
 
 export type Difficulty = 'foundational' | 'intermediate' | 'advanced'
 
+export type Strength = 'settled' | 'strong' | 'debated'
+
 export interface Debate {
   id: string
   title: string
   category: string
   difficulty: Difficulty
-  severity: number
+  /** How firm the evidence behind the challenge is. */
+  strength: Strength
+  /** The Christian answer to the strongest Muslim reply (which is held in `challenge`). */
+  rejoinder: string
   summary: string
   challenge: string
   response: string
@@ -177,8 +199,18 @@ export interface JudaeaSurprise {
   description: string
 }
 
+export interface ConversationEntry {
+  year: string
+  name: string
+  place: string
+  title: string
+  text: string
+  lesson: string
+}
+
 export interface StrataData {
   eras: StrataEra[]
+  conversation: ConversationEntry[]
   empires: StrataEmpire[]
   gods: StrataGod[]
   tribes: {
@@ -204,4 +236,28 @@ export interface SectionPreviewData {
   path: string
   description: string
   icon: string
+}
+
+// ── Two Portraits ─────────────────────────────────────────
+
+export interface PortraitSide {
+  text: string
+  refs: string
+}
+
+export interface Portrait {
+  id: string
+  topic: string
+  verdict: 'shared' | 'partly' | 'divergent'
+  gospels: PortraitSide
+  quran: PortraitSide
+  note: string
+}
+
+// ── Field Guide: questions to ask back ────────────────────
+
+export interface AskBack {
+  id: string
+  question: string
+  why: string
 }

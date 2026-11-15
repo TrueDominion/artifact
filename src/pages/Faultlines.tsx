@@ -1,12 +1,14 @@
 /**
  * src/pages/Faultlines.tsx
- * FAULTLINES: the hardest Islamic challenges. Severity and ground sit left of the rule;
- * opened, the claim (grey) stands beside the Christian response (white), then thinkers and sources.
+ * FAULTLINES: the hardest Christian challenges to Islam, argued honestly. Each entry states the
+ * challenge, then the strongest Muslim reply (grey), then the Christian response (white), which
+ * opens by answering that reply. Evidence strength sits left of the rule.
  */
 
 import { PageHead, PageBody, Entry, Prose, Sources } from '@/components/ui/Page'
-import { Severity } from '@/components/ui/Glyphs'
-import { SEVERITY_LABEL, Word, debates, pad } from '@/lib/content'
+import { Strength } from '@/components/ui/Glyphs'
+import { STRENGTH, Word, debates, pad } from '@/lib/content'
+import type { Strength as StrengthKey } from '@/types'
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
@@ -16,12 +18,16 @@ export default function Faultlines() {
       <PageHead
         kicker="Section V · Faultlines"
         meta="The primary excavation: Islam & the Christian faith"
-        lines={['The hardest', 'Islamic', 'challenges.']}
-        side={<span style={{ display: 'grid', gap: 8, justifyItems: 'inherit' }}>
-          <Severity level={5} />
-          <span>Five bars: the ones most commonly raised in real conversations</span>
+        lines={['The hardest', 'questions', 'for Islam.']}
+        side={<span style={{ display: 'grid', gap: 10, justifyItems: 'inherit' }}>
+          {(Object.keys(STRENGTH) as StrengthKey[]).map(k => (
+            <span key={k} style={{ display: 'grid', gap: 4, justifyItems: 'inherit' }}>
+              <Strength value={k} />
+              <span>{STRENGTH[k].text}</span>
+            </span>
+          ))}
         </span>}
-        lede={`${Word(debates.length)} Islamic challenges to Christian belief, each stated in its strongest form and answered with historical evidence, textual analysis, and logical argument.`}
+        lede={`${Word(debates.length)} challenges Christians put to Islam, each paired with the strongest Muslim reply and an answer to that reply. Marked by how firm the evidence is, so you know which to lead with and which to handle with care.`}
       />
       <PageBody>
         {debates.map((d, i) => (
@@ -31,19 +37,23 @@ export default function Faultlines() {
             group="faultlines"
             side={<>
               <span className="m-text-3 is-accent">Fault {pad(i + 1)}</span>
-              <Severity level={d.severity} />
-              <span className="m-text-3">{SEVERITY_LABEL[d.severity]} · {d.category} · {cap(d.difficulty)}</span>
+              <Strength value={d.strength} />
+              <span className="m-text-3">{d.category} · {cap(d.difficulty)}</span>
             </>}
             title={d.title}
             sub={d.summary}
           >
             <div className="ex-split">
               <div className="m-panel m-surface">
-                <p className="m-label">The Islamic claim</p>
+                <p className="m-label">The strongest Muslim reply</p>
                 <Prose text={d.challenge} />
               </div>
               <div className="m-panel m-surface-2">
                 <p className="m-label is-accent">The Christian response</p>
+                <div className="fl-rejoinder">
+                  <p className="m-label">Answering the reply</p>
+                  <Prose text={d.rejoinder} />
+                </div>
                 <Prose text={d.response} />
                 {d.key_thinkers.length > 0 && (
                   <div className="ex-meta">
