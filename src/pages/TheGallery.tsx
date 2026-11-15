@@ -1,75 +1,43 @@
 /**
  * src/pages/TheGallery.tsx
- * THE GALLERY — worldviews in context. One exhibit per worldview; opened, three tabs:
- * Overview (with adherents and relative share), Core claims, and the Reformed critique.
+ * THE GALLERY — Islam on its own terms. One exhibit, read top to bottom along the rule:
+ * overview and scale, core claims, the texts it rests on, then the Reformed critique.
  */
 
-import { useState } from 'react'
-import { PageHead, PageBody, Entry, Prose } from '@/components/ui/Page'
-import { Word, pad, worldviews } from '@/lib/content'
-import type { Worldview } from '@/types'
+import { PageHead, PageBody, Prose } from '@/components/ui/Page'
+import { pad, worldviews } from '@/lib/content'
 
-type Tab = 'overview' | 'claims' | 'critique'
+function Block({ side, children }: { side: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <div className="pg-block">
+      <div className="m-text-3 pg-side">{side}</div>
+      <div className="pg-block__main">{children}</div>
+    </div>
+  )
+}
 
-const TABS: { key: Tab; label: string }[] = [
-  { key: 'overview', label: 'Overview' },
-  { key: 'claims', label: 'Core claims' },
-  { key: 'critique', label: 'Critique' },
-]
-
-/** Share of the largest tradition shown, in millions; the bar is relative, not absolute. */
-const millions = (w: Worldview) => (w.adherents_count ?? 0) * (w.adherents_unit === 'billion' ? 1000 : 1)
-const MAX = Math.max(...worldviews.map(millions))
-
-function Exhibit({ wv }: { wv: Worldview }) {
-  const [tab, setTab] = useState<Tab>('critique')
+export default function TheGallery() {
+  const wv = worldviews.find(w => w.id === 'islam')
+  if (!wv) return null
 
   return (
     <>
-      <div className="m-chips gl-tabs" role="tablist" aria-label={`${wv.name} exhibit`}>
-        {TABS.map(t => (
-          <button
-            key={t.key}
-            type="button"
-            role="tab"
-            className="m-chip"
-            id={`${wv.id}-${t.key}`}
-            aria-selected={tab === t.key}
-            aria-controls={`${wv.id}-panel`}
-            onClick={() => setTab(t.key)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-
-      <div key={tab} className="st-panel" role="tabpanel" id={`${wv.id}-panel`} aria-labelledby={`${wv.id}-${tab}`}>
-        {tab === 'overview' && (
+      <PageHead
+        kicker="Section III · The Gallery"
+        meta={`${wv.tradition} · founded ${wv.founded}`}
+        lines={['Islam,', 'on its own', 'terms.']}
+        side="Understand before you answer"
+        lede="Islam presented first as Muslims would recognise it, then examined from a Reformed Christian perspective. The goal is honest engagement, not caricature."
+      />
+      <PageBody>
+        <Block side={<span className="m-label is-accent">The exhibit</span>}>
+          <p className="m-text-4" style={{ maxWidth: '36ch' }}>{wv.tagline}</p>
           <div className="ex-split">
-            <div>
-              <Prose text={wv.overview} />
-              <div className="ex-meta">
-                <p className="m-label">Key texts</p>
-                <ul className="m-text-3" style={{ display: 'grid', gap: 4 }}>
-                  {wv.key_texts.map(t => <li key={t}>{t}</li>)}
-                </ul>
-              </div>
-            </div>
+            <Prose text={wv.overview} />
             <div className="m-panel m-surface" style={{ display: 'grid', gap: 22 }}>
               <div className="gl-figure">
                 <p className="m-label">Estimated adherents</p>
-                {wv.adherents_count !== null ? (
-                  <>
-                    <p className="m-text-2">{wv.adherents_count}<span className="m-text-4"> {wv.adherents_unit}</span></p>
-                    <div className="gl-bar" aria-hidden="true"><span style={{ '--share': millions(wv) / MAX } as React.CSSProperties} /></div>
-                    <p className="m-text-3" style={{ color: 'var(--color-4)' }}>Relative to the largest tradition shown</p>
-                  </>
-                ) : (
-                  <>
-                    <p className="m-text-2">Diffuse</p>
-                    <p className="m-text">Secular humanism functions as a cultural default rather than a counted membership; its influence exceeds any fixed figure.</p>
-                  </>
-                )}
+                <p className="m-text-2">{wv.adherents_count}<span className="m-text-4"> {wv.adherents_unit}</span></p>
               </div>
               <div className="gl-figure">
                 <p className="m-label">Founded</p>
@@ -77,52 +45,23 @@ function Exhibit({ wv }: { wv: Worldview }) {
               </div>
             </div>
           </div>
-        )}
+        </Block>
 
-        {tab === 'claims' && (
+        <Block side={`${wv.core_claims.length} core claims`}>
           <div className="m-prose m-text">
             {wv.core_claims.map((c, i) => <p key={i} className="is-num" data-n={pad(i + 1)}>{c}</p>)}
           </div>
-        )}
+        </Block>
 
-        {tab === 'critique' && (
-          <>
-            <p className="m-label is-accent">Reformed Christian critique</p>
-            <Prose text={wv.christian_critique} />
-          </>
-        )}
-      </div>
-    </>
-  )
-}
+        <Block side="Key texts">
+          <ul className="sx-list">
+            {wv.key_texts.map(t => <li key={t}><span className="m-text">{t}</span></li>)}
+          </ul>
+        </Block>
 
-export default function TheGallery() {
-  return (
-    <>
-      <PageHead
-        kicker="Section III · The Gallery"
-        meta={`${worldviews.length} worldviews`}
-        lines={[`${Word(worldviews.length)} worldviews,`, 'examined', 'honestly.']}
-        side="Overview · Core claims · Critique"
-        lede="Each tradition presented on its own terms, then examined from a Reformed Christian perspective. The goal is honest engagement, not caricature."
-      />
-      <PageBody>
-        {worldviews.map((wv, i) => (
-          <Entry
-            key={wv.id}
-            id={wv.id}
-            group="gallery"
-            side={<>
-              <span className="m-text-3 is-accent">Exhibit {pad(i + 1)}</span>
-              <span className="m-text-3">{wv.tradition}</span>
-              <span className="m-text-3">{wv.adherents}</span>
-            </>}
-            title={wv.name}
-            sub={wv.tagline}
-          >
-            <Exhibit wv={wv} />
-          </Entry>
-        ))}
+        <Block side={<span className="m-label is-accent">Reformed Christian critique</span>}>
+          <Prose text={wv.christian_critique} />
+        </Block>
       </PageBody>
     </>
   )

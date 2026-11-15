@@ -8,10 +8,8 @@
  *   Objections   a turning sphere of Field Guide challenges (clients)
  *   Islam        the faultlines as a hairline table with severity (prices)
  *   Method       three steps in the Field Guide, each closing a red ring (switch)
- *   Traditions   four traditions dealt out as cards (team)
  *   Principle    one staggered line ending in a red full stop
  *   Foundations  Bedrock as questions and answers (faq)
- *   Worldviews   Gallery sheets that stack as you scroll (reviews)
  *   Contact      write to us (contact)
  */
 
@@ -19,8 +17,7 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties, type FormEven
 import { Link } from 'react-router-dom'
 import { setVars, useMeasure, useTrack } from '@/lib/motion'
 import {
-  EMAIL, LAYERS, RELIGIONS, ROOMS, SEVERITY_LABEL, Word, args, bedrock, debates, fieldGuide, pad,
-  religionCount, worldviews,
+  EMAIL, LAYERS, ROOMS, SEVERITY_LABEL, TAG_LABELS, Word, args, bedrock, debates, fieldGuide, pad,
 } from '@/lib/content'
 import { Arrow, Plus, Severity } from '@/components/ui/Glyphs'
 
@@ -68,7 +65,7 @@ function Opening() {
     <section ref={section} className="op" id="opening">
       <div className="op-one">
         <span ref={rule} className="l-rule op-rule" aria-hidden="true" />
-        <p className="m-text-3 op-where l-b"><span>Christian apologetics</span><span>A modern museum of ancient arguments</span></p>
+        <p className="m-text-3 op-where l-b"><span>Christianity &amp; Islam</span><span>A modern museum of ancient arguments</span></p>
         <div className="op-head">
           <div className="op-name">
             <p className="m-text-3 op-what">Arguments, answers &amp; history</p>
@@ -193,27 +190,23 @@ function Layers() {
 
 // ── Objections sphere ─────────────────────────────────────
 
-const SPHERE: [number, number][] = [
-  [74.6, 0.0], [63.2, 137.5], [55.2, 275.0], [48.6, 52.5], [42.7, 190.0], [37.4, 327.5], [32.4, 105.0],
-  [27.7, 242.6], [23.1, 20.1], [18.7, 157.6], [14.5, 295.1], [10.3, 72.6], [6.2, 210.1], [2.0, 347.6],
-  [-2.0, 125.1], [-6.2, 262.6], [-10.3, 40.1], [-14.5, 177.6], [-18.7, 315.1], [-23.1, 92.7], [-27.7, 230.2],
-  [-32.4, 7.7], [-37.4, 145.2], [-42.7, 282.7], [-48.6, 60.2], [-55.2, 197.7], [-63.2, 335.2], [-74.6, 112.7],
-]
-
-const RELIGION_SHORT: Record<string, string> = {
-  islam: 'Islam', atheism: 'Atheism', mormonism: 'Mormonism', 'jehovahs-witnesses': "Jehovah's Witnesses",
-}
+/** Golden-angle spiral: n cards spread evenly over the sphere (the template's 28 positions, for any n). */
+const sphere = (n: number): [number, number][] => Array.from({ length: n }, (_, i) => [
+  +(Math.asin(1 - (2 * (i + 0.5)) / n) * 180 / Math.PI).toFixed(1),
+  +((i * 137.508) % 360).toFixed(1),
+])
 
 function Objections() {
   const title = useRef<HTMLHeadingElement>(null)
   const a = useRef<HTMLSpanElement>(null)
   const b = useRef<HTMLSpanElement>(null)
 
-  // The 28 shortest challenges fit a card; keep their data order so traditions mix around the sphere.
+  // Up to 28 cards fit the sphere; prefer the shortest challenges, in data order so topics mix.
   const cards = useMemo(() => {
-    const short = new Set([...fieldGuide].sort((x, y) => x.challenge.length - y.challenge.length).slice(0, SPHERE.length).map(e => e.id))
+    const short = new Set([...fieldGuide].sort((x, y) => x.challenge.length - y.challenge.length).slice(0, 28).map(e => e.id))
     return fieldGuide.filter(e => short.has(e.id))
   }, [])
+  const spots = useMemo(() => sphere(cards.length), [cards])
 
   useMeasure(() => {
     const t = title.current, ha = a.current, hb = b.current
@@ -239,16 +232,16 @@ function Objections() {
         </h2>
         <ul className="cl-globe" aria-label="Some of the challenges answered in the Field Guide">
           {cards.map((entry, i) => (
-            <li key={entry.id} className="cl-card" style={{ '--lat': `${SPHERE[i][0]}deg`, '--lon': `${SPHERE[i][1]}deg` } as Vars}>
+            <li key={entry.id} className="cl-card" style={{ '--lat': `${spots[i][0]}deg`, '--lon': `${spots[i][1]}deg` } as Vars}>
               <div className={`cl-face ${i % 3 === 1 ? 'm-surface-3' : 'm-surface'}`}>
                 <span className="m-text-3">“{entry.challenge}”</span>
-                <span className="m-text-3 cl-trade">{RELIGION_SHORT[entry.religion]}</span>
+                <span className="m-text-3 cl-trade">{TAG_LABELS[entry.tag]}</span>
               </div>
             </li>
           ))}
         </ul>
         <p className="m-text-3 cl-note">
-          {fieldGuide.length} challenges in the Field Guide. Twenty-eight of them are here. <Link className="m-link" to="/field-guide">Answer them</Link>
+          {cards.length === fieldGuide.length ? `All ${fieldGuide.length} challenges in the Field Guide.` : `${fieldGuide.length} challenges in the Field Guide. ${cards.length} of them are here.`} <Link className="m-link" to="/field-guide">Answer them</Link>
         </p>
       </div>
     </section>
@@ -291,9 +284,9 @@ function Faultlines() {
 // ── Method: three steps in the Field Guide ────────────────
 
 const STEPS = [
-  { title: 'Pick the tradition', text: 'Islam, atheism, Mormonism, or Jehovah’s Witnesses: start where the conversation is.' },
   { title: 'Find the challenge', text: 'Search for what was said, or filter by Scripture, Jesus, the Trinity, salvation and more.' },
-  { title: 'Give the answer', text: 'A one-line response, the evidence behind it, and an anchor verse to stand on.' },
+  { title: 'Say the short answer', text: 'A one-line response you can give in the moment, without a lecture.' },
+  { title: 'Stand on the evidence', text: 'Numbered points behind every answer, and an anchor verse to stand on.' },
 ]
 
 function Method() {
@@ -313,7 +306,7 @@ function Method() {
           <span className="l-rule sw-rule" aria-hidden="true" />
           <div className="sw-old">
             <p className="m-text-3">In the Field Guide</p>
-            <p className="m-text">Select the worldview you are engaging with. You will see clear, concise responses to the challenges you are most likely to encounter.</p>
+            <p className="m-text">The challenges Muslims most often raise, with clear, concise responses you can actually use in conversation.</p>
             <p className="m-text-3"><Link className="m-link" to="/field-guide">Open the Field Guide</Link></p>
           </div>
           <ol className="sw-tiles">
@@ -330,46 +323,6 @@ function Method() {
           </ol>
         </div>
       </div>
-    </section>
-  )
-}
-
-// ── Four traditions (cards dealt from a pile) ─────────────
-
-const TILTS = [-7, 5, -3, 8]
-
-function Traditions() {
-  const row = useRef<HTMLUListElement>(null)
-
-  useMeasure(() => {
-    const r = row.current
-    if (!r) return
-    const cards = [...r.children] as HTMLElement[]
-    const middle = (cards.length - 1) / 2
-    cards.forEach((card, i) => setVars(card, {
-      '--team-x': `${r.clientWidth / 2 - (card.offsetLeft + card.offsetWidth / 2) + (i - middle) * 16}px`,
-      '--team-y': `${r.clientHeight / 2 - (card.offsetTop + card.offsetHeight / 2) + (i % 2 ? -12 : 12)}px`,
-    }))
-  })
-
-  return (
-    <section className="tm" id="traditions">
-      <h2 className="m-text-2 tm-h"><span className="l-a">{Word(RELIGIONS.length)} traditions,</span><span className="l-b">one guide.</span></h2>
-      <ul ref={row} className="tm-row">
-        {RELIGIONS.map((r, i) => (
-          <li key={r.id} className="tm-card" style={{ '--team-tilt': `${TILTS[i % TILTS.length]}deg`, '--i': i, '--n': RELIGIONS.length } as Vars}>
-            <Link className="tm-link" to={`/field-guide?tradition=${r.id}`}>
-              <div className="tm-photo tm-count m-surface-3">
-                <span className="m-text-2">{religionCount(r.id)}</span>
-                <span className="m-text-3">challenges answered</span>
-              </div>
-              <h3 className="m-text-4">{r.label}</h3>
-              <p className="m-text-3 tm-role">{r.sublabel}</p>
-              <p className="m-text">{firstSentence(r.description)}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
     </section>
   )
 }
@@ -411,48 +364,6 @@ function Foundations() {
           </div>
         ))}
       </div>
-    </section>
-  )
-}
-
-// ── Worldviews (stacking sheets) ──────────────────────────
-
-const SHEETS = ['islam', 'atheism', 'hinduism', 'buddhism']
-
-function Worldviews() {
-  const stack = useRef<HTMLOListElement>(null)
-  const sheets = useMemo(() => SHEETS.map(id => worldviews.find(w => w.id === id)).filter(Boolean) as typeof worldviews, [])
-
-  useMeasure(() => {
-    const s = stack.current
-    if (!s) return
-    const items = [...s.children] as HTMLElement[]
-    let at = 0
-    items.slice(0, -1).forEach((sheet, i) => {
-      at += sheet.offsetHeight + parseFloat(getComputedStyle(sheet).marginBottom)
-      setVars(sheet, { '--reviews-at': `${at}px`, '--reviews-top': `${parseFloat(getComputedStyle(items[i + 1]).top) || 0}px` })
-    })
-  })
-
-  return (
-    <section className="rv" id="worldviews">
-      <h2 className="m-text-2 rv-h"><span className="l-a">{Word(worldviews.length)} worldviews,</span><span className="l-b">examined honestly.</span></h2>
-      <ol ref={stack} className="rv-stack">
-        {sheets.map((w, i) => (
-          <li key={w.id} className={`rv-sheet ${i % 2 ? 'm-surface-2' : 'm-surface'}`} style={{ '--i': i } as Vars}>
-            <p className="m-text-3 rv-kicker">Exhibit {pad(worldviews.indexOf(w) + 1)} · {w.tradition}</p>
-            <p className="m-text-4 rv-quote">{w.tagline}</p>
-            <p className="m-text-3 rv-who">
-              <span>{w.name}</span>
-              <span>Founded {w.founded}</span>
-              <Link className="m-link" to={`/the-gallery#${w.id}`}>Enter the exhibit</Link>
-            </p>
-          </li>
-        ))}
-      </ol>
-      <p className="m-text rv-more l-b">
-        Each tradition presented on its own terms, then examined from a Reformed Christian perspective. <Link className="m-link" to="/the-gallery">Enter the Gallery</Link>
-      </p>
     </section>
   )
 }
@@ -529,10 +440,8 @@ export default function Home() {
       <Objections />
       <Faultlines />
       <Method />
-      <Traditions />
       <Principle />
       <Foundations />
-      <Worldviews />
       <Contact />
     </>
   )

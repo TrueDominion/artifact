@@ -1,53 +1,18 @@
 /**
  * src/pages/FieldGuide.tsx
- * THE FIELD GUIDE — rapid reference for real conversations.
- * Step 1: pick a tradition (tiles). Step 2: search and filter its challenges; each entry opens to
- * numbered points and an anchor verse. The tradition lives in the URL (?tradition=islam) so it can be shared.
+ * THE FIELD GUIDE — rapid reference for conversations with Muslims.
+ * Search and filter the challenges; each entry opens to numbered points and an anchor verse.
  */
 
 import { useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
 import { PageHead, PageBody, Entry } from '@/components/ui/Page'
-import { ALL_TAGS, RELIGIONS, TAG_LABELS, fieldGuide, pad, religionCount } from '@/lib/content'
-import type { FieldGuideReligion, FieldGuideTag } from '@/types'
+import { ALL_TAGS, TAG_LABELS, fieldGuide, pad } from '@/lib/content'
+import type { FieldGuideTag } from '@/types'
 
-function Selector({ onSelect }: { onSelect: (id: FieldGuideReligion) => void }) {
-  return (
-    <>
-      <PageHead
-        kicker="Reference · Field Guide"
-        meta={`${fieldGuide.length} challenges, ${RELIGIONS.length} traditions`}
-        lines={['When someone', 'says it to you', 'face to face.']}
-        side="Step one of two"
-        lede="Select the worldview you are engaging with. You will see clear, concise responses to the challenges you are most likely to encounter."
-      />
-      <div className="pg-body">
-        <ul className="fg-tiles">
-          {RELIGIONS.map(r => (
-            <li key={r.id}>
-              <button type="button" className="fg-tile" onClick={() => onSelect(r.id)}>
-                <span className="fg-count m-surface">
-                  <span className="m-text-2">{religionCount(r.id)}</span>
-                  <span className="m-text-3">challenges answered</span>
-                </span>
-                <span className="m-text-4">{r.label}</span>
-                <span className="m-text-3">{r.sublabel}</span>
-                <span className="m-text">{r.description}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  )
-}
-
-function Guide({ religion, onSelect }: { religion: FieldGuideReligion; onSelect: (id: FieldGuideReligion | null) => void }) {
+export default function FieldGuide() {
   const [search, setSearch] = useState('')
   const [tag, setTag] = useState<FieldGuideTag | 'all'>('all')
-  const config = RELIGIONS.find(r => r.id === religion)!
-
-  const pool = useMemo(() => fieldGuide.filter(e => e.religion === religion), [religion])
+  const pool = fieldGuide
   const tags = useMemo(() => ALL_TAGS.filter(t => pool.some(e => e.tag === t)), [pool])
 
   const shown = useMemo(() => {
@@ -66,18 +31,11 @@ function Guide({ religion, onSelect }: { religion: FieldGuideReligion; onSelect:
     <>
       <PageHead
         kicker="Reference · Field Guide"
-        meta={config.sublabel}
-        lines={[config.label + '.']}
-        side={<button type="button" className="m-link" style={{ background: 'none', border: 0, padding: 0, cursor: 'pointer', font: 'inherit' }} onClick={() => onSelect(null)}>All traditions</button>}
-        lede={`${config.description} Each entry gives you a one-line response and the evidence behind it.`}
+        meta={`${pool.length} challenges Muslims raise`}
+        lines={['When someone', 'says it to you', 'face to face.']}
+        side="Search, open, answer"
+        lede="Challenges from Islamic theology: the Quran, Muhammad's credentials, the Trinity, tahrif, and the nature of God. Each entry gives you a one-line response you can say in the moment, and the evidence behind it."
       >
-        <div className="m-chips" role="group" aria-label="Tradition">
-          {RELIGIONS.map(r => (
-            <button key={r.id} type="button" className="m-chip" aria-pressed={r.id === religion} onClick={() => onSelect(r.id)}>
-              {r.label} <span className="m-chip__n">{religionCount(r.id)}</span>
-            </button>
-          ))}
-        </div>
         <label className="m-field pg-search">
           <span className="m-field__label">Search what was said</span>
           <input className="m-field__input" type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="e.g. corrupted, Paraclete, evil" />
@@ -132,17 +90,4 @@ function Guide({ religion, onSelect }: { religion: FieldGuideReligion; onSelect:
       </PageBody>
     </>
   )
-}
-
-export default function FieldGuide() {
-  const [params, setParams] = useSearchParams()
-  const requested = params.get('tradition')
-  const religion = RELIGIONS.some(r => r.id === requested) ? (requested as FieldGuideReligion) : null
-
-  const select = (id: FieldGuideReligion | null) => {
-    setParams(id ? { tradition: id } : {})
-    scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
-  }
-
-  return religion ? <Guide key={religion} religion={religion} onSelect={select} /> : <Selector onSelect={select} />
 }
