@@ -22,6 +22,105 @@
       "Sahih al-Bukhari (Hadith collection)",
       "Al-Ghazali, Ihya Ulum al-Din"
     ],
-    "christian_critique": "Islam and Christianity share enough family resemblance (monotheism, prophethood, Scripture, judgment) that their differences are theologically precise rather than merely cultural. The central dispute is Christological: Islam affirms Jesus' miraculous birth and prophetic ministry but explicitly denies his crucifixion (Quran 4:157), resurrection, and divine nature. The crucifixion, however, is among the most historically secure facts of antiquity, confirmed by Tacitus, Josephus, and the Babylonian Talmud. None of whom had any motive to support Christian claims. The tahrif doctrine requires that thousands of manuscripts across multiple continents and centuries were systematically corrupted without a single trace in the textual record, a position no serious historian defends. The Trinitarian critique attacks tritheism, which Christianity itself condemned as heresy before Islam existed. The deeper question Islam cannot answer is soteriological: if Jesus was only a prophet, how are sins forgiven? Islam offers no atoning mediator, only deeds, divine mercy, and uncertainty."
+    "christian_critique": "Islam and Christianity share enough family resemblance (monotheism, prophethood, Scripture, judgment) that their differences are theologically precise rather than merely cultural. The central dispute is Christological: Islam affirms Jesus' miraculous birth and prophetic ministry but explicitly denies his crucifixion (Quran 4:157), resurrection, and divine nature. The crucifixion, however, is among the most historically secure facts of antiquity, confirmed by Tacitus, Josephus, and the Babylonian Talmud. None of whom had any motive to support Christian claims. The tahrif doctrine requires that thousands of manuscripts across multiple continents and centuries were systematically corrupted without a single trace in the textual record, a position no serious historian defends. The Trinitarian critique attacks tritheism, which Christianity itself condemned as heresy before Islam existed. The deeper question Islam cannot answer is soteriological: if Jesus was only a prophet, how are sins forgiven? Islam offers no atoning mediator, only deeds, divine mercy, and uncertainty.",
+    "articles": [
+      {
+        "name": "God (Allah)",
+        "text": "One, without partner or equal, the Creator of all. This is tawhid, the heart of Islam."
+      },
+      {
+        "name": "Angels",
+        "text": "Created servants of God. Jibril (Gabriel) brought the revelation to Muhammad."
+      },
+      {
+        "name": "Revealed books",
+        "text": "The Tawrat given to Moses, the Zabur to David, the Injil to Jesus, and the Quran, the final revelation, which Muslims believe God has preserved."
+      },
+      {
+        "name": "Messengers",
+        "text": "From Adam to Muhammad, 'the seal of the prophets' (33:40). Jesus is honoured among the greatest of them."
+      },
+      {
+        "name": "The Last Day",
+        "text": "Bodily resurrection, judgment by the weighing of deeds, then paradise or hell."
+      },
+      {
+        "name": "Divine decree (qadar)",
+        "text": "All that happens, good and bad, happens by God's knowledge and will."
+      }
+    ],
+    "pillars": [
+      {
+        "name": "Shahada",
+        "text": "The declaration: 'There is no god but God, and Muhammad is the messenger of God.'"
+      },
+      {
+        "name": "Salah",
+        "text": "Ritual prayer five times a day, facing Mecca."
+      },
+      {
+        "name": "Zakat",
+        "text": "Obligatory alms, traditionally 2.5 percent of qualifying wealth each year."
+      },
+      {
+        "name": "Sawm",
+        "text": "Fasting from dawn to sunset during the month of Ramadan."
+      },
+      {
+        "name": "Hajj",
+        "text": "Pilgrimage to Mecca, once in a lifetime for those who are able."
+      }
+    ],
+    "sources": [
+      {
+        "name": "Quran",
+        "text": "114 surahs, received by Muhammad between about 610 and 632, and standardised in writing under the caliph Uthman (ruled 644-656). For Muslims, the uncreated word of God."
+      },
+      {
+        "name": "Hadith",
+        "text": "Reports of Muhammad's words and actions, each with a chain of narrators (isnad) and a text (matn), graded authentic (sahih), good (hasan) or weak (da'if). Sunni Islam treats the collections of al-Bukhari and Muslim as the most reliable."
+      },
+      {
+        "name": "Sira",
+        "text": "Biography of Muhammad. The earliest, by Ibn Ishaq (died about 767), survives through later editors such as Ibn Hisham."
+      },
+      {
+        "name": "Tafsir",
+        "text": "Commentary on the Quran. The classic works of al-Tabari (died 923) and Ibn Kathir (died 1373) remain widely used."
+      },
+      {
+        "name": "Sharia and fiqh",
+        "text": "God's law (sharia) and the human science of working it out (fiqh), drawn from the Quran, the hadith, scholarly consensus and reasoning."
+      }
+    ],
+    "branches": [
+      {
+        "name": "Sunni",
+        "text": "About 85 to 90 percent of Muslims. Authority rests with the Quran, the example of Muhammad (sunna) and the consensus of the community."
+      },
+      {
+        "name": "Shia",
+        "text": "About 10 to 15 percent, the largest group being Twelvers, centred on Iran and Iraq. The split began over succession: Shia Muslims hold that leadership belonged to Ali, Muhammad's cousin and son-in-law, and his descendants (the imams)."
+      },
+      {
+        "name": "Ibadi",
+        "text": "A small, distinct tradition, prominent in Oman."
+      },
+      {
+        "name": "Sufism",
+        "text": "Not a separate branch but a mystical stream found in both Sunni and Shia Islam, centred on nearness to God."
+      }
+    ],
+    "schools": [
+      {
+        "name": "Theology",
+        "text": "Ash'ari and Maturidi (the two main Sunni schools of reasoned theology), Athari (traditionalist, wary of speculation), and historically the Mu'tazila, who held that the Quran was created."
+      },
+      {
+        "name": "Law",
+        "text": "Four Sunni schools (Hanafi, Maliki, Shafi'i, Hanbali) and the Ja'fari school of Twelver Shia Islam."
+      }
+    ],
+    "why_it_matters": "When a Muslim friend says 'Islam teaches...', it is worth asking which source and which school. A verse of the Quran, an authentic hadith, a medieval commentator and a modern preacher carry very different weight within Islam itself. Answer the Islam your friend actually holds."
   }
 ]

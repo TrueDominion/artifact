@@ -8,6 +8,7 @@
  *   Objections   a turning sphere of Field Guide challenges (clients)
  *   Islam        the faultlines as a hairline table with severity (prices)
  *   Method       three steps in the Field Guide, each closing a red ring (switch)
+ *   Portraits    Jesus in the Gospels and the Quran, three topics side by side
  *   Principle    one staggered line ending in a red full stop
  *   Foundations  Bedrock as questions and answers (faq)
  *   Contact      write to us (contact)
@@ -17,9 +18,10 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties, type FormEven
 import { Link } from 'react-router-dom'
 import { setVars, useMeasure, useTrack } from '@/lib/motion'
 import {
-  EMAIL, LAYERS, ROOMS, SEVERITY_LABEL, TAG_LABELS, Word, args, bedrock, debates, fieldGuide, pad,
+  EMAIL, LAYERS, ROOMS, TAG_LABELS, Word, args, bedrock, debates, fieldGuide, pad, portraits,
 } from '@/lib/content'
-import { Arrow, Plus, Severity } from '@/components/ui/Glyphs'
+import { Arrow, Plus, Strength } from '@/components/ui/Glyphs'
+import { PortraitHead, PortraitRow } from '@/components/ui/Portraits'
 
 type Vars = CSSProperties & Record<`--${string}`, string | number>
 
@@ -255,7 +257,7 @@ function Faultlines() {
     <section className="pr" id="islam">
       <h2 className="m-text-2 pr-h"><span className="pr-l1"><span className="l-left">Islam</span>&amp; the</span><span className="l-a">Christian faith.</span></h2>
       <div className="pr-table">
-        <div className="l-ledger pr-cols m-text-3" aria-hidden="true"><span>Faultline</span><span>Ground</span><span>The challenge</span><span>Severity</span></div>
+        <div className="l-ledger pr-cols m-text-3" aria-hidden="true"><span>Faultline</span><span>Ground</span><span>The challenge</span><span>Evidence</span></div>
         <ul className="pr-plans">
           {debates.map((d, i) => (
             <li key={d.id} className="l-ledger pr-plan">
@@ -265,8 +267,7 @@ function Faultlines() {
               <p className="m-text pr-for">{d.category}<br />{d.difficulty.charAt(0).toUpperCase() + d.difficulty.slice(1)}</p>
               <p className="m-text pr-items">{firstSentence(d.summary)}</p>
               <p className="m-text-4 pr-fee" data-motion="post" data-enter="90%" style={{ '--post-translate-x-from': '36px', '--post-delay': '0.12s' } as Vars}>
-                <Severity level={d.severity} />
-                <span className="m-text-3">{SEVERITY_LABEL[d.severity]}</span>
+                <Strength value={d.strength} />
               </p>
               <span className="pr-rule" aria-hidden="true" data-motion="rule" data-enter="90%" />
             </li>
@@ -323,6 +324,27 @@ function Method() {
           </ol>
         </div>
       </div>
+    </section>
+  )
+}
+
+// ── Two Portraits (preview) ───────────────────────────────
+
+const PREVIEW = ['birth', 'death', 'identity']
+
+function Portraits() {
+  const rows = PREVIEW.map(id => portraits.find(p => p.id === id)).filter(Boolean) as typeof portraits
+  return (
+    <section className="sv" id="portraits">
+      <h2 className="m-text-2 sv-h"><span className="l-a">Two portraits</span><span className="l-b sv-in">of Jesus.</span></h2>
+      <div className="tp-list" style={{ paddingBottom: 0 }}>
+        <PortraitHead />
+        {rows.map(p => <PortraitRow key={p.id} p={p} />)}
+      </div>
+      <p className="m-text-3 tp-more">
+        <span>{Word(portraits.length)} topics, from birth to return.</span>
+        <Link className="m-btn" to="/two-portraits"><span className="m-btn__label">Compare the portraits</span></Link>
+      </p>
     </section>
   )
 }
@@ -440,6 +462,7 @@ export default function Home() {
       <Objections />
       <Faultlines />
       <Method />
+      <Portraits />
       <Principle />
       <Foundations />
       <Contact />

@@ -10,8 +10,10 @@ import worldviewsData from '@/data/worldviews.json'
 import debatesData from '@/data/debates.json'
 import fieldGuideData from '@/data/fieldguide.json'
 import strataData from '@/data/strata.json'
+import portraitsData from '@/data/portraits.json'
+import questionsData from '@/data/questions.json'
 import type {
-  Argument, BedrockEntry, Debate, FieldGuideEntry, FieldGuideReligion, FieldGuideTag, StrataData, Worldview,
+  Argument, AskBack, BedrockEntry, Debate, FieldGuideEntry, FieldGuideReligion, FieldGuideTag, Portrait, StrataData, Strength, Worldview,
 } from '@/types'
 
 export const bedrock = bedrockData as unknown as BedrockEntry[]
@@ -20,6 +22,8 @@ export const worldviews = worldviewsData as unknown as Worldview[]
 export const debates = debatesData as unknown as Debate[]
 export const fieldGuide = fieldGuideData as unknown as FieldGuideEntry[]
 export const strata = strataData as unknown as StrataData
+export const portraits = portraitsData as unknown as Portrait[]
+export const askBack = questionsData as unknown as AskBack[]
 
 export const EMAIL = 'info@artifacttruth.org'
 
@@ -54,6 +58,14 @@ export const ROOMS: Room[] = [
     count: `${fieldGuide.length} challenges`,
   },
   {
+    path: '/two-portraits',
+    name: 'Two Portraits',
+    kicker: 'Jesus',
+    question: 'Is the Jesus of the Quran the Jesus of the Gospels?',
+    description: `Jesus in the Gospels and in the Quran, side by side across ${word(portraits.length)} topics: where the two portraits agree, and where they cannot both be true.`,
+    count: `${portraits.length} topics`,
+  },
+  {
     path: '/faultlines',
     name: 'Faultlines',
     kicker: 'Challenges',
@@ -73,8 +85,8 @@ export const ROOMS: Room[] = [
     path: '/the-dig',
     name: 'The Dig',
     kicker: 'Arguments',
-    question: 'Is there a case for God?',
-    description: `${Word(args.length)} arguments for God's existence and the truth of Christianity, examined through claim, logic, strongest objection, and response.`,
+    question: 'What evidence settles the disagreement?',
+    description: `${Word(args.length)} lines of evidence for the conversation with Muslims, from common ground about God to the history that divides: each examined through claim, logic, strongest objection, and response.`,
     count: `${args.length} arguments`,
   },
   {
@@ -90,7 +102,7 @@ export const ROOMS: Room[] = [
     name: 'Strata',
     kicker: 'History',
     question: 'What world was Scripture written into?',
-    description: `${Word(strata.eras.length)} eras, ${word(strata.empires.length)} empires, twelve tribes, and the gods Israel kept chasing: the historical world Scripture was written into, mapped layer by layer.`,
+    description: `${Word(strata.eras.length)} eras from Abraham to the rise of Islam, ${word(strata.empires.length)} empires, the gods Israel kept chasing, and the long conversation between Christians and Muslims.`,
     count: `${strata.eras.length} eras`,
   },
 ]
@@ -130,7 +142,12 @@ export const ALL_TAGS = Object.keys(TAG_LABELS) as FieldGuideTag[]
 
 // ── Faultlines ────────────────────────────────────────────
 
-export const SEVERITY_LABEL: Record<number, string> = { 1: 'Minor', 2: 'Moderate', 3: 'Serious', 4: 'Critical', 5: 'Fatal' }
+/** How firm the evidence is: settled facts, a strong case, or a matter scholars still debate. */
+export const STRENGTH: Record<Strength, { label: string; level: number; text: string }> = {
+  settled: { label: 'Settled', level: 3, text: 'The facts are not in dispute; the argument is about what they mean.' },
+  strong: { label: 'Strong', level: 2, text: 'A strong case, with a serious Muslim reply that it answers.' },
+  debated: { label: 'Debated', level: 1, text: 'The evidence is contested; present it with care.' },
+}
 
 // ── The Dig: four layers of every argument ────────────────
 

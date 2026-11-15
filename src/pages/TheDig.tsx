@@ -11,10 +11,9 @@ import { LAYERS, Word, args, pad } from '@/lib/content'
 import type { Argument } from '@/types'
 
 const FILTERS = [
-  { key: 'all', label: 'All arguments', ids: null },
-  { key: 'islam', label: 'Most relevant for Islam', ids: ['kalam', 'resurrection', 'moral', 'prophecy'] },
-  { key: 'historical', label: 'Historical', ids: ['resurrection', 'prophecy'] },
-  { key: 'philosophical', label: 'Philosophical', ids: ['kalam', 'teleological', 'moral', 'reason', 'ontological', 'consciousness'] },
+  { key: 'all', label: 'All evidence', ground: null },
+  { key: 'common', label: 'Common ground', ground: 'common' },
+  { key: 'contested', label: 'What divides us', ground: 'contested' },
 ] as const
 
 function Stepper({ argument }: { argument: Argument }) {
@@ -64,16 +63,16 @@ function Stepper({ argument }: { argument: Argument }) {
 export default function TheDig() {
   const [params, setParams] = useSearchParams()
   const active = FILTERS.find(f => f.key === params.get('filter')) ?? FILTERS[0]
-  const shown = active.ids ? args.filter(a => (active.ids as readonly string[]).includes(a.id)) : args
+  const shown = active.ground ? args.filter(a => a.ground === active.ground) : args
 
   return (
     <>
       <PageHead
         kicker="Section II · The Dig"
-        meta={`${args.length} arguments, four layers each`}
-        lines={['The case for', 'Christianity,', 'layer by layer.']}
+        meta={`${args.length} lines of evidence, four layers each`}
+        lines={['The evidence,', 'layer', 'by layer.']}
         side="Claim · Logic · Objection · Response"
-        lede={`${Word(args.length)} arguments for God's existence and the truth of Christianity, each examined through four layers: claim, reasoning, strongest objection, and response. Open any argument to dig through it.`}
+        lede={`${Word(args.length)} lines of evidence for the conversation with Muslims. Some are common ground (one Creator, a moral law); the rest concern the history that divides the two faiths. Each is examined through four layers: claim, reasoning, strongest objection, and response.`}
       >
         <div className="m-chips" role="group" aria-label="Filter arguments">
           {FILTERS.map(f => (
@@ -84,7 +83,7 @@ export default function TheDig() {
               aria-pressed={active.key === f.key}
               onClick={() => setParams(f.key === 'all' ? {} : { filter: f.key }, { replace: true })}
             >
-              {f.label} <span className="m-chip__n">{f.ids ? f.ids.length : args.length}</span>
+              {f.label} <span className="m-chip__n">{f.ground ? args.filter(a => a.ground === f.ground).length : args.length}</span>
             </button>
           ))}
         </div>
@@ -95,12 +94,17 @@ export default function TheDig() {
             key={a.id}
             id={a.id}
             side={<>
-              <span className="m-text-3 is-accent">Argument {pad(args.indexOf(a) + 1)}</span>
+              <span className="m-text-3 is-accent">Evidence {pad(args.indexOf(a) + 1)}</span>
               <span className="m-text-3">{a.category}</span>
+              <span className="m-text-3">{a.ground === 'common' ? 'Common ground' : 'Divides'}</span>
             </>}
             title={a.title}
             sub={a.summary}
           >
+            <div className="m-panel m-surface dg-note">
+              <p className={`m-label${a.ground === 'common' ? '' : ' is-accent'}`}>{a.ground === 'common' ? 'Common ground with Muslims' : 'Where Christians and Muslims part'}</p>
+              <p className="m-text">{a.islam_note}</p>
+            </div>
             <Stepper argument={a} />
           </Entry>
         ))}

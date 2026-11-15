@@ -10,28 +10,29 @@
     "counterargument": "Perhaps the universe is eternal, cyclical, or self-caused. Quantum mechanics permits uncaused events at the subatomic level, perhaps the universe itself arose from a quantum fluctuation. Or perhaps the multiverse provides infinite probabilistic resources, making a first cause unnecessary. Finally, even if the Kalam succeeds, it does not establish the Christian God, only some unspecified first cause.",
     "response": "Cyclical models and multiverse proposals still require a beginning per the BGV theorem, even inflationary spacetimes are geodesically incomplete in the past. Quantum 'uncaused' events are not from absolute nothing; they occur within a pre-existing quantum vacuum governed by physical laws. True nothingness has no properties, no laws, and no fluctuations. The cosmological constant itself (the energy density of the quantum vacuum) requires extraordinary fine-tuning, pushing the explanatory demand back rather than eliminating it. On the limited conclusion: the Kalam establishes a transcendent, personal, enormously powerful Creator, which is exactly the God of natural theology. Revealed theology (Scripture), then fills in what natural theology can only gesture at. The argument does not stand alone; it opens the door that Scripture walks through. Notably, Islam also appeals to the Kalam, but its Allah (whose will is so sovereign that even his own nature does not bind him) is philosophically distinct from the necessarily good, personal God the argument actually establishes.",
     "sources": [
-      { "author": "William Lane Craig", "title": "The Kalam Cosmological Argument", "year": 1979 },
-      { "author": "Borde, Guth & Vilenkin", "title": "Inflationary Spacetimes Are Not Past-Complete", "year": 2003 },
-      { "author": "Herman Bavinck", "title": "Reformed Dogmatics Vol. 2: God and Creation", "year": 1908 },
-      { "author": "J.D. Sinclair", "title": "The Kalam Cosmological Argument, Blackwell Companion to Natural Theology", "year": 2009 }
-    ]
-  },
-  {
-    "id": "teleological",
-    "title": "The Argument from Fine-Tuning",
-    "category": "Design",
-    "summary": "The fundamental constants of physics are calibrated to life-permitting ranges with precision that defies probabilistic explanation. The Reformed tradition identifies this as the fingerprint of the Creator's wisdom. 'the heavens declare the glory of God.'",
-    "artifact_svg_key": "telescope",
-    "claim": "The constants of physics (the cosmological constant, gravitational constant, strong nuclear force, electromagnetic force, and the ratio of proton to electron mass) are each fine-tuned to extraordinary precision for a life-permitting universe to exist. This fine-tuning is not a brute fact but a datum requiring explanation. The best explanation is intentional design by an intelligent Creator.",
-    "logic": "The cosmological constant is fine-tuned to 1 part in 10^120, a precision so extreme that if it varied by one part in that range, no stars, galaxies, or planets could exist. The strong nuclear force is calibrated to 1 part in 10^40. The probability of all constants simultaneously falling within life-permitting ranges by chance is, by physicist Roger Penrose's calculation, 1 in 10^(10^123). Three explanations exist: physical necessity (the constants had to be what they are), chance (they happened to be right), or design. Physical necessity has no evidence. There is no known theory that requires these values. Chance is probabilistically untenable at these odds even granting a multiverse. Design (an intelligent agent who intended life) is the inference to the best explanation.",
-    "counterargument": "The multiverse hypothesis provides infinite probabilistic resources: with sufficiently many universes, any combination of constants will occur somewhere. The anthropic principle explains why we find ourselves in a fine-tuned universe. We could only observe conditions compatible with our existence. Fine-tuning therefore does not require a designer.",
-    "response": "The multiverse is theoretically motivated but empirically unverifiable. It is not a scientific discovery but a metaphysical inference generated to avoid the design conclusion. More critically, even granting the multiverse, it does not dissolve fine-tuning. It relocates it: the universe-generating mechanism itself requires fine-tuned physical laws to produce universes at all. Robin Collins calls this 'the fine-tuning of the multiverse.' The anthropic principle explains why observers find themselves in a life-permitting universe, but not why any life-permitting universe exists. It is a selection effect, not an explanation. The Reformed tradition has always maintained that creation bears the imprint of divine wisdom. What the Psalmist saw qualitatively, physics now measures quantitatively.",
-    "sources": [
-      { "author": "Robin Collins", "title": "The Teleological Argument, Blackwell Companion to Natural Theology", "year": 2009 },
-      { "author": "Roger Penrose", "title": "The Road to Reality", "year": 2004 },
-      { "author": "John Barrow & Frank Tipler", "title": "The Anthropic Cosmological Principle", "year": 1986 },
-      { "author": "Alvin Plantinga", "title": "Where the Conflict Really Lies", "year": 2011 }
-    ]
+      {
+        "author": "William Lane Craig",
+        "title": "The Kalam Cosmological Argument",
+        "year": 1979
+      },
+      {
+        "author": "Borde, Guth & Vilenkin",
+        "title": "Inflationary Spacetimes Are Not Past-Complete",
+        "year": 2003
+      },
+      {
+        "author": "Herman Bavinck",
+        "title": "Reformed Dogmatics Vol. 2: God and Creation",
+        "year": 1908
+      },
+      {
+        "author": "J.D. Sinclair",
+        "title": "The Kalam Cosmological Argument, Blackwell Companion to Natural Theology",
+        "year": 2009
+      }
+    ],
+    "ground": "common",
+    "islam_note": "Common ground. The argument takes its name from 'ilm al-kalam, Islamic scholastic theology, and al-Ghazali gave it its classic form. A Muslim will usually agree with every step. Use it to establish a shared starting point, one personal Creator, before the conversation turns to who that Creator is."
   },
   {
     "id": "moral",
@@ -44,45 +45,29 @@
     "counterargument": "Morality can be grounded in human flourishing, social contracts, or evolutionary adaptation without God. We do not need a divine lawgiver to recognise that cruelty is wrong. Secular ethical frameworks (utilitarianism, Kantian deontology) provide coherent moral guidance. Furthermore, the divine command theory faces the Euthyphro dilemma: is something good because God commands it, or does God command it because it is good?",
     "response": "Evolutionary ethics explains why we behave as if morality were real. It does not explain why any of it is actually binding. A behavioural tendency selected for survival is adaptive, not obligatory. Utilitarianism and Kantianism both presuppose the intrinsic dignity of persons, a claim with deep theological roots that secular frameworks borrow without justifying. The Euthyphro dilemma is dissolved by the Reformed doctrine of divine simplicity: God does not command arbitrarily (divine voluntarism) nor is He subject to an external moral standard above Him. Rather, God's nature just is the moral standard: goodness is not a property He has but what He is. Islamic divine command theory, by contrast, collapses into voluntarism: Allah's commands constitute morality with no constraint from his own nature, producing a system where God could in principle command what our moral intuitions recognise as evil.",
     "sources": [
-      { "author": "C.S. Lewis", "title": "Mere Christianity", "year": 1952 },
-      { "author": "William Lane Craig", "title": "Reasonable Faith", "year": 2008 },
-      { "author": "David Baggett & Jerry Walls", "title": "God and Cosmos: Moral Truth and Human Meaning", "year": 2016 },
-      { "author": "Herman Bavinck", "title": "Reformed Ethics Vol. 1", "year": 2019 }
-    ]
-  },
-  {
-    "id": "reason",
-    "title": "The Argument from Reason",
-    "category": "Epistemological",
-    "summary": "If human minds are purely the product of blind evolutionary processes, rational thought cannot be trusted. Reason itself (including the reasoning used to defend naturalism) is only reliable if minds were designed for truth. This is the Van Tillian insight Lewis made popular.",
-    "artifact_svg_key": "compass",
-    "claim": "If naturalism is true, human cognitive faculties were selected for survival, not truth. This undermines the very reasoning faculties used to argue for naturalism. Rational thought is only trustworthy if minds were designed by a rational Creator for the purpose of knowing truth, which is precisely the Reformed doctrine of the imago Dei.",
-    "logic": "C.S. Lewis's original formulation: if my reasoning is entirely the product of irrational physical causes, I have no reason to trust it. A valid argument requires that conclusions follow from premises by logical necessity, but if my brain states are determined by electrochemical processes shaped by survival pressures, there is no reason why they should track logical relationships rather than merely adaptive ones. Alvin Plantinga formalised this as the Evolutionary Argument Against Naturalism (EAAN): if both naturalism and evolution are true, the probability that our cognitive faculties are reliable is low or inscrutable. But if our faculties are unreliable, we cannot trust the reasoning that led us to affirm naturalism. Naturalism is therefore self-defeating. The Reformed doctrine of the imago Dei provides what naturalism cannot: minds created by the rational, truthful God of Scripture to image his own rationality are designed to know truth.",
-    "counterargument": "Evolution selects for accurate perception of reality because accurate beliefs aid survival. An organism with true beliefs about its environment will out-compete one with false beliefs. Therefore, evolutionary pressure does reliably produce truth-tracking faculties without any need for God. The EAAN conflates belief-forming processes with logical reasoning.",
-    "response": "The adaptive value of perception does not extend to abstract logical and metaphysical reasoning. Evolution can explain why we accurately perceive medium-sized objects at human timescales. It cannot explain why we have reliable faculties for quantum mechanics, modal logic, or the philosophy of mind. These capacities contribute nothing to reproductive fitness. Furthermore, the naturalist's response concedes the point: if reliable cognition requires evolutionary selection for truth, then truth-tracking is only contingently present and could have been otherwise, which still undermines the certainty naturalism claims for its own conclusions. Cornelius Van Til made this the cornerstone of presuppositional apologetics: every rational argument against Christianity borrows capital from the Christian worldview. The Islamic tradition claims to prize reason (aql) but grounds it in a God whose voluntarism (the priority of will over nature) makes even logic contingently dependent on divine decree.",
-    "sources": [
-      { "author": "C.S. Lewis", "title": "Miracles", "year": 1947 },
-      { "author": "Alvin Plantinga", "title": "Warrant and Proper Function", "year": 1993 },
-      { "author": "Victor Reppert", "title": "C.S. Lewis's Dangerous Idea", "year": 2003 },
-      { "author": "Cornelius Van Til", "title": "The Defense of the Faith", "year": 1955 }
-    ]
-  },
-  {
-    "id": "ontological",
-    "title": "The Ontological Argument",
-    "category": "Metaphysical",
-    "summary": "If a maximally great being is even possible, it necessarily exists. Plantinga's modal version demonstrates that theism is not merely plausible but (if the key premise is accepted) logically entailed.",
-    "artifact_svg_key": "eye",
-    "claim": "A maximally great being (one that is omnipotent, omniscient, and morally perfect in every possible world) is a coherent concept. If such a being is possible, modal logic entails that it necessarily exists. The burden therefore falls on the atheist to demonstrate that maximal greatness is incoherent.",
-    "logic": "Plantinga's modal ontological argument uses possible worlds semantics. A maximally great being is defined as one with maximal excellence (omnipotence, omniscience, moral perfection) in every possible world. If it is even possible that such a being exists (if there is any possible world in which it exists), then because it exists necessarily in all possible worlds (that is what maximal greatness entails), it exists in the actual world. The argument's structure: Premise 1: It is possible that a maximally great being exists. Premise 2: If it is possible that a maximally great being exists, then a maximally great being exists in some possible world. Premise 3: If a maximally great being exists in some possible world, it exists in every possible world. Premise 4: If a maximally great being exists in every possible world, it exists in the actual world. Conclusion: A maximally great being exists. The argument is valid. The dispute is over Premise 1.",
-    "counterargument": "The argument appears to define God into existence. Gaunilo's parody applies: using identical logic, one could prove the existence of a maximally great island, pizza, or any arbitrary object. Kant argued existence is not a predicate. We cannot reason from a concept to the existence of the thing conceived. The move from possible to necessary existence seems to violate basic modal logic.",
-    "response": "Plantinga's response to the parody objections is decisive: islands, pizzas, and contingent objects are intrinsically incapable of necessary existence. The concept of a 'necessarily existing island' is incoherent because islands are the kind of thing whose existence depends on contingent conditions. Necessary existence is a coherent concept only for a being whose essence involves existence, which is precisely what classical theism has always maintained (God as ipsum esse subsistens). Kant's objection applies to the Cartesian version of the argument, not to Plantinga's modal formulation, which does not treat existence as a first-order predicate. The argument's real force is epistemological: it demonstrates that theism is not merely rational but that if the possibility premise is true, theism is necessarily true. No Islamic philosopher has provided a coherent account of why a maximally great being is impossible.",
-    "sources": [
-      { "author": "Alvin Plantinga", "title": "The Nature of Necessity", "year": 1974 },
-      { "author": "Alvin Plantinga", "title": "God, Freedom, and Evil", "year": 1974 },
-      { "author": "Anselm of Canterbury", "title": "Proslogion", "year": 1078 },
-      { "author": "Brian Leftow", "title": "God and Necessity", "year": 2012 }
-    ]
+      {
+        "author": "C.S. Lewis",
+        "title": "Mere Christianity",
+        "year": 1952
+      },
+      {
+        "author": "William Lane Craig",
+        "title": "Reasonable Faith",
+        "year": 2008
+      },
+      {
+        "author": "David Baggett & Jerry Walls",
+        "title": "God and Cosmos: Moral Truth and Human Meaning",
+        "year": 2016
+      },
+      {
+        "author": "Herman Bavinck",
+        "title": "Reformed Ethics Vol. 1",
+        "year": 2019
+      }
+    ],
+    "ground": "common",
+    "islam_note": "Mostly common ground: Muslims and Christians agree that moral obligation comes from God. The live question is the one in Faultlines: whether goodness flows from God's unchanging nature or is defined by his will."
   },
   {
     "id": "resurrection",
@@ -95,10 +80,68 @@
     "counterargument": "The resurrection is a miracle claim requiring extraordinary evidence. The Gospels were written decades after the events by theologically motivated authors. Alternative explanations (hallucination, legendary development, mistaken identity) are more parsimonious. The Quran (Surah 4:157) states explicitly that Jesus was not crucified. It was made to appear so. This divine testimony supersedes later Christian elaboration.",
     "response": "Paul's creed in 1 Corinthians 15:3-7 is dated by critical scholars to within 2-5 years of the crucifixion, not decades. It names living eyewitnesses. The criterion of embarrassment supports the women's testimony (women were not credible witnesses in first-century Jewish culture, an invented account would not use them as primary witnesses). The criterion of enemy attestation confirms the empty tomb. The Jewish and Roman authorities did not deny it but attributed it to theft. The hallucination hypothesis cannot account for group appearances or the empty tomb. The Quran's denial (written 600 years after the event with no cited historical sources) faces an insurmountable evidential burden. Furthermore, it creates an internal theological crisis: if God deceived the disciples into believing a crucifixion and resurrection that did not occur, Christianity was founded on a divinely engineered lie. This raises profound questions about the character of the God Islam claims is perfectly truthful.",
     "sources": [
-      { "author": "Gary Habermas & Michael Licona", "title": "The Case for the Resurrection of Jesus", "year": 2004 },
-      { "author": "N.T. Wright", "title": "The Resurrection of the Son of God", "year": 2003 },
-      { "author": "Michael Licona", "title": "The Resurrection of Jesus: A New Historiographical Approach", "year": 2010 },
-      { "author": "Gerd Lüdemann", "title": "The Resurrection of Christ: A Historical Inquiry", "year": 2004 }
+      {
+        "author": "Gary Habermas & Michael Licona",
+        "title": "The Case for the Resurrection of Jesus",
+        "year": 2004
+      },
+      {
+        "author": "N.T. Wright",
+        "title": "The Resurrection of the Son of God",
+        "year": 2003
+      },
+      {
+        "author": "Michael Licona",
+        "title": "The Resurrection of Jesus: A New Historiographical Approach",
+        "year": 2010
+      },
+      {
+        "author": "Gerd Lüdemann",
+        "title": "The Resurrection of Christ: A Historical Inquiry",
+        "year": 2004
+      }
+    ],
+    "ground": "contested",
+    "islam_note": "The central dividing line. The Quran (4:157-158) denies the crucifixion, so with a Muslim this is not a debate about whether miracles happen but about which account of Jesus' end is historical."
+  },
+  {
+    "id": "crucifixion",
+    "title": "The Crucifixion as Historical Fact",
+    "category": "Historical",
+    "artifact_svg_key": "stone",
+    "ground": "contested",
+    "islam_note": "This is where the conversation turns on evidence rather than theology. Islam does not offer a historical case against the crucifixion; it offers a later text that denies it. Ask which kind of evidence should settle a question about an event in Jerusalem around AD 30.",
+    "summary": "That Jesus died by Roman crucifixion is one of the best-attested facts of ancient history, accepted by historians of every persuasion. The Quran's denial (4:157) came about six centuries later and offers no historical evidence of its own.",
+    "claim": "Jesus of Nazareth was crucified under Pontius Pilate and died. This can be established on ordinary historical grounds, before any theological claim is made about what his death means.",
+    "logic": "(1) Several independent Christian sources report it: Paul's letters (from about AD 50), Mark and John. The creed Paul quotes in 1 Corinthians 15:3-5 is dated by most scholars to within a few years of the event.\n\n(2) Non-Christian sources confirm it. The Roman historian Tacitus (Annals 15.44, about AD 116) records that Christus was executed by Pontius Pilate in the reign of Tiberius. Josephus (Antiquities 18.63-64), in the core of a passage later expanded by Christian copyists, records his crucifixion under Pilate. The Babylonian Talmud (Sanhedrin 43a) records that Yeshu was hanged on the eve of Passover.\n\n(3) No one inventing a religion would choose a crucified Messiah: Paul calls it 'a stumbling block to Jews and folly to Gentiles' (1 Corinthians 1:23).\n\n(4) Hence the verdict of critical scholarship. John Dominic Crossan, no traditional believer, wrote that 'that he was crucified is as sure as anything historical can ever be.'",
+    "counterargument": "Surah 4:157 says of Jesus: 'they did not kill him, nor did they crucify him, but it was made to appear so to them.' For a Muslim this is the word of God, who knows what happened better than any historian. Many Muslim commentators add that another man, such as Judas or a volunteer, was made to look like Jesus and was crucified in his place.",
+    "response": "The reply does not engage the history; it overrides it. It asks us to set aside every first- and second-century source, friendly and hostile, in favour of a text given around 600 years later that draws on no historical sources of its own.\n\nThe substitution theory appears in Muslim commentary long after Jesus, and it raises a serious theological problem. If God made another man look like Jesus, then God deliberately led the apostles, Jesus' own mother and every early witness to believe something false, and so caused the very Christian faith the Quran sets out to correct.\n\nThe Quran itself has Jesus say: 'Peace be upon me the day I was born, the day I die, and the day I am raised alive' (19:33). That is the same pattern of birth, death and raising that the Gospels report.",
+    "sources": [
+      {
+        "author": "Tacitus",
+        "title": "Annals 15.44"
+      },
+      {
+        "author": "Josephus",
+        "title": "Antiquities of the Jews 18.63-64"
+      },
+      {
+        "author": "Babylonian Talmud",
+        "title": "Sanhedrin 43a"
+      },
+      {
+        "author": "Paul",
+        "title": "1 Corinthians 15:3-5"
+      },
+      {
+        "author": "John Dominic Crossan",
+        "title": "Jesus: A Revolutionary Biography",
+        "year": 1994
+      },
+      {
+        "author": "Quran",
+        "title": "4:157-158; 19:33"
+      }
     ]
   },
   {
@@ -112,27 +155,64 @@
     "counterargument": "The prophecies are vague, retrofitted, or taken out of their original context. The Gospel authors wrote their accounts with the OT in mind and shaped the narrative to match the prophecies rather than the other way around. Psalm 22 and Isaiah 53 are not predictions of Jesus. They describe the sufferings of Israel or the Psalmist himself. Islam holds that these texts were later corrupted by Christians to manufacture the appearance of messianic prediction.",
     "response": "The Dead Sea Scrolls (discovered in 1947 and predating Christ by 200-300 years) contain the complete book of Isaiah, including chapter 53, and the Psalms. The text is substantially identical to the Masoretic Text used today. There is no evidence of post-Christian interpolation and the pre-Christian dating is certain. The charge of retroactive corruption is without manuscript support. Isaiah 53 presents an individual who bears the iniquity of 'us', a distinction that resists a purely collective interpretation. The Servant is punished for others' sins, a concept absent from both Second Temple Jewish messianism and Islamic prophetology. Crucially, the accusation of corruption (tahrif) requires that manuscripts across widely separated geographical regions (Alexandria, Antioch, Rome, Jerusalem) were simultaneously and consistently altered, leaving no trace in any textual tradition. No serious textual scholar accepts this.",
     "sources": [
-      { "author": "E.J. Young", "title": "The Book of Isaiah Vol. 3", "year": 1972 },
-      { "author": "Peter Stoner", "title": "Science Speaks", "year": 1963 },
-      { "author": "Alfred Edersheim", "title": "The Life and Times of Jesus the Messiah", "year": 1883 },
-      { "author": "Geerhardus Vos", "title": "Biblical Theology: Old and New Testaments", "year": 1948 }
-    ]
+      {
+        "author": "E.J. Young",
+        "title": "The Book of Isaiah Vol. 3",
+        "year": 1972
+      },
+      {
+        "author": "Peter Stoner",
+        "title": "Science Speaks",
+        "year": 1963
+      },
+      {
+        "author": "Alfred Edersheim",
+        "title": "The Life and Times of Jesus the Messiah",
+        "year": 1883
+      },
+      {
+        "author": "Geerhardus Vos",
+        "title": "Biblical Theology: Old and New Testaments",
+        "year": 1948
+      }
+    ],
+    "ground": "contested",
+    "islam_note": "Muslims agree that the prophets foretold what was to come, and many argue the Bible foretells Muhammad (see the Field Guide on Deuteronomy 18). The question is whose life fulfils the messianic texts, above all Isaiah 53."
   },
   {
-    "id": "consciousness",
-    "title": "The Argument from Consciousness",
-    "category": "Mind",
-    "summary": "Subjective conscious experience (qualia, intentionality, the 'hard problem') cannot be explained by physical processes alone. A universe grounded in a personal, rational God is the only framework where consciousness is expected rather than anomalous.",
-    "artifact_svg_key": "cosmos",
-    "claim": "Consciousness (particularly the subjective, first-person character of experience) is not reducible to physical processes and is not predicted by any physicalist ontology. It is, however, exactly what we would expect in a universe created by a personal, rational God who made human beings in his image to know him.",
-    "logic": "David Chalmers identified the 'hard problem' of consciousness: explaining why any physical process gives rise to subjective experience at all. We can explain how the brain processes visual information. We cannot explain why there is something it is like to see red. The conceivability of philosophical zombies (beings physically identical to us but with no inner experience) demonstrates that consciousness is not logically entailed by physical description. J.P. Moreland identifies additional problems: the intentionality of mental states (their 'aboutness'), the unity of consciousness across time, the existence of libertarian free will, and the correlation between mental states and brain states that is contingent rather than necessary. On theism, none of these are surprising: God is the paradigm case of a conscious, rational, free, unified mind, and human beings are made in his image to reflect these properties. On naturalism, consciousness is an embarrassing anomaly.",
-    "counterargument": "The hard problem is a temporary explanatory gap, not a permanent mystery. Neuroscience will eventually account for consciousness in physical terms. Identity theory, functionalism, or eliminative materialism can dissolve rather than solve the problem. Furthermore, the argument from consciousness proves at most that minds exist. It does not establish the Christian God specifically.",
-    "response": "The promissory note response, 'science will explain it eventually', is not a philosophical argument but a prediction about future progress that cannot bear the weight of a worldview. The structural nature of the explanatory gap is precisely the point: no description of neurons firing is of the same logical type as a description of what it feels like. You cannot derive first-person facts from third-person descriptions in principle, not merely in practice. Eliminativism (the view that consciousness does not really exist) is self-refuting: the claim that there are no phenomenal mental states is itself made from a phenomenal mental state. On the Islamic contrast: Islamic theology has a sophisticated tradition of occasionalism (al-Ash'ari, al-Ghazali) in which God is the direct cause of every event, but this produces a cosmos of constant divine intervention with no stable natural order, undermining the regularity on which science depends. The Reformed doctrine of concurrence (God sustaining a creation with genuine secondary causation) better accounts for both the regularity of nature and the reality of conscious agency.",
+    "id": "manuscripts",
+    "title": "The Bible Before Muhammad",
+    "category": "Textual",
+    "artifact_svg_key": "telescope",
+    "ground": "contested",
+    "islam_note": "This answers tahrif with dates rather than assertions. The Quran assumes Christians of Muhammad's day had the Gospel; the manuscripts let anyone check what that Gospel said.",
+    "summary": "Complete Bibles copied centuries before Islam still survive. They let anyone compare the Bible of Muhammad's day with the Bible of today, and they show it is the same book.",
+    "claim": "The Bible in circulation when the Quran appeared (about 610-632) is substantially the text Christians read today. Any corruption serious enough to change the gospel would have to have happened before 610, and the manuscripts show it did not.",
+    "logic": "(1) Complete or nearly complete Greek Bibles survive from before Islam: Codex Vaticanus (about 300-325), Codex Sinaiticus (about 330-360) and Codex Alexandrinus (about 400-440).\n\n(2) Earlier papyri, such as P66 and P75 (late 2nd to early 3rd century), preserve large parts of the Gospels of Luke and John.\n\n(3) Translations spread across the known world before Islam: Latin (Jerome's Vulgate, about 382-405), Syriac (the Peshitta, by the early 5th century) and Coptic. No single authority could have edited them all.\n\n(4) For the Old Testament, the Great Isaiah Scroll from Qumran (about 125 BC) closely matches the later Masoretic text of Isaiah.\n\n(5) Every core teaching Islam disputes, including Jesus' death, resurrection and divine identity, stands in these pre-Islamic manuscripts.",
+    "counterargument": "Textual critics themselves admit that the manuscripts differ in many thousands of places, and some familiar passages, such as the woman caught in adultery (John 7:53-8:11) and the longer ending of Mark (16:9-20), are missing from the earliest copies. Christians cannot claim a perfectly preserved text.",
+    "response": "That is true, and Christians should say so plainly: the Bible's preservation is a matter of copying and comparison, not of a text kept miraculously free of variation. But the variants are known precisely because so many manuscripts survive, and modern Bibles mark the disputed passages. None of them changes a doctrine, and none arose after 610.\n\nThe Quran points both Christians and Muslims to the Gospel of its own day: 'Let the people of the Gospel judge by what God has revealed in it' (5:47). It even tells Muhammad that if he is in doubt, he should ask those who had been reading the Scripture before him (10:94). That Gospel survives, and it is the one Christians read.",
     "sources": [
-      { "author": "David Chalmers", "title": "The Conscious Mind", "year": 1996 },
-      { "author": "J.P. Moreland", "title": "Consciousness and the Existence of God", "year": 2008 },
-      { "author": "Thomas Nagel", "title": "Mind and Cosmos", "year": 2012 },
-      { "author": "Richard Swinburne", "title": "The Evolution of the Soul", "year": 1986 }
+      {
+        "author": "British Library",
+        "title": "Codex Sinaiticus"
+      },
+      {
+        "author": "Vatican Library",
+        "title": "Codex Vaticanus (Vat. gr. 1209)"
+      },
+      {
+        "author": "Bruce Metzger & Bart Ehrman",
+        "title": "The Text of the New Testament, 4th ed.",
+        "year": 2005
+      },
+      {
+        "author": "Dead Sea Scrolls",
+        "title": "Great Isaiah Scroll (1QIsa-a)"
+      },
+      {
+        "author": "Quran",
+        "title": "5:47; 10:94"
+      }
     ]
   }
 ]

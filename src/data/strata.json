@@ -7,14 +7,32 @@
       "dates": "~2000 – 1700 BCE",
       "summary": "God calls Abraham out of Ur (modern Iraq) to the land of Canaan, promising him three things: land, countless descendants, and that through him all nations on earth would be blessed. Abraham's son Isaac, then Isaac's son Jacob, whom God renames Israel, continue the covenant line. Jacob has twelve sons, the future twelve tribes. One son, Joseph, is sold into slavery by his jealous brothers, rises to become second-in-command of all Egypt, and eventually rescues the entire family during a famine. Around seventy people enter Egypt. Four hundred years later, millions will leave.",
       "key_figures": [
-        { "name": "Abraham", "role": "The founding covenant: called from Ur to Canaan" },
-        { "name": "Isaac", "role": "Son of promise; nearly sacrificed, then spared" },
-        { "name": "Jacob (Israel)", "role": "Wrestled with God; renamed Israel; twelve sons" },
-        { "name": "Joseph", "role": "Sold by brothers; rose to rule Egypt; saved his family" }
+        {
+          "name": "Abraham",
+          "role": "The founding covenant: called from Ur to Canaan"
+        },
+        {
+          "name": "Isaac",
+          "role": "Son of promise; nearly sacrificed, then spared"
+        },
+        {
+          "name": "Jacob (Israel)",
+          "role": "Wrestled with God; renamed Israel; twelve sons"
+        },
+        {
+          "name": "Joseph",
+          "role": "Sold by brothers; rose to rule Egypt; saved his family"
+        }
       ],
       "dominant_powers": [
-        { "name": "Egypt", "description": "The family enters Egypt as honored guests of Pharaoh during the famine. No oppression yet: that comes later." },
-        { "name": "Mesopotamian city-states", "description": "Abraham came from Ur, a major Sumerian city with a sophisticated moon-god cult (Nanna). Leaving it meant leaving that entire religious system." }
+        {
+          "name": "Egypt",
+          "description": "The family enters Egypt as honored guests of Pharaoh during the famine. No oppression yet: that comes later."
+        },
+        {
+          "name": "Mesopotamian city-states",
+          "description": "Abraham came from Ur, a major Sumerian city with a sophisticated moon-god cult (Nanna). Leaving it meant leaving that entire religious system."
+        }
       ],
       "religious_flashpoint": {
         "title": "Surrounding polytheism",
@@ -29,14 +47,32 @@
       "dates": "~1700 – 1200 BCE",
       "summary": "The seventy who entered Egypt multiply over four centuries until a pharaoh 'who did not know Joseph' enslaves them. Moses is born, raised in Pharaoh's palace, flees to the Sinai desert, and encounters God in a burning bush. He returns to demand Pharaoh release the people. Ten plagues destroy Egypt's agriculture, economy, and firstborn sons. After the Passover (the night the destroying angel passes over homes marked with lamb's blood) Pharaoh releases the Israelites. They walk through a miraculously divided sea. Forty years of wilderness follow: manna from the sky, water from rocks, the giving of the Torah at Mount Sinai, and the construction of the Tabernacle. Moses dies at the edge of Canaan without entering.",
       "key_figures": [
-        { "name": "Moses", "role": "Lawgiver, liberator, the human face of the Exodus" },
-        { "name": "Aaron", "role": "Moses's brother; first High Priest; made the golden calf" },
-        { "name": "Miriam", "role": "Moses's sister; prophetess; led the women in song after crossing" },
-        { "name": "Pharaoh", "role": "Possibly Ramesses II (~1279–1213 BCE), though debated" },
-        { "name": "Joshua", "role": "Moses's military commander; will succeed him into Canaan" }
+        {
+          "name": "Moses",
+          "role": "Lawgiver, liberator, the human face of the Exodus"
+        },
+        {
+          "name": "Aaron",
+          "role": "Moses's brother; first High Priest; made the golden calf"
+        },
+        {
+          "name": "Miriam",
+          "role": "Moses's sister; prophetess; led the women in song after crossing"
+        },
+        {
+          "name": "Pharaoh",
+          "role": "Possibly Ramesses II (~1279–1213 BCE), though debated"
+        },
+        {
+          "name": "Joshua",
+          "role": "Moses's military commander; will succeed him into Canaan"
+        }
       ],
       "dominant_powers": [
-        { "name": "Egypt", "description": "The most advanced civilization on earth. The ten plagues systematically attack Egyptian gods: Hapi (the Nile), Ra (darkness), Pharaoh himself (seen as a god). Each plague is a theological statement, not merely a natural disaster." }
+        {
+          "name": "Egypt",
+          "description": "The most advanced civilization on earth. The ten plagues systematically attack Egyptian gods: Hapi (the Nile), Ra (darkness), Pharaoh himself (seen as a god). Each plague is a theological statement, not merely a natural disaster."
+        }
       ],
       "religious_flashpoint": {
         "title": "The Golden Calf",
@@ -51,16 +87,40 @@
       "dates": "~1200 – 1020 BCE",
       "summary": "Joshua leads the Israelites across the Jordan into Canaan. The walls of Jericho collapse. The land is divided among the twelve tribes by lot. Each tribe given a territory. But the conquest is incomplete. Israel fails to drive out the Canaanites, begins intermarrying, and starts worshipping Canaanite gods. The Book of Judges is dominated by a relentless cycle: Israel abandons God and worships Baal → God allows a foreign oppressor to dominate them → Israel cries out in suffering → God raises a judge (a military deliverer) → the judge defeats the enemy → peace → the judge dies → repeat. This cycle runs for roughly 180 years. It ends with Samuel, the last judge, who bridges into the monarchy.",
       "key_figures": [
-        { "name": "Joshua", "role": "Military commander; conquered Canaan; divided the land" },
-        { "name": "Deborah", "role": "Only female judge; prophetess; led Israel to victory over Sisera" },
-        { "name": "Gideon", "role": "Defeated 135,000 Midianites with 300 men; later made an idol" },
-        { "name": "Samson", "role": "Nazirite; supernatural strength; died destroying the Philistine temple of Dagon" },
-        { "name": "Samuel", "role": "Last judge; first great prophet; anointed Israel's first two kings" }
+        {
+          "name": "Joshua",
+          "role": "Military commander; conquered Canaan; divided the land"
+        },
+        {
+          "name": "Deborah",
+          "role": "Only female judge; prophetess; led Israel to victory over Sisera"
+        },
+        {
+          "name": "Gideon",
+          "role": "Defeated 135,000 Midianites with 300 men; later made an idol"
+        },
+        {
+          "name": "Samson",
+          "role": "Nazirite; supernatural strength; died destroying the Philistine temple of Dagon"
+        },
+        {
+          "name": "Samuel",
+          "role": "Last judge; first great prophet; anointed Israel's first two kings"
+        }
       ],
       "dominant_powers": [
-        { "name": "Canaanite city-states", "description": "Hazor, Jericho, Jerusalem: each a fortified city with its own king and local gods." },
-        { "name": "Philistines", "description": "Sea people from the Aegean; occupied the coastal strip (Gaza, Ashkelon, Ashdod, Gath, Ekron); advanced in iron-working; the main military threat of this era. God: Dagon." },
-        { "name": "Midianites, Moabites, Ammonites", "description": "Rotating oppressors during the Judges cycle. Each representing a failed attempt by Israel to find security outside of God." }
+        {
+          "name": "Canaanite city-states",
+          "description": "Hazor, Jericho, Jerusalem: each a fortified city with its own king and local gods."
+        },
+        {
+          "name": "Philistines",
+          "description": "Sea people from the Aegean; occupied the coastal strip (Gaza, Ashkelon, Ashdod, Gath, Ekron); advanced in iron-working; the main military threat of this era. God: Dagon."
+        },
+        {
+          "name": "Midianites, Moabites, Ammonites",
+          "description": "Rotating oppressors during the Judges cycle. Each representing a failed attempt by Israel to find security outside of God."
+        }
       ],
       "religious_flashpoint": {
         "title": "Baal & Asherah",
@@ -75,15 +135,36 @@
       "dates": "~1020 – 930 BCE",
       "summary": "The people demand a king 'like the other nations.' God grants the request, warning through Samuel that kings will tax, conscript, and dominate. Saul from the tribe of Benjamin is anointed first (tall, impressive, militarily capable) but he repeatedly disobeys God and is rejected. David, a young shepherd from Bethlehem, is anointed secretly while Saul still reigns. He kills Goliath, serves as musician and warrior, survives years of persecution, and eventually becomes king of all Israel. He captures Jerusalem, makes it the capital, brings the Ark of the Covenant there. Solomon builds the First Temple in Jerusalem (~957 BCE), a structure of breathtaking beauty covered in gold, with the Ark of the Covenant in the innermost room. Solomon's wisdom is legendary. But his 700 wives turn his heart to their gods in old age, and the kingdom begins to fracture before he dies.",
       "key_figures": [
-        { "name": "Saul", "role": "First king; from Benjamin; starts well, disobeys, declines" },
-        { "name": "David", "role": "Israel's greatest king; poet; adulterer; man 'after God's own heart'" },
-        { "name": "Solomon", "role": "Wisest king; built the Temple; 700 wives; died apostate" },
-        { "name": "Nathan", "role": "Prophet who confronted David over Bathsheba and Uriah" }
+        {
+          "name": "Saul",
+          "role": "First king; from Benjamin; starts well, disobeys, declines"
+        },
+        {
+          "name": "David",
+          "role": "Israel's greatest king; poet; adulterer; man 'after God's own heart'"
+        },
+        {
+          "name": "Solomon",
+          "role": "Wisest king; built the Temple; 700 wives; died apostate"
+        },
+        {
+          "name": "Nathan",
+          "role": "Prophet who confronted David over Bathsheba and Uriah"
+        }
       ],
       "dominant_powers": [
-        { "name": "Philistines (defeated)", "description": "David definitively defeats them, including Goliath. This is Israel's high point of military dominance." },
-        { "name": "Phoenicia (Tyre)", "description": "Trade and building partner. Lebanon's cedar for the Temple. Solomon's navy partnered with Hiram's fleet." },
-        { "name": "Egypt", "description": "Solomon marries Pharaoh's daughter, a remarkable diplomatic coup suggesting Israel's international prestige at its peak." }
+        {
+          "name": "Philistines (defeated)",
+          "description": "David definitively defeats them, including Goliath. This is Israel's high point of military dominance."
+        },
+        {
+          "name": "Phoenicia (Tyre)",
+          "description": "Trade and building partner. Lebanon's cedar for the Temple. Solomon's navy partnered with Hiram's fleet."
+        },
+        {
+          "name": "Egypt",
+          "description": "Solomon marries Pharaoh's daughter, a remarkable diplomatic coup suggesting Israel's international prestige at its peak."
+        }
       ],
       "religious_flashpoint": {
         "title": "Solomon's apostasy",
@@ -98,16 +179,40 @@
       "dates": "~930 – 722 BCE",
       "summary": "When Solomon dies, his son Rehoboam refuses to lighten the tax burden. Ten northern tribes revolt under Jeroboam and form the separate nation of Israel (capital: Samaria). The two southern tribes of Judah and Benjamin remain as Judah (capital: Jerusalem). The split is permanent. Israel (North) lasts 209 years with 19 kings, not one of them considered righteous in the biblical record. The most catastrophic period is the reign of Ahab, who marries the Phoenician princess Jezebel and aggressively imports Baal worship as the national religion. The prophet Elijah confronts 450 prophets of Baal on Mount Carmel in one of Scripture's most dramatic scenes.",
       "key_figures": [
-        { "name": "Rehoboam", "role": "Solomon's son; his arrogance causes the split" },
-        { "name": "Jeroboam I", "role": "First king of the North; immediately sets up golden calves at Dan and Bethel" },
-        { "name": "Ahab & Jezebel", "role": "Most wicked royal couple; Baal worship as state religion" },
-        { "name": "Elijah", "role": "Prophet; confronted Ahab; Mount Carmel showdown; taken to heaven in a whirlwind" },
-        { "name": "Elisha", "role": "Elijah's successor; miracles; healed Naaman the Syrian general" }
+        {
+          "name": "Rehoboam",
+          "role": "Solomon's son; his arrogance causes the split"
+        },
+        {
+          "name": "Jeroboam I",
+          "role": "First king of the North; immediately sets up golden calves at Dan and Bethel"
+        },
+        {
+          "name": "Ahab & Jezebel",
+          "role": "Most wicked royal couple; Baal worship as state religion"
+        },
+        {
+          "name": "Elijah",
+          "role": "Prophet; confronted Ahab; Mount Carmel showdown; taken to heaven in a whirlwind"
+        },
+        {
+          "name": "Elisha",
+          "role": "Elijah's successor; miracles; healed Naaman the Syrian general"
+        }
       ],
       "dominant_powers": [
-        { "name": "Assyria (rising)", "description": "The empire to the northeast begins demanding tribute. The northern kings pay to buy time. The clock is running." },
-        { "name": "Aram / Syria (Damascus)", "description": "Israel's immediate northeastern neighbor and frequent military enemy. Multiple wars involving Elisha and the royal courts." },
-        { "name": "Phoenicia (Tyre)", "description": "Jezebel came from here. Cultural and religious influence through trade, and a catastrophic one at the royal level." }
+        {
+          "name": "Assyria (rising)",
+          "description": "The empire to the northeast begins demanding tribute. The northern kings pay to buy time. The clock is running."
+        },
+        {
+          "name": "Aram / Syria (Damascus)",
+          "description": "Israel's immediate northeastern neighbor and frequent military enemy. Multiple wars involving Elisha and the royal courts."
+        },
+        {
+          "name": "Phoenicia (Tyre)",
+          "description": "Jezebel came from here. Cultural and religious influence through trade, and a catastrophic one at the royal level."
+        }
       ],
       "religious_flashpoint": {
         "title": "Jeroboam's golden calves and Baal as state policy",
@@ -122,16 +227,40 @@
       "dates": "~722 – 605 BCE",
       "summary": "The Assyrian Empire is the most feared military machine of the ancient world: iron weapons, mobile siege equipment, and psychological terror (impaled captives displayed at city walls as a message). After years of demanding tribute, Assyria lays siege to Samaria for three years. It falls in 722 BCE. The Assyrian deportation policy: remove the educated and skilled Israelites and scatter them across the empire (they become the 'Lost Ten Tribes.' Mixed settlers replace them, becoming the Samaritans) which explains exactly why Jews despise Samaritans 700 years later in Jesus's time. Meanwhile Judah in the south pays tribute and survives, for now. Jerusalem is besieged by Sennacherib in 701 BCE but miraculously not captured.",
       "key_figures": [
-        { "name": "Sargon II", "role": "Assyrian king who completed the conquest of Samaria (722 BCE)" },
-        { "name": "Sennacherib", "role": "Besieged Jerusalem in 701 BCE; mysteriously withdrew: 185,000 Assyrian soldiers died overnight" },
-        { "name": "Hezekiah", "role": "One of Judah's best kings; removed high places; trusted God during the siege" },
-        { "name": "Manasseh", "role": "Hezekiah's son; worst king of Judah; placed an Asherah pole in the Temple; 55-year reign" },
-        { "name": "Isaiah", "role": "Prophet in Jerusalem throughout this era; wrote the most Messianic prophecies" },
-        { "name": "Josiah", "role": "Discovered the lost Torah; most sweeping religious reform in Israel's history; died at Megiddo 609 BCE" }
+        {
+          "name": "Sargon II",
+          "role": "Assyrian king who completed the conquest of Samaria (722 BCE)"
+        },
+        {
+          "name": "Sennacherib",
+          "role": "Besieged Jerusalem in 701 BCE; mysteriously withdrew: 185,000 Assyrian soldiers died overnight"
+        },
+        {
+          "name": "Hezekiah",
+          "role": "One of Judah's best kings; removed high places; trusted God during the siege"
+        },
+        {
+          "name": "Manasseh",
+          "role": "Hezekiah's son; worst king of Judah; placed an Asherah pole in the Temple; 55-year reign"
+        },
+        {
+          "name": "Isaiah",
+          "role": "Prophet in Jerusalem throughout this era; wrote the most Messianic prophecies"
+        },
+        {
+          "name": "Josiah",
+          "role": "Discovered the lost Torah; most sweeping religious reform in Israel's history; died at Megiddo 609 BCE"
+        }
       ],
       "dominant_powers": [
-        { "name": "Assyria", "description": "Capital: Nineveh (modern Mosul, Iraq). Symbol: the winged bull (lamassu). Method: brutal deportation, psychological terror, empire-wide infrastructure. Destroyed by the combined forces of Babylon and the Medes in 612 BCE." },
-        { "name": "Egypt (weakening)", "description": "Trying to counterbalance Assyria. Isaiah repeatedly warns against trusting Egypt instead of God. One of his most consistent prophetic themes." }
+        {
+          "name": "Assyria",
+          "description": "Capital: Nineveh (modern Mosul, Iraq). Symbol: the winged bull (lamassu). Method: brutal deportation, psychological terror, empire-wide infrastructure. Destroyed by the combined forces of Babylon and the Medes in 612 BCE."
+        },
+        {
+          "name": "Egypt (weakening)",
+          "description": "Trying to counterbalance Assyria. Isaiah repeatedly warns against trusting Egypt instead of God. One of his most consistent prophetic themes."
+        }
       ],
       "religious_flashpoint": {
         "title": "Manasseh's comprehensive apostasy",
@@ -146,14 +275,32 @@
       "dates": "~605 – 539 BCE",
       "summary": "Babylon under Nebuchadnezzar II defeats Egypt at the Battle of Carchemish (605 BCE) and immediately turns its attention to Judah. The conquest happens in three waves. First wave (605 BCE): Daniel and other noble young men taken to Babylon to be educated in Babylonian culture. Second wave (597 BCE): King Jehoiachin, the prophet Ezekiel, and most of Jerusalem's skilled population deported. Third wave (586 BCE): Jerusalem finally falls. The Temple is burned. The walls demolished. Everything looted. Most of the remaining population is marched to Babylon. Yet something remarkable happens: Jewish identity crystallizes in exile. The synagogue is invented. The Torah is compiled and organized. Babylon itself falls in 539 BCE when Cyrus the Great of Persia walks in: reportedly without a battle.",
       "key_figures": [
-        { "name": "Nebuchadnezzar II", "role": "Most powerful Babylonian king; destroyed Jerusalem; later went mad for seven years (Daniel 4)" },
-        { "name": "Belshazzar", "role": "Last Babylonian king; saw the writing on the wall at his feast. That same night Persia conquered the city" },
-        { "name": "Daniel", "role": "Taken in first wave; rose to prominence; refused to stop praying; survived the lions' den; interpreted dreams" },
-        { "name": "Ezekiel", "role": "Priest-prophet in exile; elaborate visions; the valley of dry bones" },
-        { "name": "Jeremiah", "role": "Stayed in Jerusalem; wept over its fall; thrown into a pit for his prophecies; wrote Lamentations" }
+        {
+          "name": "Nebuchadnezzar II",
+          "role": "Most powerful Babylonian king; destroyed Jerusalem; later went mad for seven years (Daniel 4)"
+        },
+        {
+          "name": "Belshazzar",
+          "role": "Last Babylonian king; saw the writing on the wall at his feast. That same night Persia conquered the city"
+        },
+        {
+          "name": "Daniel",
+          "role": "Taken in first wave; rose to prominence; refused to stop praying; survived the lions' den; interpreted dreams"
+        },
+        {
+          "name": "Ezekiel",
+          "role": "Priest-prophet in exile; elaborate visions; the valley of dry bones"
+        },
+        {
+          "name": "Jeremiah",
+          "role": "Stayed in Jerusalem; wept over its fall; thrown into a pit for his prophecies; wrote Lamentations"
+        }
       ],
       "dominant_powers": [
-        { "name": "Babylon (Neo-Babylonian Empire)", "description": "Capital: Babylon on the Euphrates (modern Iraq). The Hanging Gardens (one of the Seven Wonders of the Ancient World) were here. Under Nebuchadnezzar it was the largest city on earth. Lasted only 88 years as a dominant empire before Persia ended it. Chief god: Marduk." }
+        {
+          "name": "Babylon (Neo-Babylonian Empire)",
+          "description": "Capital: Babylon on the Euphrates (modern Iraq). The Hanging Gardens (one of the Seven Wonders of the Ancient World) were here. Under Nebuchadnezzar it was the largest city on earth. Lasted only 88 years as a dominant empire before Persia ended it. Chief god: Marduk."
+        }
       ],
       "religious_flashpoint": {
         "title": "Assimilation vs. identity",
@@ -168,14 +315,32 @@
       "dates": "~539 – 330 BCE",
       "summary": "In 538 BCE, Cyrus the Great issues the Edict of Cyrus. The exiles may return to their homelands and rebuild their temples. This was Persian policy, not generosity: Cyrus understood that subject peoples who could practice their religion were easier to govern. The Isaiah scroll had actually called Cyrus by name over 150 years before his birth (Isaiah 44:28–45:1), calling him God's 'anointed.' About 50,000 Jews return in the first wave under Zerubbabel. Many choose to stay in Babylon. Under Zerubbabel they rebuild the Temple (completed 516 BCE: the Second Temple). Nehemiah rebuilds Jerusalem's walls in 52 days. Ezra, a priest and scholar, leads a sweeping covenant renewal. The book of Esther is set during this period.",
       "key_figures": [
-        { "name": "Cyrus the Great", "role": "Persian king; issued the edict of return; called 'God's anointed' in Isaiah" },
-        { "name": "Zerubbabel", "role": "Governor; led first return; oversaw rebuilding of the Temple" },
-        { "name": "Ezra", "role": "Priest and Torah scholar; led covenant renewal; insisted on separation from foreign wives" },
-        { "name": "Nehemiah", "role": "Persian court official; rebuilt Jerusalem's walls in 52 days against fierce opposition" },
-        { "name": "Esther", "role": "Jewish queen of Persia; prevented the genocide of all Jews in the empire" }
+        {
+          "name": "Cyrus the Great",
+          "role": "Persian king; issued the edict of return; called 'God's anointed' in Isaiah"
+        },
+        {
+          "name": "Zerubbabel",
+          "role": "Governor; led first return; oversaw rebuilding of the Temple"
+        },
+        {
+          "name": "Ezra",
+          "role": "Priest and Torah scholar; led covenant renewal; insisted on separation from foreign wives"
+        },
+        {
+          "name": "Nehemiah",
+          "role": "Persian court official; rebuilt Jerusalem's walls in 52 days against fierce opposition"
+        },
+        {
+          "name": "Esther",
+          "role": "Jewish queen of Persia; prevented the genocide of all Jews in the empire"
+        }
       ],
       "dominant_powers": [
-        { "name": "Persia (Achaemenid Empire)", "description": "The most benevolent empire Israel ever lived under. Policy of religious and cultural tolerance. Stretched from Greece to India. Major kings: Cyrus, Darius I, Xerxes, Artaxerxes. Ended by Alexander the Great in 330 BCE. Chief religion: Zoroastrianism." }
+        {
+          "name": "Persia (Achaemenid Empire)",
+          "description": "The most benevolent empire Israel ever lived under. Policy of religious and cultural tolerance. Stretched from Greece to India. Major kings: Cyrus, Darius I, Xerxes, Artaxerxes. Ended by Alexander the Great in 330 BCE. Chief religion: Zoroastrianism."
+        }
       ],
       "religious_flashpoint": {
         "title": "Intermarriage and apathy",
@@ -190,14 +355,32 @@
       "dates": "~330 – 63 BCE",
       "summary": "Alexander the Great of Macedonia defeats Persia in 334–331 BCE and conquers everything from Greece to India in eleven years, dying at 32. His empire fractures into successor kingdoms. Judaea initially falls under the Ptolemies of Egypt (favorable) and then, in 198 BCE, to the Seleucids of Syria. The Seleucid king Antiochus IV Epiphanes decides Hellenization is not optional. In 167 BCE he bans circumcision, Sabbath observance, and Torah reading under penalty of death, and sacrifices a pig on the altar of Zeus in the Jerusalem Temple. The response is the Maccabean revolt. An elderly priest named Mattathias and his five sons launch a guerrilla war. Against all military logic, they win. Jerusalem is retaken in 164 BCE.",
       "key_figures": [
-        { "name": "Alexander the Great", "role": "Conquered the known world in 11 years; spread Greek language (koine). The language of the New Testament" },
-        { "name": "Antiochus IV Epiphanes", "role": "The villain of Hanukkah; desecrated the Temple; referenced by Daniel and later by Jesus as the 'abomination of desolation'" },
-        { "name": "Mattathias", "role": "Elderly priest who sparked the revolt by killing a Jew about to sacrifice to a Greek god" },
-        { "name": "Judas Maccabeus", "role": "'The Hammer'; military genius; led the revolt to victory; died in battle 161 BCE" }
+        {
+          "name": "Alexander the Great",
+          "role": "Conquered the known world in 11 years; spread Greek language (koine). The language of the New Testament"
+        },
+        {
+          "name": "Antiochus IV Epiphanes",
+          "role": "The villain of Hanukkah; desecrated the Temple; referenced by Daniel and later by Jesus as the 'abomination of desolation'"
+        },
+        {
+          "name": "Mattathias",
+          "role": "Elderly priest who sparked the revolt by killing a Jew about to sacrifice to a Greek god"
+        },
+        {
+          "name": "Judas Maccabeus",
+          "role": "'The Hammer'; military genius; led the revolt to victory; died in battle 161 BCE"
+        }
       ],
       "dominant_powers": [
-        { "name": "Greece / Hellenism", "description": "Not just a military empire but a cultural one. Greek language, philosophy, gymnasiums, theater, and religious syncretism penetrated everywhere. Many Jews voluntarily adopted Greek culture. The 'Hellenized Jews.' Others (forerunners of the Pharisees and Essenes) resisted as apostasy." },
-        { "name": "Rome (rising)", "description": "The Maccabees signed a friendship treaty with Rome in 161 BCE: hoping Rome would counterbalance the Seleucids. Rome will eventually consume them all." }
+        {
+          "name": "Greece / Hellenism",
+          "description": "Not just a military empire but a cultural one. Greek language, philosophy, gymnasiums, theater, and religious syncretism penetrated everywhere. Many Jews voluntarily adopted Greek culture. The 'Hellenized Jews.' Others (forerunners of the Pharisees and Essenes) resisted as apostasy."
+        },
+        {
+          "name": "Rome (rising)",
+          "description": "The Maccabees signed a friendship treaty with Rome in 161 BCE: hoping Rome would counterbalance the Seleucids. Rome will eventually consume them all."
+        }
       ],
       "religious_flashpoint": {
         "title": "The abomination of desolation",
@@ -212,21 +395,94 @@
       "dates": "~63 BCE – 70 CE",
       "summary": "The Hasmonean dynasty tears itself apart in civil war. Two brothers, Hyrcanus and Aristobulus, both appeal to Rome for support. Roman general Pompey arrives in 63 BCE, walks into the Holy of Holies, looks around (takes nothing), and makes Judaea a Roman client state. Rome eventually appoints Herod the Great (an Idumean whose family had been forcibly converted to Judaism) as 'King of the Jews' in 37 BCE. Herod rules for 33 years with extraordinary brutality and extraordinary building. He massively expands the Jerusalem Temple into one of the most magnificent structures in the Roman world. The one Jesus teaches in. After Herod's death (4 BCE), direct Roman prefects govern Judaea, including Pontius Pilate (26–36 CE). Jesus is born ~4 BCE, crucified ~30 CE. The Jewish revolts of 66–73 CE end with Titus destroying the Temple in 70 CE.",
       "key_figures": [
-        { "name": "Pompey", "role": "Roman general; entered Jerusalem 63 BCE; walked into the Holy of Holies" },
-        { "name": "Herod the Great", "role": "Client king; brilliant builder; massacred the Bethlehem infants; paranoid; rebuilt the Temple" },
-        { "name": "Augustus Caesar", "role": "Roman Emperor during Jesus's birth; his census triggered the Bethlehem journey" },
-        { "name": "Tiberius Caesar", "role": "Emperor during Jesus's ministry and crucifixion" },
-        { "name": "Pontius Pilate", "role": "Prefect of Judaea (26–36 CE); authorized Jesus's crucifixion" },
-        { "name": "Jesus of Nazareth", "role": "Born ~4 BCE; ministry begins ~27 CE; crucified ~30 CE; the axis around which this entire 2,000-year timeline turns" }
+        {
+          "name": "Pompey",
+          "role": "Roman general; entered Jerusalem 63 BCE; walked into the Holy of Holies"
+        },
+        {
+          "name": "Herod the Great",
+          "role": "Client king; brilliant builder; massacred the Bethlehem infants; paranoid; rebuilt the Temple"
+        },
+        {
+          "name": "Augustus Caesar",
+          "role": "Roman Emperor during Jesus's birth; his census triggered the Bethlehem journey"
+        },
+        {
+          "name": "Tiberius Caesar",
+          "role": "Emperor during Jesus's ministry and crucifixion"
+        },
+        {
+          "name": "Pontius Pilate",
+          "role": "Prefect of Judaea (26–36 CE); authorized Jesus's crucifixion"
+        },
+        {
+          "name": "Jesus of Nazareth",
+          "role": "Born ~4 BCE; ministry begins ~27 CE; crucified ~30 CE; the axis around which this entire 2,000-year timeline turns"
+        }
       ],
       "dominant_powers": [
-        { "name": "Rome (absolute)", "description": "The entire Mediterranean world is Roman. Pax Romana means no major external wars. But occupation means taxation, troops, and the humiliation of a foreign power ruling God's promised land. Crucifixion is used as public deterrence. Roads, law, and infrastructure span the empire." }
+        {
+          "name": "Rome (absolute)",
+          "description": "The entire Mediterranean world is Roman. Pax Romana means no major external wars. But occupation means taxation, troops, and the humiliation of a foreign power ruling God's promised land. Crucifixion is used as public deterrence. Roads, law, and infrastructure span the empire."
+        }
       ],
       "religious_flashpoint": {
         "title": "The five factions",
         "description": "Pharisees (oral law, synagogue), Sadducees (Temple, Roman cooperation), Essenes (desert withdrawal), Zealots (armed revolt), and the emerging Jesus movement. All simultaneously competing for the answer to one question: how do God's people survive under empire while remaining faithful? By Jesus's time the Temple had also become a commercial operation (money-changers, animal sellers) in the Court of the Gentiles. Jesus's overturning of those tables was a direct theological act."
       },
       "defining_moment": "70 CE. Roman general Titus besieges Jerusalem. After five months of famine and disease, the Temple is set on fire. The soldiers pry apart every stone to recover the melted gold, just as Jesus predicted: 'Not one stone will be left on another' (Mark 13:2). The Menorah and Temple vessels are carried in triumph to Rome: depicted on the Arch of Titus, still standing in the Roman Forum today. The Sadducees vanish. The Zealots are destroyed. Only the Pharisees survive. They become the rabbis who create the Talmud and modern Judaism."
+    },
+    {
+      "id": "late-antiquity",
+      "number": 11,
+      "name": "Late Antiquity & the Rise of Islam",
+      "dates": "70 – 632 CE",
+      "summary": "After Rome destroyed the Temple in 70, the church spread through the empire and far beyond it. By the 4th century Christianity was the faith of the Roman, later Byzantine, Empire, and its councils at Nicaea (325) and Chalcedon (451) defined who Jesus is. Those definitions also divided the eastern churches: many Syriac, Coptic and Armenian Christians rejected Chalcedon and were often at odds with Constantinople. To the east, the Sasanian Persian Empire was officially Zoroastrian but home to the Church of the East, which carried the gospel as far as Central Asia and China. Between the two empires lay Arabia, where Christians lived in Najran, along the trade routes and among Arab tribes such as the Ghassanids, alongside Jewish communities and the old Arabian gods. This is the world the Quran addressed. It speaks to 'People of the Book' who already knew the stories of Abraham, Moses, Mary and Jesus, often in the forms told in Syriac Christianity.",
+      "key_figures": [
+        {
+          "name": "Constantine",
+          "role": "First Christian emperor; called the Council of Nicaea (325)"
+        },
+        {
+          "name": "Ephrem the Syrian",
+          "role": "Poet-theologian of Syriac Christianity (died 373)"
+        },
+        {
+          "name": "Justinian I",
+          "role": "Byzantine emperor (527-565); built Hagia Sophia"
+        },
+        {
+          "name": "Khosrow II",
+          "role": "Sasanian shah whose armies took Jerusalem in 614"
+        },
+        {
+          "name": "Heraclius",
+          "role": "Byzantine emperor (610-641); defeated Persia by 628"
+        },
+        {
+          "name": "Muhammad",
+          "role": "Prophet of Islam (about 570-632)"
+        }
+      ],
+      "dominant_powers": [
+        {
+          "name": "Byzantine Empire",
+          "description": "The Christian continuation of Rome, ruled from Constantinople and in constant war with Persia."
+        },
+        {
+          "name": "Sasanian Persia",
+          "description": "Rome's great eastern rival, Zoroastrian by state religion, by turns tolerating and persecuting its Christians."
+        },
+        {
+          "name": "Aksum and Himyar",
+          "description": "Christian Ethiopia and the kingdom of Yemen across the Red Sea, whose conflicts drew in the great powers."
+        }
+      ],
+      "religious_flashpoint": {
+        "title": "The martyrs of Najran (about 523)",
+        "description": "Dhu Nuwas, the king of Himyar in Yemen, a convert to Judaism, massacred the Christians of Najran who refused to give up their faith. Christian Aksum invaded Yemen in response. Many Muslim commentators link the 'people of the ditch' in Surah 85:4-8 to this event, a sign that the Quran's first hearers knew the Christian story of their region."
+      },
+      "defining_moment": "The Byzantine-Persian war of 602-628 exhausted both superpowers. Persia took Jerusalem in 614; Heraclius won it back by 628, and Surah 30:2-4 refers to this war. Within a few years of his victory, Arab armies united under Islam took Syria and Jerusalem (by 638) and Egypt (by 642) from Byzantium, and the Sasanian Empire fell altogether by 651."
     }
   ],
   "empires": [
@@ -285,6 +541,22 @@
       "impact": "Absolute power over the Mediterranean. Brilliant infrastructure: roads, law, Pax Romana. Brutal enforcement: crucifixion as public deterrence. Destroyed the Second Temple in 70 CE, ending the sacrificial system permanently.",
       "gods": "Emperor worship (Augustus declared divine after death), Jupiter, Mars, and the full Roman pantheon. Jews were exempt from emperor worship, a source of constant tension.",
       "era_peak": "Era 10"
+    },
+    {
+      "id": "byzantium",
+      "name": "Byzantium",
+      "dates": "330 – 1453 CE",
+      "impact": "The Christian continuation of Rome, ruled from Constantinople. Its councils defined Christian doctrine, and its loss of Syria, Jerusalem and Egypt to the Arab conquests (634-642) shaped the first Christian encounter with Islam.",
+      "gods": "Christianity, as defined by the councils of Nicaea (325) and Chalcedon (451).",
+      "era_peak": "Era 11"
+    },
+    {
+      "id": "sasanian-persia",
+      "name": "Sasanian Persia",
+      "dates": "224 – 651 CE",
+      "impact": "Rome's great rival in the east. It alternately tolerated and persecuted the Church of the East, took Jerusalem in 614, and collapsed under the Arab conquests by 651.",
+      "gods": "Zoroastrianism (Ahura Mazda), the state religion.",
+      "era_peak": "Era 11"
     }
   ],
   "gods": [
@@ -347,23 +619,62 @@
   ],
   "tribes": {
     "north": [
-      { "name": "Ephraim", "note": "Most powerful northern tribe; 'Ephraim' used as shorthand for the entire north; Jeroboam was from here" },
-      { "name": "Manasseh", "note": "Joseph's other son; had eastern and western portions on both sides of the Jordan" },
-      { "name": "Issachar", "note": "Fertile Jezreel Valley; Megiddo (Armageddon) is in their territory" },
-      { "name": "Zebulun", "note": "Galilee, where Jesus grew up and ministered" },
-      { "name": "Naphtali", "note": "Northern Galilee; Sea of Galilee region; 'Galilee of the Gentiles'" },
-      { "name": "Asher", "note": "Coastal plain north of Mount Carmel" },
-      { "name": "Dan", "note": "Originally coastal near Philistia, later migrated to the far north; one of Jeroboam's golden calves placed here" },
-      { "name": "Gad", "note": "East of the Jordan River" },
-      { "name": "Reuben", "note": "East of Jordan, south of Gad; Jacob's firstborn but lost that status" },
-      { "name": "Simeon", "note": "Originally in the far south; gradually absorbed into Judah over the centuries" }
+      {
+        "name": "Ephraim",
+        "note": "Most powerful northern tribe; 'Ephraim' used as shorthand for the entire north; Jeroboam was from here"
+      },
+      {
+        "name": "Manasseh",
+        "note": "Joseph's other son; had eastern and western portions on both sides of the Jordan"
+      },
+      {
+        "name": "Issachar",
+        "note": "Fertile Jezreel Valley; Megiddo (Armageddon) is in their territory"
+      },
+      {
+        "name": "Zebulun",
+        "note": "Galilee, where Jesus grew up and ministered"
+      },
+      {
+        "name": "Naphtali",
+        "note": "Northern Galilee; Sea of Galilee region; 'Galilee of the Gentiles'"
+      },
+      {
+        "name": "Asher",
+        "note": "Coastal plain north of Mount Carmel"
+      },
+      {
+        "name": "Dan",
+        "note": "Originally coastal near Philistia, later migrated to the far north; one of Jeroboam's golden calves placed here"
+      },
+      {
+        "name": "Gad",
+        "note": "East of the Jordan River"
+      },
+      {
+        "name": "Reuben",
+        "note": "East of Jordan, south of Gad; Jacob's firstborn but lost that status"
+      },
+      {
+        "name": "Simeon",
+        "note": "Originally in the far south; gradually absorbed into Judah over the centuries"
+      }
     ],
     "south": [
-      { "name": "Judah", "note": "Largest tribe; David's tribe; Jesus's tribe; gave its name to 'Judaism' and 'Jews'; the royal line (and the messianic promise) runs through here" },
-      { "name": "Benjamin", "note": "Smallest tribe; Saul was a Benjaminite; Jerusalem sits on its border with Judah; Paul of Tarsus was 'of the tribe of Benjamin'" }
+      {
+        "name": "Judah",
+        "note": "Largest tribe; David's tribe; Jesus's tribe; gave its name to 'Judaism' and 'Jews'; the royal line (and the messianic promise) runs through here"
+      },
+      {
+        "name": "Benjamin",
+        "note": "Smallest tribe; Saul was a Benjaminite; Jerusalem sits on its border with Judah; Paul of Tarsus was 'of the tribe of Benjamin'"
+      }
     ],
     "priestly": [
-      { "name": "Levi", "note": "No territorial inheritance; lived in 48 cities scattered among all tribes; Moses, Aaron, and Miriam were Levites; responsible for the Tabernacle, then the Temple" }
+      {
+        "name": "Levi",
+        "note": "No territorial inheritance; lived in 48 cities scattered among all tribes; Moses, Aaron, and Miriam were Levites; responsible for the Tabernacle, then the Temple"
+      }
     ]
   },
   "judaea": {
@@ -374,7 +685,11 @@
         "name": "Rome",
         "subtitle": "The Empire",
         "description": "The Roman Emperor, Tiberius during Jesus's ministry, held ultimate authority over the entire Mediterranean world. The Senate provided legal legitimacy. In Judaea specifically, Rome governed through a Prefect. Pontius Pilate served from 26–36 CE. Rome kept ultimate control over life-and-death sentences, which is exactly why the Jewish leaders had to bring Jesus to Pilate for execution. They could not legally carry it out themselves.",
-        "figures": ["Emperor Tiberius (14–37 CE)", "The Roman Senate", "Pontius Pilate, Prefect of Judaea (26–36 CE)"]
+        "figures": [
+          "Emperor Tiberius (14–37 CE)",
+          "The Roman Senate",
+          "Pontius Pilate, Prefect of Judaea (26–36 CE)"
+        ]
       },
       {
         "id": "herodian",
@@ -382,7 +697,11 @@
         "name": "Herodian Client Kings",
         "subtitle": "Rome's local rulers",
         "description": "After Herod the Great died (4 BCE), his kingdom was divided among his sons. Herod Antipas ruled Galilee and Perea. He is the Herod who beheaded John the Baptist and briefly examined Jesus before his crucifixion. Archelaus ruled Judaea and Samaria so badly he was removed and replaced by a Roman prefect. These were client kings: they held power only with Roman approval, which made them politically insecure and often brutal.",
-        "figures": ["Herod Antipas (Galilee & Perea)", "Archelaus (Judaea & Samaria, deposed 6 CE)", "Philip (NE territories)"]
+        "figures": [
+          "Herod Antipas (Galilee & Perea)",
+          "Archelaus (Judaea & Samaria, deposed 6 CE)",
+          "Philip (NE territories)"
+        ]
       },
       {
         "id": "temple",
@@ -390,7 +709,11 @@
         "name": "Temple Establishment",
         "subtitle": "The religious elite",
         "description": "The High Priest was the most powerful Jewish official, but Rome appointed him. Crucially, Rome also kept the High Priest's sacred ceremonial robes locked in the Antonia Fortress adjacent to the Temple, releasing them only for major festivals. No robes meant no ability to perform the holiest rituals. The Sanhedrin was the Jewish supreme court of 71 members. The Sadducees were the priestly aristocracy who controlled the Temple. They cooperated with Rome because they had the most to lose from instability.",
-        "figures": ["The High Priest (Rome-appointed)", "The Sanhedrin (71-member supreme court)", "The Sadducees (Temple aristocracy)"]
+        "figures": [
+          "The High Priest (Rome-appointed)",
+          "The Sanhedrin (71-member supreme court)",
+          "The Sadducees (Temple aristocracy)"
+        ]
       },
       {
         "id": "factions",
@@ -398,7 +721,12 @@
         "name": "Factions & Movements",
         "subtitle": "Competing visions of faithfulness",
         "description": "The Pharisees had no army, no Temple, no government title, but they ran the synagogues and taught the law to ordinary people every week. That gave them more real influence over everyday Jewish life than anyone above them in the formal power structure. The Essenes withdrew entirely to the desert (Qumran, where the Dead Sea Scrolls were found). The Zealots believed armed revolt was the only faithful response to Roman occupation. The Scribes were Torah scholars who interpreted the law: many were aligned with the Pharisees.",
-        "figures": ["Pharisees (oral law; synagogue network)", "Essenes (desert withdrawal; Dead Sea Scrolls)", "Zealots (armed revolt against Rome)", "Scribes (Torah scholars and interpreters)"]
+        "figures": [
+          "Pharisees (oral law; synagogue network)",
+          "Essenes (desert withdrawal; Dead Sea Scrolls)",
+          "Zealots (armed revolt against Rome)",
+          "Scribes (Torah scholars and interpreters)"
+        ]
       },
       {
         "id": "people",
@@ -406,7 +734,12 @@
         "name": "The People",
         "subtitle": "Am Ha'aretz: the common folk",
         "description": "Peasants, fishermen, craftsmen, tax collectors, shepherds, servants, and slaves. These are the people Jesus spent most of his time with. Tax collectors were despised because they collected for Rome and could overcharge at will: Matthew was one. Fishermen like Peter, James, and John were working class but not destitute. The Pharisees sometimes looked down on the Am Ha'aretz as ignorant of the law, which makes Jesus's comment that the tax collectors and prostitutes were entering the kingdom ahead of the Pharisees all the more pointed.",
-        "figures": ["Peasants and farmers", "Fishermen and craftsmen", "Tax collectors (Roman revenue agents)", "Slaves (common throughout the empire)"]
+        "figures": [
+          "Peasants and farmers",
+          "Fishermen and craftsmen",
+          "Tax collectors (Roman revenue agents)",
+          "Slaves (common throughout the empire)"
+        ]
       }
     ],
     "surprises": [
@@ -423,5 +756,63 @@
         "description": "When Rome destroyed the Temple in 70 CE, the Sadducees vanished. No Temple meant no purpose, no income, no identity. The Zealots were crushed in the revolt. Only the Pharisees survived. They became the rabbis who shaped all modern Judaism. Everything in the Talmud traces back to them. This is why the Judaism Jesus debated in the Gospels looks so similar to the Judaism practiced today: the Pharisees won, by surviving when everyone else did not."
       }
     ]
-  }
+  },
+  "conversation": [
+    {
+      "year": "c. 730s",
+      "name": "John of Damascus",
+      "place": "Damascus",
+      "title": "The first Christian answer to Islam",
+      "text": "Born into a Christian family that served the Umayyad caliphs, John wrote a chapter on Islam in his Fount of Knowledge, the earliest substantial Christian theological response to it. He knew the Quran's description of Jesus as a Word and Spirit from God (4:171) and pressed it: if Christ is God's Word, was God ever without his Word?",
+      "lesson": "Start from what the Quran itself says about Jesus."
+    },
+    {
+      "year": "781",
+      "name": "Patriarch Timothy I and Caliph al-Mahdi",
+      "place": "Baghdad",
+      "title": "A dialogue at court",
+      "text": "Over two days the head of the Church of the East answered the caliph's questions about the Trinity, the Son of God and Muhammad. Asked what he thought of Muhammad, he said that Muhammad 'walked in the path of the prophets' by calling people to one God, without confessing him as a prophet. The record of the debate circulated widely among Christians living under Muslim rule.",
+      "lesson": "Courtesy and conviction can share a sentence."
+    },
+    {
+      "year": "c. 800",
+      "name": "Theodore Abu Qurrah",
+      "place": "Harran",
+      "title": "Theology in Arabic",
+      "text": "A bishop of Harran and one of the first Christians to write theology in Arabic, using the vocabulary of Islamic debate to explain the Trinity and the incarnation to Arabic speakers.",
+      "lesson": "Speak the language of the people you are talking to."
+    },
+    {
+      "year": "c. 1274",
+      "name": "Ramon Llull",
+      "place": "Majorca and North Africa",
+      "title": "The Book of the Gentile and the Three Wise Men",
+      "text": "Llull learned Arabic and wrote a dialogue in which a Jew, a Christian and a Muslim each courteously present their faith to a seeker. He urged the founding of schools of Arabic for missionaries and travelled to North Africa to debate Muslim scholars. Tradition holds that he died after being stoned in Bugia in 1315 or 1316.",
+      "lesson": "Argue patiently, and in person."
+    },
+    {
+      "year": "1461",
+      "name": "Nicholas of Cusa",
+      "place": "Rome",
+      "title": "Sifting the Quran",
+      "text": "After the fall of Constantinople in 1453, the cardinal wrote Cribratio Alkorani, a 'sifting' of the Quran that tried to read it charitably and show that, rightly understood, it points towards the Gospel.",
+      "lesson": "Read the Quran carefully before you answer it."
+    },
+    {
+      "year": "1890–1952",
+      "name": "Samuel Zwemer",
+      "place": "Arabia and Cairo",
+      "title": "The apostle to Islam",
+      "text": "An American Reformed missionary who served in Basra and Bahrain, then Cairo, and founded the journal The Moslem World in 1911. His long ministry saw few converts, and he taught a generation of Christians to love Muslims and to persevere.",
+      "lesson": "Faithfulness is measured in decades."
+    },
+    {
+      "year": "2014",
+      "name": "Nabeel Qureshi",
+      "place": "United States",
+      "title": "Seeking Allah, Finding Jesus",
+      "text": "Raised in a devout Ahmadi Muslim family, Qureshi came to faith in Christ through years of argument and friendship with a Christian classmate, and told the story in Seeking Allah, Finding Jesus (2014). He died of cancer in 2017, aged 34.",
+      "lesson": "Arguments open doors; friendship walks through them."
+    }
+  ]
 }
