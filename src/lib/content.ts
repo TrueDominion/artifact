@@ -109,7 +109,7 @@ export const RELIGIONS: ReligionConfig[] = [
     id: 'islam',
     label: 'Islam',
     sublabel: '1.9 billion adherents',
-    description: "Challenges from Islamic theology — the Quran, Muhammad's credentials, the Trinity, tahrif, and the nature of God. Written for real conversations with Muslims.",
+    description: "Challenges from Islamic theology: the Quran, Muhammad's credentials, the Trinity, tahrif, and the nature of God. Written for real conversations with Muslims.",
   },
 ]
 

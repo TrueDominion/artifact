@@ -1,6 +1,6 @@
 /**
  * src/pages/TheGallery.tsx
- * THE GALLERY — Islam on its own terms. One exhibit, read top to bottom along the rule:
+ * THE GALLERY: Islam on its own terms. One exhibit, read top to bottom along the rule:
  * overview and scale, core claims, the texts it rests on, then the Reformed critique.
  */
 

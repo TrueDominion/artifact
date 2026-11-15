@@ -2,7 +2,7 @@
 
 A Christian apologetics knowledge platform focused on the conversation between Christianity and Islam, with the historical world of Scripture as context.
 
-artiFACT functions like a curated museum of ideas — users explore a modern archaeological exhibition about truth, belief, and the history of ideas.
+artiFACT functions like a curated museum of ideas: users explore a modern archaeological exhibition about truth, belief, and the history of ideas.
 
 ---
 

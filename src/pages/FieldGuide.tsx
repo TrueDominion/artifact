@@ -1,6 +1,6 @@
 /**
  * src/pages/FieldGuide.tsx
- * THE FIELD GUIDE — rapid reference for conversations with Muslims.
+ * THE FIELD GUIDE: rapid reference for conversations with Muslims.
  * Search and filter the challenges; each entry opens to numbered points and an anchor verse.
  */
 

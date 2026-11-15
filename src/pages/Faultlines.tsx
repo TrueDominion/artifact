@@ -1,6 +1,6 @@
 /**
  * src/pages/Faultlines.tsx
- * FAULTLINES — the hardest Islamic challenges. Severity and ground sit left of the rule;
+ * FAULTLINES: the hardest Islamic challenges. Severity and ground sit left of the rule;
  * opened, the claim (grey) stands beside the Christian response (white), then thinkers and sources.
  */
 

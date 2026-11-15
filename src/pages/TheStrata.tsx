@@ -1,6 +1,6 @@
 /**
  * src/pages/TheStrata.tsx
- * THE STRATA — the world Scripture was written into. Five modules behind one chip bar
+ * THE STRATA: the world Scripture was written into. Five modules behind one chip bar
  * (?module=timeline|empires|gods|tribes|judaea):
  *   Timeline  ten eras on the ruler; prev/next or click a tick
  *   Empires   a hairline ledger
