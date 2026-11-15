@@ -1,7 +1,7 @@
 /**
  * src/pages/TheGallery.tsx
  * THE GALLERY: Islam on its own terms. One exhibit, read top to bottom along the rule:
- * overview and scale, core claims, the texts it rests on, then the Reformed critique.
+ * overview and scale, core claims, the texts it rests on, then the Christian critique.
  */
 
 import { PageHead, PageBody, Prose } from '@/components/ui/Page'
@@ -41,7 +41,7 @@ export default function TheGallery() {
         meta={`${wv.tradition} · founded ${wv.founded}`}
         lines={['Islam,', 'on its own', 'terms.']}
         side="Understand before you answer"
-        lede="Islam presented first as Muslims would recognise it, then examined from a Reformed Christian perspective. The goal is honest engagement, not caricature."
+        lede="Islam presented first as Muslims would recognise it, then examined from a Christian perspective. The goal is honest engagement, not caricature."
       />
       <PageBody>
         <Block side={<span className="m-label is-accent">The exhibit</span>}>
@@ -109,7 +109,7 @@ export default function TheGallery() {
           </ul>
         </Block>
 
-        <Block side={<span className="m-label is-accent">Reformed Christian critique</span>}>
+        <Block side={<span className="m-label is-accent">A Christian critique</span>}>
           <Prose text={wv.christian_critique} />
         </Block>
       </PageBody>
